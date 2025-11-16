@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#T#",
+        "#S#",
+        "#R#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:vine"
+        },
+        "T": {
+            "item": "minecraft:turtle_helmet"
+        },
+        "S": {
+            "item": "minecraft:target"
+        },
+        "R": {
+            "item": "minecraft:rabbit_foot"
+        }
+    },
+    "result": {
+        "item": "minecraft:wild_armor_trim_smithing_template",
+        "count": 1
+    }
+}

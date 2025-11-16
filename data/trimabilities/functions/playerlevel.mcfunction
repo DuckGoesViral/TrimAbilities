@@ -1,0 +1,8 @@
+scoreboard players enable @a playerLevel
+
+execute as @a[scores={playerLevel=1..}] run tellraw @s ["",{"text":"----------------------------------","color":"yellow"},{"text":"\n"},{"text":"Your Levels:","color":"gold"},{"text":"\n\n"},{"text":"Minecraft Level","color":"light_purple"},{"text":" "},{"score":{"name":"@s","objective":"mcLvl"},"color":"green"},{"text":", ","color":"green"},{"score":{"name":"@s","objective":"minecraftLevel"},"color":"green"},{"text":"\n"},{"text":"Warrior Level","color":"light_purple"},{"text":" "},{"score":{"name":"@s","objective":"wLvl"},"color":"green"},{"text":", ","color":"green"},{"score":{"name":"@s","objective":"warriorLevel"},"color":"green"},{"text":"\n"},{"text":"Tank Level","color":"light_purple"},{"text":" "},{"score":{"name":"@s","objective":"tLvl"},"color":"green"},{"text":", ","color":"green"},{"score":{"name":"@s","objective":"tankLevel"},"color":"green"},{"text":"\n"},{"text":"Archer Level","color":"light_purple"},{"text":" "},{"score":{"name":"@s","objective":"aLvl"},"color":"green"},{"text":", ","color":"green"},{"score":{"name":"@s","objective":"archerLevel"},"color":"green"},{"text":"\n"},{"text":"Necromancer Level","color":"light_purple"},{"text":" "},{"score":{"name":"@s","objective":"nLvl"},"color":"green"},{"text":", ","color":"green"},{"score":{"name":"@s","objective":"necromancerLevel"},"color":"green"},{"text":"\n"},{"text":"----------------------------------","color":"yellow"}]
+execute as @a[scores={playerLevel=1..}] run scoreboard players set @s playerLevel 0 
+execute as @a[scores={playerLevel=..-1}] run scoreboard players set @s playerLevel 0 
+
+
+schedule function trimabilities:playerlevel 5t

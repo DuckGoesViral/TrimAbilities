@@ -1,0 +1,3 @@
+execute as @a[scores={mcLvl=2..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:coast"}}},{Slot: 102b,tag:{Trim:{pattern:"minecraft:coast"}}},{Slot: 101b,tag:{Trim:{pattern:"minecraft:coast"}}},{Slot: 100b,tag:{Trim:{pattern:"minecraft:coast"}}}]}] run tag @s add coast
+execute if entity @a[tag=coast,tag=!unlockedCoast] as @a[tag=coast,tag=!unlockedCoast] at @s run function trimabilities:unlocked/coast
+execute as @a[tag=coast] run effect give @s water_breathing infinite 0 true

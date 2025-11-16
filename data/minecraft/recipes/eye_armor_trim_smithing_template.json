@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#B#",
+        "ESE",
+        "GCG"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:spider_eye"
+        },
+        "B": {
+            "item": "minecraft:beacon"
+        },
+        "E": {
+            "item": "minecraft:ender_eye"
+        },
+        "S": {
+            "item": "minecraft:spyglass"
+        },
+        "G": {
+            "item": "minecraft:end_crystal"
+        },
+        "C": {
+            "item": "minecraft:end_stone"
+        }
+    },
+    "result": {
+        "item": "minecraft:eye_armor_trim_smithing_template",
+        "count": 1
+    }
+}
