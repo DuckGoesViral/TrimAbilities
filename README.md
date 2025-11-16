@@ -1,0 +1,2 @@
+Trim Abilities Datapack Readme
+
