@@ -1,7 +1,7 @@
 execute as @a[scores={progressEye=3..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:eye"}}},{Slot: 102b,tag:{Trim:{pattern:"minecraft:eye"}}},{Slot: 101b,tag:{Trim:{pattern:"minecraft:eye"}}},{Slot: 100b,tag:{Trim:{pattern:"minecraft:eye"}}}]}] run tag @s add eye
 execute if entity @a[tag=eye,tag=!unlockedEye] as @a[tag=eye,tag=!unlockedEye] at @s run function trimabilities:unlocked/eye
 execute as @a[tag=eye] run function trimabilities:eyearrow
-execute as @a[tag=eye] run effect give @s weakness infinite 1 true
+execute as @a[tag=eye] run effect give @s weakness infinite 0 true
 
 
 execute as @e[tag=target] unless entity @a[tag=targeting] run tag @s remove target

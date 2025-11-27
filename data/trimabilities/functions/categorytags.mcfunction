@@ -20,10 +20,10 @@ execute as @a[tag=sentry] run tag @s add archer
 
 execute as @a[tag=!wayfinder,tag=!wild,tag=!eye,tag=!sentry] run tag @s remove archer
 
-execute as @a[tag=raiser] run tag @s add necromancer
-execute as @a[tag=rib] run tag @s add necromancer
-execute as @a[tag=vex] run tag @s add necromancer
-
-execute as @a[tag=!raiser,tag=!rib,tag=!vex] run tag @s remove necromancer
+#execute as @a[tag=raiser] run tag @s add necromancer
+#execute as @a[tag=rib] run tag @s add necromancer
+#execute as @a[tag=vex] run tag @s add necromancer
+#
+#execute as @a[tag=!raiser,tag=!rib,tag=!vex] run tag @s remove necromancer
 
 schedule function trimabilities:categorytags 10t

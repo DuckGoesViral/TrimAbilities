@@ -1,7 +1,7 @@
 execute as @a[scores={progressSpire=3..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:spire"}}},{Slot: 102b,tag:{Trim:{pattern:"minecraft:spire"}}},{Slot: 101b,tag:{Trim:{pattern:"minecraft:spire"}}},{Slot: 100b,tag:{Trim:{pattern:"minecraft:spire"}}}]}] run tag @s add spire
 execute if entity @a[tag=spire,tag=!unlockedSpire] as @a[tag=spire,tag=!unlockedSpire] at @s run function trimabilities:unlocked/spire
 execute as @a[tag=spire,scores={mcLvl=8..,tLvl=5}] run attribute @s generic.max_health base set 30
-execute as @a[tag=spire,scores={mcLvl=8..,tLvl=5}] run effect give @s resistance infinite 2 true
+execute as @a[tag=spire,scores={mcLvl=8..,tLvl=5}] run effect give @s resistance infinite 1 true
 
 
 

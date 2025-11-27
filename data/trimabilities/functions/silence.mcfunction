@@ -1,8 +1,8 @@
 execute as @a[scores={progressSilence=3..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:silence"}}},{Slot: 102b,tag:{Trim:{pattern:"minecraft:silence"}}},{Slot: 101b,tag:{Trim:{pattern:"minecraft:silence"}}},{Slot: 100b,tag:{Trim:{pattern:"minecraft:silence"}}}]}] run tag @s add silence
 execute if entity @a[tag=silence,tag=!unlockedSilence] as @a[tag=silence,tag=!unlockedSilence] at @s run function trimabilities:unlocked/silence
 execute as @a[tag=silence] run effect give @s strength infinite 1 true
-execute as @a[tag=silence] run attribute @s generic.attack_speed base set 5
-execute as @a[tag=silence] run attribute @s generic.movement_speed base set 0.15
+execute as @a[tag=silence] run effect give @s speed infinite 1 true
+
 
 
 execute as @a[scores={sneakTrigger=2..},tag=WcooldownTimer,tag=silence] run scoreboard players operation @s WcooldownCurrent = @s WcooldownMax

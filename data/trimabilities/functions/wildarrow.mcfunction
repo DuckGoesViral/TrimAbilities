@@ -15,16 +15,16 @@ execute as @a[scores={shoot=1..}] run scoreboard players set @s shoot 0
 execute as @a[scores={shoot2=1..}] run scoreboard players set @s shoot2 0
 
 
-execute as @e[type=arrow,tag=wildarrowpo0] run data merge entity @s {damage:3.5d,PierceLevel:2b}
-execute as @e[type=arrow,tag=wildarrowpo1] run data merge entity @s {damage:4.5d,PierceLevel:2b}
-execute as @e[type=arrow,tag=wildarrowpo2] run data merge entity @s {damage:5d,PierceLevel:2b}
-execute as @e[type=arrow,tag=wildarrowpo3] run data merge entity @s {damage:5.5d,PierceLevel:2b}
-execute as @e[type=arrow,tag=wildarrowpo4] run data merge entity @s {damage:6d,PierceLevel:2b}
-execute as @e[type=arrow,tag=wildarrowpo5] run data merge entity @s {damage:6.5d,PierceLevel:2b}
+execute as @e[type=arrow,tag=wildarrowpo0] run data merge entity @s {damage:3d,PierceLevel:2b}
+execute as @e[type=arrow,tag=wildarrowpo1] run data merge entity @s {damage:4d,PierceLevel:2b}
+execute as @e[type=arrow,tag=wildarrowpo2] run data merge entity @s {damage:4.5d,PierceLevel:2b}
+execute as @e[type=arrow,tag=wildarrowpo3] run data merge entity @s {damage:5d,PierceLevel:2b}
+execute as @e[type=arrow,tag=wildarrowpo4] run data merge entity @s {damage:5.5d,PierceLevel:2b}
+execute as @e[type=arrow,tag=wildarrowpo5] run data merge entity @s {damage:6d,PierceLevel:2b}
 
-execute as @e[type=arrow,tag=wildarrowpi0] run data merge entity @s {damage:3.5d,PierceLevel:2b}
-execute as @e[type=arrow,tag=wildarrowpi1] run data merge entity @s {damage:3.5d,PierceLevel:3b}
-execute as @e[type=arrow,tag=wildarrowpi2] run data merge entity @s {damage:3.5d,PierceLevel:4b}
-execute as @e[type=arrow,tag=wildarrowpi3] run data merge entity @s {damage:3.5d,PierceLevel:5b}
-execute as @e[type=arrow,tag=wildarrowpi4] run data merge entity @s {damage:3.5d,PierceLevel:6b}
+execute as @e[type=arrow,tag=wildarrowpi0] run data merge entity @s {damage:3d,PierceLevel:2b}
+execute as @e[type=arrow,tag=wildarrowpi1] run data merge entity @s {damage:3d,PierceLevel:3b}
+execute as @e[type=arrow,tag=wildarrowpi2] run data merge entity @s {damage:3d,PierceLevel:4b}
+execute as @e[type=arrow,tag=wildarrowpi3] run data merge entity @s {damage:3d,PierceLevel:5b}
+execute as @e[type=arrow,tag=wildarrowpi4] run data merge entity @s {damage:3d,PierceLevel:6b}
 

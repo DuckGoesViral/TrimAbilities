@@ -1,4 +1,0 @@
-function trimabilities:scoreboardlevels
-tellraw @s ["",{"text":"----------------------------------","bold":true,"color":"dark_aqua"},{"text":"\n"},{"text":" Necromancy Level Up","bold":true,"color":"yellow"},{"text":" 4\u27a1","color":"dark_gray"},{"text":"5 ","color":"green"},{"text":"MAX LEVEL","color":"green","bold": true},{"text":"\n\n"},{"text":" REWARDS","color":"green"},{"text":"\n+ ("},{"score":{"name":"@s","objective":"progressVex"}},{"text":"/"},{"text":"3","color":"yellow"},{"text":") Vex\n"},{"text":"----------------------------------","bold":true,"color":"dark_aqua"}]
-playsound minecraft:entity.player.levelup ambient @s ~ ~ ~ 1 0
-scoreboard players remove @s necromancerLevel 5000

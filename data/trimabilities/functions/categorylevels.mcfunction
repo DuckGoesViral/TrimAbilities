@@ -115,42 +115,42 @@ execute as @a[scores={archerLevel=5000..},tag=aLvl5go] at @s run function trimab
 execute as @a[tag=aLvl5go] run tag @s remove aLvl5go
 
 #Necromancer Level
-execute as @a[scores={necromancerLevel=0..},tag=!nLvl0,tag=!nLvl1,tag=!nLvl2,tag=!nLvl3,tag=!nLvl4,tag=!nLvl5] run tag @s add nLvl0
-
-execute as @a[scores={necromancerLevel=100..},tag=!nLvl1,tag=!nLvl2,tag=!nLvl3,tag=!nLvl4,tag=!nLvl5] run tag @s remove nLvl0
-execute as @a[scores={necromancerLevel=100..},tag=!nLvl1,tag=!nLvl2,tag=!nLvl3,tag=!nLvl4,tag=!nLvl5] run tag @s add nLvl1go
-execute as @a[scores={necromancerLevel=100..},tag=!nLvl1,tag=!nLvl2,tag=!nLvl3,tag=!nLvl4,tag=!nLvl5] run tag @s add nLvl1
-execute as @a[scores={necromancerLevel=100..},tag=nLvl1go] at @s run function trimabilities:clvl/n1
-execute as @a[tag=nLvl1go] run tag @s remove nLvl1go
-
-execute as @a[scores={necromancerLevel=250..},tag=!nLvl0,tag=!nLvl2,tag=!nLvl3,tag=!nLvl4,tag=!nLvl5] run tag @s remove nLvl1
-execute as @a[scores={necromancerLevel=250..},tag=!nLvl0,tag=!nLvl2,tag=!nLvl3,tag=!nLvl4,tag=!nLvl5] run tag @s add nLvl2go
-execute as @a[scores={necromancerLevel=250..},tag=!nLvl0,tag=!nLvl2,tag=!nLvl3,tag=!nLvl4,tag=!nLvl5] run tag @s add nLvl2
-execute as @a[scores={necromancerLevel=250..},tag=nLvl2go] at @s run function trimabilities:clvl/n2
-execute as @a[tag=nLvl2go] run tag @s remove nLvl2go
-
-execute as @a[scores={necromancerLevel=1000..},tag=!nLvl0,tag=!nLvl1,tag=!nLvl3,tag=!nLvl4,tag=!nLvl5] run tag @s remove nLvl2
-execute as @a[scores={necromancerLevel=1000..},tag=!nLvl0,tag=!nLvl1,tag=!nLvl3,tag=!nLvl4,tag=!nLvl5] run tag @s add nLvl3go
-execute as @a[scores={necromancerLevel=1000..},tag=!nLvl0,tag=!nLvl1,tag=!nLvl3,tag=!nLvl4,tag=!nLvl5] run tag @s add nLvl3
-execute as @a[scores={necromancerLevel=1000..},tag=nLvl3go,tag=!tRibGive] run scoreboard players add @s progressRib 1
-execute as @a[scores={necromancerLevel=1000..},tag=nLvl3go,tag=!tRibGive] run tag @s add tRibGive
-execute as @a[scores={necromancerLevel=1000..},tag=nLvl3go] at @s run function trimabilities:clvl/n3
-execute as @a[tag=nLvl3go] run tag @s remove nLvl3go
-
-execute as @a[scores={necromancerLevel=2500..},tag=!nLvl0,tag=!nLvl1,tag=!nLvl2,tag=!nLvl4,tag=!nLvl5] run tag @s remove nLvl3
-execute as @a[scores={necromancerLevel=2500..},tag=!nLvl0,tag=!nLvl1,tag=!nLvl2,tag=!nLvl4,tag=!nLvl5] run tag @s add nLvl4go
-execute as @a[scores={necromancerLevel=2500..},tag=!nLvl0,tag=!nLvl1,tag=!nLvl2,tag=!nLvl4,tag=!nLvl5] run tag @s add nLvl4
-execute as @a[scores={necromancerLevel=2500..},tag=nLvl4go] at @s run function trimabilities:clvl/n4
-execute as @a[tag=nLvl4go] run tag @s remove nLvl4go
-
-execute as @a[scores={necromancerLevel=5000..},tag=!nLvl0,tag=!nLvl1,tag=!nLvl2,tag=!nLvl3,tag=!nLvl5] run tag @s remove nLvl4
-execute as @a[scores={necromancerLevel=5000..},tag=!nLvl0,tag=!nLvl1,tag=!nLvl2,tag=!nLvl3,tag=!nLvl5] run tag @s add nLvl5go
-execute as @a[scores={necromancerLevel=5000..},tag=!nLvl0,tag=!nLvl1,tag=!nLvl2,tag=!nLvl3,tag=!nLvl5] run tag @s add nLvl5
-execute as @a[scores={necromancerLevel=5000..},tag=nLvl5go,tag=!tVexGive] run scoreboard players add @s progressVex 1
-execute as @a[scores={necromancerLevel=5000..},tag=nLvl5go,tag=!tVexGive] run tag @s add tVexGive
-execute as @a[scores={necromancerLevel=5000..},tag=nLvl5go] at @s run function trimabilities:clvl/n5
-
-execute as @a[tag=nLvl5go] run tag @s remove nLvl5go
+#execute as @a[scores={necromancerLevel=0..},tag=!nLvl0,tag=!nLvl1,tag=!nLvl2,tag=!nLvl3,tag=!nLvl4,tag=!nLvl5] run tag @s add nLvl0
+#
+#execute as @a[scores={necromancerLevel=100..},tag=!nLvl1,tag=!nLvl2,tag=!nLvl3,tag=!nLvl4,tag=!nLvl5] run tag @s remove nLvl0
+#execute as @a[scores={necromancerLevel=100..},tag=!nLvl1,tag=!nLvl2,tag=!nLvl3,tag=!nLvl4,tag=!nLvl5] run tag @s add nLvl1go
+#execute as @a[scores={necromancerLevel=100..},tag=!nLvl1,tag=!nLvl2,tag=!nLvl3,tag=!nLvl4,tag=!nLvl5] run tag @s add nLvl1
+#execute as @a[scores={necromancerLevel=100..},tag=nLvl1go] at @s run function trimabilities:clvl/n1
+#execute as @a[tag=nLvl1go] run tag @s remove nLvl1go
+#
+#execute as @a[scores={necromancerLevel=250..},tag=!nLvl0,tag=!nLvl2,tag=!nLvl3,tag=!nLvl4,tag=!nLvl5] run tag @s remove nLvl1
+#execute as @a[scores={necromancerLevel=250..},tag=!nLvl0,tag=!nLvl2,tag=!nLvl3,tag=!nLvl4,tag=!nLvl5] run tag @s add nLvl2go
+#execute as @a[scores={necromancerLevel=250..},tag=!nLvl0,tag=!nLvl2,tag=!nLvl3,tag=!nLvl4,tag=!nLvl5] run tag @s add nLvl2
+#execute as @a[scores={necromancerLevel=250..},tag=nLvl2go] at @s run function trimabilities:clvl/n2
+#execute as @a[tag=nLvl2go] run tag @s remove nLvl2go
+#
+#execute as @a[scores={necromancerLevel=1000..},tag=!nLvl0,tag=!nLvl1,tag=!nLvl3,tag=!nLvl4,tag=!nLvl5] run tag @s remove nLvl2
+#execute as @a[scores={necromancerLevel=1000..},tag=!nLvl0,tag=!nLvl1,tag=!nLvl3,tag=!nLvl4,tag=!nLvl5] run tag @s add nLvl3go
+#execute as @a[scores={necromancerLevel=1000..},tag=!nLvl0,tag=!nLvl1,tag=!nLvl3,tag=!nLvl4,tag=!nLvl5] run tag @s add nLvl3
+#execute as @a[scores={necromancerLevel=1000..},tag=nLvl3go,tag=!tRibGive] run scoreboard players add @s progressRib 1
+#execute as @a[scores={necromancerLevel=1000..},tag=nLvl3go,tag=!tRibGive] run tag @s add tRibGive
+#execute as @a[scores={necromancerLevel=1000..},tag=nLvl3go] at @s run function trimabilities:clvl/n3
+#execute as @a[tag=nLvl3go] run tag @s remove nLvl3go
+#
+#execute as @a[scores={necromancerLevel=2500..},tag=!nLvl0,tag=!nLvl1,tag=!nLvl2,tag=!nLvl4,tag=!nLvl5] run tag @s remove nLvl3
+#execute as @a[scores={necromancerLevel=2500..},tag=!nLvl0,tag=!nLvl1,tag=!nLvl2,tag=!nLvl4,tag=!nLvl5] run tag @s add nLvl4go
+#execute as @a[scores={necromancerLevel=2500..},tag=!nLvl0,tag=!nLvl1,tag=!nLvl2,tag=!nLvl4,tag=!nLvl5] run tag @s add nLvl4
+#execute as @a[scores={necromancerLevel=2500..},tag=nLvl4go] at @s run function trimabilities:clvl/n4
+#execute as @a[tag=nLvl4go] run tag @s remove nLvl4go
+#
+#execute as @a[scores={necromancerLevel=5000..},tag=!nLvl0,tag=!nLvl1,tag=!nLvl2,tag=!nLvl3,tag=!nLvl5] run tag @s remove nLvl4
+#execute as @a[scores={necromancerLevel=5000..},tag=!nLvl0,tag=!nLvl1,tag=!nLvl2,tag=!nLvl3,tag=!nLvl5] run tag @s add nLvl5go
+#execute as @a[scores={necromancerLevel=5000..},tag=!nLvl0,tag=!nLvl1,tag=!nLvl2,tag=!nLvl3,tag=!nLvl5] run tag @s add nLvl5
+#execute as @a[scores={necromancerLevel=5000..},tag=nLvl5go,tag=!tVexGive] run scoreboard players add @s progressVex 1
+#execute as @a[scores={necromancerLevel=5000..},tag=nLvl5go,tag=!tVexGive] run tag @s add tVexGive
+#execute as @a[scores={necromancerLevel=5000..},tag=nLvl5go] at @s run function trimabilities:clvl/n5
+#
+#execute as @a[tag=nLvl5go] run tag @s remove nLvl5go
 
 
 

@@ -132,42 +132,42 @@ execute as @a[scores={BowAttack=1..}] run scoreboard players reset @s BowAttack
 
 
 #Necromancer xp
-execute as @a[nbt={SelectedItem:{id:"minecraft:potion",tag:{Potion:"minecraft:water"}}}] run tag @s add hydrated
-execute as @a[nbt={SelectedItem:{id:"minecraft:potion",tag:{Potion:"minecraft:awkward"}}}] run tag @s add hydrated
-execute as @a[nbt={SelectedItem:{id:"minecraft:potion",tag:{Potion:"minecraft:mundane"}}}] run tag @s add hydrated
-execute as @a[nbt={SelectedItem:{id:"minecraft:potion",tag:{Potion:"minecraft:thick"}}}] run tag @s add hydrated
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:potion",tag:{Potion:"minecraft:water"}}},nbt=!{SelectedItem:{id:"minecraft:potion",tag:{Potion:"minecraft:awkward"}}},nbt=!{SelectedItem:{id:"minecraft:potion",tag:{Potion:"minecraft:mundane"}}},nbt=!{SelectedItem:{id:"minecraft:potion",tag:{Potion:"minecraft:thick"}}}] run tag @s remove hydrated
-
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl0,tag=necromancer] run scoreboard players add @s necromancerLevel 0
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl0,tag=necromancer] run scoreboard players set @s xpDisplay 0
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl1,tag=necromancer] run scoreboard players add @s necromancerLevel 2
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl1,tag=necromancer] run scoreboard players set @s xpDisplay 2
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl2,tag=necromancer] run scoreboard players add @s necromancerLevel 4
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl2,tag=necromancer] run scoreboard players set @s xpDisplay 4
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl3,tag=necromancer] run scoreboard players add @s necromancerLevel 6
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl3,tag=necromancer] run scoreboard players set @s xpDisplay 6
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl4,tag=necromancer] run scoreboard players add @s necromancerLevel 8
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl4,tag=necromancer] run scoreboard players set @s xpDisplay 8
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl5,tag=necromancer] run scoreboard players add @s necromancerLevel 10
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl5,tag=necromancer] run scoreboard players set @s xpDisplay 10
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl6,tag=necromancer] run scoreboard players add @s necromancerLevel 12
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl6,tag=necromancer] run scoreboard players set @s xpDisplay 12
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl7,tag=necromancer] run scoreboard players add @s necromancerLevel 14
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl7,tag=necromancer] run scoreboard players set @s xpDisplay 14
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl8,tag=necromancer] run scoreboard players add @s necromancerLevel 16
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl8,tag=necromancer] run scoreboard players set @s xpDisplay 16
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl9,tag=necromancer] run scoreboard players add @s necromancerLevel 18
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl9,tag=necromancer] run scoreboard players set @s xpDisplay 18
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl10,tag=necromancer] run scoreboard players add @s necromancerLevel 20
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl10,tag=necromancer] run scoreboard players set @s xpDisplay 20
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=nLvl0,tag=necromancer] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Necromancer xp | Level 1 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"necromancerLevel"},"color":"dark_aqua"},{"text":" / 100) ","color":"dark_aqua"}]
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=nLvl1,tag=necromancer] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Necromancer xp | Level 2 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"necromancerLevel"},"color":"dark_aqua"},{"text":" / 250) ","color":"dark_aqua"}]
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=nLvl2,tag=necromancer] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Necromancer xp | Level 3 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"necromancerLevel"},"color":"dark_aqua"},{"text":" / 1000) ","color":"dark_aqua"}]
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=nLvl3,tag=necromancer] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Necromancer xp | Level 4 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"necromancerLevel"},"color":"dark_aqua"},{"text":" / 2500) ","color":"dark_aqua"}]
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=nLvl4,tag=necromancer] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Necromancer xp | Level 5 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"necromancerLevel"},"color":"dark_aqua"},{"text":" / 5000) ","color":"dark_aqua"}]
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=nLvl5,tag=necromancer] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Necromancer xp | Level 5 ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"necromancerLevel"},"color":"dark_aqua"},{"text":") ","color":"dark_aqua"}]
-execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=necromancer] at @s run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 0.5 2
-execute as @a[scores={drankPotion=1..}] run scoreboard players reset @s drankPotion
+#execute as @a[nbt={SelectedItem:{id:"minecraft:potion",tag:{Potion:"minecraft:water"}}}] run tag @s add hydrated
+#execute as @a[nbt={SelectedItem:{id:"minecraft:potion",tag:{Potion:"minecraft:awkward"}}}] run tag @s add hydrated
+#execute as @a[nbt={SelectedItem:{id:"minecraft:potion",tag:{Potion:"minecraft:mundane"}}}] run tag @s add hydrated
+#execute as @a[nbt={SelectedItem:{id:"minecraft:potion",tag:{Potion:"minecraft:thick"}}}] run tag @s add hydrated
+#execute as @a[nbt=!{SelectedItem:{id:"minecraft:potion",tag:{Potion:"minecraft:water"}}},nbt=!{SelectedItem:{id:"minecraft:potion",tag:{Potion:"minecraft:awkward"}}},nbt=!{SelectedItem:{id:"minecraft:potion",tag:{Potion:"minecraft:mundane"}}},nbt=!{SelectedItem:{id:"minecraft:potion",tag:{Potion:"minecraft:thick"}}}] run tag @s remove hydrated
+#
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl0,tag=necromancer] run scoreboard players add @s necromancerLevel 0
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl0,tag=necromancer] run scoreboard players set @s xpDisplay 0
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl1,tag=necromancer] run scoreboard players add @s necromancerLevel 2
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl1,tag=necromancer] run scoreboard players set @s xpDisplay 2
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl2,tag=necromancer] run scoreboard players add @s necromancerLevel 4
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl2,tag=necromancer] run scoreboard players set @s xpDisplay 4
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl3,tag=necromancer] run scoreboard players add @s necromancerLevel 6
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl3,tag=necromancer] run scoreboard players set @s xpDisplay 6
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl4,tag=necromancer] run scoreboard players add @s necromancerLevel 8
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl4,tag=necromancer] run scoreboard players set @s xpDisplay 8
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl5,tag=necromancer] run scoreboard players add @s necromancerLevel 10
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl5,tag=necromancer] run scoreboard players set @s xpDisplay 10
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl6,tag=necromancer] run scoreboard players add @s necromancerLevel 12
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl6,tag=necromancer] run scoreboard players set @s xpDisplay 12
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl7,tag=necromancer] run scoreboard players add @s necromancerLevel 14
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl7,tag=necromancer] run scoreboard players set @s xpDisplay 14
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl8,tag=necromancer] run scoreboard players add @s necromancerLevel 16
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl8,tag=necromancer] run scoreboard players set @s xpDisplay 16
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl9,tag=necromancer] run scoreboard players add @s necromancerLevel 18
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl9,tag=necromancer] run scoreboard players set @s xpDisplay 18
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl10,tag=necromancer] run scoreboard players add @s necromancerLevel 20
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl10,tag=necromancer] run scoreboard players set @s xpDisplay 20
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=nLvl0,tag=necromancer] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Necromancer xp | Level 1 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"necromancerLevel"},"color":"dark_aqua"},{"text":" / 100) ","color":"dark_aqua"}]
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=nLvl1,tag=necromancer] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Necromancer xp | Level 2 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"necromancerLevel"},"color":"dark_aqua"},{"text":" / 250) ","color":"dark_aqua"}]
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=nLvl2,tag=necromancer] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Necromancer xp | Level 3 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"necromancerLevel"},"color":"dark_aqua"},{"text":" / 1000) ","color":"dark_aqua"}]
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=nLvl3,tag=necromancer] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Necromancer xp | Level 4 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"necromancerLevel"},"color":"dark_aqua"},{"text":" / 2500) ","color":"dark_aqua"}]
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=nLvl4,tag=necromancer] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Necromancer xp | Level 5 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"necromancerLevel"},"color":"dark_aqua"},{"text":" / 5000) ","color":"dark_aqua"}]
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=nLvl5,tag=necromancer] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Necromancer xp | Level 5 ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"necromancerLevel"},"color":"dark_aqua"},{"text":") ","color":"dark_aqua"}]
+#execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=necromancer] at @s run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 0.5 2
+#execute as @a[scores={drankPotion=1..}] run scoreboard players reset @s drankPotion
 
 
 

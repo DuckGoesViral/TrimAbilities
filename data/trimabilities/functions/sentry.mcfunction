@@ -1,7 +1,7 @@
 execute as @a[scores={progressSentry=3..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:sentry"}}},{Slot: 102b,tag:{Trim:{pattern:"minecraft:sentry"}}},{Slot: 101b,tag:{Trim:{pattern:"minecraft:sentry"}}},{Slot: 100b,tag:{Trim:{pattern:"minecraft:sentry"}}}]}] run tag @s add sentry
 execute if entity @a[tag=sentry,tag=!unlockedSentry] as @a[tag=sentry,tag=!unlockedSentry] at @s run function trimabilities:unlocked/sentry
 execute as @a[tag=sentry] run function trimabilities:sentryarrow
-execute as @a[tag=sentry] run effect give @s weakness infinite 1 true
+
 
 
 execute as @a[advancements={trimabilities:spyglass=true}] run scoreboard players set @s spyglass 1
