@@ -24,3 +24,11 @@ execute as @a[predicate=trimabilities:not_sneaking,scores={sneakTimer=..4}] run 
 execute as @a[predicate=trimabilities:is_sneaking] run scoreboard players set @s sneakTimer 0
 execute as @a[predicate=trimabilities:not_sneaking,scores={sneakTimer=5..}] run scoreboard players set @s sneakTrigger 0
 
+
+
+
+
+
+
+
+

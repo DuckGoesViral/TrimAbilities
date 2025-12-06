@@ -12,34 +12,12 @@ execute as @a[scores={sneakTrigger=2..},tag=WcooldownTimer,tag=silence] run tell
 execute as @a[scores={sneakTrigger=2..},tag=WcooldownTimer,tag=silence] at @s run playsound minecraft:entity.enderman.teleport ambient @s ~ ~ ~
 
 
-execute as @a[scores={sneakTrigger=2..},tag=!WcooldownTimer,tag=silence] run tag @s add syphon
-execute as @a[tag=syphon,tag=silence] run scoreboard players add @s syphonSecond 1
-
-execute as @a[tag=syphon,tag=silence,scores={syphonSecond=1}] run effect give @s regeneration 10 1 true
-
-execute as @a[tag=syphon,tag=silence,scores={syphonSecond=20}] at @s run damage @e[distance=1..20,limit=1,sort=nearest] 1 magic
-
-execute as @a[tag=syphon,tag=silence,scores={syphonSecond=40}] at @s run damage @e[distance=1..20,limit=1,sort=nearest] 1 magic
-
-execute as @a[tag=syphon,tag=silence,scores={syphonSecond=60}] at @s run damage @e[distance=1..20,limit=1,sort=nearest] 1 magic
-
-execute as @a[tag=syphon,tag=silence,scores={syphonSecond=80}] at @s run damage @e[distance=1..20,limit=1,sort=nearest] 1 magic
-
-execute as @a[tag=syphon,tag=silence,scores={syphonSecond=100}] at @s run damage @e[distance=1..20,limit=1,sort=nearest] 1 magic
-
-execute as @a[tag=syphon,tag=silence,scores={syphonSecond=120}] at @s run damage @e[distance=1..20,limit=1,sort=nearest] 1 magic
-
-execute as @a[tag=syphon,tag=silence,scores={syphonSecond=140}] at @s run damage @e[distance=1..20,limit=1,sort=nearest] 1 magic
-
-execute as @a[tag=syphon,tag=silence,scores={syphonSecond=160}] at @s run damage @e[distance=1..20,limit=1,sort=nearest] 1 magic
-
-execute as @a[tag=syphon,tag=silence,scores={syphonSecond=180}] at @s run damage @e[distance=1..20,limit=1,sort=nearest] 1 magic
-
-execute as @a[tag=syphon,tag=silence,scores={syphonSecond=200}] at @s run damage @e[distance=1..20,limit=1,sort=nearest] 1 magic
+execute as @a[scores={sneakTrigger=2..},tag=!WcooldownTimer,tag=silence] run function trimabilities:silenceboom
 
 
-execute as @a[tag=syphon,tag=silence,scores={syphonSecond=200}] run tag @s remove syphon
-execute as @a[scores={syphonSecond=200}] run scoreboard players set @s syphonSecond 0
+
+
+
 
 
 

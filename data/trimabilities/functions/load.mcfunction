@@ -147,6 +147,10 @@ scoreboard players set @a TcooldownTimer2 0
 
 scoreboard objectives add syphonSecond dummy
 
+scoreboard objectives add sonicAttack dummy
+scoreboard objectives add sonicTimer dummy
+
+
 scoreboard objectives add WcooldownMax dummy
 scoreboard players set @a WcooldownMax 60
 scoreboard objectives add WcooldownCurrent dummy
