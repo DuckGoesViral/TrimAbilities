@@ -1,0 +1,9 @@
+{
+  "asset_id": "trimabilities:superior_trim",
+  "template_item": "minecraft:book",
+  "description": {
+    "text": "Superior Armor Trim"
+  },
+  "decal": false,
+  "nbt": "{CustomModelData:100}"
+}
