@@ -4,11 +4,11 @@ execute if entity @a[tag=raiser,tag=!unlockedRaiser] as @a[tag=raiser,tag=!unloc
 
 
 
-execute as @a[scores={sneakTrigger=2..},tag=NRcooldownTimer,tag=raiser] run scoreboard players operation @s NRcooldownCurrent = @s NRcooldownMax
-execute as @a[scores={sneakTrigger=2..},tag=NRcooldownTimer,tag=raiser] run scoreboard players operation @s NRcooldownCurrent -= @s NRcooldownTimer2
-
-execute as @a[scores={sneakTrigger=2..},tag=NRcooldownTimer,tag=raiser] run tellraw @s ["",{"text":"This ability is not available yet. It will be available in ","bold":true,"color":"red"},{"score":{"name":"@s","objective":"NRcooldownCurrent"},"bold":true,"color":"yellow"},{"text":" second(s)","bold":true,"color":"red"}]
-execute as @a[scores={sneakTrigger=2..},tag=NRcooldownTimer,tag=raiser] at @s run playsound minecraft:entity.enderman.teleport ambient @s ~ ~ ~
+#execute as @a[scores={sneakTrigger=2..},tag=NRcooldownTimer,tag=raiser] run scoreboard players operation @s NRcooldownCurrent = @s NRcooldownMax
+#execute as @a[scores={sneakTrigger=2..},tag=NRcooldownTimer,tag=raiser] run scoreboard players operation @s NRcooldownCurrent -= @s NRcooldownTimer2
+#
+#execute as @a[scores={sneakTrigger=2..},tag=NRcooldownTimer,tag=raiser] run tellraw @s ["",{"text":"This ability is not available yet. It will be #available in ","bold":true,"color":"red"},{"score":{"name":"@s","objective":"NRcooldownCurrent"},"bold":true,"color":"yellow"},{"text":" second(s)",#"bold":true,"color":"red"}]
+#execute as @a[scores={sneakTrigger=2..},tag=NRcooldownTimer,tag=raiser] at @s run playsound minecraft:entity.enderman.teleport ambient @s ~ ~ ~
 
 # Handle adding score to frankensteinScore when specific kills are done.
 execute as @a[tag=raiser] run scoreboard players operation @s frankensteinScore += @s frankensteinKills
@@ -53,11 +53,11 @@ execute as @a[tag=raiser] run scoreboard players set @s frankensteinWitchKills 0
 
 
 
-execute as @a[scores={sneakTrigger=2..,zombieSuccess=0},tag=!NRcooldownTimer,tag=raiser] at @s if block ^ ^ ^1 air run tag @s add northSpawn
-execute as @a[scores={sneakTrigger=2..,zombieSuccess=0},tag=!NRcooldownTimer,tag=raiser,tag=!northSpawn] at @s if block ^1 ^ ^ air run tag @s add eastSpawn
-execute as @a[scores={sneakTrigger=2..,zombieSuccess=0},tag=!NRcooldownTimer,tag=raiser,tag=!northSpawn,tag=!eastSpawn] at @s if block ^-1 ^ ^ air run tag @s add westSpawn
-execute as @a[scores={sneakTrigger=2..,zombieSuccess=0},tag=!NRcooldownTimer,tag=raiser,tag=!northSpawn,tag=!eastSpawn,tag=!westSpawn] at @s if block ^ ^ ^-1 air run tag @s add southSpawn
-execute as @a[scores={sneakTrigger=2..,zombieSuccess=0},tag=!NRcooldownTimer,tag=raiser,tag=!northSpawn,tag=!eastSpawn,tag=!westSpawn,tag=!southSpawn] run tellraw @s {"text": "Could not find a location to summon","color": "red","bold": true}
+#execute as @a[scores={sneakTrigger=2..,zombieSuccess=0},tag=!NRcooldownTimer,tag=raiser] at @s if block ^ ^ ^1 air run tag @s add northSpawn
+#execute as @a[scores={sneakTrigger=2..,zombieSuccess=0},tag=!NRcooldownTimer,tag=raiser,tag=!northSpawn] at @s if block ^1 ^ ^ air run tag @s add #eastSpawn
+#execute as @a[scores={sneakTrigger=2..,zombieSuccess=0},tag=!NRcooldownTimer,tag=raiser,tag=!northSpawn,tag=!eastSpawn] at @s if block ^-1 ^ ^ air #run tag @s add westSpawn
+#execute as @a[scores={sneakTrigger=2..,zombieSuccess=0},tag=!NRcooldownTimer,tag=raiser,tag=!northSpawn,tag=!eastSpawn,tag=!westSpawn] at @s if block #^ ^ ^-1 air run tag @s add southSpawn
+#execute as @a[scores={sneakTrigger=2..,zombieSuccess=0},tag=!NRcooldownTimer,tag=raiser,tag=!northSpawn,tag=!eastSpawn,tag=!westSpawn,tag=!southSpawn] #run tellraw @s {"text": "Could not find a location to summon","color": "red","bold": true}
 # execute as @a[scores={sneakTrigger=2..},tag=!NRcooldownTimer,tag=raiser] run weather rain 20s
 
 
