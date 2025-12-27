@@ -1,33 +1,117 @@
+#Utility
+
+#Coast
+#water breathing
+execute as @a[scores={coast=1..}] run scoreboard players set @s coast 0
+
+execute as @a if entity @s[scores={mcLvl=2..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:coast"}}}]}] run scoreboard players add @s coast 1
+execute as @a if entity @s[scores={mcLvl=2..},nbt={Inventory:[{Slot: 102b,tag:{Trim:{pattern:"minecraft:coast"}}}]}] run scoreboard players add @s coast 1
+execute as @a if entity @s[scores={mcLvl=2..},nbt={Inventory:[{Slot: 101b,tag:{Trim:{pattern:"minecraft:coast"}}}]}] run scoreboard players add @s coast 1
+execute as @a if entity @s[scores={mcLvl=2..},nbt={Inventory:[{Slot: 100b,tag:{Trim:{pattern:"minecraft:coast"}}}]}] run scoreboard players add @s coast 1
+
+execute as @a[scores={coast=1..}] run tag @s add coast
+
+execute as @a[tag=coast] run function trimabilities:coast
+
+
+#Tide
+#water breathing, dolphins grace
+execute as @a[scores={tide=1..}] run scoreboard players set @s tide 0
+
+execute as @a if entity @s[scores={mcLvl=4..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:tide"}}}]}] run scoreboard players add @s tide 1
+execute as @a if entity @s[scores={mcLvl=4..},nbt={Inventory:[{Slot: 102b,tag:{Trim:{pattern:"minecraft:tide"}}}]}] run scoreboard players add @s tide 1
+execute as @a if entity @s[scores={mcLvl=4..},nbt={Inventory:[{Slot: 101b,tag:{Trim:{pattern:"minecraft:tide"}}}]}] run scoreboard players add @s tide 1
+execute as @a if entity @s[scores={mcLvl=4..},nbt={Inventory:[{Slot: 100b,tag:{Trim:{pattern:"minecraft:tide"}}}]}] run scoreboard players add @s tide 1
+
+execute as @a[scores={tide=1..}] run tag @s add tide
+
+execute as @a[tag=tide] run function trimabilities:tide
+
+
+#Ravine
+execute as @a[scores={ravine=1..}] run scoreboard players set @s ravine 0
+
+execute as @a if entity @s[scores={mcLvl=3..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"trimabilities:ravine"}}}]}] run scoreboard players add @s ravine 1
+execute as @a if entity @s[scores={mcLvl=3..},nbt={Inventory:[{Slot: 102b,tag:{Trim:{pattern:"trimabilities:ravine"}}}]}] run scoreboard players add @s ravine 1
+execute as @a if entity @s[scores={mcLvl=3..},nbt={Inventory:[{Slot: 101b,tag:{Trim:{pattern:"trimabilities:ravine"}}}]}] run scoreboard players add @s ravine 1
+execute as @a if entity @s[scores={mcLvl=3..},nbt={Inventory:[{Slot: 100b,tag:{Trim:{pattern:"trimabilities:ravine"}}}]}] run scoreboard players add @s ravine 1
+
+execute as @a[scores={ravine=1..}] run tag @s add ravine
+
+execute as @a[tag=ravine] run function trimabilities:ravine
+
+#Rib
+execute as @a[scores={rib=1..}] run scoreboard players set @s rib 0
+
+execute as @a if entity @s[scores={mcLvl=3..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:rib"}}}]}] run scoreboard players add @s rib 1
+execute as @a if entity @s[scores={mcLvl=3..},nbt={Inventory:[{Slot: 102b,tag:{Trim:{pattern:"minecraft:rib"}}}]}] run scoreboard players add @s rib 1
+execute as @a if entity @s[scores={mcLvl=3..},nbt={Inventory:[{Slot: 101b,tag:{Trim:{pattern:"minecraft:rib"}}}]}] run scoreboard players add @s rib 1
+execute as @a if entity @s[scores={mcLvl=3..},nbt={Inventory:[{Slot: 100b,tag:{Trim:{pattern:"minecraft:rib"}}}]}] run scoreboard players add @s rib 1
+
+execute as @a[scores={rib=1..}] run tag @s add rib
+
+execute as @a[tag=rib] run function trimabilities:rib
+
+
+
+
 #Warrior
 
 #Shaper
 #haste but slowness
-execute if entity @a[scores={mcLvl=1..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:shaper"}}},{Slot: 102b,tag:{Trim:{pattern:"minecraft:shaper"}}},{Slot: 101b,tag:{Trim:{pattern:"minecraft:shaper"}}},{Slot: 100b,tag:{Trim:{pattern:"minecraft:shaper"}}}]}] run function trimabilities:shaper
+execute as @a[scores={shaper=1..}] run scoreboard players set @s shaper 0
+
+execute as @a if entity @s[scores={mcLvl=1..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:shaper"}}}]}] run scoreboard players add @s shaper 1
+execute as @a if entity @s[scores={mcLvl=1..},nbt={Inventory:[{Slot: 102b,tag:{Trim:{pattern:"minecraft:shaper"}}}]}] run scoreboard players add @s shaper 1
+execute as @a if entity @s[scores={mcLvl=1..},nbt={Inventory:[{Slot: 101b,tag:{Trim:{pattern:"minecraft:shaper"}}}]}] run scoreboard players add @s shaper 1
+execute as @a if entity @s[scores={mcLvl=1..},nbt={Inventory:[{Slot: 100b,tag:{Trim:{pattern:"minecraft:shaper"}}}]}] run scoreboard players add @s shaper 1
+
+execute as @a[scores={shaper=1..}] run tag @s add shaper
+
+execute as @a[tag=shaper] run function trimabilities:shaper
 
 #Dune
 #fast but low damage
-execute if entity @a[scores={progressDune=3..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:dune"}}},{Slot: 102b,tag:{Trim:{pattern:"minecraft:dune"}}},{Slot: 101b,tag:{Trim:{pattern:"minecraft:dune"}}},{Slot: 100b,tag:{Trim:{pattern:"minecraft:dune"}}}]}] run function trimabilities:dune
+execute as @a[scores={dune=1..}] run scoreboard players set @s dune 0
+
+execute as @a if entity @s[scores={progressDune=3..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:dune"}}}]}] run scoreboard players add @s dune 1
+execute as @a if entity @s[scores={progressDune=3..},nbt={Inventory:[{Slot: 102b,tag:{Trim:{pattern:"minecraft:dune"}}}]}] run scoreboard players add @s dune 1
+execute as @a if entity @s[scores={progressDune=3..},nbt={Inventory:[{Slot: 101b,tag:{Trim:{pattern:"minecraft:dune"}}}]}] run scoreboard players add @s dune 1
+execute as @a if entity @s[scores={progressDune=3..},nbt={Inventory:[{Slot: 100b,tag:{Trim:{pattern:"minecraft:dune"}}}]}] run scoreboard players add @s dune 1
+
+execute as @a[scores={dune=1..}] run tag @s add dune
+
+execute as @a[tag=dune] run function trimabilities:dune
 
 #Snout
 #fire res, regen 1
-execute if entity @a[scores={progressSnout=3..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:snout"}}},{Slot: 102b,tag:{Trim:{pattern:"minecraft:snout"}}},{Slot: 101b,tag:{Trim:{pattern:"minecraft:snout"}}},{Slot: 100b,tag:{Trim:{pattern:"minecraft:snout"}}}]}] run function trimabilities:snout
+execute as @a[scores={snout=1..}] run scoreboard players reset @s snout
+
+execute as @a if entity @s[scores={mcLvl=1..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:snout"}}}]}] run scoreboard players add @s snout 1
+execute as @a if entity @s[scores={mcLvl=1..},nbt={Inventory:[{Slot: 102b,tag:{Trim:{pattern:"minecraft:snout"}}}]}] run scoreboard players add @s snout 1
+execute as @a if entity @s[scores={mcLvl=1..},nbt={Inventory:[{Slot: 101b,tag:{Trim:{pattern:"minecraft:snout"}}}]}] run scoreboard players add @s snout 1
+execute as @a if entity @s[scores={mcLvl=1..},nbt={Inventory:[{Slot: 100b,tag:{Trim:{pattern:"minecraft:snout"}}}]}] run scoreboard players add @s snout 1
+
+execute as @a[scores={snout=1..}] run tag @s add snout
+
+execute if entity @a[tag=snout] run function trimabilities:snout
 
 
 #NoShaper
-execute as @a[tag=shaper,nbt=!{Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:shaper"}}}]}] run tag @s add noshaper
-execute as @a[tag=shaper,nbt=!{Inventory:[{Slot: 102b,tag:{Trim:{pattern:"minecraft:shaper"}}}]}] run tag @s add noshaper
-execute as @a[tag=shaper,nbt=!{Inventory:[{Slot: 101b,tag:{Trim:{pattern:"minecraft:shaper"}}}]}] run tag @s add noshaper
-execute as @a[tag=shaper,nbt=!{Inventory:[{Slot: 100b,tag:{Trim:{pattern:"minecraft:shaper"}}}]}] run tag @s add noshaper
-
-execute if entity @a[tag=noshaper] as @a[tag=noshaper] run function trimabilities:noshaper
+#execute as @a[tag=shaper,nbt=!{Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:shaper"}}}]}] run tag @s add noshaper
+#execute as @a[tag=shaper,nbt=!{Inventory:[{Slot: 102b,tag:{Trim:{pattern:"minecraft:shaper"}}}]}] run tag @s add noshaper
+#execute as @a[tag=shaper,nbt=!{Inventory:[{Slot: 101b,tag:{Trim:{pattern:"minecraft:shaper"}}}]}] run tag @s add noshaper
+#execute as @a[tag=shaper,nbt=!{Inventory:[{Slot: 100b,tag:{Trim:{pattern:"minecraft:shaper"}}}]}] run tag @s add noshaper
+#
+#execute if entity @a[tag=noshaper] as @a[tag=noshaper] run function trimabilities:noshaper
 
 #NoDune
-execute as @a[tag=dune,nbt=!{Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:dune"}}}]}] run tag @s add nodune
-execute as @a[tag=dune,nbt=!{Inventory:[{Slot: 102b,tag:{Trim:{pattern:"minecraft:dune"}}}]}] run tag @s add nodune
-execute as @a[tag=dune,nbt=!{Inventory:[{Slot: 101b,tag:{Trim:{pattern:"minecraft:dune"}}}]}] run tag @s add nodune
-execute as @a[tag=dune,nbt=!{Inventory:[{Slot: 100b,tag:{Trim:{pattern:"minecraft:dune"}}}]}] run tag @s add nodune
-
-execute if entity @a[tag=nodune] as @a[tag=nodune] run function trimabilities:nodune
+#execute as @a[tag=dune,nbt=!{Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:dune"}}}]}] run tag @s add nodune
+#execute as @a[tag=dune,nbt=!{Inventory:[{Slot: 102b,tag:{Trim:{pattern:"minecraft:dune"}}}]}] run tag @s add nodune
+#execute as @a[tag=dune,nbt=!{Inventory:[{Slot: 101b,tag:{Trim:{pattern:"minecraft:dune"}}}]}] run tag @s add nodune
+#execute as @a[tag=dune,nbt=!{Inventory:[{Slot: 100b,tag:{Trim:{pattern:"minecraft:dune"}}}]}] run tag @s add nodune
+#
+#execute if entity @a[tag=nodune] as @a[tag=nodune] run function trimabilities:nodune
 
 #NoSnout
 execute if entity @a[scores={mcLvl=6..,wLvl=3..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:snout"}}},{Slot: 102b,tag:{Trim:{pattern:"minecraft:snout"}}},{Slot: 101b,tag:{Trim:{pattern:"minecraft:snout"}}},{Slot: 100b,tag:{Trim:{pattern:"minecraft:snout"}}}]}] run function trimabilities:snout
@@ -54,7 +138,33 @@ execute as @a[tag=syphon,tag=!silence] run scoreboard players set @s syphonSecon
 
 #Host
 #haste but less hearts
-execute if entity @a[scores={mcLvl=1..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:host"}}},{Slot: 102b,tag:{Trim:{pattern:"minecraft:host"}}},{Slot: 101b,tag:{Trim:{pattern:"minecraft:host"}}},{Slot: 100b,tag:{Trim:{pattern:"minecraft:host"}}}]}] run function trimabilities:host
+
+execute as @a[scores={host=1..}] run scoreboard players set @s host 0
+
+execute as @a if entity @s[scores={mcLvl=1..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:host"}}}]}] run scoreboard players add @s host 1
+execute as @a if entity @s[scores={mcLvl=1..},nbt={Inventory:[{Slot: 102b,tag:{Trim:{pattern:"minecraft:host"}}}]}] run scoreboard players add @s host 1
+execute as @a if entity @s[scores={mcLvl=1..},nbt={Inventory:[{Slot: 101b,tag:{Trim:{pattern:"minecraft:host"}}}]}] run scoreboard players add @s host 1
+execute as @a if entity @s[scores={mcLvl=1..},nbt={Inventory:[{Slot: 100b,tag:{Trim:{pattern:"minecraft:host"}}}]}] run scoreboard players add @s host 1
+
+execute as @a[scores={host=1..}] run tag @s add host
+
+execute as @a[tag=host] run function trimabilities:host
+
+
+#Vital
+execute as @a[scores={vital=1..}] run scoreboard players set @s vital 0
+
+execute as @a if entity @s[scores={progressVital=3..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"trimabilities:vital"}}}]}] run scoreboard players add @s vital 1
+execute as @a if entity @s[scores={progressVital=3..},nbt={Inventory:[{Slot: 102b,tag:{Trim:{pattern:"trimabilities:vital"}}}]}] run scoreboard players add @s vital 1
+execute as @a if entity @s[scores={progressVital=3..},nbt={Inventory:[{Slot: 101b,tag:{Trim:{pattern:"trimabilities:vital"}}}]}] run scoreboard players add @s vital 1
+execute as @a if entity @s[scores={progressVital=3..},nbt={Inventory:[{Slot: 100b,tag:{Trim:{pattern:"trimabilities:vital"}}}]}] run scoreboard players add @s vital 1
+
+execute as @a[scores={vital=1..}] run tag @s add vital
+
+execute as @a[tag=vital] run function trimabilities:vital
+
+
+
 
 #Ward
 #health boost 5, speed set at 0.08
@@ -63,12 +173,12 @@ execute if entity @a[scores={progressWard=3..},nbt={Inventory:[{Slot: 103b,tag:{
 
 
 #NoHost
-execute as @a[tag=host,nbt=!{Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:host"}}}]}] run tag @s add nohost
-execute as @a[tag=host,nbt=!{Inventory:[{Slot: 102b,tag:{Trim:{pattern:"minecraft:host"}}}]}] run tag @s add nohost
-execute as @a[tag=host,nbt=!{Inventory:[{Slot: 101b,tag:{Trim:{pattern:"minecraft:host"}}}]}] run tag @s add nohost
-execute as @a[tag=host,nbt=!{Inventory:[{Slot: 100b,tag:{Trim:{pattern:"minecraft:host"}}}]}] run tag @s add nohost
-
-execute if entity @a[tag=nohost] as @a[tag=nohost] run function trimabilities:nohost
+#execute as @a[tag=host,nbt=!{Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:host"}}}]}] run tag @s add nohost
+#execute as @a[tag=host,nbt=!{Inventory:[{Slot: 102b,tag:{Trim:{pattern:"minecraft:host"}}}]}] run tag @s add nohost
+#execute as @a[tag=host,nbt=!{Inventory:[{Slot: 101b,tag:{Trim:{pattern:"minecraft:host"}}}]}] run tag @s add nohost
+#execute as @a[tag=host,nbt=!{Inventory:[{Slot: 100b,tag:{Trim:{pattern:"minecraft:host"}}}]}] run tag @s add nohost
+#
+#execute if entity @a[tag=nohost] as @a[tag=nohost] run function trimabilities:nohost
 
 #NoWard
 execute as @a[tag=ward,nbt=!{Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:ward"}}}]}] run tag @s add noward
@@ -148,33 +258,6 @@ execute as @a[tag=vex,nbt=!{Inventory:[{Slot: 100b,tag:{Trim:{pattern:"minecraft
 execute if entity @a[tag=novex] as @a[tag=novex] run function trimabilities:novex
 
 
-#Aquatic
-
-#Coast
-#water breathing
-execute if entity @a[scores={mcLvl=2..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:coast"}}},{Slot: 102b,tag:{Trim:{pattern:"minecraft:coast"}}},{Slot: 101b,tag:{Trim:{pattern:"minecraft:coast"}}},{Slot: 100b,tag:{Trim:{pattern:"minecraft:coast"}}}]}] run function trimabilities:coast
-
-
-#Tide
-#water breathing, dolphins grace
-execute if entity @a[scores={progressTide=2..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:tide"}}},{Slot: 102b,tag:{Trim:{pattern:"minecraft:tide"}}},{Slot: 101b,tag:{Trim:{pattern:"minecraft:tide"}}},{Slot: 100b,tag:{Trim:{pattern:"minecraft:tide"}}}]}] run function trimabilities:tide
-
-
-#NoCoast
-execute as @a[tag=coast,nbt=!{Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:coast"}}}]}] run tag @s add nocoast
-execute as @a[tag=coast,nbt=!{Inventory:[{Slot: 102b,tag:{Trim:{pattern:"minecraft:coast"}}}]}] run tag @s add nocoast
-execute as @a[tag=coast,nbt=!{Inventory:[{Slot: 101b,tag:{Trim:{pattern:"minecraft:coast"}}}]}] run tag @s add nocoast
-execute as @a[tag=coast,nbt=!{Inventory:[{Slot: 100b,tag:{Trim:{pattern:"minecraft:coast"}}}]}] run tag @s add nocoast
-
-execute if entity @a[tag=nocoast] as @a[tag=nocoast] run function trimabilities:nocoast
-
-#NoTide
-execute as @a[tag=tide,nbt=!{Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:tide"}}}]}] run tag @s add notide
-execute as @a[tag=tide,nbt=!{Inventory:[{Slot: 102b,tag:{Trim:{pattern:"minecraft:tide"}}}]}] run tag @s add notide
-execute as @a[tag=tide,nbt=!{Inventory:[{Slot: 101b,tag:{Trim:{pattern:"minecraft:tide"}}}]}] run tag @s add notide
-execute as @a[tag=tide,nbt=!{Inventory:[{Slot: 100b,tag:{Trim:{pattern:"minecraft:tide"}}}]}] run tag @s add notide
-
-execute if entity @a[tag=notide] as @a[tag=notide] run function trimabilities:notide
 
 
 schedule function trimabilities:abilities5t 5t

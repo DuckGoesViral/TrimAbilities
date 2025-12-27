@@ -65,7 +65,7 @@ scoreboard objectives add farmedPotato minecraft.mined:minecraft.potatoes
 scoreboard objectives add warriorLevel dummy
 scoreboard objectives add tankLevel dummy
 scoreboard objectives add archerLevel dummy
-scoreboard objectives add necromancerLevel dummy
+scoreboard objectives add mageLevel dummy
 
 
 scoreboard objectives add xpDisplay dummy
@@ -80,6 +80,64 @@ scoreboard objectives add damageBlocked minecraft.custom:minecraft.damage_blocke
 scoreboard objectives add BowAttack minecraft.custom:minecraft.mob_kills
 
 scoreboard objectives add drankPotion minecraft.used:minecraft.potion
+scoreboard objectives add enchantItem minecraft.custom:minecraft.enchant_item
+
+
+scoreboard objectives add shaper dummy
+scoreboard objectives add dune dummy
+scoreboard objectives add snout dummy
+scoreboard objectives add silence dummy
+
+scoreboard objectives add host dummy
+scoreboard objectives add ward dummy
+scoreboard objectives add vital dummy
+scoreboard objectives add spire dummy
+
+scoreboard objectives add wayfinder dummy
+scoreboard objectives add wild dummy
+scoreboard objectives add eye dummy
+scoreboard objectives add sentry dummy
+
+scoreboard objectives add raiser dummy
+scoreboard objectives add stray dummy
+scoreboard objectives add echo dummy
+scoreboard objectives add storm dummy
+
+scoreboard objectives add coast dummy
+scoreboard objectives add tide dummy
+
+scoreboard objectives add ravine dummy
+scoreboard objectives add rib dummy
+
+scoreboard objectives add vex dummy
+
+scoreboard objectives add shaperOld dummy
+scoreboard objectives add duneOld dummy
+scoreboard objectives add snoutOld dummy
+scoreboard objectives add silenceOld dummy
+
+scoreboard objectives add hostOld dummy
+scoreboard objectives add wardOld dummy
+scoreboard objectives add vitalOld dummy
+scoreboard objectives add spireOld dummy
+
+scoreboard objectives add wayfinderOld dummy
+scoreboard objectives add wildOld dummy
+scoreboard objectives add eyeOld dummy
+scoreboard objectives add sentryOld dummy
+
+scoreboard objectives add raiserOld dummy
+scoreboard objectives add strayOld dummy
+scoreboard objectives add echoOld dummy
+scoreboard objectives add stormOld dummy
+
+scoreboard objectives add coastOld dummy
+scoreboard objectives add tideOld dummy
+
+scoreboard objectives add ravineOld dummy
+scoreboard objectives add ribOld dummy
+
+scoreboard objectives add vexOld dummy
 
 
 
@@ -87,12 +145,17 @@ scoreboard objectives add progressDune dummy
 scoreboard objectives add progressSnout dummy
 scoreboard objectives add progressSilence dummy
 
+scoreboard objectives add progressVital dummy
 scoreboard objectives add progressWard dummy
 scoreboard objectives add progressSpire dummy
 
 scoreboard objectives add progressWild dummy
 scoreboard objectives add progressEye dummy
 scoreboard objectives add progressSentry dummy
+
+scoreboard objectives add progressStray dummy
+scoreboard objectives add progressEcho dummy
+scoreboard objectives add progressStorm dummy
 
 scoreboard objectives add progressRib dummy
 scoreboard objectives add progressVex dummy
