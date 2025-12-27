@@ -30,6 +30,10 @@ execute as @a[predicate=trimabilities:not_sneaking,scores={sneakTimer=5..}] run 
 
 
 
+clear @a elytra
+clear @a potion
+clear @a splash_potion
+clear @a totem_of_undying
 
 
 
