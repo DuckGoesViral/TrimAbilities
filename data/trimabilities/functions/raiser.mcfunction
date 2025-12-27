@@ -18,32 +18,32 @@ execute as @a[tag=raiser] run scoreboard players set @s frankensteinKills 0
 # NOTE: Since the scoreboards already add +1 score for everything, remove 1 score from any bonus souls added.
 
 # Handle wither scoreboard (+10 for each kill)
-execute as @a[tag=raiser] run scoreboard players operation @s frankensteinWitherKills *= @a 9
+execute as @a[tag=raiser] run scoreboard players operation @s frankensteinWitherKills *= 9 constants
 execute as @a[tag=raiser] run scoreboard players operation @s frankensteinScore += @s frankensteinWitherKills
 execute as @a[tag=raiser] run scoreboard players set @s frankensteinWitherKills 0
 
 # Handle ender draon scoreboard (+25 for each kill)
-execute as @a[tag=raiser] run scoreboard players operation @s frankensteinDragonKills *= @a 24
+execute as @a[tag=raiser] run scoreboard players operation @s frankensteinDragonKills *= 24 constants
 execute as @a[tag=raiser] run scoreboard players operation @s frankensteinScore += @s frankensteinDragonKills
 execute as @a[tag=raiser] run scoreboard players set @s frankensteinDragonKills 0
 
 # Handle elder guardian scoreboard (+5 for each kill)
-execute as @a[tag=raiser] run scoreboard players operation @s frankensteinElderKills *= @a 4
+execute as @a[tag=raiser] run scoreboard players operation @s frankensteinElderKills *= 4 constants
 execute as @a[tag=raiser] run scoreboard players operation @s frankensteinScore += @s frankensteinElderKills
 execute as @a[tag=raiser] run scoreboard players set @s frankensteinElderKills 0
 
 # Handle warden scoreboard (+5 for each kill)
-execute as @a[tag=raiser] run scoreboard players operation @s frankensteinWardenKills *= @a 4
+execute as @a[tag=raiser] run scoreboard players operation @s frankensteinWardenKills *= 4 constants
 execute as @a[tag=raiser] run scoreboard players operation @s frankensteinScore += @s frankensteinWardenKills
 execute as @a[tag=raiser] run scoreboard players set @s frankensteinWardenKills 0
 
 # Handle ravager scoreboard (+3 for each kill)
-execute as @a[tag=raiser] run scoreboard players operation @s frankensteinRavagerKills *= @a 2
+execute as @a[tag=raiser] run scoreboard players operation @s frankensteinRavagerKills *= 2 constants
 execute as @a[tag=raiser] run scoreboard players operation @s frankensteinScore += @s frankensteinRavagerKills
 execute as @a[tag=raiser] run scoreboard players set @s frankensteinRavagerKills 0
 
 # Handle piglin brute scoreboard (+3 for each kill)
-execute as @a[tag=raiser] run scoreboard players operation @s frankensteinPiglinBruteKills *= @a 2
+execute as @a[tag=raiser] run scoreboard players operation @s frankensteinPiglinBruteKills *= 2 constants
 execute as @a[tag=raiser] run scoreboard players operation @s frankensteinScore += @s frankensteinPiglinBruteKills
 execute as @a[tag=raiser] run scoreboard players set @s frankensteinPiglinBruteKills 0
 

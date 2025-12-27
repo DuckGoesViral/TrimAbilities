@@ -199,12 +199,14 @@ execute if entity @a[tag=nospire] as @a[tag=nospire] run function trimabilities:
 #Archer
 
 #NoWayfinder
-execute as @a[tag=wayfinder,nbt=!{Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:wayfinder"}}}]}] run tag @s add nowayfinder
-execute as @a[tag=wayfinder,nbt=!{Inventory:[{Slot: 102b,tag:{Trim:{pattern:"minecraft:wayfinder"}}}]}] run tag @s add nowayfinder
-execute as @a[tag=wayfinder,nbt=!{Inventory:[{Slot: 101b,tag:{Trim:{pattern:"minecraft:wayfinder"}}}]}] run tag @s add nowayfinder
-execute as @a[tag=wayfinder,nbt=!{Inventory:[{Slot: 100b,tag:{Trim:{pattern:"minecraft:wayfinder"}}}]}] run tag @s add nowayfinder
 
-execute if entity @a[tag=nowayfinder] as @a[tag=nowayfinder] run function trimabilities:nowayfinder
+
+#execute as @a[tag=wayfinder,nbt=!{Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:wayfinder"}}}]}] run tag @s add nowayfinder
+#execute as @a[tag=wayfinder,nbt=!{Inventory:[{Slot: 102b,tag:{Trim:{pattern:"minecraft:wayfinder"}}}]}] run tag @s add nowayfinder
+#execute as @a[tag=wayfinder,nbt=!{Inventory:[{Slot: 101b,tag:{Trim:{pattern:"minecraft:wayfinder"}}}]}] run tag @s add nowayfinder
+#execute as @a[tag=wayfinder,nbt=!{Inventory:[{Slot: 100b,tag:{Trim:{pattern:"minecraft:wayfinder"}}}]}] run tag @s add nowayfinder
+#
+#execute if entity @a[tag=nowayfinder] as @a[tag=nowayfinder] run function trimabilities:nowayfinder
 
 #NoWild
 execute as @a[tag=wild,nbt=!{Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:wild"}}}]}] run tag @s add nowild
@@ -234,29 +236,32 @@ execute if entity @a[tag=nosentry] as @a[tag=nosentry] run function trimabilitie
 #Necomancer
 
 #NoRaiser
-execute as @a[tag=raiser,nbt=!{Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:raiser"}}}]}] run tag @s add noraiser
-execute as @a[tag=raiser,nbt=!{Inventory:[{Slot: 102b,tag:{Trim:{pattern:"minecraft:raiser"}}}]}] run tag @s add noraiser
-execute as @a[tag=raiser,nbt=!{Inventory:[{Slot: 101b,tag:{Trim:{pattern:"minecraft:raiser"}}}]}] run tag @s add noraiser
-execute as @a[tag=raiser,nbt=!{Inventory:[{Slot: 100b,tag:{Trim:{pattern:"minecraft:raiser"}}}]}] run tag @s add noraiser
-
-execute if entity @a[tag=noraiser] as @a[tag=noraiser] run function trimabilities:noraiser
+#execute as @a[tag=raiser,nbt=!{Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:raiser"}}}]}] run tag @s add noraiser
+#execute as @a[tag=raiser,nbt=!{Inventory:[{Slot: 102b,tag:{Trim:{pattern:"minecraft:raiser"}}}]}] run tag @s add noraiser
+#execute as @a[tag=raiser,nbt=!{Inventory:[{Slot: 101b,tag:{Trim:{pattern:"minecraft:raiser"}}}]}] run tag @s add noraiser
+#execute as @a[tag=raiser,nbt=!{Inventory:[{Slot: 100b,tag:{Trim:{pattern:"minecraft:raiser"}}}]}] run tag @s add noraiser
+#
+#execute if entity @a[tag=noraiser] as @a[tag=noraiser] run function trimabilities:noraiser
 
 #NoRib
-execute as @a[tag=rib,nbt=!{Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:rib"}}}]}] run tag @s add norib
-execute as @a[tag=rib,nbt=!{Inventory:[{Slot: 102b,tag:{Trim:{pattern:"minecraft:rib"}}}]}] run tag @s add norib
-execute as @a[tag=rib,nbt=!{Inventory:[{Slot: 101b,tag:{Trim:{pattern:"minecraft:rib"}}}]}] run tag @s add norib
-execute as @a[tag=rib,nbt=!{Inventory:[{Slot: 100b,tag:{Trim:{pattern:"minecraft:rib"}}}]}] run tag @s add norib
+#execute as @a[tag=rib,nbt=!{Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:rib"}}}]}] run tag @s add norib
+#execute as @a[tag=rib,nbt=!{Inventory:[{Slot: 102b,tag:{Trim:{pattern:"minecraft:rib"}}}]}] run tag @s add norib
+#execute as @a[tag=rib,nbt=!{Inventory:[{Slot: 101b,tag:{Trim:{pattern:"minecraft:rib"}}}]}] run tag @s add norib
+#execute as @a[tag=rib,nbt=!{Inventory:[{Slot: 100b,tag:{Trim:{pattern:"minecraft:rib"}}}]}] run tag @s add norib
+#
+#execute if entity @a[tag=norib] as @a[tag=norib] run function trimabilities:norib
+#
+##NoVex
+#execute as @a[tag=vex,nbt=!{Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:vex"}}}]}] run tag @s add novex
+#execute as @a[tag=vex,nbt=!{Inventory:[{Slot: 102b,tag:{Trim:{pattern:"minecraft:vex"}}}]}] run tag @s add novex
+#execute as @a[tag=vex,nbt=!{Inventory:[{Slot: 101b,tag:{Trim:{pattern:"minecraft:vex"}}}]}] run tag @s add novex
+#execute as @a[tag=vex,nbt=!{Inventory:[{Slot: 100b,tag:{Trim:{pattern:"minecraft:vex"}}}]}] run tag @s add novex
+#
+#execute if entity @a[tag=novex] as @a[tag=novex] run function trimabilities:novex
 
-execute if entity @a[tag=norib] as @a[tag=norib] run function trimabilities:norib
 
-#NoVex
-execute as @a[tag=vex,nbt=!{Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:vex"}}}]}] run tag @s add novex
-execute as @a[tag=vex,nbt=!{Inventory:[{Slot: 102b,tag:{Trim:{pattern:"minecraft:vex"}}}]}] run tag @s add novex
-execute as @a[tag=vex,nbt=!{Inventory:[{Slot: 101b,tag:{Trim:{pattern:"minecraft:vex"}}}]}] run tag @s add novex
-execute as @a[tag=vex,nbt=!{Inventory:[{Slot: 100b,tag:{Trim:{pattern:"minecraft:vex"}}}]}] run tag @s add novex
 
-execute if entity @a[tag=novex] as @a[tag=novex] run function trimabilities:novex
-
+execute at @e[type=item_display,tag=damageOrb] as @a[distance=..2,tag=!damageOrbImmunity] run damage @s 1 magic
 
 
 
