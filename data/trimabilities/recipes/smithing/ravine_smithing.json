@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:smithing_trim",
+  "base": { "tag": "minecraft:trimmable_armor" },
+  "addition": { "tag": "minecraft:trim_materials" },
+  "template": { "item": "minecraft:structure_block" }
+}

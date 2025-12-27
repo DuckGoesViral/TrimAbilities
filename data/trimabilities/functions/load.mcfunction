@@ -231,7 +231,6 @@ scoreboard players set @a sneakTimer 0
 
 scoreboard players set @a NRcooldownTimer 0
 scoreboard players set @a NRcooldownTimer2 0
-scoreboard players set @a zombieSuccess 0
 
 scoreboard players set @a NBcooldownTimer 0
 scoreboard players set @a NBcooldownTimer2 0
@@ -280,3 +279,60 @@ scoreboard objectives add vexSuccess dummy
 
 scoreboard objectives add NVcooldownTimer dummy
 scoreboard objectives add NVcooldownTimer2 dummy
+
+
+# Create Constant scoreboard objectives for operations.
+scoreboard objectives add 1 dummy
+scoreboard players set @a 1 1
+scoreboard objectives add 2 dummy
+scoreboard players set @a 2 2
+scoreboard objectives add 3 dummy
+scoreboard players set @a 3 3
+scoreboard objectives add 4 dummy
+scoreboard players set @a 4 4
+scoreboard objectives add 5 dummy
+scoreboard players set @a 5 5
+scoreboard objectives add 6 dummy
+scoreboard players set @a 6 6
+scoreboard objectives add 7 dummy
+scoreboard players set @a 7 7
+scoreboard objectives add 8 dummy
+scoreboard players set @a 8 8
+scoreboard objectives add 9 dummy
+scoreboard players set @a 9 9
+scoreboard objectives add 10 dummy
+scoreboard players set @a 10 10
+scoreboard objectives add 20 dummy
+scoreboard players set @a 20 20
+scoreboard objectives add 24 dummy
+scoreboard players set @a 24 24
+scoreboard objectives add 40 dummy
+scoreboard players set @a 40 40
+scoreboard objectives add 100 dummy
+scoreboard players set @a 100 100
+
+
+# Frankenstein score counter and kill counts. Anything outside normal mob kills will be counted as extra kills for the frankenstein score.
+
+scoreboard objectives add summonSuccess dummy
+
+scoreboard objectives add frankensteinScore dummy
+# 1 score per kill
+scoreboard objectives add frankensteinKills minecraft.custom:minecraft.mob_kills
+# 10 score per kill
+scoreboard objectives add frankensteinWitherKills minecraft.killed:minecraft.wither
+# 25 score per kill
+scoreboard objectives add frankensteinDragonKills minecraft.killed:minecraft.ender_dragon
+# 5 score per kill
+scoreboard objectives add frankensteinElderKills minecraft.killed:minecraft.elder_guardian
+# 5 score per kill
+scoreboard objectives add frankensteinWardenKills minecraft.killed:minecraft.warden
+# 3 score per kill
+scoreboard objectives add frankensteinRavagerKills minecraft.killed:minecraft.ravager
+# 3 score per kill
+scoreboard objectives add frankensteinPiglinBruteKills minecraft.killed:minecraft.piglin_brute
+# 2 score per kill
+scoreboard objectives add frankensteinWitchKills minecraft.killed:minecraft.witch
+
+# Direction scoreboard for the necromancer's summon check.
+scoreboard objectives add playerFacing dummy
