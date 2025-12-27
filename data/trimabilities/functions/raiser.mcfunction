@@ -2,6 +2,23 @@ execute as @a[scores={mcLvl=1..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:
 execute if entity @a[tag=raiser,tag=!unlockedRaiser] as @a[tag=raiser,tag=!unlockedRaiser] at @s run function trimabilities:unlocked/raiser
 
 
+execute if score @s raiserOld matches 4 run scoreboard players remove @s manaMax 50
+execute if score @s raiserOld matches 3 run scoreboard players remove @s manaMax 45
+execute if score @s raiserOld matches 2 run scoreboard players remove @s manaMax 30
+execute if score @s raiserOld matches 1 run scoreboard players remove @s manaMax 15
+
+execute if score @s raiser matches 0 run tag @s remove raiser
+
+execute if score @s raiser matches 1 run scoreboard players add @s manaMax 15
+execute if score @s raiser matches 2 run scoreboard players add @s manaMax 30
+execute if score @s raiser matches 3 run scoreboard players add @s manaMax 45
+
+execute if score @s raiser matches 4 if entity @s[tag=!unlockedRaiser] at @s run function trimabilities:unlocked/raiser
+
+execute if score @s raiser matches 4 run scoreboard players add @s manaMax 50
+
+scoreboard players operation @s raiserOld = @s raiser
+
 
 
 #execute as @a[scores={sneakTrigger=2..},tag=NRcooldownTimer,tag=raiser] run scoreboard players operation @s NRcooldownCurrent = @s NRcooldownMax
@@ -92,16 +109,16 @@ execute as @a[tag=raiser] run scoreboard players set @s frankensteinWitchKills 0
 
 #effect give @e[type=!player,tag=necroSummon] instant_health 1 1 true
 
-execute as @a[scores={sneakTrigger=2..,zombieSuccess=1},tag=!NRcooldownTimer,tag=raiser] run scoreboard players set @s NRcooldownTimer 0
-execute as @a[scores={sneakTrigger=2..,zombieSuccess=1},tag=!NRcooldownTimer,tag=raiser] run scoreboard players set @s NRcooldownTimer2 0
-execute as @a[scores={sneakTrigger=2..,zombieSuccess=1},tag=!NRcooldownTimer,tag=raiser] run tag @s add NRcooldownTimer
-execute as @a[scores={sneakTrigger=2..,zombieSuccess=1},tag=raiser] run scoreboard players set @s zombieSuccess 0
-execute as @a[scores={sneakTrigger=2..}] run scoreboard players set @s sneakTrigger 0
-
-
-execute as @a[tag=NRcooldownTimer,scores={NRcooldownTimer=..19,NRcooldownTimer2=..59}] run scoreboard players add @s NRcooldownTimer 1
-execute as @a[tag=NRcooldownTimer,scores={NRcooldownTimer=20}] run scoreboard players add @s NRcooldownTimer2 1
-execute as @a[tag=NRcooldownTimer,scores={NRcooldownTimer=20}] run scoreboard players set @s NRcooldownTimer 0
-execute as @a[tag=NRcooldownTimer,scores={NRcooldownTimer2=60},tag=raiser] run tag @s remove NRcooldownTimer
+#execute as @a[scores={sneakTrigger=2..,zombieSuccess=1},tag=!NRcooldownTimer,tag=raiser] run scoreboard players set @s NRcooldownTimer 0
+#execute as @a[scores={sneakTrigger=2..,zombieSuccess=1},tag=!NRcooldownTimer,tag=raiser] run scoreboard players set @s NRcooldownTimer2 0
+#execute as @a[scores={sneakTrigger=2..,zombieSuccess=1},tag=!NRcooldownTimer,tag=raiser] run tag @s add NRcooldownTimer
+#execute as @a[scores={sneakTrigger=2..,zombieSuccess=1},tag=raiser] run scoreboard players set @s zombieSuccess 0
+#execute as @a[scores={sneakTrigger=2..}] run scoreboard players set @s sneakTrigger 0
+#
+#
+#execute as @a[tag=NRcooldownTimer,scores={NRcooldownTimer=..19,NRcooldownTimer2=..59}] run scoreboard players add @s NRcooldownTimer 1
+#execute as @a[tag=NRcooldownTimer,scores={NRcooldownTimer=20}] run scoreboard players add @s NRcooldownTimer2 1
+#execute as @a[tag=NRcooldownTimer,scores={NRcooldownTimer=20}] run scoreboard players set @s NRcooldownTimer 0
+#execute as @a[tag=NRcooldownTimer,scores={NRcooldownTimer2=60},tag=raiser] run tag @s remove NRcooldownTimer
 
 

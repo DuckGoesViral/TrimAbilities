@@ -30,10 +30,10 @@ execute as @a[predicate=trimabilities:not_sneaking,scores={sneakTimer=5..}] run 
 
 
 
-clear @a elytra
-clear @a potion
-clear @a splash_potion
-clear @a totem_of_undying
+clear @a[tag=!banTest] elytra
+clear @a[tag=!banTest] potion
+clear @a[tag=!banTest] splash_potion
+clear @a[tag=!banTest] totem_of_undying
 
 
 

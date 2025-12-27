@@ -46,21 +46,7 @@ execute if entity @a[scores={progressEye=3..},nbt={Inventory:[{Slot: 103b,tag:{T
 execute if entity @a[scores={progressSentry=3..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:sentry"}}},{Slot: 102b,tag:{Trim:{pattern:"minecraft:sentry"}}},{Slot: 101b,tag:{Trim:{pattern:"minecraft:sentry"}}},{Slot: 100b,tag:{Trim:{pattern:"minecraft:sentry"}}}]}] run function trimabilities:sentry
 
 
-#Necromancer
 
-#Raiser
-#haste but weakness
-execute if entity @a[scores={mcLvl=1..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:raiser"}}},{Slot: 102b,tag:{Trim:{pattern:"minecraft:raiser"}}},{Slot: 101b,tag:{Trim:{pattern:"minecraft:raiser"}}},{Slot: 100b,tag:{Trim:{pattern:"minecraft:raiser"}}}]}] run function trimabilities:raiser
-
-
-#Rib
-#fire res, netherite bonusus
-execute if entity @a[scores={progressRib=3..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:rib"}}},{Slot: 102b,tag:{Trim:{pattern:"minecraft:rib"}}},{Slot: 101b,tag:{Trim:{pattern:"minecraft:rib"}}},{Slot: 100b,tag:{Trim:{pattern:"minecraft:rib"}}}]}] run function trimabilities:rib
-
-
-#Vex
-#heal - no debufs
-execute if entity @a[scores={progressVex=3..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:vex"}}},{Slot: 102b,tag:{Trim:{pattern:"minecraft:vex"}}},{Slot: 101b,tag:{Trim:{pattern:"minecraft:vex"}}},{Slot: 100b,tag:{Trim:{pattern:"minecraft:vex"}}}]}] run function trimabilities:vex
 
 
 scoreboard players add timer mana 1
