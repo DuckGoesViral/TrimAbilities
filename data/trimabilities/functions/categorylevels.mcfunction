@@ -114,6 +114,48 @@ execute as @a[scores={archerLevel=5000..},tag=aLvl5go,tag=!wSentryGive] run tag 
 execute as @a[scores={archerLevel=5000..},tag=aLvl5go] at @s run function trimabilities:clvl/a5
 execute as @a[tag=aLvl5go] run tag @s remove aLvl5go
 
+
+
+#Mage Level
+execute as @a[scores={mageLevel=0..},tag=!mLvl0,tag=!mLvl1,tag=!mLvl2,tag=!mLvl3,tag=!mLvl4,tag=!mLvl5] run tag @s add mLvl0
+
+execute as @a[scores={mageLevel=100..},tag=!mLvl1,tag=!mLvl2,tag=!mLvl3,tag=!mLvl4,tag=!mLvl5] run tag @s remove mLvl0
+execute as @a[scores={mageLevel=100..},tag=!mLvl1,tag=!mLvl2,tag=!mLvl3,tag=!mLvl4,tag=!mLvl5] run tag @s add mLvl1go
+execute as @a[scores={mageLevel=100..},tag=!mLvl1,tag=!mLvl2,tag=!mLvl3,tag=!mLvl4,tag=!mLvl5] run tag @s add mLvl1
+execute as @a[scores={mageLevel=100..},tag=mLvl1go] at @s run function trimabilities:clvl/m1
+execute as @a[tag=mLvl1go] run tag @s remove mLvl1go
+
+execute as @a[scores={mageLevel=250..},tag=!mLvl0,tag=!mLvl2,tag=!mLvl3,tag=!mLvl4,tag=!mLvl5] run tag @s remove mLvl1
+execute as @a[scores={mageLevel=250..},tag=!mLvl0,tag=!mLvl2,tag=!mLvl3,tag=!mLvl4,tag=!mLvl5] run tag @s add mLvl2go
+execute as @a[scores={mageLevel=250..},tag=!mLvl0,tag=!mLvl2,tag=!mLvl3,tag=!mLvl4,tag=!mLvl5] run tag @s add mLvl2
+execute as @a[scores={mageLevel=250..},tag=mLvl2go,tag=!wStrayGive] run scoreboard players add @s progressStray 1
+execute as @a[scores={mageLevel=250..},tag=mLvl2go,tag=!wStrayGive] run tag @s add wStrayGive
+execute as @a[scores={mageLevel=250..},tag=mLvl2go] at @s run function trimabilities:clvl/m2
+execute as @a[tag=mLvl2go] run tag @s remove mLvl2go
+
+execute as @a[scores={mageLevel=1000..},tag=!mLvl0,tag=!mLvl1,tag=!mLvl3,tag=!mLvl4,tag=!mLvl5] run tag @s remove mLvl2
+execute as @a[scores={mageLevel=1000..},tag=!mLvl0,tag=!mLvl1,tag=!mLvl3,tag=!mLvl4,tag=!mLvl5] run tag @s add mLvl3go
+execute as @a[scores={mageLevel=1000..},tag=!mLvl0,tag=!mLvl1,tag=!mLvl3,tag=!mLvl4,tag=!mLvl5] run tag @s add mLvl3
+execute as @a[scores={mageLevel=1000..},tag=mLvl3go] at @s run function trimabilities:clvl/m3
+execute as @a[tag=mLvl3go] run tag @s remove mLvl3go
+
+execute as @a[scores={mageLevel=2500..},tag=!mLvl0,tag=!mLvl1,tag=!mLvl2,tag=!mLvl4,tag=!mLvl5] run tag @s remove mLvl3
+execute as @a[scores={mageLevel=2500..},tag=!mLvl0,tag=!mLvl1,tag=!mLvl2,tag=!mLvl4,tag=!mLvl5] run tag @s add mLvl4go
+execute as @a[scores={mageLevel=2500..},tag=!mLvl0,tag=!mLvl1,tag=!mLvl2,tag=!mLvl4,tag=!mLvl5] run tag @s add mLvl4
+execute as @a[scores={mageLevel=2500..},tag=mLvl4go,tag=!wEchoGive] run scoreboard players add @s progressEcho 1
+execute as @a[scores={mageLevel=2500..},tag=mLvl4go,tag=!wEchoGive] run tag @s add wEchoGive
+execute as @a[scores={mageLevel=2500..},tag=mLvl4go] at @s run function trimabilities:clvl/m4
+execute as @a[tag=mLvl4go] run tag @s remove mLvl4go
+
+execute as @a[scores={mageLevel=5000..},tag=!mLvl0,tag=!mLvl1,tag=!mLvl2,tag=!mLvl3,tag=!mLvl5] run tag @s remove mLvl4
+execute as @a[scores={mageLevel=5000..},tag=!mLvl0,tag=!mLvl1,tag=!mLvl2,tag=!mLvl3,tag=!mLvl5] run tag @s add mLvl5go
+execute as @a[scores={mageLevel=5000..},tag=!mLvl0,tag=!mLvl1,tag=!mLvl2,tag=!mLvl3,tag=!mLvl5] run tag @s add mLvl5
+execute as @a[scores={mageLevel=5000..},tag=mLvl5go,tag=!wStormGive] run scoreboard players add @s progressStorm 1
+execute as @a[scores={mageLevel=5000..},tag=mLvl5go,tag=!wStormGive] run tag @s add wStormGive
+execute as @a[scores={mageLevel=5000..},tag=mLvl5go] at @s run function trimabilities:clvl/m5
+execute as @a[tag=mLvl5go] run tag @s remove mLvl5go
+
+
 #Necromancer Level
 #execute as @a[scores={necromancerLevel=0..},tag=!nLvl0,tag=!nLvl1,tag=!nLvl2,tag=!nLvl3,tag=!nLvl4,tag=!nLvl5] run tag @s add nLvl0
 #
