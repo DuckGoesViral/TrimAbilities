@@ -1,0 +1,18 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "block/jigsaw_top",
+    "north": "block/jigsaw_side",
+    "south": "block/jigsaw_lock",
+    "east": "block/jigsaw_side",
+    "west": "block/jigsaw_side",
+    "up": "block/jigsaw_top",
+    "down": "block/jigsaw_bottom"
+  },
+  "overrides": [
+    {
+      "predicate": { "custom_model_data": 1 },
+      "model": "minecraft:item/echo_trim"
+    }
+  ]
+}

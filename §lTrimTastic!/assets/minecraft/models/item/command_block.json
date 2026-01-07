@@ -1,0 +1,18 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "block/command_block",
+    "down": "block/command_block_side",
+    "up": "block/command_block_side",
+    "north": "block/command_block_front",
+    "east": "block/command_block_side",
+    "south": "block/command_block_back",
+    "west": "block/command_block_side"
+  },
+  "overrides": [
+    {
+      "predicate": { "custom_model_data": 1 },
+      "model": "minecraft:item/storm_trim"
+    }
+  ]
+}

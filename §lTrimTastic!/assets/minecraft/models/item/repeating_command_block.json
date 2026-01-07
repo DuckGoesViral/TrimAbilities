@@ -1,0 +1,18 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "block/repeating_command_block",
+    "down": "block/repeating_command_block_side",
+    "up": "block/repeating_command_block_side",
+    "north": "block/repeating_command_block_front",
+    "east": "block/repeating_command_block_side",
+    "south": "block/repeating_command_block_back",
+    "west": "block/repeating_command_block_side"
+  },
+  "overrides": [
+    {
+      "predicate": { "custom_model_data": 1 },
+      "model": "minecraft:item/stray_trim"
+    }
+  ]
+}
