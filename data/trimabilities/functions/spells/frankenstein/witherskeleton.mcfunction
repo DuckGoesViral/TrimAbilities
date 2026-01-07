@@ -38,31 +38,34 @@ execute as @a[scores={summonSuccess=0},tag=raiser,tag=!northSpawn,tag=!eastSpawn
 
 # Spawn the skeleton in front of the player if that is the block available.
 execute as @a[tag=raiser,tag=southSpawn,scores={summonSuccess=0},tag=3blocknorth] at @s store success score @s summonSuccess unless score @s frankensteinScore matches ..19 run summon minecraft:wither_skeleton ~ ~ ~1 {Tags:["necroSummon"],DeathLootTable:"minecraft:empty"}
-execute as @a[tag=raiser,tag=southSpawn,scores={summonSuccess=1}] run tag @s remove southSpawn
 execute as @a[tag=raiser,tag=southSpawn,scores={summonSuccess=1}] run tag @s remove 3blocksouth
-execute as @a[tag=raiser,tag=southSpawn,scores={summonSuccess=1}] run scoreboard players operation @s frankensteinScore -= @s 20
+execute as @a[tag=raiser,tag=southSpawn,scores={summonSuccess=1}] run scoreboard players remove @s frankensteinScore 50
+execute as @a[tag=raiser,tag=southSpawn,scores={summonSuccess=1}] run tag @s remove southSpawn
 
 
 # Spawn the skeleton to the left of the player if that is the block available. 
 execute as @a[tag=raiser,tag=eastSpawn,scores={summonSuccess=0},tag=3blockeast] at @s store success score @s summonSuccess unless score @s frankensteinScore matches ..19 run summon minecraft:wither_skeleton ~1 ~ ~ {Tags:["necroSummon"],DeathLootTable:"minecraft:empty"}
-execute as @a[tag=raiser,tag=eastSpawn,scores={summonSuccess=1}] run tag @s remove eastSpawn
 execute as @a[tag=raiser,tag=eastSpawn,scores={summonSuccess=1}] run tag @s remove 3blockeast
-execute as @a[tag=raiser,tag=eastSpawn,scores={summonSuccess=1}] run scoreboard players operation @s frankensteinScore -= @s 20
+execute as @a[tag=raiser,tag=eastSpawn,scores={summonSuccess=1}] run scoreboard players remove @s frankensteinScore 50
+execute as @a[tag=raiser,tag=eastSpawn,scores={summonSuccess=1}] run tag @s remove eastSpawn
 
 
 # Spawn the skeleton to the right of the player if that is the block available. 
 execute as @a[tag=raiser,tag=westSpawn,scores={summonSuccess=0},tag=3blockwest] at @s store success score @s summonSuccess unless score @s frankensteinScore matches ..19 run summon minecraft:wither_skeleton ~-1 ~ ~ {Tags:["necroSummon"],DeathLootTable:"minecraft:empty"}
-execute as @a[tag=raiser,tag=westSpawn,scores={summonSuccess=1}] run tag @s remove westSpawn
 execute as @a[tag=raiser,tag=westSpawn,scores={summonSuccess=1}] run tag @s remove 3blockwest
-execute as @a[tag=raiser,tag=westSpawn,scores={summonSuccess=1}] run scoreboard players operation @s frankensteinScore -= @s 20
+execute as @a[tag=raiser,tag=westSpawn,scores={summonSuccess=1}] run scoreboard players remove @s frankensteinScore 50
+execute as @a[tag=raiser,tag=westSpawn,scores={summonSuccess=1}] run tag @s remove westSpawn
 
 
 # Spawn the skeleton behind the player if that is the block available. 
 execute as @a[tag=raiser,tag=northSpawn,scores={summonSuccess=0},tag=3blocknorth] at @s store success score @s summonSuccess unless score @s frankensteinScore matches ..19 run summon minecraft:wither_skeleton ~ ~ ~-1 {Tags:["necroSummon"],DeathLootTable:"minecraft:empty"}
-execute as @a[tag=raiser,tag=northSpawn,scores={summonSuccess=1}] run tag @s remove northSpawn
 execute as @a[tag=raiser,tag=northSpawn,scores={summonSuccess=1}] run tag @s remove 3blocksouth
-execute as @a[tag=raiser,tag=northSpawn,scores={summonSuccess=1}] run scoreboard players operation @s frankensteinScore -= @s 20
+execute as @a[tag=raiser,tag=northSpawn,scores={summonSuccess=1}] run execute as @a[tag=raiser,tag=westSpawn,scores={summonSuccess=1}] run scoreboard players remove @s frankensteinScore 50
+execute as @a[tag=raiser,tag=northSpawn,scores={summonSuccess=1}] run tag @s remove northSpawn
+
 execute as @e[tag=necroSummon] run team join necromancer @s
 
 # Reset the summon success score to 0 regardless of successful summon.
 execute as @a[scores={summonSuccess=1}] run scoreboard players set @s summonSuccess 0
+
+execute at @s run particle minecraft:reverse_portal ~ ~1 ~ 0 0 0 1 15 normal @a[distance=..15]

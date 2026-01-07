@@ -1,6 +1,7 @@
-tag @s remove tank
-tag @s remove warrior
-tag @s remove archer
+tag @a remove tank
+tag @a remove warrior
+tag @a remove archer
+tag @a remove mage
 
 
 execute as @a[tag=shaper] run tag @s add warrior

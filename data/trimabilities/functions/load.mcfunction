@@ -10,6 +10,46 @@ function trimabilities:minecraftlevels
 function trimabilities:categorylevels
 function trimabilities:necroteam
 
+scoreboard objectives add trimShrine dummy
+execute unless score started trimShrine matches 1 run function trimabilities:shrine/find-y
+
+scoreboard objectives add buttonRecovery dummy
+scoreboard objectives add buttonRemove dummy
+
+
+scoreboard objectives add recoveryToggle dummy
+scoreboard objectives add Trim_Recovery_Toggle trigger
+execute unless score server recoveryToggle matches 0.. run scoreboard players set server recoveryToggle 1
+
+scoreboard objectives add recoveryDeath deathCount
+
+scoreboard objectives add recoveryTotal dummy
+
+scoreboard objectives add recoveryShaper dummy
+scoreboard objectives add recoveryDune dummy
+scoreboard objectives add recoverySnout dummy
+scoreboard objectives add recoverySilence dummy
+scoreboard objectives add recoveryHost dummy
+scoreboard objectives add recoveryVital dummy
+scoreboard objectives add recoveryWard dummy
+scoreboard objectives add recoverySpire dummy
+scoreboard objectives add recoveryWayfinder dummy
+scoreboard objectives add recoveryWild dummy
+scoreboard objectives add recoveryEye dummy
+scoreboard objectives add recoverySentry dummy
+scoreboard objectives add recoveryRaiser dummy
+scoreboard objectives add recoveryStray dummy
+scoreboard objectives add recoveryEcho dummy
+scoreboard objectives add recoveryStorm dummy
+scoreboard objectives add recoveryCoast dummy
+scoreboard objectives add recoveryTide dummy
+scoreboard objectives add recoveryRavine dummy
+scoreboard objectives add recoveryRib dummy
+scoreboard objectives add recoveryVex dummy
+
+
+
+
 scoreboard objectives add swamBlocks minecraft.custom:minecraft.swim_one_cm
 
 scoreboard objectives add isDead deathCount

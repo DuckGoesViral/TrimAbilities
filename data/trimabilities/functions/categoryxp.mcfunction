@@ -139,7 +139,7 @@ execute as @a[nbt={SelectedItem:{id:"minecraft:potion",tag:{Potion:"minecraft:wa
 execute as @a[nbt={SelectedItem:{id:"minecraft:potion",tag:{Potion:"minecraft:awkward"}}}] run tag @s add hydrated
 execute as @a[nbt={SelectedItem:{id:"minecraft:potion",tag:{Potion:"minecraft:mundane"}}}] run tag @s add hydrated
 execute as @a[nbt={SelectedItem:{id:"minecraft:potion",tag:{Potion:"minecraft:thick"}}}] run tag @s add hydrated
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:potion",tag:{Potion:"minecraft:water"}}},nbt=!{SelectedItem:{id:"minecraft:potion",tag:Potion:"minecraft:awkward"}}},nbt=!{SelectedItem:{id:"minecraft:potion",tag:{Potion:"minecraft:mundane"}}},nbt=!{SelectedItem:{id:"minecraft:potion",tag:Potion:"minecraft:thick"}}}] run tag @s remove hydrated
+execute as @a[nbt=!{SelectedItem:{id:"minecraft:potion",tag:{Potion:"minecraft:water"}}},nbt=!{SelectedItem:{id:"minecraft:potion",tag:{Potion:"minecraft:awkward"}}},nbt=!{SelectedItem:{id:"minecraft:potion",tag:{Potion:"minecraft:mundane"}}},nbt=!{SelectedItem:{id:"minecraft:potion",tag:{Potion:"minecraft:thick"}}}] run tag @s remove hydrated
 
 execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl0,tag=mage] run scoreboard players add @s mageLevel 0
 execute as @a[scores={drankPotion=1..},tag=!hydrated,tag=mcLvl0,tag=mage] run scoreboard players set @s xpDisplay 0

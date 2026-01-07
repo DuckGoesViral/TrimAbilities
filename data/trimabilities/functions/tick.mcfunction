@@ -30,16 +30,28 @@ execute as @a[predicate=trimabilities:not_sneaking,scores={sneakTimer=5..}] run 
 
 
 
-clear @a[tag=!banTest] elytra
-clear @a[tag=!banTest] potion
-clear @a[tag=!banTest] splash_potion
-clear @a[tag=!banTest] totem_of_undying
+#clear @a[tag=!banTest] elytra
+#clear @a[tag=!banTest] potion
+#clear @a[tag=!banTest] splash_potion
+#clear @a[tag=!banTest] totem_of_undying
 
 
 
 
+execute as @a[scores={recoveryDeath=1..}] run function trimabilities:recovery/trimrecovery
 
 
+
+execute if score placed trimShrine matches 1 run function trimabilities:shrine/display
+
+
+
+
+# ARCHER POWER STUFF
+scoreboard objectives add archerPower dummy
+
+
+execute as @a[tag=!wayfinder,nbt={SelectedItem:{id:"minecraft:bow",tag:{Tags:{trim:"wayfinder"}}}}] run item modify entity @s weapon.mainhand trimabilities:-1power
 
 
 

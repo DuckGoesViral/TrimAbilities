@@ -1,3 +1,5 @@
-execute if entity @a[tag=!placedRuins] unless score TrailRuins ruinsPlaced matches 4.. run function trimabilities:placetrailruins
+execute as @r[tag=!placedRuins] unless score TrailRuins ruinsPlaced matches 12.. run function trimabilities:placetrailruins
 
-schedule function trimabilities:starttrailruins 1s
+
+
+schedule function trimabilities:starttrailruins 1s replace

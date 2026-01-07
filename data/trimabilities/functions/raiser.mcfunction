@@ -12,10 +12,12 @@ execute if score @s raiser matches 0 run tag @s remove raiser
 execute if score @s raiser matches 1 run scoreboard players add @s manaMax 15
 execute if score @s raiser matches 2 run scoreboard players add @s manaMax 30
 execute if score @s raiser matches 3 run scoreboard players add @s manaMax 45
+execute if score @s raiser matches ..3 run team leave @s
 
 execute if score @s raiser matches 4 if entity @s[tag=!unlockedRaiser] at @s run function trimabilities:unlocked/raiser
 
 execute if score @s raiser matches 4 run scoreboard players add @s manaMax 50
+execute if score @s raiser matches 4 run team join necromancer @s
 
 scoreboard players operation @s raiserOld = @s raiser
 

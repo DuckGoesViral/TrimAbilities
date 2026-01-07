@@ -31,12 +31,13 @@ execute as @a[tag=aLvl3] run scoreboard players set @s aLvl 3
 execute as @a[tag=aLvl4] run scoreboard players set @s aLvl 4
 execute as @a[tag=aLvl5] run scoreboard players set @s aLvl 5
 
-execute as @a[tag=nLvl0] run scoreboard players set @s nLvl 0
-execute as @a[tag=nLvl1] run scoreboard players set @s nLvl 1
-execute as @a[tag=nLvl2] run scoreboard players set @s nLvl 2
-execute as @a[tag=nLvl3] run scoreboard players set @s nLvl 3
-execute as @a[tag=nLvl4] run scoreboard players set @s nLvl 4
-execute as @a[tag=nLvl5] run scoreboard players set @s nLvl 5
+execute as @a[tag=mLvl0] run scoreboard players set @s mLvl 0
+execute as @a[tag=mLvl1] run scoreboard players set @s mLvl 1
+execute as @a[tag=mLvl2] run scoreboard players set @s mLvl 2
+execute as @a[tag=mLvl3] run scoreboard players set @s mLvl 3
+execute as @a[tag=mLvl4] run scoreboard players set @s mLvl 4
+execute as @a[tag=mLvl5] run scoreboard players set @s mLvl 5
 
+scoreboard objectives add mLvl dummy
 
 schedule function trimabilities:scoreboardlevels 10s replace

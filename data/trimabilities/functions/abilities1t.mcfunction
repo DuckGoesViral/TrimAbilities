@@ -50,7 +50,7 @@ execute if entity @a[scores={progressSentry=3..},nbt={Inventory:[{Slot: 103b,tag
 
 
 scoreboard players add timer mana 1
-execute if score timer mana matches 100.. as @a[tag=mage] run function trimabilities:manaregen
+execute if score timer mana matches 100.. as @a[tag=mage] unless score @s mana >= @s manaMax run function trimabilities:manaregen
 execute if score timer mana matches 100.. as @a[tag=mage] if score @s mana > @s manaMax run scoreboard players operation @s mana = @s manaMax
 execute if score timer mana matches 100.. run scoreboard players set timer mana 0
 
@@ -75,13 +75,17 @@ execute as @a[scores={8259-2315=1..}] run scoreboard players reset 8259-2315
 
 scoreboard objectives add orbDeath dummy
 execute as @e[type=item_display,tag=damageOrb] run scoreboard players add @s orbDeath 1
+execute as @e[type=armor_stand,tag=damageOrbMarker] run scoreboard players add @s orbDeath 1
 execute as @a[tag=damageOrbImmunity] run scoreboard players add @s orbDeath 1
 
+execute at @e[type=item_display,tag=damageOrb,scores={orbDeath=600..}] run particle minecraft:poof ~ ~-.25 ~ .1 .1 .1 .1 15 normal @a
 execute as @e[type=item_display,tag=damageOrb,scores={orbDeath=600..}] run kill @s
+execute as @e[type=armor_stand,tag=damageOrbMarker,scores={orbDeath=600..}] run kill @s
 execute as @a[tag=damageOrbImmunity,scores={orbDeath=600..}] run tag @s remove damageOrbImmunity
+execute as @a[scores={orbDeath=600..}] run scoreboard players reset @s orbDeath
 
 
 
-
-#execute as @e[type=item_display,tag=damageOrb] at @s run tp ^ ^ ^-.1
-
+execute as @e[type=armor_stand,tag=damageOrbMarker] at @s run tp ^ ^ ^-.025
+execute as @e[type=item_display,tag=damageOrb] at @s at @e[type=armor_stand,tag=damageOrbMarker,limit=1,sort=nearest] run tp ~ ~2 ~
+execute at @e[type=item_display,tag=damageOrb] run particle minecraft:smoke ~ ~-.25 ~ .1 .1 .1 0 5 normal @a
