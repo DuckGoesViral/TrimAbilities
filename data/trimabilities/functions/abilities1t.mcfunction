@@ -14,6 +14,8 @@ execute if entity @a[scores={progressSpire=3..},nbt={Inventory:[{Slot: 103b,tag:
 
 
 #Archer
+scoreboard players reset @a subPower
+
 
 #Wayfinder
 #haste but blindness
@@ -33,7 +35,18 @@ execute as @a[tag=wayfinder] run function trimabilities:wayfinder
 
 #Wild
 #jump boost 4, 0.125 speed
-execute if entity @a[scores={progressWild=3..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:wild"}}},{Slot: 102b,tag:{Trim:{pattern:"minecraft:wild"}}},{Slot: 101b,tag:{Trim:{pattern:"minecraft:wild"}}},{Slot: 100b,tag:{Trim:{pattern:"minecraft:wild"}}}]}] run function trimabilities:wild
+execute as @a[scores={wild=1..}] run scoreboard players set @s wild 0
+
+execute as @a if entity @s[scores={progressWild=3..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:wild"}}}]}] run scoreboard players add @s wild 1
+execute as @a if entity @s[scores={progressWild=3..},nbt={Inventory:[{Slot: 102b,tag:{Trim:{pattern:"minecraft:wild"}}}]}] run scoreboard players add @s wild 1
+execute as @a if entity @s[scores={progressWild=3..},nbt={Inventory:[{Slot: 101b,tag:{Trim:{pattern:"minecraft:wild"}}}]}] run scoreboard players add @s wild 1
+execute as @a if entity @s[scores={progressWild=3..},nbt={Inventory:[{Slot: 100b,tag:{Trim:{pattern:"minecraft:wild"}}}]}] run scoreboard players add @s wild 1
+
+execute as @a[scores={wild=1..}] run tag @s add wild
+
+execute as @a[tag=wild] run function trimabilities:wild
+
+
 
 
 #Eye
@@ -84,8 +97,15 @@ execute as @e[type=armor_stand,tag=damageOrbMarker,scores={orbDeath=600..}] run 
 execute as @a[tag=damageOrbImmunity,scores={orbDeath=600..}] run tag @s remove damageOrbImmunity
 execute as @a[scores={orbDeath=600..}] run scoreboard players reset @s orbDeath
 
+execute as @e[type=item_display,tag=healPool] run scoreboard players add @s orbDeath 1
+execute at @e[type=item_display,tag=healPool,scores={orbDeath=400..}] run particle minecraft:heart ~ ~-.25 ~ .1 .1 .1 .1 5 normal @a
+execute as @e[type=item_display,tag=healPool,scores={orbDeath=400..}] run kill @s
 
 
 execute as @e[type=armor_stand,tag=damageOrbMarker] at @s run tp ^ ^ ^-.025
 execute as @e[type=item_display,tag=damageOrb] at @s at @e[type=armor_stand,tag=damageOrbMarker,limit=1,sort=nearest] run tp ~ ~2 ~
 execute at @e[type=item_display,tag=damageOrb] run particle minecraft:smoke ~ ~-.25 ~ .1 .1 .1 0 5 normal @a
+
+
+execute as @e[type=minecraft:item_display,tag=healPool] at @s run tp @s ~ ~ ~ ~5 ~
+execute as @e[type=minecraft:item_display,tag=healPool] at @s run particle minecraft:egg_crack ^ ^ ^2.5

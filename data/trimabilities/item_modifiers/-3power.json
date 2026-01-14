@@ -1,0 +1,8 @@
+{
+  "function": "minecraft:set_enchantments",
+  "enchantments": {
+    "minecraft:power": -3
+  },
+  "add": true,
+  "conditions": []
+}

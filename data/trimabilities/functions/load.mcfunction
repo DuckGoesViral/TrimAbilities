@@ -2,6 +2,7 @@
 tellraw @a {"text": "Reload Succesful!","color": "#0000FF"}
 
 function trimabilities:abilities5t
+function trimabilities:abilities20t
 function trimabilities:scoreboardlevels
 function trimabilities:categorytags
 function trimabilities:minecraftxp
@@ -9,6 +10,11 @@ function trimabilities:categoryxp
 function trimabilities:minecraftlevels
 function trimabilities:categorylevels
 function trimabilities:necroteam
+
+scoreboard objectives add subPower dummy
+scoreboard objectives add subRandom dummy
+scoreboard objectives add subTag dummy
+
 
 scoreboard objectives add trimShrine dummy
 execute unless score started trimShrine matches 1 run function trimabilities:shrine/find-y

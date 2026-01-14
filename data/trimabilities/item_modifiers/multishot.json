@@ -1,0 +1,8 @@
+{
+  "function": "minecraft:set_enchantments",
+  "enchantments": {
+    "minecraft:multishot": 1
+  },
+  "add": true,
+  "conditions": []
+}

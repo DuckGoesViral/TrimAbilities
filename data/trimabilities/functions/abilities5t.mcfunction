@@ -290,6 +290,7 @@ execute as @a[scores={Trim_Recovery_Toggle=1..}] run scoreboard players set @s T
 
 
 
+
 schedule function trimabilities:abilities5t 5t
 
 

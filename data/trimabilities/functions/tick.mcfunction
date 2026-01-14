@@ -48,13 +48,21 @@ execute if score placed trimShrine matches 1 run function trimabilities:shrine/d
 
 
 # ARCHER POWER STUFF
-scoreboard objectives add archerPower dummy
-
-
-execute as @a[tag=!wayfinder,nbt={SelectedItem:{id:"minecraft:bow",tag:{Tags:{trim:"wayfinder"}}}}] run item modify entity @s weapon.mainhand trimabilities:-1power
 
 
 
+
+scoreboard players add Timer subPower 1
+execute if score Timer subPower matches 20.. as @a[nbt={SelectedItem:{id:"minecraft:bow"}}] run function trimabilities:subarrow_pre
+execute if score Timer subPower matches 20.. run scoreboard players reset Timer subPower
+
+execute as @a[nbt={SelectedItem:{tag:{added_power:0}}}] run item modify entity @s weapon.mainhand trimabilities:warn_clear
+execute as @a[nbt={SelectedItem:{tag:{added_power:1}}}] run item modify entity @s weapon.mainhand trimabilities:warn_power
+execute as @a[nbt={SelectedItem:{tag:{added_power:2}}}] run item modify entity @s weapon.mainhand trimabilities:warn_power
+execute as @a[nbt={SelectedItem:{tag:{added_power:3}}}] run item modify entity @s weapon.mainhand trimabilities:warn_power
+execute as @a[nbt={SelectedItem:{tag:{added_power:4}}}] run item modify entity @s weapon.mainhand trimabilities:warn_power
+
+execute as @a[nbt={SelectedItem:{tag:{Unbreakable:1b}}},tag=!ravine] run item modify entity @s weapon.mainhand trimabilities:ununbreakable
 
 
 

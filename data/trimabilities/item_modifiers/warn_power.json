@@ -1,0 +1,15 @@
+{
+  "function": "minecraft:set_lore",
+  "lore": [
+    {
+      "text": "WARNING: This bow has boosted power",
+      "color": "red"
+    },
+    {
+      "text": "Enchant at your own risk.",
+      "color": "light_purple"
+    }
+  ],
+  "replace": true,
+  "conditions": []
+}

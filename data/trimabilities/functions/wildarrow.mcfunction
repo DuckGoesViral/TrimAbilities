@@ -15,6 +15,7 @@ execute as @a[scores={shoot=1..}] run scoreboard players set @s shoot 0
 execute as @a[scores={shoot2=1..}] run scoreboard players set @s shoot2 0
 
 
+
 execute as @e[type=arrow,tag=wildarrowpo0] run data merge entity @s {damage:3d,PierceLevel:2b}
 execute as @e[type=arrow,tag=wildarrowpo1] run data merge entity @s {damage:4d,PierceLevel:2b}
 execute as @e[type=arrow,tag=wildarrowpo2] run data merge entity @s {damage:4.5d,PierceLevel:2b}
