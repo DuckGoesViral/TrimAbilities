@@ -13,3 +13,4 @@ execute at @s run playsound minecraft:block.enchantment_table.use ambient @s ~ ~
 execute at @s run particle minecraft:reverse_portal ~ ~1 ~ 0 0 0 1 30 normal @a[distance=..15]
 
 
+effect give @s saturation 3 1 true
