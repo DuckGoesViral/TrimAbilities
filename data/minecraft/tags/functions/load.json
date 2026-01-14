@@ -1,5 +1,6 @@
 {
     "values": [
-    "trimabilities:load"
+    "trimabilities:load",
+    "teams:load"
  ]
 }

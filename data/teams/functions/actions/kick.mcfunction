@@ -1,0 +1,1 @@
+# Hnadles the kicking of a player from a team
