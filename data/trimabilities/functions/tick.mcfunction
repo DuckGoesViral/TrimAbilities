@@ -64,7 +64,8 @@ execute as @a[nbt={SelectedItem:{tag:{added_power:4}}}] run item modify entity @
 
 execute as @a[nbt={SelectedItem:{tag:{Unbreakable:1b}}},tag=!ravine] run item modify entity @s weapon.mainhand trimabilities:ununbreakable
 
-
+execute as @a[scores={grindstoneUse=1..}] run function trimabilities:subarrow_clear
+execute as @a[scores={grindstoneUse=1..}] run scoreboard players reset @s grindstoneUse
 
 #kill
 #give @s minecraft:stone_sword 1
