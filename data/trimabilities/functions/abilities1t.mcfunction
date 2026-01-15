@@ -71,13 +71,19 @@ execute as @a[tag=raiser] run title @s actionbar ["",{"text":"Mana: ","color":"d
 
 execute as @a[tag=mage,tag=!raiser] run title @s actionbar ["",{"text":"Mana: ","color":"dark_aqua"},{"score":{"name":"@s","objective":"mana"},"color":"dark_aqua"}]
 
+scoreboard players enable @a 2457-1364
+scoreboard players enable @a 6781-6345
+scoreboard players enable @a 0123-9678
+scoreboard players enable @a 8259-8215
+scoreboard players enable @a 8259-9671
+scoreboard players enable @a 8259-2315
 
-execute as @a[tag=mage,scores={2457-1364=1..}] at @s run function trimabilities:spells/fireball
-execute as @a[tag=mage,scores={6781-6345=1..}] at @s run function trimabilities:spells/damageorb
-execute as @a[tag=mage,scores={0123-9678=1..}] at @s run function trimabilities:spells/healpool
-execute as @a[tag=mage,scores={8259-8215=1..}] at @s run function trimabilities:spells/frankenstein/zombie
-execute as @a[tag=mage,scores={8259-9671=1..}] at @s run function trimabilities:spells/frankenstein/skeleton
-execute as @a[tag=mage,scores={8259-2315=1..}] at @s run function trimabilities:spells/frankenstein/witherskeleton
+execute as @a[scores={2457-1364=1..}] at @s run function trimabilities:spells/fireball
+execute as @a[scores={6781-6345=1..}] at @s run function trimabilities:spells/damageorb
+execute as @a[scores={0123-9678=1..}] at @s run function trimabilities:spells/healpool
+execute as @a[scores={8259-8215=1..}] at @s run function trimabilities:spells/frankenstein/zombie
+execute as @a[scores={8259-9671=1..}] at @s run function trimabilities:spells/frankenstein/skeleton
+execute as @a[scores={8259-2315=1..}] at @s run function trimabilities:spells/frankenstein/witherskeleton
 
 execute as @a[scores={2457-1364=1..}] run scoreboard players reset 2457-1364
 execute as @a[scores={6781-6345=1..}] run scoreboard players reset 6781-6345
