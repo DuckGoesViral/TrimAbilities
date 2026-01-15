@@ -22,7 +22,7 @@ scoreboard objectives add has_team dummy
 # The color of the player's team
 scoreboard objectives add team_color dummy
 
-# Creates a team for the player if the doesn't already exist. 
+# allows a player to request to join a team if the team already exists. 
 scoreboard objectives add team_gold trigger
 scoreboard objectives add team_gray trigger
 scoreboard objectives add team_blue trigger
@@ -32,11 +32,15 @@ scoreboard objectives add team_red trigger
 scoreboard objectives add team_purple trigger
 scoreboard objectives add team_yellow trigger
 
-# Joins another player's team 
-scoreboard objectives add jointeam trigger
-
-# Sends a team invite to the player standing in front of the triggering player
-scoreboard objectives add team_invite trigger
+# Allows a player to go to other teams, including creating the team if it doesnt exist.
+scoreboard objectives add join_aqua trigger
+scoreboard objectives add join_gold trigger
+scoreboard objectives add join_blue trigger
+scoreboard objectives add join_gray trigger
+scoreboard objectives add join_green trigger
+scoreboard objectives add join_red trigger
+scoreboard objectives add join_purple trigger
+scoreboard objectives add join_yellow trigger
 
 # Holds the player counts of all teams. 
 scoreboard objectives add gold_team_count dummy
@@ -48,8 +52,16 @@ scoreboard objectives add red_team_count dummy
 scoreboard objectives add purple_team_count dummy
 scoreboard objectives add yellow_team_count dummy
 
-# Handles invite requests for players who want to join a team via invite
-scoreboard objectives add approval_count dummy
+# Threshold for number of players required to accept team invite requests
+scoreboard objectives add aqua_team_threshold dummy
+scoreboard objectives add gold_team_threshold dummy
+scoreboard objectives add blue_team_threshold dummy
+scoreboard objectives add gray_team_threshold dummy
+scoreboard objectives add green_team_threshold dummy
+scoreboard objectives add red_team_threshold dummy
+scoreboard objectives add purple_team_threshold dummy
+scoreboard objectives add yellow_team_threshold dummy
+
 
 # Handles leaving a team
 scoreboard objectives add leaveteam trigger
@@ -63,6 +75,8 @@ scoreboard objectives add confirm_leave dummy
 # handles confirmations of various checks
 scoreboard objectives add confirmed dummy
 
+# Check for if a player has been registered
+scoreboard objectives add registered dummy
 
 # Tracks requests to join a team
 scoreboard objectives add aqua_request dummy
@@ -75,29 +89,12 @@ scoreboard objectives add purple_request dummy
 scoreboard objectives add yellow_request dummy
 
 # Tracks approval and disapproval counts for team join requests
-scoreboard objectives add aqua_approve_count dummy
-scoreboard objectives add aqua_disapprove_count dummy
 
-scoreboard objectives add gold_approve_count dummy
-scoreboard objectives add gold_disapprove_count dummy
-
-scoreboard objectives add blue_approve_count dummy
-scoreboard objectives add blue_disapprove_count dummy
-
-scoreboard objectives add gray_approve_count dummy
-scoreboard objectives add gray_disapprove_count dummy
-
-scoreboard objectives add green_approve_count dummy
-scoreboard objectives add green_disapprove_count dummy
-
-scoreboard objectives add red_approve_count dummy
-scoreboard objectives add red_disapprove_count dummy
-
-scoreboard objectives add purple_approve_count dummy
-scoreboard objectives add purple_disapprove_count dummy
-
-scoreboard objectives add yellow_approve_count dummy
-scoreboard objectives add yellow_disapprove_count dummy
 
 # Timer to limit voting duration
 scoreboard objectives add vote_timer dummy
+scoreboard objectives add reminder_timer dummy
+
+scoreboard objectives add 2 dummy
+scoreboard players set two 2 2
+

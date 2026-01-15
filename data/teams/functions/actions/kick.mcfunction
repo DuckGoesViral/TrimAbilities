@@ -1,1 +1,1 @@
-# Hnadles the kicking of a player from a team
+# Hnadles the kicking of a player from a team through a 50% vote. 
