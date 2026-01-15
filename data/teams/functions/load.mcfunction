@@ -22,17 +22,6 @@ scoreboard objectives add has_team dummy
 # The color of the player's team
 scoreboard objectives add team_color dummy
 
-# See if the team already exists
-scoreboard objectives add gold_team_exists dummy
-scoreboard objectives add gray_team_exists dummy
-scoreboard objectives add blue_team_exists dummy
-scoreboard objectives add green_team_exists dummy
-scoreboard objectives add aqua_team_exists dummy
-scoreboard objectives add red_team_exists dummy
-scoreboard objectives add purple_team_exists dummy
-scoreboard objectives add yellow_team_exists dummy
-
-
 # Creates a team for the player if the doesn't already exist. 
 scoreboard objectives add team_gold trigger
 scoreboard objectives add team_gray trigger
@@ -75,3 +64,40 @@ scoreboard objectives add confirm_leave dummy
 scoreboard objectives add confirmed dummy
 
 
+# Tracks requests to join a team
+scoreboard objectives add aqua_request dummy
+scoreboard objectives add gold_request dummy
+scoreboard objectives add blue_request dummy
+scoreboard objectives add gray_request dummy
+scoreboard objectives add green_request dummy
+scoreboard objectives add red_request dummy
+scoreboard objectives add purple_request dummy
+scoreboard objectives add yellow_request dummy
+
+# Tracks approval and disapproval counts for team join requests
+scoreboard objectives add aqua_approve_count dummy
+scoreboard objectives add aqua_disapprove_count dummy
+
+scoreboard objectives add gold_approve_count dummy
+scoreboard objectives add gold_disapprove_count dummy
+
+scoreboard objectives add blue_approve_count dummy
+scoreboard objectives add blue_disapprove_count dummy
+
+scoreboard objectives add gray_approve_count dummy
+scoreboard objectives add gray_disapprove_count dummy
+
+scoreboard objectives add green_approve_count dummy
+scoreboard objectives add green_disapprove_count dummy
+
+scoreboard objectives add red_approve_count dummy
+scoreboard objectives add red_disapprove_count dummy
+
+scoreboard objectives add purple_approve_count dummy
+scoreboard objectives add purple_disapprove_count dummy
+
+scoreboard objectives add yellow_approve_count dummy
+scoreboard objectives add yellow_disapprove_count dummy
+
+# Timer to limit voting duration
+scoreboard objectives add vote_timer dummy

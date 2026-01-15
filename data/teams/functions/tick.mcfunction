@@ -1,22 +1,13 @@
 # Check if each team exists, if not set existence score to 0
  execute as @a store result score @s aqua_team_count run team list AquaTeam
- execute as @a store result score * gold_team_count run team list GoldTeam
- execute as @a store result score * blue_team_count run team list BlueTeam
- execute as @a store result score * gray_team_count run team list GrayTeam
- execute as @a store result score * green_team_count run team list GreenTeam
- execute as @a store result score * red_team_count run team list RedTeam
- execute as @a store result score * purple_team_count run team list PurpleTeam
- execute as @a store result score * yellow_team_count run team list YellowTeam
+ execute as @a store result score @s gold_team_count run team list GoldTeam
+ execute as @a store result score @s blue_team_count run team list BlueTeam
+ execute as @a store result score @s gray_team_count run team list GrayTeam
+ execute as @a store result score @s green_team_count run team list GreenTeam
+ execute as @a store result score @s red_team_count run team list RedTeam
+ execute as @a store result score @s purple_team_count run team list PurpleTeam
+ execute as @a store result score @s yellow_team_count run team list YellowTeam
 
-# delete team if no players are on it
-execute if score * aqua_team_count matches 0 run scoreboard players set * aqua_team_exists 0
-execute if score * gold_team_count matches 0 run scoreboard players set * gold_team_exists 0
-execute if score * blue_team_count matches 0 run scoreboard players set * blue_team_exists 0
-execute if score * gray_team_count matches 0 run scoreboard players set * gray_team_exists 0
-execute if score * green_team_count matches 0 run scoreboard players set * green_team_exists 0
-execute if score * red_team_count matches 0 run scoreboard players set * red_team_exists 0
-execute if score * purple_team_count matches 0 run scoreboard players set * purple_team_exists 0
-execute if score * yellow_team_count matches 0 run scoreboard players set * yellow_team_exists 0
 
 # Enable team creation/joining for players without a team
 scoreboard players enable @a[scores={has_team=0}] team_aqua
@@ -52,6 +43,32 @@ execute as @a[scores={has_team=1..,confirm_leave=1..}] run scoreboard players en
 execute as @a[scores={confirm=1..}] run scoreboard players set @s confirm 1
 
 # Leaves player team if they confirm leaving
+execute at @a[scores={has_team=1,confirm=1..,confirm_leave=1..},team=AquaTeam] run tellraw @a[team=AquaTeam] {"text":"","extra":[{"selector":"@p","bold":true,"color":"dark_red"},{"text":" has left the team.","color":"red"}]}
+execute at @a[scores={has_team=1,confirm=1..,confirm_leave=1..},team=GoldTeam] run tellraw @a[team=GoldTeam] {"text":"","extra":[{"selector":"@p","bold":true,"color":"dark_red"},{"text":" has left the team.","color":"red"}]}
+execute at @a[scores={has_team=1,confirm=1..,confirm_leave=1..},team=BlueTeam] run tellraw @a[team=BlueTeam] {"text":"","extra":[{"selector":"@p","bold":true,"color":"dark_red"},{"text":" has left the team.","color":"red"}]}
+execute at @a[scores={has_team=1,confirm=1..,confirm_leave=1..},team=GrayTeam] run tellraw @a[team=GrayTeam] {"text":"","extra":[{"selector":"@p","bold":true,"color":"dark_red"},{"text":" has left the team.","color":"red"}]}
+execute at @a[scores={has_team=1,confirm=1..,confirm_leave=1..},team=GreenTeam] run tellraw @a[team=GreenTeam] {"text":"","extra":[{"selector":"@p","bold":true,"color":"dark_red"},{"text":" has left the team.","color":"red"}]}
+execute at @a[scores={has_team=1,confirm=1..,confirm_leave=1..},team=RedTeam] run tellraw @a[team=RedTeam] {"text":"","extra":[{"selector":"@p","bold":true,"color":"dark_red"},{"text":" has left the team.","color":"red"}]}
+execute at @a[scores={has_team=1,confirm=1..,confirm_leave=1..},team=PurpleTeam] run tellraw @a[team=PurpleTeam] {"text":"","extra":[{"selector":"@p","bold":true,"color":"dark_red"},{"text":" has left the team.","color":"red"}]}
+execute at @a[scores={has_team=1,confirm=1..,confirm_leave=1..},team=YellowTeam] run tellraw @a[team=YellowTeam] {"text":"","extra":[{"selector":"@p","bold":true,"color":"dark_red"},{"text":" has left the team.","color":"red"}]}
 execute as @a[scores={has_team=1,confirm=1..,confirm_leave=1..}] run tellraw @s {"text":"You have left your team.","color":"red","bold":true}
-execute as @a[scores={has_team=1,confirm=1..,confirm_leave=1..}] run team leave @s
+#Handle the scoreboard cleanup after leaving team
 execute as @a[scores={confirm=1..,confirm_leave=1..}] run function teams:actions/leftteam
+
+# Actually remove the player from the team
+execute as @a[scores={has_team=1,confirm=1..,confirm_leave=1..}] run team leave @s
+
+# Check if a player triggers the team creation/joining triggers
+execute as @a[scores={team_aqua=1..}] run function teams:utility/getuuid with storage teams:macro this
+execute as @a[scores={team_gold=1..}] run function teams:utility/getuuid with storage teams:macro this
+execute as @a[scores={team_blue=1..}] run function teams:utility/getuuid with storage teams:macro this
+execute as @a[scores={team_gray=1..}] run function teams:utility/getuuid with storage teams:macro this
+execute as @a[scores={team_green=1..}] run function teams:utility/getuuid with storage teams:macro this
+execute as @a[scores={team_red=1..}] run function teams:utility/getuuid with storage teams:macro this
+execute as @a[scores={team_purple=1..}] run function teams:utility/getuuid with storage teams:macro this
+execute as @a[scores={team_yellow=1..}] run function teams:utility/getuuid with storage teams:macro this
+
+
+
+execute as @e[tag=Vote_Stand] run scoreboard players add @s vote_timer 1 
+execute as @e[tag=Vote_Stand,scores={vote_timer=1728000..}] run kill @s
