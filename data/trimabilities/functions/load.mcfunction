@@ -18,6 +18,7 @@ scoreboard objectives add subTag dummy
 scoreboard objectives add grindstoneUse minecraft.custom:interact_with_grindstone
 
 
+
 scoreboard objectives add trimShrine dummy
 execute unless score started trimShrine matches 1 run function trimabilities:shrine/find-y
 
@@ -221,6 +222,9 @@ scoreboard objectives add tLvl dummy
 scoreboard objectives add aLvl dummy
 scoreboard objectives add nLvl dummy
 
+scoreboard objectives add level3s dummy
+scoreboard objectives add level4s dummy
+scoreboard objectives add level5s dummy
 
 #abilities
 scoreboard objectives add shoot minecraft.used:minecraft.bow
