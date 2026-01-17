@@ -67,9 +67,12 @@ execute if score timer mana matches 100.. as @a[tag=mage] unless score @s mana >
 execute if score timer mana matches 100.. as @a[tag=mage] if score @s mana > @s manaMax run scoreboard players operation @s mana = @s manaMax
 execute if score timer mana matches 100.. run scoreboard players set timer mana 0
 
-execute as @a[tag=raiser] run title @s actionbar ["",{"text":"Mana: ","color":"dark_aqua"},{"score":{"name":"@s","objective":"mana"},"color":"dark_aqua"},{"text":" |","color":"dark_gray"},{"text":" Souls: ","color":"dark_green"},{"score":{"name":"@s","objective":"frankensteinScore"},"color":"dark_green"}]
+execute as @a[tag=mage,scores={xpDelay=1..}] run scoreboard players add @s xpDelay 1
+execute as @a[tag=mage,scores={xpDelay=60..}] run scoreboard players reset @s xpDelay
 
-execute as @a[tag=mage,tag=!raiser] run title @s actionbar ["",{"text":"Mana: ","color":"dark_aqua"},{"score":{"name":"@s","objective":"mana"},"color":"dark_aqua"}]
+execute as @a[tag=raiser] unless score @s xpDelay matches 1.. run title @s actionbar ["",{"text":"Mana: ","color":"dark_aqua"},{"score":{"name":"@s","objective":"mana"},"color":"dark_aqua"},{"text":" |","color":"dark_gray"},{"text":" Souls: ","color":"dark_green"},{"score":{"name":"@s","objective":"frankensteinScore"},"color":"dark_green"}]
+
+execute as @a[tag=mage,tag=!raiser] unless score @s xpDelay matches 1.. run title @s actionbar ["",{"text":"Mana: ","color":"dark_aqua"},{"score":{"name":"@s","objective":"mana"},"color":"dark_aqua"}]
 
 scoreboard players enable @a 2457-1364
 scoreboard players enable @a 6781-6345
@@ -91,6 +94,9 @@ execute as @a[scores={0123-9678=1..}] run scoreboard players set @s 0123-9678 0
 execute as @a[scores={8259-8215=1..}] run scoreboard players set @s 8259-8215 0
 execute as @a[scores={8259-9671=1..}] run scoreboard players set @s 8259-9671 0
 execute as @a[scores={8259-2315=1..}] run scoreboard players set @s 8259-2315 0
+
+
+
 
 scoreboard objectives add orbDeath dummy
 execute as @e[type=item_display,tag=damageOrb] run scoreboard players add @s orbDeath 1

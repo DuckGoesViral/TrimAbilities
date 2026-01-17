@@ -73,7 +73,17 @@ execute as @s[tag=southSpawn] run tag @s remove southSpawn
 execute as @s[tag=selfSpawn] at @s anchored eyes run summon minecraft:zombie ~ ~ ~ {Tags:["necroSummon"],DeathLootTable:"minecraft:empty"}
 execute as @s[tag=selfSpawn] run tag @s remove selfSpawn
 
-execute as @e[tag=necroSummon] run team join necromancer @s
+execute if entity @s[team=] run team join necromancer @s
+
+execute if entity @s[team=AquaTeam] as @e[tag=necroSummon] run team join AquaTeam
+execute if entity @s[team=BlueTeam] as @e[tag=necroSummon] run team join BlueTeam
+execute if entity @s[team=GoldTeam] as @e[tag=necroSummon] run team join GoldTeam
+execute if entity @s[team=GrayTeam] as @e[tag=necroSummon] run team join GrayTeam
+execute if entity @s[team=GreenTeam] as @e[tag=necroSummon] run team join GreenTeam
+execute if entity @s[team=PurpleTeam] as @e[tag=necroSummon] run team join PurpleTeam
+execute if entity @s[team=RedTeam] as @e[tag=necroSummon] run team join RedTeam
+execute if entity @s[team=YellowTeam] as @e[tag=necroSummon] run team join YellowTeam
+execute if entity @s[team=necromancer] as @e[tag=necroSummon] run team join necromancer
 
 scoreboard players remove @s frankensteinScore 10
 

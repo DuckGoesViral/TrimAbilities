@@ -130,6 +130,7 @@ scoreboard objectives add BowAttack minecraft.custom:minecraft.mob_kills
 
 scoreboard objectives add drankPotion minecraft.used:minecraft.potion
 scoreboard objectives add enchantItem minecraft.custom:minecraft.enchant_item
+scoreboard objectives add xpDelay dummy
 
 
 scoreboard objectives add mana dummy
@@ -380,7 +381,7 @@ scoreboard objectives add frankensteinWitchKills minecraft.killed:minecraft.witc
 
 # Direction scoreboard for the necromancer's summon check.
 scoreboard objectives add playerFacing dummy
-
+scoreboard objectives add necroTimer dummy
 
 
 ##real spell scoreboards

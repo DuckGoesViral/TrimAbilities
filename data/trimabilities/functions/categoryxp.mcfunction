@@ -174,7 +174,7 @@ execute as @a[scores={drankPotion=1..}] run scoreboard players reset @s drankPot
 
 
 
-
+execute as @a[scores={enchantItem=1..},tag=mage] run scoreboard players add @s xpDelay 1
 execute as @a[scores={enchantItem=1..},tag=mcLvl0,tag=mage] run scoreboard players add @s mageLevel 0
 execute as @a[scores={enchantItem=1..},tag=mcLvl0,tag=mage] run scoreboard players set @s xpDisplay 0
 execute as @a[scores={enchantItem=1..},tag=mcLvl1,tag=mage] run scoreboard players add @s mageLevel 2
@@ -205,7 +205,6 @@ execute as @a[scores={enchantItem=1..},tag=mLvl4,tag=mage] run title @s actionba
 execute as @a[scores={enchantItem=1..},tag=mLvl5,tag=mage] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Mage xp | Level 5 ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"mageLevel"},"color":"dark_aqua"},{"text":") ","color":"dark_aqua"}]
 execute as @a[scores={enchantItem=1..},tag=mage] at @s run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 0.5 2
 execute as @a[scores={enchantItem=1..}] run scoreboard players reset @s enchantItem
-
 
 
 schedule function trimabilities:categoryxp 3t
