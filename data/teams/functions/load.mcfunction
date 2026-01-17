@@ -77,6 +77,7 @@ scoreboard objectives add confirmed dummy
 
 # Check for if a player has been registered
 scoreboard objectives add registered dummy
+scoreboard objectives add registration_check dummy
 
 # Tracks requests to join a team
 scoreboard objectives add aqua_request dummy
