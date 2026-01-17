@@ -78,19 +78,19 @@ scoreboard players enable @a 8259-8215
 scoreboard players enable @a 8259-9671
 scoreboard players enable @a 8259-2315
 
-execute as @a[scores={2457-1364=1..}] at @s run function trimabilities:spells/fireball
-execute as @a[scores={6781-6345=1..}] at @s run function trimabilities:spells/damageorb
-execute as @a[scores={0123-9678=1..}] at @s run function trimabilities:spells/healpool
-execute as @a[scores={8259-8215=1..}] at @s run function trimabilities:spells/frankenstein/zombie
-execute as @a[scores={8259-9671=1..}] at @s run function trimabilities:spells/frankenstein/skeleton
-execute as @a[scores={8259-2315=1..}] at @s run function trimabilities:spells/frankenstein/witherskeleton
+execute as @a[scores={2457-1364=1..},tag=mage] at @s run function trimabilities:spells/fireball
+execute as @a[scores={6781-6345=1..},tag=mage] at @s run function trimabilities:spells/damageorb
+execute as @a[scores={0123-9678=1..},tag=mage] at @s run function trimabilities:spells/healpool
+execute as @a[scores={8259-8215=1..},tag=mage] at @s run function trimabilities:spells/frankenstein/zombie
+execute as @a[scores={8259-9671=1..},tag=mage] at @s run function trimabilities:spells/frankenstein/skeleton
+execute as @a[scores={8259-2315=1..},tag=mage] at @s run function trimabilities:spells/frankenstein/witherskeleton
 
-execute as @a[scores={2457-1364=1..}] run scoreboard players reset 2457-1364
-execute as @a[scores={6781-6345=1..}] run scoreboard players reset 6781-6345
-execute as @a[scores={0123-9678=1..}] run scoreboard players reset 0123-9678
-execute as @a[scores={8259-8215=1..}] run scoreboard players reset 8259-8215
-execute as @a[scores={8259-9671=1..}] run scoreboard players reset 8259-9671
-execute as @a[scores={8259-2315=1..}] run scoreboard players reset 8259-2315
+execute as @a[scores={2457-1364=1..}] run scoreboard players set @s 2457-1364 0
+execute as @a[scores={6781-6345=1..}] run scoreboard players set @s 6781-6345 0
+execute as @a[scores={0123-9678=1..}] run scoreboard players set @s 0123-9678 0
+execute as @a[scores={8259-8215=1..}] run scoreboard players set @s 8259-8215 0
+execute as @a[scores={8259-9671=1..}] run scoreboard players set @s 8259-9671 0
+execute as @a[scores={8259-2315=1..}] run scoreboard players set @s 8259-2315 0
 
 scoreboard objectives add orbDeath dummy
 execute as @e[type=item_display,tag=damageOrb] run scoreboard players add @s orbDeath 1
