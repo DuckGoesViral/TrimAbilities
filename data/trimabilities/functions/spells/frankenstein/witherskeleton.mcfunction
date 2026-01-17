@@ -1,71 +1,40 @@
 
+execute unless score @s mana matches 15.. at @s run playsound minecraft:entity.enderman.teleport ambient @s ~ ~ ~
+execute unless score @s mana matches 15.. run playsound minecraft:entity.enderman.teleport ambient @s ~ ~ ~
+execute unless score @s mana matches 15.. run return run tellraw @s ["",{"text":"Not enough Mana to cast Frankenstein!","color":"red","bold": true}]
 
-# Facing South = 1
-execute as @a[scores={zombieSuccess=0},tag=raiser,y_rotation=-45..45] run scoreboard players set @s playerFacing 1
+scoreboard players remove @s mana 15
 
-# Facing West = 2
-execute as @a[scores={zombieSuccess=0},tag=raiser,y_rotation=45..135] run scoreboard players set @s playerFacing 2
+execute if score @s frankensteinScore matches ..49 at @s run playsound minecraft:entity.enderman.teleport ambient @s ~ ~ ~
+execute if score @s frankensteinScore matches ..49 run playsound minecraft:entity.enderman.teleport ambient @s ~ ~ ~
+execute if score @s frankensteinScore matches ..49 run return run tellraw @s {"text": "Not enough souls to summon a wither skeleton!","color": "red","bold": true}
 
-# Facing North = 3
-execute as @a[scores={zombieSuccess=0},tag=raiser,y_rotation=135..180] run scoreboard players set @s playerFacing 3
-execute as @a[scores={zombieSuccess=0},tag=raiser,y_rotation=-180..-135] run scoreboard players set @s playerFacing 3
+execute at @s run playsound minecraft:block.enchantment_table.use ambient @s ~ ~ ~ 1 2
 
-# Facing East = 4
-execute as @a[scores={zombieSuccess=0},tag=raiser,y_rotation=-135..-45] run scoreboard players set @s playerFacing 4
+execute at @s anchored eyes run summon minecraft:wither_skeleton ~ ~ ~ {Tags:["necroSummon0"],DeathLootTable:"minecraft:empty"}
+item replace entity @e[type=wither_skeleton,tag=necroSummon0] weapon.offhand with stone_sword
 
-# Check the blocks around the player to see if they are air. If they are, add a tag to the player to indicate which direction the skeleton should be spawned in. Starts in front then goes to sides, then behind.
-# Facing South Check
-execute as @a[scores={zombieSuccess=0,playerFacing=1},tag=raiser] at @s if block ~ ~1 ~1 air run tag @s add southSpawn
-execute as @a[scores={zombieSuccess=0,playerFacing=1},tag=raiser,tag=southSpawn] at @s if block ~ ~2 ~1 air run tag @s add 3blocksouth
-execute as @a[scores={zombieSuccess=0,playerFacing=1},tag=raiser,tag=!northSpawn] at @s if block ~1 ~1 ~ air run tag @s add eastSpawn
-execute as @a[scores={zombieSuccess=0,playerFacing=1},tag=raiser,tag=eastSpawn] at @s if block ~1 ~2 ~ air run tag @s add 3blockeast
-execute as @a[scores={zombieSuccess=0,playerFacing=1},tag=raiser,tag=!northSpawn,tag=!eastSpawn] at @s if block ~-1 ~1 ~ air run tag @s add westSpawn
-execute as @a[scores={zombieSuccess=0,playerFacing=1},tag=raiser,tag=westSpawn] at @s if block ~-1 ~2 ~ air run tag @s add 3blockwest
-execute as @a[scores={zombieSuccess=0,playerFacing=1},tag=raiser,tag=!northSpawn,tag=!eastSpawn,tag=!westSpawn] at @s if block ~ ~1 ~-1 air run tag @s add northSpawn
-execute as @a[scores={zombieSuccess=0,playerFacing=1},tag=raiser,tag=northSpawn] at @s if block ~ ~2 ~-1 air run tag @s add 3blocknorth
-execute as @a[scores={summonSuccess=0},tag=raiser,tag=!northSpawn,tag=!eastSpawn,tag=!westSpawn,tag=!southSpawn] run tellraw @s {"text": "Could not find a location to summon","color": "red","bold": true}
+execute if entity @s[team=] run team join necromancer @s
+execute if entity @s[team=necromancer] run scoreboard players reset @s necroTimer
 
-# Facing West Check
-execute as @a[scores={zombieSuccess=0,playerFacing=1},tag=raiser] at @s if block ~ ~1 ~1 air run tag @s add southSpawn
-execute as @a[scores={zombieSuccess=0,playerFacing=1},tag=raiser,tag=southSpawn] at @s if block ~ ~2 ~1 air run tag @s add 3blocksouth
-execute as @a[scores={zombieSuccess=0,playerFacing=1},tag=raiser,tag=!northSpawn] at @s if block ~1 ~1 ~ air run tag @s add eastSpawn
-execute as @a[scores={zombieSuccess=0,playerFacing=1},tag=raiser,tag=eastSpawn] at @s if block ~1 ~2 ~ air run tag @s add 3blockeast
-execute as @a[scores={zombieSuccess=0,playerFacing=1},tag=raiser,tag=!northSpawn,tag=!eastSpawn] at @s if block ~-1 ~1 ~ air run tag @s add westSpawn
-execute as @a[scores={zombieSuccess=0,playerFacing=1},tag=raiser,tag=westSpawn] at @s if block ~-1 ~2 ~ air run tag @s add 3blockwest
-execute as @a[scores={zombieSuccess=0,playerFacing=1},tag=raiser,tag=!northSpawn,tag=!eastSpawn,tag=!westSpawn] at @s if block ~ ~1 ~-1 air run tag @s add northSpawn
-execute as @a[scores={zombieSuccess=0,playerFacing=1},tag=raiser,tag=northSpawn] at @s if block ~ ~2 ~-1 air run tag @s add 3blocknorth
-execute as @a[scores={summonSuccess=0},tag=raiser,tag=!northSpawn,tag=!eastSpawn,tag=!westSpawn,tag=!southSpawn] run tellraw @s {"text": "Could not find a location to summon","color": "red","bold": true}
+execute if entity @s[team=AquaTeam] as @e[tag=necroSummon0,distance=..3] run team join AquaTeam
+execute if entity @s[team=BlueTeam] as @e[tag=necroSummon0,distance=..3] run team join BlueTeam
+execute if entity @s[team=GoldTeam] as @e[tag=necroSummon0,distance=..3] run team join GoldTeam
+execute if entity @s[team=GrayTeam] as @e[tag=necroSummon0,distance=..3] run team join GrayTeam
+execute if entity @s[team=GreenTeam] as @e[tag=necroSummon0,distance=..3] run team join GreenTeam
+execute if entity @s[team=PurpleTeam] as @e[tag=necroSummon0,distance=..3] run team join PurpleTeam
+execute if entity @s[team=RedTeam] as @e[tag=necroSummon0,distance=..3] run team join RedTeam
+execute if entity @s[team=YellowTeam] as @e[tag=necroSummon0,distance=..3] run team join YellowTeam
+execute if entity @s[team=necromancer] as @e[tag=necroSummon0,distance=..3] run team join necromancer
 
-# Spawn the skeleton in front of the player if that is the block available.
-execute as @a[tag=raiser,tag=southSpawn,scores={summonSuccess=0},tag=3blocknorth] at @s store success score @s summonSuccess unless score @s frankensteinScore matches ..19 run summon minecraft:wither_skeleton ~ ~ ~1 {Tags:["necroSummon"],DeathLootTable:"minecraft:empty"}
-execute as @a[tag=raiser,tag=southSpawn,scores={summonSuccess=1}] run tag @s remove 3blocksouth
-execute as @a[tag=raiser,tag=southSpawn,scores={summonSuccess=1}] run scoreboard players remove @s frankensteinScore 50
-execute as @a[tag=raiser,tag=southSpawn,scores={summonSuccess=1}] run tag @s remove southSpawn
+execute as @e[tag=necroSummon0] run effect give @s glowing infinite 0 true
 
+execute as @e[tag=necroSummon0,distance=..3] run tag @s add necroSummon
+execute as @e[tag=necroSummon0,distance=..3] run tag @s remove necroSummon0
 
-# Spawn the skeleton to the left of the player if that is the block available. 
-execute as @a[tag=raiser,tag=eastSpawn,scores={summonSuccess=0},tag=3blockeast] at @s store success score @s summonSuccess unless score @s frankensteinScore matches ..19 run summon minecraft:wither_skeleton ~1 ~ ~ {Tags:["necroSummon"],DeathLootTable:"minecraft:empty"}
-execute as @a[tag=raiser,tag=eastSpawn,scores={summonSuccess=1}] run tag @s remove 3blockeast
-execute as @a[tag=raiser,tag=eastSpawn,scores={summonSuccess=1}] run scoreboard players remove @s frankensteinScore 50
-execute as @a[tag=raiser,tag=eastSpawn,scores={summonSuccess=1}] run tag @s remove eastSpawn
+scoreboard players remove @s frankensteinScore 50
 
-
-# Spawn the skeleton to the right of the player if that is the block available. 
-execute as @a[tag=raiser,tag=westSpawn,scores={summonSuccess=0},tag=3blockwest] at @s store success score @s summonSuccess unless score @s frankensteinScore matches ..19 run summon minecraft:wither_skeleton ~-1 ~ ~ {Tags:["necroSummon"],DeathLootTable:"minecraft:empty"}
-execute as @a[tag=raiser,tag=westSpawn,scores={summonSuccess=1}] run tag @s remove 3blockwest
-execute as @a[tag=raiser,tag=westSpawn,scores={summonSuccess=1}] run scoreboard players remove @s frankensteinScore 50
-execute as @a[tag=raiser,tag=westSpawn,scores={summonSuccess=1}] run tag @s remove westSpawn
-
-
-# Spawn the skeleton behind the player if that is the block available. 
-execute as @a[tag=raiser,tag=northSpawn,scores={summonSuccess=0},tag=3blocknorth] at @s store success score @s summonSuccess unless score @s frankensteinScore matches ..19 run summon minecraft:wither_skeleton ~ ~ ~-1 {Tags:["necroSummon"],DeathLootTable:"minecraft:empty"}
-execute as @a[tag=raiser,tag=northSpawn,scores={summonSuccess=1}] run tag @s remove 3blocksouth
-execute as @a[tag=raiser,tag=northSpawn,scores={summonSuccess=1}] run execute as @a[tag=raiser,tag=westSpawn,scores={summonSuccess=1}] run scoreboard players remove @s frankensteinScore 50
-execute as @a[tag=raiser,tag=northSpawn,scores={summonSuccess=1}] run tag @s remove northSpawn
-
-execute as @e[tag=necroSummon] run team join necromancer @s
-
-# Reset the summon success score to 0 regardless of successful summon.
-execute as @a[scores={summonSuccess=1}] run scoreboard players set @s summonSuccess 0
 
 execute at @s run particle minecraft:reverse_portal ~ ~1 ~ 0 0 0 1 15 normal @a[distance=..15]
+
+

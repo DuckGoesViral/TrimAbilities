@@ -382,6 +382,7 @@ scoreboard objectives add frankensteinWitchKills minecraft.killed:minecraft.witc
 # Direction scoreboard for the necromancer's summon check.
 scoreboard objectives add playerFacing dummy
 scoreboard objectives add necroTimer dummy
+scoreboard objectives add necroDamage dummy
 
 
 ##real spell scoreboards

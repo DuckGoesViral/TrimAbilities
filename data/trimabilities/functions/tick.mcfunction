@@ -62,7 +62,8 @@ execute as @a[nbt={SelectedItem:{tag:{added_power:2}}}] run item modify entity @
 execute as @a[nbt={SelectedItem:{tag:{added_power:3}}}] run item modify entity @s weapon.mainhand trimabilities:warn_power
 execute as @a[nbt={SelectedItem:{tag:{added_power:4}}}] run item modify entity @s weapon.mainhand trimabilities:warn_power
 
-execute as @a[nbt={SelectedItem:{tag:{Unbreakable:1b}}},tag=!ravine] run item modify entity @s weapon.mainhand trimabilities:ununbreakable
+execute as @a[nbt={SelectedItem:{tag:{Unbreakable:1b}}}] unless score @s ravine matches 4 run item modify entity @s weapon.mainhand trimabilities:ununbreakable
+execute as @a[nbt={Inventory:[{Slot:-106b,tag:{Unbreakable:1b}}]}] unless score @s ravine matches 4 run item modify entity @s weapon.offhand trimabilities:ununbreakable
 
 execute as @a[scores={grindstoneUse=1..}] run function trimabilities:subarrow_clear
 
