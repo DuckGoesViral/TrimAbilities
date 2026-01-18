@@ -1,4 +1,4 @@
-title @a title {"text":"BAILED OUT OF WILDS","bold":true,"color":"red"}
+title @s title {"text":"BAILED OUT OF WILDS","bold":true,"color":"red"}
 tp @s 0 200 0
 tag @s add falling
 particle minecraft:flash ~ ~1 ~ 0 0 0 0 10
