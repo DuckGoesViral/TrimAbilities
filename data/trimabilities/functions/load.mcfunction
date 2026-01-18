@@ -11,6 +11,8 @@ function trimabilities:minecraftlevels
 function trimabilities:categorylevels
 function trimabilities:necroteam
 
+function trimabilities:border/load
+
 scoreboard objectives add subPower dummy
 scoreboard objectives add subRandom dummy
 scoreboard objectives add subTag dummy

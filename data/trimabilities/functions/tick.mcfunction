@@ -2,7 +2,7 @@
 function trimabilities:abilities1t
 
 
-
+function trimabilities:border/tick
 
 
 
