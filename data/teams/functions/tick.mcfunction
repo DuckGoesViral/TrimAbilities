@@ -39,6 +39,7 @@ execute if score purple_team purple_team_count matches 1 run scoreboard players 
 execute if score yellow_team yellow_team_count matches 1 run scoreboard players set yellow_team yellow_team_threshold 1
 
 # Get the name and store it of each player that joins
+execute as @a unless score @s registered matches 0.. run scoreboard players set @s registered 0
 execute as @a[scores={registered=0}] run function teams:utility/register
 
 # Enable joining teams for players without a team
@@ -95,7 +96,8 @@ execute as @e[tag=Vote_Stand] run scoreboard players add @s reminder_timer 1
 execute as @e[tag=Vote_Stand,scores={vote_timer=1728000..}] run kill @s
 
 # Remind players to vote every 15 Minutes (18000 ticks)
-execute as @a[tag=Vote_Stand,scores={reminder_timer=18000}] run function teams:utility/vote_remind with storage teams:macro this
+execute as @a[tag=Vote_Stand,scores={reminder_timer=..100}] run function teams:utility/vote_remind with storage teams:macro this
+execute as @a[tag=Vote_Stand,scores={reminder_timer=18000..}] run function teams:utility/vote_remind with storage teams:macro this
 
 # Checks to see if anyone has voted since last tick
 execute as @e[type=armor_stand,tag=Vote_Stand] run function teams:utility/checkvotes with storage teams:macro this
