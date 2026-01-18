@@ -283,7 +283,7 @@ execute if entity @a[tag=nosentry] as @a[tag=nosentry] run function trimabilitie
 execute at @e[type=item_display,tag=damageOrb] positioned ~ ~-2 ~ as @e[distance=..3,tag=!damageOrbImmunity,tag=!damageOrb,tag=!damageOrbMarker] run damage @s 2 magic
 execute at @e[type=item_display,tag=damageOrb] positioned ~ ~-2 ~ as @e[distance=..3,tag=!damageOrbImmunity,tag=!damageOrb,tag=!damageOrbMarker] at @s run particle minecraft:damage_indicator ~ ~.5 ~ .1 .1 .1 0.25 3 normal @a
 
-
+execute as @a run scoreboard players enable @s Trim_Recovery_Toggle
 execute as @a[scores={Trim_Recovery_Toggle=1..}] run function trimabilities:recovery/playertoggle
 execute as @a[scores={Trim_Recovery_Toggle=1..}] run scoreboard players set @s Trim_Recovery_Toggle 0
 

@@ -11,6 +11,8 @@ function trimabilities:minecraftlevels
 function trimabilities:categorylevels
 function trimabilities:necroteam
 
+function trimabilities:border/load
+
 scoreboard objectives add subPower dummy
 scoreboard objectives add subRandom dummy
 scoreboard objectives add subTag dummy
@@ -130,6 +132,7 @@ scoreboard objectives add BowAttack minecraft.custom:minecraft.mob_kills
 
 scoreboard objectives add drankPotion minecraft.used:minecraft.potion
 scoreboard objectives add enchantItem minecraft.custom:minecraft.enchant_item
+scoreboard objectives add xpDelay dummy
 
 
 scoreboard objectives add mana dummy
@@ -380,7 +383,8 @@ scoreboard objectives add frankensteinWitchKills minecraft.killed:minecraft.witc
 
 # Direction scoreboard for the necromancer's summon check.
 scoreboard objectives add playerFacing dummy
-
+scoreboard objectives add necroTimer dummy
+scoreboard objectives add necroDamage dummy
 
 
 ##real spell scoreboards

@@ -416,7 +416,7 @@
         },
         {
           "type": "minecraft:item",
-          "weight": 30,
+          "weight": 15,
           "name": "minecraft:ward_armor_trim_smithing_template"
         }
       ]
