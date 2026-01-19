@@ -20,14 +20,12 @@ execute as @a[tag=inWilds,scores={wildsTimer=1200..}] run scoreboard players res
 execute as @a[tag=!inWilds] run scoreboard players reset @s wildsTimer
 
 
+execute at @a[tag=inWilds] as @e[type=!player,type=!experience_orb,type=!item,distance=..25,tag=,limit=1] run function trimabilities:border/buff
 
-execute store result score effects wildsRandom run random value 1..9
-execute at @a[tag=inWilds] as @e[type=!player,distance=..25,tag=,limit=1] run function trimabilities:border/buff
+execute at @a[tag=!inWilds] as @e[type=!player,type=!experience_orb,type=!item,distance=..20,tag=,limit=1] run tag @s add notWildMob
 
-execute at @a[tag=!inWilds] as @e[type=!player,distance=..25,tag=,limit=1] run tag @s add notWildMob
-
-execute as @a[tag=inWilds] at @s run kill @e[type=experience_orb,distance=..10]
-execute as @a[tag=inWilds] at @s run kill @e[type=experience_bottle,distance=..10]
+execute as @a[tag=inWilds] at @s run kill @e[type=experience_orb,distance=..8]
+execute as @a[tag=inWilds] at @s run kill @e[type=experience_bottle,distance=..8]
 execute as @a[tag=inWilds] at @s run kill @e[type=minecraft:area_effect_cloud,distance=..25]
 
 
