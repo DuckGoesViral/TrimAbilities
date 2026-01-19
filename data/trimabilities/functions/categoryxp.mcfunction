@@ -177,26 +177,26 @@ execute as @a[scores={drankPotion=1..}] run scoreboard players reset @s drankPot
 execute as @a[scores={enchantItem=1..},tag=mage] run scoreboard players add @s xpDelay 1
 execute as @a[scores={enchantItem=1..},tag=mcLvl0,tag=mage] run scoreboard players add @s mageLevel 0
 execute as @a[scores={enchantItem=1..},tag=mcLvl0,tag=mage] run scoreboard players set @s xpDisplay 0
-execute as @a[scores={enchantItem=1..},tag=mcLvl1,tag=mage] run scoreboard players add @s mageLevel 2
-execute as @a[scores={enchantItem=1..},tag=mcLvl1,tag=mage] run scoreboard players set @s xpDisplay 2
-execute as @a[scores={enchantItem=1..},tag=mcLvl2,tag=mage] run scoreboard players add @s mageLevel 4
-execute as @a[scores={enchantItem=1..},tag=mcLvl2,tag=mage] run scoreboard players set @s xpDisplay 4
-execute as @a[scores={enchantItem=1..},tag=mcLvl3,tag=mage] run scoreboard players add @s mageLevel 6
-execute as @a[scores={enchantItem=1..},tag=mcLvl3,tag=mage] run scoreboard players set @s xpDisplay 6
-execute as @a[scores={enchantItem=1..},tag=mcLvl4,tag=mage] run scoreboard players add @s mageLevel 8
-execute as @a[scores={enchantItem=1..},tag=mcLvl4,tag=mage] run scoreboard players set @s xpDisplay 8
-execute as @a[scores={enchantItem=1..},tag=mcLvl5,tag=mage] run scoreboard players add @s mageLevel 10
-execute as @a[scores={enchantItem=1..},tag=mcLvl5,tag=mage] run scoreboard players set @s xpDisplay 10
-execute as @a[scores={enchantItem=1..},tag=mcLvl6,tag=mage] run scoreboard players add @s mageLevel 12
-execute as @a[scores={enchantItem=1..},tag=mcLvl6,tag=mage] run scoreboard players set @s xpDisplay 12
-execute as @a[scores={enchantItem=1..},tag=mcLvl7,tag=mage] run scoreboard players add @s mageLevel 14
-execute as @a[scores={enchantItem=1..},tag=mcLvl7,tag=mage] run scoreboard players set @s xpDisplay 14
-execute as @a[scores={enchantItem=1..},tag=mcLvl8,tag=mage] run scoreboard players add @s mageLevel 16
-execute as @a[scores={enchantItem=1..},tag=mcLvl8,tag=mage] run scoreboard players set @s xpDisplay 16
-execute as @a[scores={enchantItem=1..},tag=mcLvl9,tag=mage] run scoreboard players add @s mageLevel 18
-execute as @a[scores={enchantItem=1..},tag=mcLvl9,tag=mage] run scoreboard players set @s xpDisplay 18
-execute as @a[scores={enchantItem=1..},tag=mcLvl10,tag=mage] run scoreboard players add @s mageLevel 20
-execute as @a[scores={enchantItem=1..},tag=mcLvl10,tag=mage] run scoreboard players set @s xpDisplay 20
+execute as @a[scores={enchantItem=1..},tag=mcLvl1,tag=mage] run scoreboard players add @s mageLevel 4
+execute as @a[scores={enchantItem=1..},tag=mcLvl1,tag=mage] run scoreboard players set @s xpDisplay 4
+execute as @a[scores={enchantItem=1..},tag=mcLvl2,tag=mage] run scoreboard players add @s mageLevel 8
+execute as @a[scores={enchantItem=1..},tag=mcLvl2,tag=mage] run scoreboard players set @s xpDisplay 8
+execute as @a[scores={enchantItem=1..},tag=mcLvl3,tag=mage] run scoreboard players add @s mageLevel 12
+execute as @a[scores={enchantItem=1..},tag=mcLvl3,tag=mage] run scoreboard players set @s xpDisplay 12
+execute as @a[scores={enchantItem=1..},tag=mcLvl4,tag=mage] run scoreboard players add @s mageLevel 16
+execute as @a[scores={enchantItem=1..},tag=mcLvl4,tag=mage] run scoreboard players set @s xpDisplay 16
+execute as @a[scores={enchantItem=1..},tag=mcLvl5,tag=mage] run scoreboard players add @s mageLevel 20
+execute as @a[scores={enchantItem=1..},tag=mcLvl5,tag=mage] run scoreboard players set @s xpDisplay 20
+execute as @a[scores={enchantItem=1..},tag=mcLvl6,tag=mage] run scoreboard players add @s mageLevel 24
+execute as @a[scores={enchantItem=1..},tag=mcLvl6,tag=mage] run scoreboard players set @s xpDisplay 24
+execute as @a[scores={enchantItem=1..},tag=mcLvl7,tag=mage] run scoreboard players add @s mageLevel 28
+execute as @a[scores={enchantItem=1..},tag=mcLvl7,tag=mage] run scoreboard players set @s xpDisplay 28
+execute as @a[scores={enchantItem=1..},tag=mcLvl8,tag=mage] run scoreboard players add @s mageLevel 32
+execute as @a[scores={enchantItem=1..},tag=mcLvl8,tag=mage] run scoreboard players set @s xpDisplay 32
+execute as @a[scores={enchantItem=1..},tag=mcLvl9,tag=mage] run scoreboard players add @s mageLevel 36
+execute as @a[scores={enchantItem=1..},tag=mcLvl9,tag=mage] run scoreboard players set @s xpDisplay 36
+execute as @a[scores={enchantItem=1..},tag=mcLvl10,tag=mage] run scoreboard players add @s mageLevel 40
+execute as @a[scores={enchantItem=1..},tag=mcLvl10,tag=mage] run scoreboard players set @s xpDisplay 40
 execute as @a[scores={enchantItem=1..},tag=mLvl0,tag=mage] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Mage xp | Level 1 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"mageLevel"},"color":"dark_aqua"},{"text":" / 100) ","color":"dark_aqua"}]
 execute as @a[scores={enchantItem=1..},tag=mLvl1,tag=mage] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Mage xp | Level 2 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"mageLevel"},"color":"dark_aqua"},{"text":" / 250) ","color":"dark_aqua"}]
 execute as @a[scores={enchantItem=1..},tag=mLvl2,tag=mage] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Mage xp | Level 3 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"mageLevel"},"color":"dark_aqua"},{"text":" / 1000) ","color":"dark_aqua"}]
