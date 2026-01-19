@@ -28,6 +28,7 @@ execute at @a[tag=!inWilds] as @e[type=!player,distance=..25,tag=,limit=1] run t
 
 execute as @a[tag=inWilds] at @s run kill @e[type=experience_orb,distance=..10]
 execute as @a[tag=inWilds] at @s run kill @e[type=experience_bottle,distance=..10]
+execute as @a[tag=inWilds] at @s run kill @e[type=minecraft:area_effect_cloud,distance=..25]
 
 
 #execute as @a[tag=inWilds] run scoreboard players add @s wildsETimer 1

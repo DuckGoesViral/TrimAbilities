@@ -8,7 +8,7 @@ execute if score effects wildsRandom matches 5 run effect give @s strength infin
 execute if score effects wildsRandom matches 6 run effect give @s strength infinite 4 false
 execute if score effects wildsRandom matches 7 run effect give @s resistance infinite 0 false
 execute if score effects wildsRandom matches 8 run effect give @s resistance infinite 1 false
-execute if score effects wildsRandom matches 9 run effect give @s resistance infinite 4 false
+execute if score effects wildsRandom matches 9 run effect give @s resistance infinite 3 false
 
 execute as @s if entity @s[type=horse] run effect clear @s speed
 execute as @s if entity @s[type=mule] run effect clear @s speed
