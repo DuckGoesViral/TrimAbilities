@@ -211,18 +211,27 @@
       "bonus_rolls": 0,
       "entries": [
         {
-          "type": "minecraft:empty",
-          "weight": 4
-        },
-        {
           "type": "minecraft:item",
+          "name": "minecraft:paper",
           "weight": 1,
-          "name": "minecraft:sentry_armor_trim_smithing_template",
+          "conditions": [],
           "functions": [
             {
-              "function": "minecraft:set_count",
-              "count": 1,
-              "add": false
+              "function": "minecraft:set_nbt",
+              "tag": "{warp:1}"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1}",
+              "conditions": []
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "SENTRY WARP COMING SOON (KEEP THIS)",
+                "color": "white",
+                "italic": false
+              }
             }
           ]
         }

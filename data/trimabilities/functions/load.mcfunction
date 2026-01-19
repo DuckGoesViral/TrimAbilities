@@ -10,7 +10,7 @@ function trimabilities:categoryxp
 function trimabilities:minecraftlevels
 function trimabilities:categorylevels
 function trimabilities:necroteam
-
+function trimabilities:shrine/destroy
 function trimabilities:border/load
 
 scoreboard objectives add subPower dummy
