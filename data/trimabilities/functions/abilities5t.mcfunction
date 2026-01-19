@@ -191,6 +191,19 @@ execute as @a[scores={raiser=1..}] run tag @s add raiser
 execute as @a[tag=raiser] run function trimabilities:raiser
 
 
+#Stray
+execute as @a[scores={stray=1..}] run scoreboard players set @s stray 0
+
+execute as @a if entity @s[scores={progressStray=3..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"trimabilities:stray"}}}]}] run scoreboard players add @s stray 1
+execute as @a if entity @s[scores={progressStray=3..},nbt={Inventory:[{Slot: 102b,tag:{Trim:{pattern:"trimabilities:stray"}}}]}] run scoreboard players add @s stray 1
+execute as @a if entity @s[scores={progressStray=3..},nbt={Inventory:[{Slot: 101b,tag:{Trim:{pattern:"trimabilities:stray"}}}]}] run scoreboard players add @s stray 1
+execute as @a if entity @s[scores={progressStray=3..},nbt={Inventory:[{Slot: 100b,tag:{Trim:{pattern:"trimabilities:stray"}}}]}] run scoreboard players add @s stray 1
+
+execute as @a[scores={stray=1..}] run tag @s add stray
+
+execute as @a[tag=stray] run function trimabilities:stray
+
+
 #NoHost
 #execute as @a[tag=host,nbt=!{Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:host"}}}]}] run tag @s add nohost
 #execute as @a[tag=host,nbt=!{Inventory:[{Slot: 102b,tag:{Trim:{pattern:"minecraft:host"}}}]}] run tag @s add nohost

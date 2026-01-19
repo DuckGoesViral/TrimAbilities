@@ -1,5 +1,3 @@
-execute as @a[scores={mcLvl=1..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:raiser"}}},{Slot: 102b,tag:{Trim:{pattern:"minecraft:raiser"}}},{Slot: 101b,tag:{Trim:{pattern:"minecraft:raiser"}}},{Slot: 100b,tag:{Trim:{pattern:"minecraft:raiser"}}}]}] run tag @s add raiser
-execute if entity @a[tag=raiser,tag=!unlockedRaiser] as @a[tag=raiser,tag=!unlockedRaiser] at @s run function trimabilities:unlocked/raiser
 
 
 execute if score @s raiserOld matches 4 run scoreboard players remove @s manaMax 50
