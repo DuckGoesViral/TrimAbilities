@@ -6,7 +6,7 @@ function trimabilities:border/wilds with storage trimabilities:border wild
 execute as @a[tag=inWilds] run scoreboard players add @s wildsTimer 1
 
 execute as @a[tag=inWilds] store result score @s wildsLevels run xp query @s levels
-execute as @a[tag=inWilds,scores={wildsLevels=0,wildsTimer=2400..}] at @s run function trimabilities:border/bail
+execute as @a[tag=inWilds,scores={wildsLevels=0,wildsTimer=1200..}] at @s run function trimabilities:border/bail
 
 execute as @a[tag=falling] at @s run function trimabilities:border/tp
 
@@ -20,9 +20,9 @@ execute as @a[tag=inWilds,scores={wildsTimer=1200..}] run scoreboard players res
 execute as @a[tag=!inWilds] run scoreboard players reset @s wildsTimer
 
 
-execute at @a[tag=inWilds] as @e[type=!player,type=!experience_orb,type=!item,distance=..25,tag=,limit=1] run function trimabilities:border/buff
+execute at @a[tag=inWilds] if entity @e[type=!player,type=!experience_orb,type=!item,distance=..25,tag=,limit=1] as @e[type=!player,type=!experience_orb,type=!item,distance=..25,tag=,limit=1] run function trimabilities:border/buff
 
-execute at @a[tag=!inWilds] as @e[type=!player,type=!experience_orb,type=!item,distance=..20,tag=,limit=1] run tag @s add notWildMob
+execute at @a[tag=!inWilds] if entity @e[type=!player,type=!experience_orb,type=!item,distance=..20,tag=,limit=1] as @e[type=!player,type=!experience_orb,type=!item,distance=..20,tag=,limit=1] run tag @s add notWildMob
 
 execute as @a[tag=inWilds] at @s run kill @e[type=experience_orb,distance=..8]
 execute as @a[tag=inWilds] at @s run kill @e[type=experience_bottle,distance=..8]

@@ -20,9 +20,9 @@ execute as @s if entity @s[type=skeleton_horse] run effect clear @s speed
 execute as @s if entity @s[type=zombie_horse] run effect clear @s speed
 execute as @s if entity @s[type=strider] run effect clear @s speed
 
-execute store result score effects wildsRandom run random value 1..3
-
+#execute store result score effects wildsRandom run random value 1..3
+scoreboard players operation effects wildsRandom %= 3 constants
 execute if score effects wildsRandom matches 1 if entity @s[type=#minecraft:undead] run item replace entity @s armor.head with leather_helmet
 execute if score effects wildsRandom matches 2 if entity @s[type=#minecraft:undead] run item replace entity @s armor.head with chainmail_helmet
-execute if score effects wildsRandom matches 3 if entity @s[type=#minecraft:undead] run item replace entity @s armor.head with iron_helmet
+execute if score effects wildsRandom matches 0 if entity @s[type=#minecraft:undead] run item replace entity @s armor.head with iron_helmet
 
