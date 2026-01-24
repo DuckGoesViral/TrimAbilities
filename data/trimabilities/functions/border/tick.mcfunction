@@ -14,10 +14,10 @@ execute as @a[tag=falling] at @s run function trimabilities:border/tp
 
 # Remove 1 level from the player every 60 seconds in the wilds. Also, run a cave ambient sound and teleport nearby mobs to the player. This excludes any players, items, xp, etc. 
 # Note that boats being teleported to the player is intended behavior, as players may be in boats to avoid the TP. 
-execute as @a[tag=inWilds,scores={wildsTimer=1200..}] run xp add @s -1 levels
-execute as @a[tag=inWilds,scores={wildsTimer=1200..}] at @s run playsound minecraft:ambient.cave ambient @s ~ ~ ~ 5 1 1
-execute as @a[tag=inWilds,scores={wildsTimer=1200..}] at @s run spreadplayers ~ ~ 1 10 false @e[distance=..64,type=!minecraft:player,type=!item,type=!minecraft:chest_minecart,type=!marker,type=!minecraft:armor_stand,type=!minecraft:experience_bottle,type=!minecraft:experience_orb,type=!minecraft:arrow,type=!minecraft:ender_pearl,type=!minecraft:eye_of_ender]
-execute as @a[tag=inWilds,scores={wildsTimer=1200..}] run scoreboard players reset @s wildsTimer
+execute as @a[tag=inWilds,scores={wildsTimer=1200..}] unless score @s wildsLevels matches 0 run xp add @s -1 levels
+execute as @a[tag=inWilds,scores={wildsTimer=1200..}] at @s unless score @s wildsLevels matches 0 run playsound minecraft:ambient.cave ambient @s ~ ~ ~ 5 1 1
+execute as @a[tag=inWilds,scores={wildsTimer=1200..}] at @s unless score @s wildsLevels matches 0 run spreadplayers ~ ~ 1 10 false @e[distance=..64,type=!minecraft:player,type=!item,type=!minecraft:chest_minecart,type=!marker,type=!minecraft:armor_stand,type=!minecraft:experience_bottle,type=!minecraft:experience_orb,type=!minecraft:arrow,type=!minecraft:ender_pearl,type=!minecraft:eye_of_ender]
+execute as @a[tag=inWilds,scores={wildsTimer=1200..}] unless score @s wildsLevels matches 0 run scoreboard players reset @s wildsTimer
 
 # Resets the wilds timer for players not in the wilds
 execute as @a[tag=!inWilds] run scoreboard players reset @s wildsTimer
