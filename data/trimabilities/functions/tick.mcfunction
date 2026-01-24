@@ -106,14 +106,35 @@ clear @a potion{Potion:"minecraft:strength"}
 clear @a potion{Potion:"minecraft:strong_strength"}
 clear @a potion{Potion:"minecraft:long_strength"}
 
+clear @a splash_potion{Potion:"minecraft:strength"}
+clear @a splash_potion{Potion:"minecraft:strong_strength"}
+clear @a splash_potion{Potion:"minecraft:long_strength"}
+
+clear @a lingering_potion{Potion:"minecraft:harming"}
+clear @a lingering_potion{Potion:"minecraft:strong_harming"}
+
 clear @a splash_potion{Potion:"minecraft:harming"}
 clear @a splash_potion{Potion:"minecraft:strong_harming"}
 
 clear @a potion{Potion:"minecraft:strong_swiftness"}
+clear @a splash_potion{Potion:"minecraft:strong_swiftness"}
+clear @a lingering_potion{Potion:"minecraft:strong_swiftness"}
 
-clear @a potion{Potion:"minecraft:weakness"}
-clear @a potion{Potion:"minecraft:long_weakness"}
+clear @a splash_potion{Potion:"minecraft:weakness"}
+clear @a splash_potion{Potion:"minecraft:long_weakness"}
 
+clear @a lingering_potion{Potion:"minecraft:weakness"}
+clear @a lingering_potion{Potion:"minecraft:long_weakness"}
+
+
+clear @a tipped_arrow{Potion:"minecraft:strength"}
+clear @a tipped_arrow{Potion:"minecraft:strong_strength"}
+clear @a tipped_arrow{Potion:"minecraft:long_strength"}
+clear @a tipped_arrow{Potion:"minecraft:strong_swiftness"}
+clear @a tipped_arrow{Potion:"minecraft:harming"}
+clear @a tipped_arrow{Potion:"minecraft:strong_harming"}
+clear @a tipped_arrow{Potion:"minecraft:weakness"}
+clear @a tipped_arrow{Potion:"minecraft:long_weakness"}
 
 #kill
 #give @s minecraft:stone_sword 1
