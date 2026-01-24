@@ -20,6 +20,10 @@ execute as @a[scores={minecraftLevel=1000..},tag=mcLvl3go,tag=!mcDuneGive] run s
 execute as @a[scores={minecraftLevel=1000..},tag=mcLvl3go,tag=!mcDuneGive] run tag @s add mcDuneGive
 execute as @a[scores={minecraftLevel=1000..},tag=mcLvl3go,tag=!mcWildGive] run scoreboard players add @s progressWild 1
 execute as @a[scores={minecraftLevel=1000..},tag=mcLvl3go,tag=!mcWildGive] run tag @s add mcWildGive
+execute as @a[scores={minecraftLevel=1000..},tag=mcLvl3go,tag=!mcVitalGive] run scoreboard players add @s progressVital 1
+execute as @a[scores={minecraftLevel=1000..},tag=mcLvl3go,tag=!mcVitalGive] run tag @s add mcVitalGive
+execute as @a[scores={minecraftLevel=1000..},tag=mcLvl3go,tag=!mcStrayGive] run scoreboard players add @s progressStray 1
+execute as @a[scores={minecraftLevel=1000..},tag=mcLvl3go,tag=!mcStrayGive] run tag @s add mcStrayGive
 execute if entity @a[scores={minecraftLevel=1000..},tag=mcLvl3go] as @a[scores={minecraftLevel=1000..},tag=mcLvl3go] at @s run function trimabilities:mclvl/3
 execute as @a[tag=mcLvl3go] run tag @s remove mcLvl3go
 
@@ -34,8 +38,7 @@ execute as @a[tag=mcLvl4go] run tag @s remove mcLvl4go
 execute as @a[scores={minecraftLevel=5000..},tag=!mcLvl0,tag=!mcLvl1,tag=!mcLvl2,tag=!mcLvl3,tag=!mcLvl5,tag=!mcLvl6,tag=!mcLvl7,tag=!mcLvl8,tag=!mcLvl9,tag=!mcLvl10] run tag @s remove mcLvl4
 execute as @a[scores={minecraftLevel=5000..},tag=!mcLvl0,tag=!mcLvl1,tag=!mcLvl2,tag=!mcLvl3,tag=!mcLvl5,tag=!mcLvl6,tag=!mcLvl7,tag=!mcLvl8,tag=!mcLvl9,tag=!mcLvl10] run tag @s add mcLvl5go
 execute as @a[scores={minecraftLevel=5000..},tag=!mcLvl0,tag=!mcLvl1,tag=!mcLvl2,tag=!mcLvl3,tag=!mcLvl5,tag=!mcLvl6,tag=!mcLvl7,tag=!mcLvl8,tag=!mcLvl9,tag=!mcLvl10] run tag @s add mcLvl5
-execute as @a[scores={minecraftLevel=5000..},tag=mcLvl5go,tag=!mcWardGive] run scoreboard players add @s progressWard 1
-execute as @a[scores={minecraftLevel=5000..},tag=mcLvl5go,tag=!mcWardGive] run tag @s add mcWardGive
+
 execute as @a[scores={minecraftLevel=5000..},tag=mcLvl5go,tag=!mcRibGive] run scoreboard players add @s progressRib 1
 execute as @a[scores={minecraftLevel=5000..},tag=mcLvl5go,tag=!mcRibGive] run tag @s add mcRibGive
 execute if entity @a[scores={minecraftLevel=5000..},tag=mcLvl5go] as @a[scores={minecraftLevel=5000..},tag=mcLvl5go] at @s run function trimabilities:mclvl/5
@@ -48,6 +51,8 @@ execute as @a[scores={minecraftLevel=10000..},tag=mcLvl6go,tag=!mcSnoutGive] run
 execute as @a[scores={minecraftLevel=10000..},tag=mcLvl6go,tag=!mcSnoutGive] run tag @s add mcSnoutGive
 execute as @a[scores={minecraftLevel=10000..},tag=mcLvl6go,tag=!mcEyeGive] run scoreboard players add @s progressEye 1
 execute as @a[scores={minecraftLevel=10000..},tag=mcLvl6go,tag=!mcEyeGive] run tag @s add mcEyeGive
+execute as @a[scores={minecraftLevel=10000..},tag=mcLvl6go,tag=!mcWardGive] run scoreboard players add @s progressWard 1
+execute as @a[scores={minecraftLevel=10000..},tag=mcLvl6go,tag=!mcWardGive] run tag @s add mcWardGive
 execute if entity @a[scores={minecraftLevel=10000..},tag=mcLvl6go] as @a[scores={minecraftLevel=10000..},tag=mcLvl6go] at @s run function trimabilities:mclvl/6
 execute as @a[tag=mcLvl6go] run tag @s remove mcLvl6go
 
@@ -66,8 +71,8 @@ execute as @a[scores={minecraftLevel=25000..},tag=mcLvl8go,tag=!mcSilenceGive] r
 execute as @a[scores={minecraftLevel=25000..},tag=mcLvl8go,tag=!mcSilenceGive] run tag @s add mcSilenceGive
 execute as @a[scores={minecraftLevel=25000..},tag=mcLvl8go,tag=!mcSentryGive] run scoreboard players add @s progressSentry 1
 execute as @a[scores={minecraftLevel=25000..},tag=mcLvl8go,tag=!mcSentryGive] run tag @s add mcSentryGive
-execute as @a[scores={minecraftLevel=25000..},tag=mcLvl8go,tag=!mcVexGive] run scoreboard players add @s progressVex 1
-execute as @a[scores={minecraftLevel=25000..},tag=mcLvl8go,tag=!mcVexGive] run tag @s add mcVexGive
+execute as @a[scores={minecraftLevel=25000..},tag=mcLvl8go,tag=!mcStormGive] run scoreboard players add @s progressStorm 1
+execute as @a[scores={minecraftLevel=25000..},tag=mcLvl8go,tag=!mcStormGive] run tag @s add mcStormGive
 execute if entity @a[scores={minecraftLevel=25000..},tag=mcLvl8go] as @a[scores={minecraftLevel=25000..},tag=mcLvl8go] at @s run function trimabilities:mclvl/8
 execute as @a[tag=mcLvl8go] run tag @s remove mcLvl8go
 

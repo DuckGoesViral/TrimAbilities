@@ -1,5 +1,6 @@
 
-
+execute unless score @s wild = @s wildOld run effect clear @s jump_boost
+execute unless score @s wild = @s wildOld run effect clear @s speed
 
 execute if score @s wild matches 0 run tag @s remove wild
 
@@ -12,6 +13,7 @@ execute if score @s wild matches 4 run effect give @s jump_boost infinite 3 true
 execute if score @s wild matches 4 run effect give @s speed infinite 0 true
 
 scoreboard players operation @s wildOld = @s wild
+
 
 
 

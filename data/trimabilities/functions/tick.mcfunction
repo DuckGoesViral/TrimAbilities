@@ -1,3 +1,20 @@
+#smp temp fixes
+
+#vital overhealth fix
+execute as @a[tag=unlockedVital,tag=!fixedVital] run attribute @s generic.max_health modifier remove 2-1-0-1-1
+execute as @a[tag=unlockedVital,tag=!fixedVital] run attribute @s generic.max_health modifier remove 2-1-0-2-1
+execute as @a[tag=unlockedVital,tag=!fixedVital] run attribute @s generic.max_health modifier remove 2-1-0-3-1
+execute as @a[tag=unlockedVital,tag=!fixedVital] run attribute @s generic.max_health modifier remove 2-1-1-4-1
+execute as @a[tag=unlockedVital,tag=!fixedVital] run tag @s add fixedVital
+
+
+
+
+
+
+
+
+
 #abilities
 function trimabilities:abilities1t
 
@@ -64,6 +81,10 @@ execute as @a[nbt={SelectedItem:{tag:{added_power:4}}}] run item modify entity @
 
 execute as @a[nbt={SelectedItem:{tag:{Unbreakable:1b}}}] unless score @s ravine matches 4 run item modify entity @s weapon.mainhand trimabilities:ununbreakable
 execute as @a[nbt={Inventory:[{Slot:-106b,tag:{Unbreakable:1b}}]}] unless score @s ravine matches 4 run item modify entity @s weapon.offhand trimabilities:ununbreakable
+execute as @a[nbt={Inventory:[{Slot:100b,tag:{Unbreakable:1b}}]}] unless score @s ravine matches 4 run item modify entity @s armor.feet trimabilities:ununbreakable
+execute as @a[nbt={Inventory:[{Slot:101b,tag:{Unbreakable:1b}}]}] unless score @s ravine matches 4 run item modify entity @s armor.legs trimabilities:ununbreakable
+execute as @a[nbt={Inventory:[{Slot:102b,tag:{Unbreakable:1b}}]}] unless score @s ravine matches 4 run item modify entity @s armor.chest trimabilities:ununbreakable
+execute as @a[nbt={Inventory:[{Slot:103b,tag:{Unbreakable:1b}}]}] unless score @s ravine matches 4 run item modify entity @s armor.head trimabilities:ununbreakable
 
 execute as @a[scores={grindstoneUse=1..}] run function trimabilities:subarrow_clear
 
@@ -75,13 +96,45 @@ execute as @a[scores={grindstoneUse=1..}] run function trimabilities:subarrow_cl
 scoreboard objectives add portalBan trigger
 # execute at @a if score nether portalBan matches 1 run fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air replace nether_portal
 execute as @a at @s if score nether portalBan matches 2 unless entity @s[x=0,y=60,z=0,distance=..100] run fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air replace nether_portal
-execute as @a[scores={portalBan=1..}] run scoreboard players set nether portalBan 2
-execute as @a[scores={portalBan=1..}] run fill -17 65 33 -14 68 33 minecraft:nether_portal[axis=x]
-execute as @a[scores={portalBan=1..}] run summon minecraft:lightning_bolt -15.20 70.00 33.61
+execute as @a[scores={portalBan=1..}] run scoreboard players set nether portalBan 0
+execute as @a[scores={portalBan=1..}] in minecraft:overworld run fill -17 65 33 -14 68 33 minecraft:nether_portal[axis=x]
+execute as @a[scores={portalBan=1..}] in minecraft:overworld run summon minecraft:lightning_bolt -15.20 70.00 33.61
 execute as @a[scores={portalBan=1..}] run scoreboard players reset @s portalBan
 
+#POTION BAN
+clear @a potion{Potion:"minecraft:strength"}
+clear @a potion{Potion:"minecraft:strong_strength"}
+clear @a potion{Potion:"minecraft:long_strength"}
+
+clear @a splash_potion{Potion:"minecraft:strength"}
+clear @a splash_potion{Potion:"minecraft:strong_strength"}
+clear @a splash_potion{Potion:"minecraft:long_strength"}
+
+clear @a lingering_potion{Potion:"minecraft:harming"}
+clear @a lingering_potion{Potion:"minecraft:strong_harming"}
+
+clear @a splash_potion{Potion:"minecraft:harming"}
+clear @a splash_potion{Potion:"minecraft:strong_harming"}
+
+clear @a potion{Potion:"minecraft:strong_swiftness"}
+clear @a splash_potion{Potion:"minecraft:strong_swiftness"}
+clear @a lingering_potion{Potion:"minecraft:strong_swiftness"}
+
+clear @a splash_potion{Potion:"minecraft:weakness"}
+clear @a splash_potion{Potion:"minecraft:long_weakness"}
+
+clear @a lingering_potion{Potion:"minecraft:weakness"}
+clear @a lingering_potion{Potion:"minecraft:long_weakness"}
 
 
+clear @a tipped_arrow{Potion:"minecraft:strength"}
+clear @a tipped_arrow{Potion:"minecraft:strong_strength"}
+clear @a tipped_arrow{Potion:"minecraft:long_strength"}
+clear @a tipped_arrow{Potion:"minecraft:strong_swiftness"}
+clear @a tipped_arrow{Potion:"minecraft:harming"}
+clear @a tipped_arrow{Potion:"minecraft:strong_harming"}
+clear @a tipped_arrow{Potion:"minecraft:weakness"}
+clear @a tipped_arrow{Potion:"minecraft:long_weakness"}
 
 #kill
 #give @s minecraft:stone_sword 1

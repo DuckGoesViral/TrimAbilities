@@ -1,3 +1,9 @@
+#Level Checks
+function trimabilities:levels
+
+
+
+
 #Warrior Level
 execute as @a[scores={warriorLevel=0..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl2,tag=!wLvl3,tag=!wLvl4,tag=!wLvl5] run tag @s add wLvl0
 
@@ -15,20 +21,26 @@ execute as @a[scores={warriorLevel=1000..},tag=wLvl2go,tag=!wDuneGive] run tag @
 execute as @a[scores={warriorLevel=1000..},tag=wLvl2go] at @s run function trimabilities:clvl/w2
 execute as @a[tag=wLvl2go] run tag @s remove wLvl2go
 
+execute as @a[scores={warriorLevel=2500..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl3,tag=!wLvl4,tag=!wLvl5] if score @s level3s matches 3.. run tellraw @s {"text":"You have reached your maximum mastery for this skill!","color":"red"}
+execute as @a[scores={warriorLevel=2500..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl3,tag=!wLvl4,tag=!wLvl5] if score @s level3s matches 3.. run scoreboard players set @s warriorLevel 2490
 execute as @a[scores={warriorLevel=2500..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl3,tag=!wLvl4,tag=!wLvl5] run tag @s remove wLvl2
 execute as @a[scores={warriorLevel=2500..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl3,tag=!wLvl4,tag=!wLvl5] run tag @s add wLvl3go
 execute as @a[scores={warriorLevel=2500..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl3,tag=!wLvl4,tag=!wLvl5] run tag @s add wLvl3
-execute as @a[scores={warriorLevel=2500..},tag=wLvl3go,tag=!wSnoutGive] run scoreboard players add @s progressSnout 1
-execute as @a[scores={warriorLevel=2500..},tag=wLvl3go,tag=!wSnoutGive] run tag @s add wSnoutGive
 execute as @a[scores={warriorLevel=2500..},tag=wLvl3go] at @s run function trimabilities:clvl/w3
 execute as @a[tag=wLvl3go] run tag @s remove wLvl3go
 
+execute as @a[scores={warriorLevel=5000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl3,tag=!wLvl4,tag=!wLvl5] if score @s level4s matches 2.. run tellraw @s {"text":"You have reached your maximum mastery for this skill!","color":"red"}
+execute as @a[scores={warriorLevel=5000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl3,tag=!wLvl4,tag=!wLvl5] if score @s level4s matches 2.. run scoreboard players set @s warriorLevel 4990
 execute as @a[scores={warriorLevel=5000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl2,tag=!wLvl4,tag=!wLvl5] run tag @s remove wLvl3
 execute as @a[scores={warriorLevel=5000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl2,tag=!wLvl4,tag=!wLvl5] run tag @s add wLvl4go
 execute as @a[scores={warriorLevel=5000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl2,tag=!wLvl4,tag=!wLvl5] run tag @s add wLvl4
+execute as @a[scores={warriorLevel=5000..},tag=wLvl4go,tag=!wSnoutGive] run scoreboard players add @s progressSnout 1
+execute as @a[scores={warriorLevel=5000..},tag=wLvl4go,tag=!wSnoutGive] run tag @s add wSnoutGive
 execute as @a[scores={warriorLevel=5000..},tag=wLvl4go] at @s run function trimabilities:clvl/w4
 execute as @a[tag=wLvl4go] run tag @s remove wLvl4go
 
+execute as @a[scores={warriorLevel=10000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl2,tag=!wLvl3,tag=!wLvl5] if score @s level5s matches 1.. run tellraw @s {"text":"You have reached your maximum mastery for this skill!","color":"red"}
+execute as @a[scores={warriorLevel=10000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl2,tag=!wLvl3,tag=!wLvl5] if score @s level5s matches 1.. run scoreboard players set @s warriorLevel 9990
 execute as @a[scores={warriorLevel=10000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl2,tag=!wLvl3,tag=!wLvl5] run tag @s remove wLvl4
 execute as @a[scores={warriorLevel=10000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl2,tag=!wLvl3,tag=!wLvl5] run tag @s add wLvl5go
 execute as @a[scores={warriorLevel=10000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl2,tag=!wLvl3,tag=!wLvl5] run tag @s add wLvl5
@@ -50,28 +62,28 @@ execute as @a[tag=tLvl1go] run tag @s remove tLvl1go
 execute as @a[scores={tankLevel=250..},tag=!tLvl0,tag=!tLvl2,tag=!tLvl3,tag=!tLvl4,tag=!tLvl5] run tag @s remove tLvl1
 execute as @a[scores={tankLevel=250..},tag=!tLvl0,tag=!tLvl2,tag=!tLvl3,tag=!tLvl4,tag=!tLvl5] run tag @s add tLvl2go
 execute as @a[scores={tankLevel=250..},tag=!tLvl0,tag=!tLvl2,tag=!tLvl3,tag=!tLvl4,tag=!tLvl5] run tag @s add tLvl2
+execute as @a[scores={tankLevel=250..},tag=tLvl2go,tag=!tVitalGive] run scoreboard players add @s progressVital 1
+execute as @a[scores={tankLevel=250..},tag=tLvl2go,tag=!tVitalGive] run tag @s add tVitalGive
 execute as @a[scores={tankLevel=250..},tag=tLvl2go] at @s run function trimabilities:clvl/t2
 execute as @a[tag=tLvl2go] run tag @s remove tLvl2go
 
 execute as @a[scores={tankLevel=1000..},tag=!tLvl0,tag=!tLvl1,tag=!tLvl3,tag=!tLvl4,tag=!tLvl5] run tag @s remove tLvl2
 execute as @a[scores={tankLevel=1000..},tag=!tLvl0,tag=!tLvl1,tag=!tLvl3,tag=!tLvl4,tag=!tLvl5] run tag @s add tLvl3go
 execute as @a[scores={tankLevel=1000..},tag=!tLvl0,tag=!tLvl1,tag=!tLvl3,tag=!tLvl4,tag=!tLvl5] run tag @s add tLvl3
-execute as @a[scores={tankLevel=1000..},tag=tLvl3go,tag=!tSpireGive] run scoreboard players add @s progressSpire 1
-execute as @a[scores={tankLevel=1000..},tag=tLvl3go,tag=!tSpireGive] run tag @s add tSpireGive
 execute as @a[scores={tankLevel=1000..},tag=tLvl3go] at @s run function trimabilities:clvl/t3
 execute as @a[tag=tLvl3go] run tag @s remove tLvl3go
 
 execute as @a[scores={tankLevel=2500..},tag=!tLvl0,tag=!tLvl1,tag=!tLvl2,tag=!tLvl4,tag=!tLvl5] run tag @s remove tLvl3
 execute as @a[scores={tankLevel=2500..},tag=!tLvl0,tag=!tLvl1,tag=!tLvl2,tag=!tLvl4,tag=!tLvl5] run tag @s add tLvl4go
 execute as @a[scores={tankLevel=2500..},tag=!tLvl0,tag=!tLvl1,tag=!tLvl2,tag=!tLvl4,tag=!tLvl5] run tag @s add tLvl4
+execute as @a[scores={tankLevel=2500..},tag=tLvl4go,tag=!tWardGive] run scoreboard players add @s progressWard 1
+execute as @a[scores={tankLevel=2500..},tag=tLvl4go,tag=!tWardGive] run tag @s add tWardGive
 execute as @a[scores={tankLevel=2500..},tag=tLvl4go] at @s run function trimabilities:clvl/t4
 execute as @a[tag=tLvl4go] run tag @s remove tLvl4go
 
 execute as @a[scores={tankLevel=5000..},tag=!tLvl0,tag=!tLvl1,tag=!tLvl2,tag=!tLvl3,tag=!tLvl5] run tag @s remove tLvl4
 execute as @a[scores={tankLevel=5000..},tag=!tLvl0,tag=!tLvl1,tag=!tLvl2,tag=!tLvl3,tag=!tLvl5] run tag @s add tLvl5go
 execute as @a[scores={tankLevel=5000..},tag=!tLvl0,tag=!tLvl1,tag=!tLvl2,tag=!tLvl3,tag=!tLvl5] run tag @s add tLvl5
-execute as @a[scores={tankLevel=5000..},tag=tLvl5go,tag=!tWardGive] run scoreboard players add @s progressWard 1
-execute as @a[scores={tankLevel=5000..},tag=tLvl5go,tag=!tWardGive] run tag @s add tWardGive
 execute as @a[scores={tankLevel=5000..},tag=tLvl5go] at @s run function trimabilities:clvl/t5
 execute as @a[tag=tLvl5go] run tag @s remove tLvl5go
 

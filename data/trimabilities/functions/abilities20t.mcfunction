@@ -6,10 +6,6 @@ execute as @e[type=minecraft:item_display,tag=healPool] at @s run effect give @e
 
 
 
-#level lock out system
-execute as @a run function trimabilities:levels
-
-
 #necromancy stuf
 
 execute as @e[tag=necroSummon] run scoreboard players add @s necroDamage 1

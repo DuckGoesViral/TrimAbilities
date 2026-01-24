@@ -33,5 +33,10 @@ execute as @a[tag=inWilds] at @s run kill @e[type=experience_orb,distance=..8]
 execute as @a[tag=inWilds] at @s run kill @e[type=experience_bottle,distance=..8]
 execute as @a[tag=inWilds] at @s run kill @e[type=minecraft:area_effect_cloud,distance=..15]
 
-
+scoreboard objectives add netherBorder dummy
+execute as @a at @s if dimension minecraft:the_nether if entity @s[x=-1000,z=-1000,dx=2000,dz=2000] run scoreboard players set @s netherBorder 0
+execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1000,z=-1000,dx=2000,dz=2000] run scoreboard players add @s netherBorder 1
+execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1000,z=-1000,dx=2000,dz=2000] run tellraw @s {"text": "PLEASE RETURN TO THE NETEHR (YOU WILL DIE IN ONE MINUTE)","color": "red","bold": true}
+execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1000,z=-1000,dx=2000,dz=2000] run title @s title {"text": "RETURN TO THE NETHER","color": "red","bold": true}
+execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1000,z=-1000,dx=2000,dz=2000] if score @s netherBorder matches 1200.. run damage @s 1 in_wall
 
