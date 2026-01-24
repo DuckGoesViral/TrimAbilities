@@ -20,7 +20,7 @@ execute if score @s ravine matches 1.. if entity @s[nbt={SelectedItem:{id:"minec
 
 execute if score @s ravine matches 1.. if entity @s[nbt={SelectedItem:{id:"minecraft:trident"}}] run effect clear @s haste
 
-execute if score @s ravine matches 4 if entity @s[tag=!unlockedRavine] at @s run function trimabilities:unlocked/ravine
+#execute if score @s ravine matches 4 if entity @s[tag=!unlockedRavine] at @s run function trimabilities:unlocked/ravine
 execute if score @s ravine matches 4 run item modify entity @s weapon.mainhand trimabilities:unbreakable
 
 
