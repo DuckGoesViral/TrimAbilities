@@ -94,7 +94,7 @@ execute as @a[scores={grindstoneUse=1..}] run function trimabilities:subarrow_cl
 
 #NETHER PORTAL LOCK OUT
 scoreboard objectives add portalBan trigger
-execute at @a if score nether portalBan matches 1 run fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air replace nether_portal
+# execute at @a if score nether portalBan matches 1 run fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air replace nether_portal
 execute as @a at @s if score nether portalBan matches 2 unless entity @s[x=0,y=60,z=0,distance=..100] run fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air replace nether_portal
 execute as @a[scores={portalBan=1..}] run scoreboard players set nether portalBan 0
 execute as @a[scores={portalBan=1..}] in minecraft:overworld run fill -17 65 33 -14 68 33 minecraft:nether_portal[axis=x]
