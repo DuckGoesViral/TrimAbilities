@@ -31,6 +31,37 @@ execute as @a[scores={mobKills=1..},tag=warrior] at @s run playsound minecraft:e
 execute as @a[scores={mobKills=1..}] run scoreboard players reset @s mobKills
 
 #Tank xp
+execute as @a[scores={damageTaken=25..},tag=mcLvl0,tag=tank] run scoreboard players add @s tankLevel 0
+execute as @a[scores={damageTaken=25..},tag=mcLvl0,tag=tank] run scoreboard players set @s xpDisplay 0
+execute as @a[scores={damageTaken=25..},tag=mcLvl1,tag=tank] run scoreboard players add @s tankLevel 1
+execute as @a[scores={damageTaken=25..},tag=mcLvl1,tag=tank] run scoreboard players set @s xpDisplay 1
+execute as @a[scores={damageTaken=25..},tag=mcLvl2,tag=tank] run scoreboard players add @s tankLevel 2
+execute as @a[scores={damageTaken=25..},tag=mcLvl2,tag=tank] run scoreboard players set @s xpDisplay 2
+execute as @a[scores={damageTaken=25..},tag=mcLvl3,tag=tank] run scoreboard players add @s tankLevel 3
+execute as @a[scores={damageTaken=25..},tag=mcLvl3,tag=tank] run scoreboard players set @s xpDisplay 3
+execute as @a[scores={damageTaken=25..},tag=mcLvl4,tag=tank] run scoreboard players add @s tankLevel 4
+execute as @a[scores={damageTaken=25..},tag=mcLvl4,tag=tank] run scoreboard players set @s xpDisplay 4
+execute as @a[scores={damageTaken=25..},tag=mcLvl5,tag=tank] run scoreboard players add @s tankLevel 5
+execute as @a[scores={damageTaken=25..},tag=mcLvl5,tag=tank] run scoreboard players set @s xpDisplay 5
+execute as @a[scores={damageTaken=25..},tag=mcLvl6,tag=tank] run scoreboard players add @s tankLevel 6
+execute as @a[scores={damageTaken=25..},tag=mcLvl6,tag=tank] run scoreboard players set @s xpDisplay 6
+execute as @a[scores={damageTaken=25..},tag=mcLvl7,tag=tank] run scoreboard players add @s tankLevel 7
+execute as @a[scores={damageTaken=25..},tag=mcLvl7,tag=tank] run scoreboard players set @s xpDisplay 7
+execute as @a[scores={damageTaken=25..},tag=mcLvl8,tag=tank] run scoreboard players add @s tankLevel 8
+execute as @a[scores={damageTaken=25..},tag=mcLvl8,tag=tank] run scoreboard players set @s xpDisplay 8
+execute as @a[scores={damageTaken=25..},tag=mcLvl9,tag=tank] run scoreboard players add @s tankLevel 9
+execute as @a[scores={damageTaken=25..},tag=mcLvl9,tag=tank] run scoreboard players set @s xpDisplay 9
+execute as @a[scores={damageTaken=25..},tag=mcLvl10,tag=tank] run scoreboard players add @s tankLevel 10
+execute as @a[scores={damageTaken=25..},tag=mcLvl10,tag=tank] run scoreboard players set @s xpDisplay 10
+execute as @a[scores={damageTaken=25..},tag=tLvl0,tag=tank] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Tank xp | Level 1 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"tankLevel"},"color":"dark_aqua"},{"text":" / 100) ","color":"dark_aqua"}]
+execute as @a[scores={damageTaken=25..},tag=tLvl1,tag=tank] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Tank xp | Level 2 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"tankLevel"},"color":"dark_aqua"},{"text":" / 250) ","color":"dark_aqua"}]
+execute as @a[scores={damageTaken=25..},tag=tLvl2,tag=tank] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Tank xp | Level 3 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"tankLevel"},"color":"dark_aqua"},{"text":" / 1000) ","color":"dark_aqua"}]
+execute as @a[scores={damageTaken=25..},tag=tLvl3,tag=tank] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Tank xp | Level 4 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"tankLevel"},"color":"dark_aqua"},{"text":" / 2500) ","color":"dark_aqua"}]
+execute as @a[scores={damageTaken=25..},tag=tLvl4,tag=tank] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Tank xp | Level 5 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"tankLevel"},"color":"dark_aqua"},{"text":" / 5000) ","color":"dark_aqua"}]
+execute as @a[scores={damageTaken=25..},tag=tLvl5,tag=tank] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Tank xp | Level 5 ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"tankLevel"},"color":"dark_aqua"},{"text":") ","color":"dark_aqua"}]
+execute as @a[scores={damageTaken=25..},tag=tank] at @s run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 0.5 2
+execute as @a[scores={damageTaken=25..}] run scoreboard players reset @s damageTanked
+
 execute as @a[scores={damageTanked=10..},tag=mcLvl0,tag=tank] run scoreboard players add @s tankLevel 0
 execute as @a[scores={damageTanked=10..},tag=mcLvl0,tag=tank] run scoreboard players set @s xpDisplay 0
 execute as @a[scores={damageTanked=10..},tag=mcLvl1,tag=tank] run scoreboard players add @s tankLevel 1
@@ -62,36 +93,36 @@ execute as @a[scores={damageTanked=10..},tag=tLvl5,tag=tank] run title @s action
 execute as @a[scores={damageTanked=10..},tag=tank] at @s run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 0.5 2
 execute as @a[scores={damageTanked=10..}] run scoreboard players reset @s damageTanked
 
-execute as @a[scores={damageBlocked=250..},tag=mcLvl0,tag=tank] run scoreboard players add @s tankLevel 0
-execute as @a[scores={damageBlocked=250..},tag=mcLvl0,tag=tank] run scoreboard players set @s xpDisplay 0
-execute as @a[scores={damageBlocked=250..},tag=mcLvl1,tag=tank] run scoreboard players add @s tankLevel 1
-execute as @a[scores={damageBlocked=250..},tag=mcLvl1,tag=tank] run scoreboard players set @s xpDisplay 1
-execute as @a[scores={damageBlocked=250..},tag=mcLvl2,tag=tank] run scoreboard players add @s tankLevel 2
-execute as @a[scores={damageBlocked=250..},tag=mcLvl2,tag=tank] run scoreboard players set @s xpDisplay 2
-execute as @a[scores={damageBlocked=250..},tag=mcLvl3,tag=tank] run scoreboard players add @s tankLevel 3
-execute as @a[scores={damageBlocked=250..},tag=mcLvl3,tag=tank] run scoreboard players set @s xpDisplay 3
-execute as @a[scores={damageBlocked=250..},tag=mcLvl4,tag=tank] run scoreboard players add @s tankLevel 4
-execute as @a[scores={damageBlocked=250..},tag=mcLvl4,tag=tank] run scoreboard players set @s xpDisplay 4
-execute as @a[scores={damageBlocked=250..},tag=mcLvl5,tag=tank] run scoreboard players add @s tankLevel 5
-execute as @a[scores={damageBlocked=250..},tag=mcLvl5,tag=tank] run scoreboard players set @s xpDisplay 5
-execute as @a[scores={damageBlocked=250..},tag=mcLvl6,tag=tank] run scoreboard players add @s tankLevel 6
-execute as @a[scores={damageBlocked=250..},tag=mcLvl6,tag=tank] run scoreboard players set @s xpDisplay 6
-execute as @a[scores={damageBlocked=250..},tag=mcLvl7,tag=tank] run scoreboard players add @s tankLevel 7
-execute as @a[scores={damageBlocked=250..},tag=mcLvl7,tag=tank] run scoreboard players set @s xpDisplay 7
-execute as @a[scores={damageBlocked=250..},tag=mcLvl8,tag=tank] run scoreboard players add @s tankLevel 8
-execute as @a[scores={damageBlocked=250..},tag=mcLvl8,tag=tank] run scoreboard players set @s xpDisplay 8
-execute as @a[scores={damageBlocked=250..},tag=mcLvl9,tag=tank] run scoreboard players add @s tankLevel 9
-execute as @a[scores={damageBlocked=250..},tag=mcLvl9,tag=tank] run scoreboard players set @s xpDisplay 9
-execute as @a[scores={damageBlocked=250..},tag=mcLvl10,tag=tank] run scoreboard players add @s tankLevel 10
-execute as @a[scores={damageBlocked=250..},tag=mcLvl10,tag=tank] run scoreboard players set @s xpDisplay 10
-execute as @a[scores={damageBlocked=250..},tag=tLvl0,tag=tank] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Tank xp | Level 1 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"tankLevel"},"color":"dark_aqua"},{"text":" / 100) ","color":"dark_aqua"}]
-execute as @a[scores={damageBlocked=250..},tag=tLvl1,tag=tank] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Tank xp | Level 2 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"tankLevel"},"color":"dark_aqua"},{"text":" / 250) ","color":"dark_aqua"}]
-execute as @a[scores={damageBlocked=250..},tag=tLvl2,tag=tank] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Tank xp | Level 3 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"tankLevel"},"color":"dark_aqua"},{"text":" / 1000) ","color":"dark_aqua"}]
-execute as @a[scores={damageBlocked=250..},tag=tLvl3,tag=tank] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Tank xp | Level 4 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"tankLevel"},"color":"dark_aqua"},{"text":" / 2500) ","color":"dark_aqua"}]
-execute as @a[scores={damageBlocked=250..},tag=tLvl4,tag=tank] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Tank xp | Level 5 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"tankLevel"},"color":"dark_aqua"},{"text":" / 5000) ","color":"dark_aqua"}]
-execute as @a[scores={damageBlocked=250..},tag=tLvl5,tag=tank] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Tank xp | Level 5 ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"tankLevel"},"color":"dark_aqua"},{"text":") ","color":"dark_aqua"}]
-execute as @a[scores={damageBlocked=250..},tag=tank] at @s run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 0.5 2
-execute as @a[scores={damageBlocked=250..}] run scoreboard players reset @s damageBlocked
+execute as @a[scores={damageBlocked=500..},tag=mcLvl0,tag=tank] run scoreboard players add @s tankLevel 0
+execute as @a[scores={damageBlocked=500..},tag=mcLvl0,tag=tank] run scoreboard players set @s xpDisplay 0
+execute as @a[scores={damageBlocked=500..},tag=mcLvl1,tag=tank] run scoreboard players add @s tankLevel 1
+execute as @a[scores={damageBlocked=500..},tag=mcLvl1,tag=tank] run scoreboard players set @s xpDisplay 1
+execute as @a[scores={damageBlocked=500..},tag=mcLvl2,tag=tank] run scoreboard players add @s tankLevel 2
+execute as @a[scores={damageBlocked=500..},tag=mcLvl2,tag=tank] run scoreboard players set @s xpDisplay 2
+execute as @a[scores={damageBlocked=500..},tag=mcLvl3,tag=tank] run scoreboard players add @s tankLevel 3
+execute as @a[scores={damageBlocked=500..},tag=mcLvl3,tag=tank] run scoreboard players set @s xpDisplay 3
+execute as @a[scores={damageBlocked=500..},tag=mcLvl4,tag=tank] run scoreboard players add @s tankLevel 4
+execute as @a[scores={damageBlocked=500..},tag=mcLvl4,tag=tank] run scoreboard players set @s xpDisplay 4
+execute as @a[scores={damageBlocked=500..},tag=mcLvl5,tag=tank] run scoreboard players add @s tankLevel 5
+execute as @a[scores={damageBlocked=500..},tag=mcLvl5,tag=tank] run scoreboard players set @s xpDisplay 5
+execute as @a[scores={damageBlocked=500..},tag=mcLvl6,tag=tank] run scoreboard players add @s tankLevel 6
+execute as @a[scores={damageBlocked=500..},tag=mcLvl6,tag=tank] run scoreboard players set @s xpDisplay 6
+execute as @a[scores={damageBlocked=500..},tag=mcLvl7,tag=tank] run scoreboard players add @s tankLevel 7
+execute as @a[scores={damageBlocked=500..},tag=mcLvl7,tag=tank] run scoreboard players set @s xpDisplay 7
+execute as @a[scores={damageBlocked=500..},tag=mcLvl8,tag=tank] run scoreboard players add @s tankLevel 8
+execute as @a[scores={damageBlocked=500..},tag=mcLvl8,tag=tank] run scoreboard players set @s xpDisplay 8
+execute as @a[scores={damageBlocked=500..},tag=mcLvl9,tag=tank] run scoreboard players add @s tankLevel 9
+execute as @a[scores={damageBlocked=500..},tag=mcLvl9,tag=tank] run scoreboard players set @s xpDisplay 9
+execute as @a[scores={damageBlocked=500..},tag=mcLvl10,tag=tank] run scoreboard players add @s tankLevel 10
+execute as @a[scores={damageBlocked=500..},tag=mcLvl10,tag=tank] run scoreboard players set @s xpDisplay 10
+execute as @a[scores={damageBlocked=500..},tag=tLvl0,tag=tank] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Tank xp | Level 1 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"tankLevel"},"color":"dark_aqua"},{"text":" / 100) ","color":"dark_aqua"}]
+execute as @a[scores={damageBlocked=500..},tag=tLvl1,tag=tank] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Tank xp | Level 2 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"tankLevel"},"color":"dark_aqua"},{"text":" / 250) ","color":"dark_aqua"}]
+execute as @a[scores={damageBlocked=500..},tag=tLvl2,tag=tank] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Tank xp | Level 3 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"tankLevel"},"color":"dark_aqua"},{"text":" / 1000) ","color":"dark_aqua"}]
+execute as @a[scores={damageBlocked=500..},tag=tLvl3,tag=tank] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Tank xp | Level 4 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"tankLevel"},"color":"dark_aqua"},{"text":" / 2500) ","color":"dark_aqua"}]
+execute as @a[scores={damageBlocked=500..},tag=tLvl4,tag=tank] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Tank xp | Level 5 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"tankLevel"},"color":"dark_aqua"},{"text":" / 5000) ","color":"dark_aqua"}]
+execute as @a[scores={damageBlocked=500..},tag=tLvl5,tag=tank] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Tank xp | Level 5 ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"tankLevel"},"color":"dark_aqua"},{"text":") ","color":"dark_aqua"}]
+execute as @a[scores={damageBlocked=500..},tag=tank] at @s run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 0.5 2
+execute as @a[scores={damageBlocked=500..}] run scoreboard players reset @s damageBlocked
 
 #Archer xp
 execute as @a[nbt={SelectedItem:{id:"minecraft:bow"}}] run tag @s add holdBow
