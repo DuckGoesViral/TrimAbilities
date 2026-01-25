@@ -60,7 +60,7 @@ execute as @a[scores={damageTaken=25..},tag=tLvl3,tag=tank] run title @s actionb
 execute as @a[scores={damageTaken=25..},tag=tLvl4,tag=tank] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Tank xp | Level 5 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"tankLevel"},"color":"dark_aqua"},{"text":" / 5000) ","color":"dark_aqua"}]
 execute as @a[scores={damageTaken=25..},tag=tLvl5,tag=tank] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Tank xp | Level 5 ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"tankLevel"},"color":"dark_aqua"},{"text":") ","color":"dark_aqua"}]
 execute as @a[scores={damageTaken=25..},tag=tank] at @s run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 0.5 2
-execute as @a[scores={damageTaken=25..}] run scoreboard players reset @s damageTanked
+execute as @a[scores={damageTaken=25..}] run scoreboard players reset @s damageTaken
 
 execute as @a[scores={damageTanked=10..},tag=mcLvl0,tag=tank] run scoreboard players add @s tankLevel 0
 execute as @a[scores={damageTanked=10..},tag=mcLvl0,tag=tank] run scoreboard players set @s xpDisplay 0

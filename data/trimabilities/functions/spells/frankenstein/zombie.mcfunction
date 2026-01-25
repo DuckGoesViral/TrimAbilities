@@ -47,3 +47,4 @@ execute as @s[tag=mLvl2] run title @s actionbar ["",{"text":"+2","color":"dark_a
 execute as @s[tag=mLvl3] run title @s actionbar ["",{"text":"+2","color":"dark_aqua"},{"text":" Mage xp | Level 4 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"mageLevel"},"color":"dark_aqua"},{"text":" / 2500) ","color":"dark_aqua"}]
 execute as @s[tag=mLvl4] run title @s actionbar ["",{"text":"+2","color":"dark_aqua"},{"text":" Mage xp | Level 5 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"mageLevel"},"color":"dark_aqua"},{"text":" / 5000) ","color":"dark_aqua"}]
 execute as @s[tag=mLvl5] run title @s actionbar ["",{"text":"+2","color":"dark_aqua"},{"text":" Mage xp | Level 5 ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"mageLevel"},"color":"dark_aqua"},{"text":") ","color":"dark_aqua"}]
+scoreboard players add @s mageLevel 2
