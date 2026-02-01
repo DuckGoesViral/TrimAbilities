@@ -60,6 +60,18 @@ execute if entity @a[scores={progressSentry=3..},nbt={Inventory:[{Slot: 103b,tag
 
 
 
+#vex
+#air walk
+execute as @a[scores={vex=1..}] run scoreboard players set @s vex 0
+
+execute as @a if entity @s[scores={mcLvl=5..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:vex"}}}]}] run scoreboard players add @s vex 1
+execute as @a if entity @s[scores={mcLvl=5..},nbt={Inventory:[{Slot: 102b,tag:{Trim:{pattern:"minecraft:vex"}}}]}] run scoreboard players add @s vex 1
+execute as @a if entity @s[scores={mcLvl=5..},nbt={Inventory:[{Slot: 101b,tag:{Trim:{pattern:"minecraft:vex"}}}]}] run scoreboard players add @s vex 1
+execute as @a if entity @s[scores={mcLvl=5..},nbt={Inventory:[{Slot: 100b,tag:{Trim:{pattern:"minecraft:vex"}}}]}] run scoreboard players add @s vex 1
+
+execute as @a[scores={vex=1..}] run tag @s add vex
+
+execute as @a[tag=vex] run function trimabilities:vex
 
 
 scoreboard players add timer mana 1

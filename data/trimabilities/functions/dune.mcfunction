@@ -15,36 +15,22 @@ execute if score @s dune matches 3 run effect give @s speed infinite 2 true
 execute if score @s dune matches 4 if entity @s[tag=!unlockedDune] at @s run function trimabilities:unlocked/dune
 
 execute if score @s dune matches 4 run effect give @s strength infinite 0 true
+execute if score @s dune matches 4 run effect give @s speed infinite 2 true
 execute if score @s dune matches 4 run attribute @s generic.max_health modifier add 1-2-1-4-1 "dune_full_1" -5 add
-execute if score @s dune matches 4 run attribute @s generic.movement_speed modifier add 1-2-1-4-2 "dune_full_2" .2 add
 
 scoreboard players operation @s duneOld = @s dune
 
 
-# execute if score @s dune matches 0 run tag @s remove dune
+execute if score @s dune matches 4 if score @s sneakTrigger matches 2.. if score @s cooldownDuneDisplay matches ..0 run effect give @s speed 12 4 true
+execute if score @s dune matches 4 if score @s sneakTrigger matches 2.. if score @s cooldownDuneDisplay matches ..0 at @s run playsound minecraft:entity.arrow.hit_player ambient @s ~ ~ ~ .1 1 .1
+execute if score @s dune matches 4 if score @s sneakTrigger matches 2.. unless score @s cooldownDuneDisplay matches ..0 run tellraw @s [{"text":"This ability is on cooldown for ","bold":true,"color":"red"},{"score":{"name":"@s","objective":"cooldownDuneDisplay"},"bold":true,"color":"red"},{"text":" seconds!","bold":true,"color":"red"}]
+execute if score @s dune matches 4 if score @s sneakTrigger matches 2.. if score @s cooldownDuneDisplay matches ..0 run scoreboard players set @s cooldownDuneDisplay 40
+execute if score @s dune matches 4 if score @s sneakTrigger matches 2.. run scoreboard players reset @s sneakTrigger
+
+execute if score @s cooldownDuneDisplay matches 28.. at @s run particle minecraft:white_smoke ~ ~ ~ .1 .1 .1 .1 25 normal @a[distance=..25]
 
 
-# execute if score @s dune matches 3 if entity @s[tag=duneFull] run attribute @s generic.movement_speed base set 0.1
-# execute if score @s dune matches 3 if entity @s[tag=duneFull] run attribute @s generic.max_health base set 20
-# execute if score @s dune matches 3 if entity @s[tag=duneFull] run effect clear @s strength
-# execute if score @s dune matches 3 if entity @s[tag=duneFull] run tag @s remove duneFull
+execute unless score @s cooldownDuneDisplay matches ..0 run scoreboard players add @s cooldownDune 1
+execute if score @s cooldownDune matches 4.. run scoreboard players remove @s cooldownDuneDisplay 1
+execute if score @s cooldownDune matches 4.. run scoreboard players reset @s cooldownDune
 
-
-# execute if score @s dune matches 4 if entity @s[tag=!unlockedDune] at @s run function trimabilities:unlocked/dune
-
-# execute if score @s dune matches 4 run effect give @s strength infinite 0 true
-# execute if score @s dune matches 4 run attribute @s generic.movement_speed base set 0.2
-# execute if score @s dune matches 4 run attribute @s generic.max_health base set 15
-# execute if score @s dune matches 4 run tag @s add duneFull
-
-
-
-
-#execute as @a[scores={progressDune=3..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:dune"}}},{Slot: 102b,tag:{Trim:{pattern:"minecraft:dune"}}},{Slot: 101b,tag:{Trim:{pattern:"minecraft:dune"}}},{Slot: 100b,tag:{Trim:{pattern:"minecraft:dune"}}}]}] run tag @s add dune
-#execute if entity @a[tag=dune,tag=!unlockedDune] as @a[tag=dune,tag=!unlockedDune] at @s run function trimabilities:unlocked/dune
-#execute as @a[tag=dune] run effect give @s strength infinite 0 true
-#execute as @a[tag=dune] run attribute @s generic.max_health base set 15
-#execute as @a[tag=dune,tag=wLvl2] run attribute @s generic.movement_speed base set 0.2
-#execute as @a[tag=dune,tag=wLvl3] run attribute @s generic.movement_speed base set 0.21
-#execute as @a[tag=dune,tag=wLvl4] run attribute @s generic.movement_speed base set 0.22
-#execute as @a[tag=dune,tag=wLvl5] run attribute @s generic.movement_speed base set 0.23

@@ -317,6 +317,11 @@ scoreboard objectives add healthTracker health
 scoreboard objectives add cooldownRib dummy
 scoreboard objectives add ribUnderground dummy
 
+scoreboard objectives add cooldownDune dummy
+scoreboard objectives add cooldownDuneDisplay dummy
+
+scoreboard objectives add vexDamage minecraft.custom:minecraft.damage_taken
+scoreboard objectives add vexDamageDisplay dummy
 
 scoreboard objectives add witherNameRandom dummy
 
