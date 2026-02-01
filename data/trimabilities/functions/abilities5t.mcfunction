@@ -187,10 +187,10 @@ execute as @a[scores={Trim_Recovery_Toggle=1..}] run scoreboard players set @s T
 
 execute as @a if score @s vexDamage matches 100.. run scoreboard players set @s vexDamage 100
 execute as @a if score @s vexDamage matches 1.. run scoreboard players remove @s vexDamage 1
-execute as @a if score @s vexDamage matches 1.. run scoreboard players operation @s vexDamageDisplay = @s vexDamage
-execute as @a if score @s vexDamage matches 1.. run scoreboard players operation @s vexDamageDisplay /= 4 constants
-execute as @a if score @s vexDamage matches 1.. run title @s actionbar ["",{"text":"Air Walker throttled. Please wait ","color":"red"},{"score":{"name":"@s","objective":"vexDamageDisplay"},"color":"red"},{"text":" seconds.","color":"red"}]
-execute as @a if score @s vexDamage matches 1 run title @s actionbar {"text":"Air Walker re-enabled.","color":"green"}
+execute as @a if score @s vex matches 4 if score @s vexDamage matches 1.. run scoreboard players operation @s vexDamageDisplay = @s vexDamage
+execute as @a if score @s vex matches 4 if score @s vexDamage matches 1.. run scoreboard players operation @s vexDamageDisplay /= 4 constants
+execute as @a if score @s vex matches 4 if score @s vexDamage matches 1.. run title @s actionbar ["",{"text":"Air Walker throttled. Please wait ","color":"red"},{"score":{"name":"@s","objective":"vexDamageDisplay"},"color":"red"},{"text":" seconds.","color":"red"}]
+execute as @a if score @s vex matches 4 if score @s vexDamage matches 1 run title @s actionbar {"text":"Air Walker re-enabled.","color":"green"}
 
 schedule function trimabilities:abilities5t 5t
 
