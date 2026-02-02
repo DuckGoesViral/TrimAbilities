@@ -1,5 +1,5 @@
 
-tellraw @a[=3] {"text": "Reload Succesful!","color": "#0000FF","bold": true}
+tellraw @a {"text": "Reload Succesful!","color": "#0000FF","bold": true}
 
 function trimabilities:abilities5t
 function trimabilities:abilities20t
