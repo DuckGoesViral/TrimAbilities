@@ -6,7 +6,7 @@ function trimabilities:border/wilds with storage trimabilities:border wild
 execute as @a[tag=inWilds] run scoreboard players add @s wildsTimer 1
 
 # Stores the player's current XP levels in a scoreboard for the time calculation.
-execute as @a[tag=inWilds] store result score @s wildsLevels run xp query @s levels
+execute as @a[tag=inWilds,nbt={Dimension:"minecraft:overworld"}] store result score @s wildsLevels run xp query @s levels
 execute as @a[tag=inWilds,scores={wildsLevels=0,wildsTimer=2400..}] at @s run function trimabilities:border/bail
 
 # Makes sure the bail out function allows players to fall without taking damage. 
@@ -20,23 +20,29 @@ execute as @a[tag=inWilds,scores={wildsTimer=1200..}] at @s unless score @s wild
 execute as @a[tag=inWilds,scores={wildsTimer=1200..}] unless score @s wildsLevels matches 0 run scoreboard players reset @s wildsTimer
 
 # Resets the wilds timer for players not in the wilds
-execute as @a[tag=!inWilds] run scoreboard players reset @s wildsTimer
+execute as @a[tag=!inWilds,nbt={Dimension:"minecraft:overworld"}] run scoreboard players reset @s wildsTimer
 
 # Gives all mobs in the wilds a permanent buff. 
-execute at @a[tag=inWilds] if entity @e[type=!player,type=!experience_orb,type=!item,distance=..20,tag=,limit=1] as @e[type=!player,type=!experience_orb,type=!item,distance=..25,tag=,limit=1] run function trimabilities:border/buff
+execute at @a[tag=inWilds,nbt={Dimension:"minecraft:overworld"}] if entity @e[type=!player,type=!experience_orb,type=!item,distance=..20,tag=,limit=1] as @e[type=!player,type=!experience_orb,type=!item,distance=..25,tag=,limit=1] run function trimabilities:border/buff
 
 # Gives all mobs outside the wilds a "notWildMob" tag to prevent them from being buffed in the wilds. 
-execute at @a[tag=!inWilds] if entity @e[type=!player,type=!experience_orb,type=!item,distance=..20,tag=,limit=1] as @e[type=!player,type=!experience_orb,type=!item,distance=..20,tag=,limit=1] run tag @s add notWildMob
+execute at @a[tag=!inWilds,nbt={Dimension:"minecraft:overworld"}] if entity @e[type=!player,type=!experience_orb,type=!item,distance=..20,tag=,limit=1] as @e[type=!player,type=!experience_orb,type=!item,distance=..20,tag=,limit=1] run tag @s add notWildMob
 
 # Prevents XP orbs and bottles from existing in the wilds, as they can be exploited to gain infinite XP.
-execute as @a[tag=inWilds] at @s run kill @e[type=experience_orb,distance=..8]
-execute as @a[tag=inWilds] at @s run kill @e[type=experience_bottle,distance=..8]
-execute as @a[tag=inWilds] at @s run kill @e[type=minecraft:area_effect_cloud,distance=..15]
+execute as @a[tag=inWilds,nbt={Dimension:"minecraft:overworld"}] at @s run kill @e[type=experience_orb,distance=..8]
+execute as @a[tag=inWilds,nbt={Dimension:"minecraft:overworld"}] at @s run kill @e[type=experience_bottle,distance=..8]
+execute as @a[tag=inWilds,nbt={Dimension:"minecraft:overworld"}] at @s run kill @e[type=minecraft:area_effect_cloud,distance=..15]
 
+# Nether border enforcement
 scoreboard objectives add netherBorder dummy
-execute as @a at @s if dimension minecraft:the_nether if entity @s[x=-1500,z=-1500,dx=3000,dz=3000] run scoreboard players set @s netherBorder 0
+execute as @a at @s if dimension minecraft:the_nether if entity @s[x=-1500,z=-1500,dx=3000,dz=3000] unless score @s netherBorder matches 0.. run scoreboard players set @s netherBorder 0
 execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] run scoreboard players add @s netherBorder 1
-execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] run tellraw @s {"text": "PLEASE RETURN TO THE NETEHR (YOU WILL START DYING IN 10 SECONDS)","color": "red","bold": true}
-execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] run title @s title {"text": "RETURN TO THE NETHER","color": "red","bold": true}
+execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] run tellraw @s {"text": "PLEASE RETURN TO THE NETHER! (YOU WILL START DYING IN 10 SECONDS)","color": "red","bold": true}
+execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] run title @s title {"text": "RETURN TO THE NETHER!","color": "red","bold": true}
+execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] if score @s netherBorder matches 1.. run playsound minecraft:entity.wither.spawn hostile @s ~ ~ ~ 1 0.5 1
 execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] if score @s netherBorder matches 200.. run damage @s 1 in_wall
 
+# Remove 1 level and reset wilds timer if a player goes to the nether.
+execute as @a[tag=inWilds,nbt={Dimension:"minecraft:the_nether"}] run xp add @s -1 levels
+execute as @a[tag=inWilds,nbt={Dimension:"minecraft:the_nether"}] run scoreboard players reset @s wildsTimer
+execute as @a[tag=inWilds,nbt={Dimension:"minecraft:the_nether"}] run tag @s remove inWilds

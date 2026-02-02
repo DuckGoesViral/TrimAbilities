@@ -8,13 +8,6 @@ execute as @a[tag=unlockedVital,tag=!fixedVital] run attribute @s generic.max_he
 execute as @a[tag=unlockedVital,tag=!fixedVital] run tag @s add fixedVital
 
 
-
-
-
-
-
-
-
 #abilities
 function trimabilities:abilities1t
 
@@ -44,13 +37,6 @@ execute as @a[predicate=trimabilities:not_sneaking,scores={sneakTimer=..4}] run 
 execute as @a[predicate=trimabilities:is_sneaking] run scoreboard players set @s sneakTimer 0
 execute as @a[predicate=trimabilities:not_sneaking,scores={sneakTimer=5..}] run scoreboard players set @s sneakTrigger 0
 
-
-
-
-#clear @a[tag=!banTest] elytra
-#clear @a[tag=!banTest] potion
-#clear @a[tag=!banTest] splash_potion
-#clear @a[tag=!banTest] totem_of_undying
 
 
 
@@ -135,23 +121,6 @@ clear @a tipped_arrow{Potion:"minecraft:harming"}
 clear @a tipped_arrow{Potion:"minecraft:strong_harming"}
 clear @a tipped_arrow{Potion:"minecraft:weakness"}
 clear @a tipped_arrow{Potion:"minecraft:long_weakness"}
-
-#kill
-#give @s minecraft:stone_sword 1
-#clear @s minecraft:stone_sword 0
-#effect give @s minecraft:strength 10 0 true
-#effect clear @s minecraft:strength
-#attribute @s generic.attack_damage base set 6
-#random value 1..10
-#damage @s 5 fireball
-#tp @e[type=zombie] ~ ~ ~ facing entity @p
-#summon zombie ~ ~ ~
-#tellraw @a {"text":"Hello, World!","color":"gold","bold":true}
-#title @a title {"text":"Welcome to the Game!","color":"green","bold":true}
-#setblock
-#fill 
-#tag
-
 
 
 
