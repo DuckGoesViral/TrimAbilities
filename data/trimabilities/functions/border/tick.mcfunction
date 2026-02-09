@@ -20,10 +20,10 @@ execute as @a[tag=!inWilds,nbt={Dimension:"minecraft:overworld"}] run scoreboard
 
 
 # Gives all mobs in the wilds a permanent buff. 
-execute at @a[tag=inWilds,nbt={Dimension:"minecraft:overworld"}] if entity @e[type=!player,type=!experience_orb,type=!item,distance=..20,tag=,limit=1] as @e[type=!player,type=!experience_orb,type=!item,distance=..25,tag=,limit=1] run function trimabilities:border/buff
+#execute at @a[tag=inWilds,nbt={Dimension:"minecraft:overworld"}] if entity @e[type=!player,type=!experience_orb,type=!item,distance=..20,tag=,limit=1] as @e[type=!player,type=!experience_orb,type=!item,distance=..25,tag=,limit=1] run function trimabilities:border/buff
 
 # Gives all mobs outside the wilds a "notWildMob" tag to prevent them from being buffed in the wilds. 
-execute at @a[tag=!inWilds,nbt={Dimension:"minecraft:overworld"}] if entity @e[type=!player,type=!experience_orb,type=!item,distance=..20,tag=,limit=1] as @e[type=!player,type=!experience_orb,type=!item,distance=..20,tag=,limit=1] run tag @s add notWildMob
+#execute at @a[tag=!inWilds,nbt={Dimension:"minecraft:overworld"}] if entity @e[type=!player,type=!experience_orb,type=!item,distance=..20,tag=,limit=1] as @e[type=!player,type=!experience_orb,type=!item,distance=..20,tag=,limit=1] run tag @s add notWildMob
 
 # Prevents XP orbs and bottles from existing in the wilds, as they can be exploited to gain infinite XP.
 execute as @a[tag=inWilds,nbt={Dimension:"minecraft:overworld"}] at @s run kill @e[type=experience_orb,distance=..8]
