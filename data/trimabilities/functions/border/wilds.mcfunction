@@ -1,9 +1,18 @@
 
 
+<<<<<<< HEAD
 $execute as @a at @s if dimension minecraft:overworld if entity @s[x=$(size),z=$(size),dx=-$(2Xsize),dz=-$(2Xsize),tag=inWilds] run tellraw @s ["",{"text":"--------------------------------------------------","color":"dark_green"},{"text":"\n"},{"text":"EXITING WILDS!!!","bold":true,"color":"green"},{"text":"\nYou are back to normal territory, what a relief!\n"},{"text":"--------------------------------------------------","color":"dark_green"},{"text":"\n "}]
 $execute as @a at @s if dimension minecraft:overworld if entity @s[x=$(size),z=$(size),dx=-$(2Xsize),dz=-$(2Xsize),tag=inWilds] run tag @s remove inWilds
 
 $execute as @a[tag=!inWilds] at @s if dimension minecraft:overworld unless entity @s[x=$(size),z=$(size),dx=-$(2Xsize),dz=-$(2Xsize)] run tellraw @s ["",{"text":"--------------------------------------------------","color":"dark_red"},{"text":"\n"},{"text":"ENTERING WILDS!!!","bold":true,"color":"red"},{"text":"\nYou are entering "},{"text":"unmarked territory","bold":true},{"text":", The longer you stay\nhere the more "},{"text":"XP will be drained","bold":true},{"text":" from your bar. If you\never reach 0, you will be "},{"text":"sent to spawn","bold":true},{"text":". You cannot gain\nany XP while in the wilds so you cannot gain any time.\nGood luck.\n"},{"text":"HERE BE DRAGONS","italic":true,"color":"dark_purple"},{"text":"\n"},{"text":"--------------------------------------------------","color":"dark_red"},{"text":"\n "}]
 $execute as @a[tag=!inWilds] at @s if dimension minecraft:overworld unless entity @s[x=$(size),z=$(size),dx=-$(2Xsize),dz=-$(2Xsize)] run playsound minecraft:entity.elder_guardian.curse ambient @s ~ ~ ~ 5 0 1
 $execute as @a[tag=!inWilds] at @s if dimension minecraft:overworld unless entity @s[x=$(size),z=$(size),dx=-$(2Xsize),dz=-$(2Xsize)] run tag @s add inWilds
+=======
+$execute as @a at @s if entity @s[x=$(size),z=$(size),dx=-$(2Xsize),dz=-$(2Xsize),tag=inWilds,nbt={Dimension:"minecraft:overworld"}] run tellraw @s ["",{"text":"--------------------------------------------------","color":"dark_green"},{"text":"\n"},{"text":"EXITING WILDS!!!","bold":true,"color":"green"},{"text":"\nYou are back to normal territory, what a relief!\n"},{"text":"--------------------------------------------------","color":"dark_green"},{"text":"\n "}]
+$execute as @a at @s if entity @s[x=$(size),z=$(size),dx=-$(2Xsize),dz=-$(2Xsize),tag=inWilds,nbt={Dimension:"minecraft:overworld"}] run tag @s remove inWilds
+
+$execute as @a[tag=!inWilds,nbt={Dimension:"minecraft:overworld"}] at @s unless entity @s[x=$(size),z=$(size),dx=-$(2Xsize),dz=-$(2Xsize)] run tellraw @s ["",{"text":"--------------------------------------------------","color":"dark_red"},{"text":"\n"},{"text":"ENTERING WILDS!!!","bold":true,"color":"red"},{"text":"\nYou are entering "},{"text":"unmarked territory","bold":true},{"text":", The longer you stay\nhere the more "},{"text":"XP will be drained","bold":true},{"text":" from your bar. If you\never reach 0, you will be "},{"text":"sent to spawn","bold":true},{"text":". You cannot gain\nany XP while in the wilds and the mobs may be stronger\nthan the ones you're used to.\n"},{"text":"HERE BE DRAGONS","italic":true,"color":"dark_purple"},{"text":"\n"},{"text":"--------------------------------------------------","color":"dark_red"},{"text":"\n "}]
+$execute as @a[tag=!inWilds,nbt={Dimension:"minecraft:overworld"}] at @s unless entity @s[x=$(size),z=$(size),dx=-$(2Xsize),dz=-$(2Xsize)] run playsound minecraft:entity.elder_guardian.curse ambient @s ~ ~ ~ 5 0 1
+$execute as @a[tag=!inWilds,nbt={Dimension:"minecraft:overworld"}] at @s unless entity @s[x=$(size),z=$(size),dx=-$(2Xsize),dz=-$(2Xsize)] run tag @s add inWilds
+>>>>>>> 93af93ca14eca657a3d2893ba9a8727535601257
 
