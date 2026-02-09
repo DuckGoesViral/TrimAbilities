@@ -445,7 +445,7 @@ execute as @a[advancements={minecraft:adventure/trim_with_all_exclusive_armor_pa
 execute as @a[advancements={minecraft:adventure/trim_with_all_exclusive_armor_patterns=true},tag=!appliedTrims] run scoreboard players add @s warriorLevel 2500
 execute as @a[advancements={minecraft:adventure/trim_with_all_exclusive_armor_patterns=true},tag=!appliedTrims] run scoreboard players add @s tankLevel 2500
 execute as @a[advancements={minecraft:adventure/trim_with_all_exclusive_armor_patterns=true},tag=!appliedTrims] run scoreboard players add @s archerLevel 2500
-execute as @a[advancements={minecraft:adventure/trim_with_all_exclusive_armor_patterns=true},tag=!appliedTrims] run scoreboard players add @s necromancerLevel 2500
+execute as @a[advancements={minecraft:adventure/trim_with_all_exclusive_armor_patterns=true},tag=!appliedTrims] run scoreboard players add @s mageLevel 2500
 execute as @a[advancements={minecraft:adventure/trim_with_all_exclusive_armor_patterns=true},tag=!appliedTrims] run tellraw @a ["",{"text":"LEGENDARY","bold": true,"color":"gold"},{"text":" "},{"selector":"@s","color":"dark_aqua"},{"text":" Has Unlocked All Trims Advancement","color":"dark_aqua"}]
 execute as @a[advancements={minecraft:adventure/trim_with_all_exclusive_armor_patterns=true},tag=!appliedTrims] run title @s subtitle {"text":"You Have Earned 20,000 Minecraft xp, and 2,500 Category xp","color":"blue"}
 execute as @a[advancements={minecraft:adventure/trim_with_all_exclusive_armor_patterns=true},tag=!appliedTrims] run title @s title ["",{"text":"Congratulations ","color":"green"},{"selector":"@s","color":"green"}]

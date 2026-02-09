@@ -407,8 +407,10 @@ scoreboard objectives add 0123-9678 trigger
 scoreboard objectives add 8259-8215 trigger
 scoreboard objectives add 8259-9671 trigger
 scoreboard objectives add 8259-2315 trigger
-
-
+#cryomancy
+scoreboard objectives add 5681-8055 trigger
+#ice cube
+scoreboard objectives add 4956-7855 trigger
 
 
 #fake spell scoreboards
@@ -416,3 +418,4 @@ scoreboard objectives add 7456-2314 trigger
 scoreboard objectives add 9124-4841 trigger
 scoreboard objectives add 9725-4688 trigger
 scoreboard objectives add 8942-6759 trigger
+scoreboard objectives add 6639-3275 trigger

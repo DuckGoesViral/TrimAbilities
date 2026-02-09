@@ -27,6 +27,7 @@ execute if entity @s[team=YellowTeam] as @e[tag=necroSummon0,distance=..3] run t
 execute if entity @s[team=necromancer] as @e[tag=necroSummon0,distance=..3] run team join necromancer
 
 execute as @e[tag=necroSummon0] run effect give @s glowing infinite 0 true
+execute as @e[tag=necroSummon0] run effect give @s fire_resistance infinite 0 true
 
 execute as @e[tag=necroSummon0,distance=..3] run tag @s add necroSummon
 execute as @e[tag=necroSummon0,distance=..3] run tag @s remove necroSummon0
@@ -39,7 +40,7 @@ execute at @s run particle minecraft:reverse_portal ~ ~1 ~ 0 0 0 1 15 normal @a[
 
 
 
-
+scoreboard players add @s mageLevel 2
 scoreboard players add @s xpDelay 1
 execute as @s[tag=mLvl0] run title @s actionbar ["",{"text":"+2","color":"dark_aqua"},{"text":" Mage xp | Level 1 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"mageLevel"},"color":"dark_aqua"},{"text":" / 100) ","color":"dark_aqua"}]
 execute as @s[tag=mLvl1] run title @s actionbar ["",{"text":"+2","color":"dark_aqua"},{"text":" Mage xp | Level 2 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"mageLevel"},"color":"dark_aqua"},{"text":" / 250) ","color":"dark_aqua"}]
@@ -47,4 +48,3 @@ execute as @s[tag=mLvl2] run title @s actionbar ["",{"text":"+2","color":"dark_a
 execute as @s[tag=mLvl3] run title @s actionbar ["",{"text":"+2","color":"dark_aqua"},{"text":" Mage xp | Level 4 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"mageLevel"},"color":"dark_aqua"},{"text":" / 2500) ","color":"dark_aqua"}]
 execute as @s[tag=mLvl4] run title @s actionbar ["",{"text":"+2","color":"dark_aqua"},{"text":" Mage xp | Level 5 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"mageLevel"},"color":"dark_aqua"},{"text":" / 5000) ","color":"dark_aqua"}]
 execute as @s[tag=mLvl5] run title @s actionbar ["",{"text":"+2","color":"dark_aqua"},{"text":" Mage xp | Level 5 ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"mageLevel"},"color":"dark_aqua"},{"text":") ","color":"dark_aqua"}]
-scoreboard players add @s mageLevel 2

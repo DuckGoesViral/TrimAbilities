@@ -9,6 +9,15 @@ execute at @s run summon item_display ~ ~ ~ {transformation:{left_rotation:[0f,0
 
 tag @s add damageOrbImmunity
 
+execute if entity @s[team=AquaTeam] at @s as @e[type=item_display,distance=..1,limit=1,sort=nearest,tag=damageOrb] run team join AquaTeam
+execute if entity @s[team=BlueTeam] at @s as @e[type=item_display,distance=..1,limit=1,sort=nearest,tag=damageOrb] run team join BlueTeam
+execute if entity @s[team=GoldTeam] at @s as @e[type=item_display,distance=..1,limit=1,sort=nearest,tag=damageOrb] run team join GoldTeam
+execute if entity @s[team=GrayTeam] at @s as @e[type=item_display,distance=..1,limit=1,sort=nearest,tag=damageOrb] run team join GrayTeam
+execute if entity @s[team=GreenTeam] at @s as @e[type=item_display,distance=..1,limit=1,sort=nearest,tag=damageOrb] run team join GreenTeam
+execute if entity @s[team=PurpleTeam] at @s as @e[type=item_display,distance=..1,limit=1,sort=nearest,tag=damageOrb] run team join PurpleTeam
+execute if entity @s[team=RedTeam] at @s as @e[type=item_display,distance=..1,limit=1,sort=nearest,tag=damageOrb] run team join RedTeam
+execute if entity @s[team=YellowTeam] at @s as @e[type=item_display,distance=..1,limit=1,sort=nearest,tag=damageOrb] run team join YellowTeam
+
 data modify entity @e[type=armor_stand,tag=damageOrbMarker,limit=1,sort=nearest] Pos[1] set from entity @s Pos[1]
 #execute as @e[type=item_display,tag=damageOrb,limit=1,sort=nearest] run tp @s ~ ~2 ~
 execute at @e[type=armor_stand,tag=damageOrbMarker,limit=1,sort=nearest] run tp @e[type=armor_stand,tag=damageOrbMarker,limit=1,sort=nearest] ~ ~ ~ facing entity @s
@@ -18,7 +27,7 @@ execute at @s run playsound minecraft:block.enchantment_table.use ambient @s ~ ~
 execute at @s run particle minecraft:reverse_portal ~ ~1 ~ 0 0 0 1 40 normal @a[distance=..15]
 
 
-
+scoreboard players add @s mageLevel 4
 execute as @s[tag=mLvl0] run title @s actionbar ["",{"text":"+4","color":"dark_aqua"},{"text":" Mage xp | Level 1 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"mageLevel"},"color":"dark_aqua"},{"text":" / 100) ","color":"dark_aqua"}]
 execute as @s[tag=mLvl1] run title @s actionbar ["",{"text":"+4","color":"dark_aqua"},{"text":" Mage xp | Level 2 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"mageLevel"},"color":"dark_aqua"},{"text":" / 250) ","color":"dark_aqua"}]
 execute as @s[tag=mLvl2] run title @s actionbar ["",{"text":"+4","color":"dark_aqua"},{"text":" Mage xp | Level 3 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"mageLevel"},"color":"dark_aqua"},{"text":" / 1000) ","color":"dark_aqua"}]
@@ -26,4 +35,3 @@ execute as @s[tag=mLvl3] run title @s actionbar ["",{"text":"+4","color":"dark_a
 execute as @s[tag=mLvl4] run title @s actionbar ["",{"text":"+4","color":"dark_aqua"},{"text":" Mage xp | Level 5 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"mageLevel"},"color":"dark_aqua"},{"text":" / 5000) ","color":"dark_aqua"}]
 execute as @s[tag=mLvl5] run title @s actionbar ["",{"text":"+4","color":"dark_aqua"},{"text":" Mage xp | Level 5 ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"mageLevel"},"color":"dark_aqua"},{"text":") ","color":"dark_aqua"}]
 scoreboard players add @s xpDelay 1
-scoreboard players add @s mageLevel 4

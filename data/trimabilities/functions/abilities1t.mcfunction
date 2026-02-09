@@ -84,7 +84,13 @@ execute as @a[tag=mage,scores={xpDelay=60..}] run scoreboard players reset @s xp
 
 execute as @a[tag=raiser] unless score @s xpDelay matches 1.. run title @s actionbar ["",{"text":"Mana: ","color":"dark_aqua"},{"score":{"name":"@s","objective":"mana"},"color":"dark_aqua"},{"text":" |","color":"dark_gray"},{"text":" Souls: ","color":"dark_green"},{"score":{"name":"@s","objective":"frankensteinScore"},"color":"dark_green"}]
 
-execute as @a[tag=mage,tag=!raiser] unless score @s xpDelay matches 1.. run title @s actionbar ["",{"text":"Mana: ","color":"dark_aqua"},{"score":{"name":"@s","objective":"mana"},"color":"dark_aqua"}]
+execute as @a[tag=mage,tag=!raiser] unless score @s xpDelay matches 1.. run title @s actionbar ["",{"text":"| ","color":"dark_gray"},{"text":"Mana: ","color":"dark_aqua"},{"score":{"name":"@s","objective":"mana"},"color":"dark_aqua"},{"text":" |","color":"dark_gray"}]
+
+scoreboard players enable @a 7456-2314
+scoreboard players enable @a 9124-4841
+scoreboard players enable @a 9725-4688
+scoreboard players enable @a 8942-6759
+scoreboard players enable @a 6639-3275
 
 scoreboard players enable @a 2457-1364
 scoreboard players enable @a 6781-6345
@@ -92,13 +98,18 @@ scoreboard players enable @a 0123-9678
 scoreboard players enable @a 8259-8215
 scoreboard players enable @a 8259-9671
 scoreboard players enable @a 8259-2315
+scoreboard players enable @a 5681-8055
+scoreboard players enable @a 4956-7855
 
 execute as @a[scores={2457-1364=1..},tag=mage] at @s run function trimabilities:spells/fireball
 execute as @a[scores={6781-6345=1..},tag=mage] at @s run function trimabilities:spells/damageorb
 execute as @a[scores={0123-9678=1..},tag=mage] at @s run function trimabilities:spells/healpool
-execute as @a[scores={8259-8215=1..},tag=mage] at @s run function trimabilities:spells/frankenstein/zombie
-execute as @a[scores={8259-9671=1..},tag=mage] at @s run function trimabilities:spells/frankenstein/skeleton
-execute as @a[scores={8259-2315=1..},tag=mage] at @s run function trimabilities:spells/frankenstein/witherskeleton
+execute as @a[scores={8259-8215=1..,raiser=4},tag=mage] at @s run function trimabilities:spells/frankenstein/zombie
+execute as @a[scores={8259-9671=1..,raiser=4},tag=mage] at @s run function trimabilities:spells/frankenstein/skeleton
+execute as @a[scores={8259-2315=1..,raiser=4},tag=mage] at @s run function trimabilities:spells/frankenstein/witherskeleton
+execute as @a[scores={5681-8055=1..,stray=4},tag=mage] at @s run function trimabilities:spells/cryomancy
+execute as @a[scores={4956-7855=1..,stray=4},tag=mage] at @s run function trimabilities:spells/icecube
+
 
 execute as @a[scores={2457-1364=1..}] run scoreboard players set @s 2457-1364 0
 execute as @a[scores={6781-6345=1..}] run scoreboard players set @s 6781-6345 0
@@ -106,11 +117,15 @@ execute as @a[scores={0123-9678=1..}] run scoreboard players set @s 0123-9678 0
 execute as @a[scores={8259-8215=1..}] run scoreboard players set @s 8259-8215 0
 execute as @a[scores={8259-9671=1..}] run scoreboard players set @s 8259-9671 0
 execute as @a[scores={8259-2315=1..}] run scoreboard players set @s 8259-2315 0
-
+execute as @a[scores={5681-8055=1..}] run scoreboard players set @s 5681-8055 0
+execute as @a[scores={4956-7855=1..}] run scoreboard players set @s 4956-7855 0
 
 
 
 scoreboard objectives add orbDeath dummy
+execute as @e[type=snow_golem,tag=cryoGolem] run scoreboard players add @s orbDeath 1
+execute as @e[type=snow_golem,tag=cryoGolem,scores={orbDeath=2400..}] run kill @s
+
 execute as @e[type=item_display,tag=damageOrb] run scoreboard players add @s orbDeath 1
 execute as @e[type=armor_stand,tag=damageOrbMarker] run scoreboard players add @s orbDeath 1
 execute as @a[tag=damageOrbImmunity] run scoreboard players add @s orbDeath 1
@@ -133,3 +148,13 @@ execute at @e[type=item_display,tag=damageOrb] run particle minecraft:smoke ~ ~-
 
 execute as @e[type=minecraft:item_display,tag=healPool] at @s run tp @s ~ ~ ~ ~5 ~
 execute as @e[type=minecraft:item_display,tag=healPool] at @s run particle minecraft:egg_crack ^ ^ ^2.5
+
+
+execute as @e[tag=frozen] at @s if entity @e[type=marker,tag=iceMarker,distance=..1] run tp @s @e[type=marker,tag=iceMarker,distance=..1,limit=1,sort=nearest]
+execute as @e[tag=frozen] at @s unless entity @e[type=marker,tag=iceMarker,distance=..1] run tag @s remove frozen
+execute as @e[type=marker,tag=iceMarker] run scoreboard players add @s iceTimer 1
+execute as @e[type=marker,tag=iceMarker,scores={iceTimer=100..}] at @s if block ~ ~ ~ ice run setblock ~ ~ ~ air destroy
+execute as @e[type=marker,tag=iceMarker,scores={iceTimer=100..}] at @s if block ~ ~1 ~ ice run setblock ~ ~1 ~ air destroy
+execute as @e[type=marker,tag=iceMarker,scores={iceTimer=100..}] run kill @s
+
+
