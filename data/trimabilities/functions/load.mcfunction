@@ -1,5 +1,5 @@
 
-tellraw @a {"text": "Reload Succesful!","color": "#0000FF"}
+tellraw @a {"text": "Reload Succesful!","color": "#0000FF","bold": true}
 
 function trimabilities:abilities5t
 function trimabilities:abilities20t
@@ -11,7 +11,7 @@ function trimabilities:minecraftlevels
 function trimabilities:categorylevels
 function trimabilities:necroteam
 function trimabilities:shrine/destroy
-function trimabilities:border/load
+#ASDF function trimabilities:border/load
 
 scoreboard objectives add subPower dummy
 scoreboard objectives add subRandom dummy
@@ -317,6 +317,11 @@ scoreboard objectives add healthTracker health
 scoreboard objectives add cooldownRib dummy
 scoreboard objectives add ribUnderground dummy
 
+scoreboard objectives add cooldownDune dummy
+scoreboard objectives add cooldownDuneDisplay dummy
+
+scoreboard objectives add vexDamage minecraft.custom:minecraft.damage_taken
+scoreboard objectives add vexDamageDisplay dummy
 
 scoreboard objectives add witherNameRandom dummy
 
@@ -402,8 +407,10 @@ scoreboard objectives add 0123-9678 trigger
 scoreboard objectives add 8259-8215 trigger
 scoreboard objectives add 8259-9671 trigger
 scoreboard objectives add 8259-2315 trigger
-
-
+#cryomancy
+scoreboard objectives add 5681-8055 trigger
+#ice cube
+scoreboard objectives add 4956-7855 trigger
 
 
 #fake spell scoreboards
@@ -411,3 +418,4 @@ scoreboard objectives add 7456-2314 trigger
 scoreboard objectives add 9124-4841 trigger
 scoreboard objectives add 9725-4688 trigger
 scoreboard objectives add 8942-6759 trigger
+scoreboard objectives add 6639-3275 trigger

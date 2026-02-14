@@ -37,7 +37,7 @@ scoreboard players remove @s frankensteinScore 50
 
 execute at @s run particle minecraft:reverse_portal ~ ~1 ~ 0 0 0 1 15 normal @a[distance=..15]
 
-
+scoreboard players add @s mageLevel 6
 scoreboard players add @s xpDelay 1
 execute as @s[tag=mLvl0] run title @s actionbar ["",{"text":"+6","color":"dark_aqua"},{"text":" Mage xp | Level 1 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"mageLevel"},"color":"dark_aqua"},{"text":" / 100) ","color":"dark_aqua"}]
 execute as @s[tag=mLvl1] run title @s actionbar ["",{"text":"+6","color":"dark_aqua"},{"text":" Mage xp | Level 2 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"mageLevel"},"color":"dark_aqua"},{"text":" / 250) ","color":"dark_aqua"}]

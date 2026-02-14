@@ -175,18 +175,94 @@ execute as @a[scores={stray=1..}] run tag @s add stray
 execute as @a[tag=stray] run function trimabilities:stray
 
 
+#AquaTeam
+#AquaTeam
+#BlueTeam
+#BlueTeam
+#GoldTeam
+#GoldTeam
+#GrayTeam
+#GrayTeam
+#GreenTeam
+#GreenTeam
+#PurpleTeam
+#PurpleTeam
+#RedTeam
+#RedTeam
+#YellowTeam
+#YellowTeam
+
+execute as @e[type=snow_golem,tag=cryoGolem] at @s run particle minecraft:snowflake ~ ~ ~ 5 5 5 0 100 normal @a[distance=..30]
+execute as @a[tag=cryoSummon] at @s unless entity @e[type=snow_golem,tag=cryoSummon] run tag @s remove cryoSummon
+
+execute as @e[type=snow_golem,tag=cryoGolem,team=AquaTeam] at @s run effect give @e[team=!AquaTeam,distance=..10] slowness 2 1 true
+execute as @e[type=snow_golem,tag=cryoGolem,team=AquaTeam] at @s run effect give @a[team=AquaTeam,distance=..10] speed 2 1 true
+
+execute as @e[type=snow_golem,tag=cryoGolem,team=BlueTeam] at @s run effect give @e[team=!BlueTeam,distance=..10] slowness 2 1 true
+execute as @e[type=snow_golem,tag=cryoGolem,team=BlueTeam] at @s run effect give @a[team=BlueTeam,distance=..10] speed 2 1 true
+
+execute as @e[type=snow_golem,tag=cryoGolem,team=GoldTeam] at @s run effect give @e[team=!GoldTeam,distance=..10] slowness 2 1 true
+execute as @e[type=snow_golem,tag=cryoGolem,team=GoldTeam] at @s run effect give @a[team=GoldTeam,distance=..10] speed 2 1 true
+
+execute as @e[type=snow_golem,tag=cryoGolem,team=GrayTeam] at @s run effect give @e[team=!GrayTeam,distance=..10] slowness 2 1 true
+execute as @e[type=snow_golem,tag=cryoGolem,team=GrayTeam] at @s run effect give @a[team=GrayTeam,distance=..10] speed 2 1 true
+
+execute as @e[type=snow_golem,tag=cryoGolem,team=GreenTeam] at @s run effect give @e[team=!GreenTeam,distance=..10] slowness 2 1 true
+execute as @e[type=snow_golem,tag=cryoGolem,team=GreenTeam] at @s run effect give @a[team=GreenTeam,distance=..10] speed 2 1 true
+
+execute as @e[type=snow_golem,tag=cryoGolem,team=PurpleTeam] at @s run effect give @e[team=!PurpleTeam,distance=..10] slowness 2 1 true
+execute as @e[type=snow_golem,tag=cryoGolem,team=PurpleTeam] at @s run effect give @a[team=PurpleTeam,distance=..10] speed 2 1 true
+
+execute as @e[type=snow_golem,tag=cryoGolem,team=RedTeam] at @s run effect give @e[team=!RedTeam,distance=..10] slowness 2 1 true
+execute as @e[type=snow_golem,tag=cryoGolem,team=RedTeam] at @s run effect give @a[team=RedTeam,distance=..10] speed 2 1 true
+
+execute as @e[type=snow_golem,tag=cryoGolem,team=YellowTeam] at @s run effect give @e[team=!YellowTeam,distance=..10] slowness 2 1 true
+execute as @e[type=snow_golem,tag=cryoGolem,team=YellowTeam] at @s run effect give @a[team=YellowTeam,distance=..10] speed 2 1 true
+
+execute as @e[type=snow_golem,tag=cryoSummon] at @s run effect give @e[tag=!cryoSummon,distance=..10] slowness 2 1 true
+execute as @e[type=snow_golem,tag=cryoSummon] at @s run effect give @a[tag=cryoSummon,distance=..10] speed 2 1 true
 
 
-execute at @e[type=item_display,tag=damageOrb] positioned ~ ~-2 ~ as @e[distance=..3,tag=!damageOrbImmunity,tag=!damageOrb,tag=!damageOrbMarker] run damage @s 2 magic
-execute at @e[type=item_display,tag=damageOrb] positioned ~ ~-2 ~ as @e[distance=..3,tag=!damageOrbImmunity,tag=!damageOrb,tag=!damageOrbMarker] at @s run particle minecraft:damage_indicator ~ ~.5 ~ .1 .1 .1 0.25 3 normal @a
+
+execute at @e[type=item_display,tag=damageOrb,team=AquaTeam] positioned ~ ~-2 ~ as @e[distance=..3,tag=!damageOrbImmunity,tag=!damageOrb,tag=!damageOrbMarker,team=!AquaTeam] run damage @s 2 magic
+execute at @e[type=item_display,tag=damageOrb,team=AquaTeam] positioned ~ ~-2 ~ as @e[distance=..3,tag=!damageOrbImmunity,tag=!damageOrb,tag=!damageOrbMarker,team=!AquaTeam] at @s run particle minecraft:damage_indicator ~ ~.5 ~ .1 .1 .1 0.25 3 normal @a
+
+execute at @e[type=item_display,tag=damageOrb,team=BlueTeam] positioned ~ ~-2 ~ as @e[distance=..3,tag=!damageOrbImmunity,tag=!damageOrb,tag=!damageOrbMarker,team=!BlueTeam] run damage @s 2 magic
+execute at @e[type=item_display,tag=damageOrb,team=BlueTeam] positioned ~ ~-2 ~ as @e[distance=..3,tag=!damageOrbImmunity,tag=!damageOrb,tag=!damageOrbMarker,team=!BlueTeam] at @s run particle minecraft:damage_indicator ~ ~.5 ~ .1 .1 .1 0.25 3 normal @a
+
+execute at @e[type=item_display,tag=damageOrb,team=GoldTeam] positioned ~ ~-2 ~ as @e[distance=..3,tag=!damageOrbImmunity,tag=!damageOrb,tag=!damageOrbMarker,team=!GoldTeam] run damage @s 2 magic
+execute at @e[type=item_display,tag=damageOrb,team=GoldTeam] positioned ~ ~-2 ~ as @e[distance=..3,tag=!damageOrbImmunity,tag=!damageOrb,tag=!damageOrbMarker,team=!GoldTeam] at @s run particle minecraft:damage_indicator ~ ~.5 ~ .1 .1 .1 0.25 3 normal @a
+
+execute at @e[type=item_display,tag=damageOrb,team=GrayTeam] positioned ~ ~-2 ~ as @e[distance=..3,tag=!damageOrbImmunity,tag=!damageOrb,tag=!damageOrbMarker,team=!GrayTeam] run damage @s 2 magic
+execute at @e[type=item_display,tag=damageOrb,team=GrayTeam] positioned ~ ~-2 ~ as @e[distance=..3,tag=!damageOrbImmunity,tag=!damageOrb,tag=!damageOrbMarker,team=!GrayTeam] at @s run particle minecraft:damage_indicator ~ ~.5 ~ .1 .1 .1 0.25 3 normal @a
+
+execute at @e[type=item_display,tag=damageOrb,team=GreenTeam] positioned ~ ~-2 ~ as @e[distance=..3,tag=!damageOrbImmunity,tag=!damageOrb,tag=!damageOrbMarker,team=!GreenTeam] run damage @s 2 magic
+execute at @e[type=item_display,tag=damageOrb,team=GreenTeam] positioned ~ ~-2 ~ as @e[distance=..3,tag=!damageOrbImmunity,tag=!damageOrb,tag=!damageOrbMarker,team=!GreenTeam] at @s run particle minecraft:damage_indicator ~ ~.5 ~ .1 .1 .1 0.25 3 normal @a
+
+execute at @e[type=item_display,tag=damageOrb,team=PurpleTeam] positioned ~ ~-2 ~ as @e[distance=..3,tag=!damageOrbImmunity,tag=!damageOrb,tag=!damageOrbMarker,team=!PurpleTeam] run damage @s 2 magic
+execute at @e[type=item_display,tag=damageOrb,team=PurpleTeam] positioned ~ ~-2 ~ as @e[distance=..3,tag=!damageOrbImmunity,tag=!damageOrb,tag=!damageOrbMarker,team=!PurpleTeam] at @s run particle minecraft:damage_indicator ~ ~.5 ~ .1 .1 .1 0.25 3 normal @a
+
+execute at @e[type=item_display,tag=damageOrb,team=RedTeam] positioned ~ ~-2 ~ as @e[distance=..3,tag=!damageOrbImmunity,tag=!damageOrb,tag=!damageOrbMarker,team=!RedTeam] run damage @s 2 magic
+execute at @e[type=item_display,tag=damageOrb,team=RedTeam] positioned ~ ~-2 ~ as @e[distance=..3,tag=!damageOrbImmunity,tag=!damageOrb,tag=!damageOrbMarker,team=!RedTeam] at @s run particle minecraft:damage_indicator ~ ~.5 ~ .1 .1 .1 0.25 3 normal @a
+
+execute at @e[type=item_display,tag=damageOrb,team=YellowTeam] positioned ~ ~-2 ~ as @e[distance=..3,tag=!damageOrbImmunity,tag=!damageOrb,tag=!damageOrbMarker,team=!YellowTeam] run damage @s 2 magic
+execute at @e[type=item_display,tag=damageOrb,team=YellowTeam] positioned ~ ~-2 ~ as @e[distance=..3,tag=!damageOrbImmunity,tag=!damageOrb,tag=!damageOrbMarker,team=!YellowTeam] at @s run particle minecraft:damage_indicator ~ ~.5 ~ .1 .1 .1 0.25 3 normal @a
+
+execute at @e[type=item_display,tag=damageOrb,team=] positioned ~ ~-2 ~ as @e[distance=..3,tag=!damageOrbImmunity,tag=!damageOrb,tag=!damageOrbMarker] run damage @s 2 magic
+execute at @e[type=item_display,tag=damageOrb,team=] positioned ~ ~-2 ~ as @e[distance=..3,tag=!damageOrbImmunity,tag=!damageOrb,tag=!damageOrbMarker] at @s run particle minecraft:damage_indicator ~ ~.5 ~ .1 .1 .1 0.25 3 normal @a
+
 
 execute as @a run scoreboard players enable @s Trim_Recovery_Toggle
 execute as @a[scores={Trim_Recovery_Toggle=1..}] run function trimabilities:recovery/playertoggle
 execute as @a[scores={Trim_Recovery_Toggle=1..}] run scoreboard players set @s Trim_Recovery_Toggle 0
 
 
-
-
+execute as @a if score @s vexDamage matches 100.. run scoreboard players set @s vexDamage 100
+execute as @a if score @s vexDamage matches 1.. run scoreboard players remove @s vexDamage 1
+execute as @a if score @s vex matches 4 if score @s vexDamage matches 1.. run scoreboard players operation @s vexDamageDisplay = @s vexDamage
+execute as @a if score @s vex matches 4 if score @s vexDamage matches 1.. run scoreboard players operation @s vexDamageDisplay /= 4 constants
+execute as @a if score @s vex matches 4 if score @s vexDamage matches 1.. run title @s actionbar ["",{"text":"Air Walker throttled. Please wait ","color":"red"},{"score":{"name":"@s","objective":"vexDamageDisplay"},"color":"red"},{"text":" seconds.","color":"red"}]
+execute as @a if score @s vex matches 4 if score @s vexDamage matches 1 run title @s actionbar {"text":"Air Walker re-enabled.","color":"green"}
 
 schedule function trimabilities:abilities5t 5t
 
