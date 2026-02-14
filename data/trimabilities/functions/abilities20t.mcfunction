@@ -48,6 +48,10 @@ execute as @a[team=necromancer,scores={necroTimer=120..}] run function trimabili
 
 
 
+execute as @a if score @s vexDamage matches 60.. run scoreboard players set @s vexDamage 60
+execute as @a if score @s vexDamage matches 1.. run scoreboard players remove @s vexDamage 1
+execute as @a if score @s vex matches 4 if score @s vexDamage matches 1.. run title @s actionbar ["",{"text":"Air Walker throttled. Please wait ","color":"red"},{"score":{"name":"@s","objective":"vexDamage"},"color":"red"},{"text":" seconds.","color":"red"}]
+execute as @a if score @s vex matches 4 if score @s vexDamage matches 1 run title @s actionbar {"text":"Air Walker re-enabled.","color":"green"}
 
 
 schedule function trimabilities:abilities20t 20t replace
