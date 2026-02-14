@@ -12,7 +12,7 @@ execute as @a[tag=unlockedVital,tag=!fixedVital] run tag @s add fixedVital
 function trimabilities:abilities1t
 
 
-function trimabilities:border/tick
+#ASDF function trimabilities:border/tick
 
 
 
