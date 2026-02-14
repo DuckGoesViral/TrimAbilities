@@ -58,12 +58,12 @@ execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z
 #
 ## Gives all mobs outside the wilds a "notWildMob" tag to prevent them from being buffed in the wilds. 
 #execute at @a[tag=!inWilds] if entity @e[type=!player,type=!experience_orb,type=!item,distance=..20,tag=,limit=1] as @e[type=!player,type=!experience_orb,type=!item,distance=..20,tag=,limit=1] run tag @s add notWildMob
-execute as @a at @s if dimension minecraft:the_nether if entity @s[x=-1500,z=-1500,dx=3000,dz=3000] unless score @s netherBorder matches 0.. run scoreboard players set @s netherBorder 0
-execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] run scoreboard players add @s netherBorder 1
-execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] run tellraw @s {"text": "PLEASE RETURN TO THE NETHER! (YOU WILL START DYING IN 10 SECONDS)","color": "red","bold": true}
-execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] run title @s title {"text": "RETURN TO THE NETHER!","color": "red","bold": true}
-execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] if score @s netherBorder matches 1.. run playsound minecraft:entity.wither.spawn hostile @s ~ ~ ~ 1 0.5 1
-execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] if score @s netherBorder matches 200.. run damage @s 1 in_wall
+##execute as @a at @s if dimension minecraft:the_nether if entity @s[x=-1500,z=-1500,dx=3000,dz=3000] unless score @s netherBorder matches 0.. run scoreboard players set @s netherBorder 0
+##execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] run scoreboard players add @s netherBorder 1
+##execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] run tellraw @s {"text": "PLEASE RETURN TO THE NETHER! (YOU WILL START DYING IN 10 SECONDS)","color": "red","bold": true}
+##execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] run title @s title {"text": "RETURN TO THE NETHER!","color": "red","bold": true}
+##execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] if score @s netherBorder matches 1.. run playsound minecraft:entity.wither.spawn hostile @s ~ ~ ~ 1 0.5 1
+##execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] if score @s netherBorder matches 200.. run damage @s 1 in_wall
 
 # Remove 1 level and reset wilds timer if a player goes to the nether.
 execute as @a[tag=inWilds,nbt={Dimension:"minecraft:the_nether"}] run xp add @s -1 levels
