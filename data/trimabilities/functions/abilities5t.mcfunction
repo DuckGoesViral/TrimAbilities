@@ -257,7 +257,7 @@ execute as @a[scores={Trim_Recovery_Toggle=1..}] run function trimabilities:reco
 execute as @a[scores={Trim_Recovery_Toggle=1..}] run scoreboard players set @s Trim_Recovery_Toggle 0
 
 
-execute as @a if score @s vexDamage matches 100.. run scoreboard players set @s vexDamage 100
+execute as @a if score @s vexDamage matches 100.. run scoreboard players set @s vexDamage 600
 execute as @a if score @s vexDamage matches 1.. run scoreboard players remove @s vexDamage 1
 execute as @a if score @s vex matches 4 if score @s vexDamage matches 1.. run scoreboard players operation @s vexDamageDisplay = @s vexDamage
 execute as @a if score @s vex matches 4 if score @s vexDamage matches 1.. run scoreboard players operation @s vexDamageDisplay /= 4 constants
