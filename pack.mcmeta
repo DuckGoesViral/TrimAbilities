@@ -1,6 +1,8 @@
 {
-    "pack": {
-        "pack_format": 94,
-        "description": "This datapack adds special abilities to each new armor trim."
-    }
+  "pack": {
+    "description": "This datapack adds special abilities to each new armor trim.",
+    "pack_format": 94,
+    "min_format": 93,
+    "max_format": 94
+  }
 }

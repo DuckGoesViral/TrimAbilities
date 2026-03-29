@@ -3,7 +3,7 @@
   "downfall": 10000,
   "has_precipitation": true,
   "temperature_modifier": "none",
-  "creature_spawn_probability": 1,
+  "creature_spawn_probability": 0.999999,
   "effects": {
     "sky_color": 986895,
     "fog_color": 4013373,
@@ -16,6 +16,10 @@
   },
   "spawners": {},
   "spawn_costs": {},
-  "carvers": {},
+  "carvers": [
+    "minecraft:cave",
+    "minecraft:cave_extra_underground",
+    "minecraft:canyon"
+  ],
   "features": []
 }
