@@ -11,7 +11,7 @@ execute if score @s frankensteinScore matches ..49 run return run tellraw @s {"t
 
 execute at @s run playsound minecraft:block.enchantment_table.use ambient @s ~ ~ ~ 1 2
 
-execute at @s anchored eyes run summon minecraft:wither_skeleton ~ ~ ~ {Tags:["necroSummon0"],DeathLootTable:"minecraft:empty"}
+execute at @s anchored eyes run summon minecraft:wither_skeleton ~ ~ ~ {Tags:["necroSummon0"],DeathLootTable:""}
 item replace entity @e[type=wither_skeleton,tag=necroSummon0] weapon.offhand with stone_sword
 
 execute if entity @s[team=] run team join necromancer @s
