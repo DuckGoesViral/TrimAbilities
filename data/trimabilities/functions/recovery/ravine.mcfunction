@@ -1,6 +1,6 @@
 
 
-execute at @s as @e[type=item,nbt={Item:{tag:{Trim:{pattern:"trimabilities:ravine"}}}},distance=..10,limit=1,sort=nearest] run data merge entity @s {Item:{tag:{Trim:{pattern:""}}}}
+execute at @s as @e[type=item,nbt={Item:{components: {"minecraft:trim":{pattern:"trimabilities:ravine"}}}},distance=..10,limit=1,sort=nearest] run item modify entity @s container.0 trimabilities:remove_trim
 
 
 scoreboard players remove @s ravine 1
