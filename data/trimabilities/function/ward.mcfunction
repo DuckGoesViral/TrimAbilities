@@ -1,20 +1,20 @@
 
-execute unless score @s ward = @s wardOld run attribute @s generic.max_health modifier remove 2-3-0-1-1
-execute unless score @s ward = @s wardOld run attribute @s generic.max_health modifier remove 2-3-0-2-1
-execute unless score @s ward = @s wardOld run attribute @s generic.max_health modifier remove 2-3-0-3-1
-execute unless score @s ward = @s wardOld run attribute @s generic.max_health modifier remove 2-3-1-4-1
+execute unless score @s ward = @s wardOld run attribute @s max_health modifier remove 2-3-0-1-1
+execute unless score @s ward = @s wardOld run attribute @s max_health modifier remove 2-3-0-2-1
+execute unless score @s ward = @s wardOld run attribute @s max_health modifier remove 2-3-0-3-1
+execute unless score @s ward = @s wardOld run attribute @s max_health modifier remove 2-3-1-4-1
 execute unless score @s ward = @s wardOld run effect clear @s resistance
 execute unless score @s ward = @s wardOld run effect clear @s slowness
 
 execute if score @s ward matches 0 run tag @s remove ward
 
-execute if score @s ward matches 1 run attribute @s generic.max_health modifier add 2-3-0-1-1 "ward_sub1_2" 3 add
-execute if score @s ward matches 2 run attribute @s generic.max_health modifier add 2-3-0-2-1 "ward_sub2_2" 6 add
-execute if score @s ward matches 3 run attribute @s generic.max_health modifier add 2-3-0-3-1 "ward_sub3_2" 9 add
+execute if score @s ward matches 1 run attribute @s max_health modifier add 2-3-0-1-1 3 add_value
+execute if score @s ward matches 2 run attribute @s max_health modifier add 2-3-0-2-1 6 add_value
+execute if score @s ward matches 3 run attribute @s max_health modifier add 2-3-0-3-1 9 add_value
 
 execute if score @s ward matches 4 if entity @s[tag=!unlockedWard] at @s run function trimabilities:unlocked/ward
 
-execute if score @s ward matches 4 run attribute @s generic.max_health modifier add 2-3-1-4-1 "ward_full_1" 8 add
+execute if score @s ward matches 4 run attribute @s max_health modifier add 2-3-1-4-1 8 add_value
 execute if score @s ward matches 4 run effect give @s resistance infinite 1 true
 execute if score @s ward matches 4 run effect give @s slowness infinite 0 true
 

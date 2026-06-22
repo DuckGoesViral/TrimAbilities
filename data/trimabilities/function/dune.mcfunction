@@ -1,6 +1,6 @@
 
-execute unless score @s dune = @s duneOld run attribute @s generic.max_health modifier remove 1-2-1-4-1
-execute unless score @s dune = @s duneOld run attribute @s generic.movement_speed modifier remove 1-2-1-4-2
+execute unless score @s dune = @s duneOld run attribute @s max_health modifier remove 1-2-1-4-1
+execute unless score @s dune = @s duneOld run attribute @s movement_speed modifier remove 1-2-1-4-2
 execute unless score @s dune = @s duneOld run effect clear @s strength
 execute unless score @s dune = @s duneOld run effect clear @s speed
 
@@ -16,7 +16,8 @@ execute if score @s dune matches 4 if entity @s[tag=!unlockedDune] at @s run fun
 
 execute if score @s dune matches 4 run effect give @s strength infinite 0 true
 execute if score @s dune matches 4 run effect give @s speed infinite 2 true
-execute if score @s dune matches 4 run attribute @s generic.max_health modifier add 1-2-1-4-1 "dune_full_1" -5 add
+execute if score @s dune matches 4 run attribute @s max_health modifier add 1-2-1-4-1 -5 add_value
+
 
 scoreboard players operation @s duneOld = @s dune
 
