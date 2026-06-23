@@ -1,9 +1,8 @@
 scoreboard players reset @s subTag
-
-execute as @s[nbt={SelectedItem:{tag:{added_power:1}}}] run item modify entity @s weapon.mainhand trimabilities:-1power
-execute as @s[nbt={SelectedItem:{tag:{added_power:2}}}] run item modify entity @s weapon.mainhand trimabilities:-2power
-execute as @s[nbt={SelectedItem:{tag:{added_power:3}}}] run item modify entity @s weapon.mainhand trimabilities:-3power
-execute as @s[nbt={SelectedItem:{tag:{added_power:4}}}] run item modify entity @s weapon.mainhand trimabilities:-4power
+execute as @s[nbt={SelectedItem:{components:{"minecraft:custom_data":{added_power:1b}}}}] run item modify entity @s weapon.mainhand trimabilities:-1power
+execute as @s[nbt={SelectedItem:{components:{"minecraft:custom_data":{added_power:2b}}}}] run item modify entity @s weapon.mainhand trimabilities:-2power
+execute as @s[nbt={SelectedItem:{components:{"minecraft:custom_data":{added_power:3b}}}}] run item modify entity @s weapon.mainhand trimabilities:-3power
+execute as @s[nbt={SelectedItem:{components:{"minecraft:custom_data":{added_power:4b}}}}] run item modify entity @s weapon.mainhand trimabilities:-4power
 item modify entity @s weapon.mainhand trimabilities:power_tag0
 
 execute as @s[scores={wayfinder=4}] run item modify entity @s weapon.mainhand trimabilities:power_tag1
