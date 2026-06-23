@@ -1,5 +1,0 @@
-{
-  "function": "minecraft:set_nbt",
-  "tag": "{added_power:0}",
-  "conditions": []
-}
