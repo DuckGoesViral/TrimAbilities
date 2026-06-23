@@ -21,7 +21,7 @@ scoreboard players reset @a subPower
 execute as @a[scores={wayfinder=1..}] run scoreboard players set @s wayfinder 0
 
 execute as @a if entity @s[scores={mcLvl=1..},nbt={equipment:{head:{components:{"minecraft:trim":{pattern:"minecraft:wayfinder"}}}}}] run scoreboard players add @s wayfinder 1
-execute as @a if entity @s[scores={mcLvl=1..},nbt={equipment:{body:{components:{"minecraft:trim":{pattern:"minecraft:wayfinder"}}}}}] run scoreboard players add @s wayfinder 1
+execute as @a if entity @s[scores={mcLvl=1..},nbt={equipment:{chest:{components:{"minecraft:trim":{pattern:"minecraft:wayfinder"}}}}}] run scoreboard players add @s wayfinder 1
 execute as @a if entity @s[scores={mcLvl=1..},nbt={equipment:{legs:{components:{"minecraft:trim":{pattern:"minecraft:wayfinder"}}}}}] run scoreboard players add @s wayfinder 1
 execute as @a if entity @s[scores={mcLvl=1..},nbt={equipment:{feet:{components:{"minecraft:trim":{pattern:"minecraft:wayfinder"}}}}}] run scoreboard players add @s wayfinder 1
 
@@ -37,7 +37,7 @@ execute as @a[tag=wayfinder] run function trimabilities:wayfinder
 execute as @a[scores={wild=1..}] run scoreboard players set @s wild 0
 
 execute as @a if entity @s[scores={progressWild=3..},nbt={equipment:{head:{components:{"minecraft:trim":{pattern:"minecraft:wild"}}}}}] run scoreboard players add @s wild 1
-execute as @a if entity @s[scores={progressWild=3..},nbt={equipment:{body:{components:{"minecraft:trim":{pattern:"minecraft:wild"}}}}}] run scoreboard players add @s wild 1
+execute as @a if entity @s[scores={progressWild=3..},nbt={equipment:{chest:{components:{"minecraft:trim":{pattern:"minecraft:wild"}}}}}] run scoreboard players add @s wild 1
 execute as @a if entity @s[scores={progressWild=3..},nbt={equipment:{legs:{components:{"minecraft:trim":{pattern:"minecraft:wild"}}}}}] run scoreboard players add @s wild 1
 execute as @a if entity @s[scores={progressWild=3..},nbt={equipment:{feet:{components:{"minecraft:trim":{pattern:"minecraft:wild"}}}}}] run scoreboard players add @s wild 1
 
@@ -64,7 +64,7 @@ execute as @a[tag=wild] run function trimabilities:wild
 execute as @a[scores={vex=1..}] run scoreboard players set @s vex 0
 
 execute as @a if entity @s[scores={mcLvl=5..},nbt={equipment:{head:{components:{"minecraft:trim":{pattern:"minecraft:vex"}}}}}] run scoreboard players add @s vex 1
-execute as @a if entity @s[scores={mcLvl=5..},nbt={equipment:{body:{components:{"minecraft:trim":{pattern:"minecraft:vex"}}}}}] run scoreboard players add @s vex 1
+execute as @a if entity @s[scores={mcLvl=5..},nbt={equipment:{chest:{components:{"minecraft:trim":{pattern:"minecraft:vex"}}}}}] run scoreboard players add @s vex 1
 execute as @a if entity @s[scores={mcLvl=5..},nbt={equipment:{legs:{components:{"minecraft:trim":{pattern:"minecraft:vex"}}}}}] run scoreboard players add @s vex 1
 execute as @a if entity @s[scores={mcLvl=5..},nbt={equipment:{feet:{components:{"minecraft:trim":{pattern:"minecraft:vex"}}}}}] run scoreboard players add @s vex 1
 
