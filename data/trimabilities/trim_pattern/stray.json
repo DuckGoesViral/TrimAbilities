@@ -1,6 +1,5 @@
 {
   "asset_id": "trimabilities:stray",
-  "template_item": "minecraft:repeating_command_block",
   "description": {
     "text": "Stray Armor Trim"
   },

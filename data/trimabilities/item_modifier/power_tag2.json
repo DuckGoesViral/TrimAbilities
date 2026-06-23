@@ -1,5 +1,6 @@
 {
-  "function": "minecraft:set_nbt",
-  "tag": "{added_power:2}",
-  "conditions": []
+  "function": "minecraft:set_custom_data",
+  "tag": {
+    "added_power": 2
+  }
 }

@@ -1,6 +1,7 @@
 {
-  "function": "minecraft:remove_components",
-  "components": [
-    "minecraft:trim"
-  ]
+  "function": "minecraft:set_components",
+  "components": {
+    "!minecraft:trim": {}
+  },
+  "conditions": []
 }

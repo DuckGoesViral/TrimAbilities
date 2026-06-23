@@ -1,5 +1,6 @@
 {
-  "function": "minecraft:set_nbt",
-  "tag": "{Unbreakable:1b}",
-  "conditions": []
+  "function": "minecraft:set_components",
+  "components": {
+    "minecraft:unbreakable": {}
+  }
 }

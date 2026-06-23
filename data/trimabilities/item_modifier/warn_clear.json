@@ -1,6 +1,7 @@
 {
-  "function": "minecraft:set_lore",
-  "lore": [],
-  "replace": true,
+  "function": "minecraft:set_components",
+  "components": {
+    "!minecraft:lore": {}
+  },
   "conditions": []
 }

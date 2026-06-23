@@ -1,6 +1,5 @@
 {
   "asset_id": "trimabilities:vital",
-  "template_item": "minecraft:chain_command_block",
   "description": {
     "text": "Vital Armor Trim"
   },
