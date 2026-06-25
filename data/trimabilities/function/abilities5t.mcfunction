@@ -96,6 +96,19 @@ execute as @a[scores={snout=1..}] run tag @s add snout
 
 execute as @a[tag=snout] run function trimabilities:snout
 
+#Silence
+execute as @a[scores={silence=1..}] run scoreboard players set @s silence 0
+
+execute as @a if entity @s[scores={progressSilence=3..},nbt={equipment:{head:{components:{"minecraft:trim":{pattern:"minecraft:silence"}}}}}] run scoreboard players add @s silence 1
+execute as @a if entity @s[scores={progressSilence=3..},nbt={equipment:{chest:{components:{"minecraft:trim":{pattern:"minecraft:silence"}}}}}] run scoreboard players add @s silence 1
+execute as @a if entity @s[scores={progressSilence=3..},nbt={equipment:{legs:{components:{"minecraft:trim":{pattern:"minecraft:silence"}}}}}] run scoreboard players add @s silence 1
+execute as @a if entity @s[scores={progressSilence=3..},nbt={equipment:{feet:{components:{"minecraft:trim":{pattern:"minecraft:silence"}}}}}] run scoreboard players add @s silence 1
+
+execute as @a[scores={silence=1..}] run tag @s add silence
+
+execute as @a[tag=silence] run function trimabilities:silence
+
+
 
 #Tank
 

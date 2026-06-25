@@ -311,6 +311,8 @@ scoreboard objectives add zombieSuccess dummy
 scoreboard objectives add NRcooldownTimer dummy
 scoreboard objectives add NRcooldownTimer2 dummy
 
+scoreboard objectives add cooldownSilence dummy
+
 scoreboard objectives add cooldownWard dummy
 scoreboard objectives add healthTracker health
 
