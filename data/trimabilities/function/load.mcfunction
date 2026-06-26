@@ -316,6 +316,15 @@ scoreboard objectives add cooldownSilence dummy
 scoreboard objectives add cooldownWard dummy
 scoreboard objectives add healthTracker health
 
+scoreboard objectives add cooldownSpire dummy
+scoreboard objectives add sneakSpire dummy
+scoreboard objectives add spireDurability dummy
+scoreboard objectives add spireDamage minecraft.custom:minecraft.damage_taken
+scoreboard objectives add spireHead dummy
+scoreboard objectives add spireChest dummy
+scoreboard objectives add spireLegs dummy
+scoreboard objectives add spireFeet dummy
+
 scoreboard objectives add cooldownRib dummy
 scoreboard objectives add ribUnderground dummy
 

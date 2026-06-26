@@ -153,7 +153,17 @@ execute as @a[scores={ward=1..}] run tag @s add ward
 
 execute as @a[tag=ward] run function trimabilities:ward
 
+#Spire
+execute as @a[scores={spire=1..}] run scoreboard players set @s spire 0
 
+execute as @a if entity @s[scores={progressSpire=3..},nbt={equipment:{head:{components:{"minecraft:trim":{pattern:"minecraft:spire"}}}}}] run scoreboard players add @s spire 1
+execute as @a if entity @s[scores={progressSpire=3..},nbt={equipment:{chest:{components:{"minecraft:trim":{pattern:"minecraft:spire"}}}}}] run scoreboard players add @s spire 1
+execute as @a if entity @s[scores={progressSpire=3..},nbt={equipment:{legs:{components:{"minecraft:trim":{pattern:"minecraft:spire"}}}}}] run scoreboard players add @s spire 1
+execute as @a if entity @s[scores={progressSpire=3..},nbt={equipment:{feet:{components:{"minecraft:trim":{pattern:"minecraft:spire"}}}}}] run scoreboard players add @s spire 1
+
+execute as @a[scores={spire=1..}] run tag @s add spire
+
+execute as @a[tag=spire] run function trimabilities:spire
 
 
 
