@@ -325,6 +325,11 @@ scoreboard objectives add spireChest dummy
 scoreboard objectives add spireLegs dummy
 scoreboard objectives add spireFeet dummy
 
+scoreboard objectives add eyeReload dummy
+scoreboard objectives add eyeFumble dummy
+scoreboard objectives add eyeHand dummy
+scoreboard objectives add eyeDamage minecraft.custom:minecraft.damage_taken
+
 scoreboard objectives add cooldownRib dummy
 scoreboard objectives add ribUnderground dummy
 
