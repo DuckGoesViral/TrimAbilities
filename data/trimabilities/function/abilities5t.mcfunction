@@ -96,6 +96,19 @@ execute as @a[scores={snout=1..}] run tag @s add snout
 
 execute as @a[tag=snout] run function trimabilities:snout
 
+#Silence
+execute as @a[scores={silence=1..}] run scoreboard players set @s silence 0
+
+execute as @a if entity @s[scores={progressSilence=3..},nbt={equipment:{head:{components:{"minecraft:trim":{pattern:"minecraft:silence"}}}}}] run scoreboard players add @s silence 1
+execute as @a if entity @s[scores={progressSilence=3..},nbt={equipment:{chest:{components:{"minecraft:trim":{pattern:"minecraft:silence"}}}}}] run scoreboard players add @s silence 1
+execute as @a if entity @s[scores={progressSilence=3..},nbt={equipment:{legs:{components:{"minecraft:trim":{pattern:"minecraft:silence"}}}}}] run scoreboard players add @s silence 1
+execute as @a if entity @s[scores={progressSilence=3..},nbt={equipment:{feet:{components:{"minecraft:trim":{pattern:"minecraft:silence"}}}}}] run scoreboard players add @s silence 1
+
+execute as @a[scores={silence=1..}] run tag @s add silence
+
+execute as @a[tag=silence] run function trimabilities:silence
+
+
 
 #Tank
 
@@ -140,6 +153,61 @@ execute as @a[scores={ward=1..}] run tag @s add ward
 
 execute as @a[tag=ward] run function trimabilities:ward
 
+#Spire
+execute as @a[scores={spire=1..}] run scoreboard players set @s spire 0
+
+execute as @a if entity @s[scores={progressSpire=3..},nbt={equipment:{head:{components:{"minecraft:trim":{pattern:"minecraft:spire"}}}}}] run scoreboard players add @s spire 1
+execute as @a if entity @s[scores={progressSpire=3..},nbt={equipment:{chest:{components:{"minecraft:trim":{pattern:"minecraft:spire"}}}}}] run scoreboard players add @s spire 1
+execute as @a if entity @s[scores={progressSpire=3..},nbt={equipment:{legs:{components:{"minecraft:trim":{pattern:"minecraft:spire"}}}}}] run scoreboard players add @s spire 1
+execute as @a if entity @s[scores={progressSpire=3..},nbt={equipment:{feet:{components:{"minecraft:trim":{pattern:"minecraft:spire"}}}}}] run scoreboard players add @s spire 1
+
+execute as @a[scores={spire=1..}] run tag @s add spire
+
+execute as @a[tag=spire] run function trimabilities:spire
+
+
+
+#Wayfinder
+#haste but blindness
+execute as @a[scores={wayfinder=1..}] run scoreboard players set @s wayfinder 0
+
+execute as @a if entity @s[scores={mcLvl=1..},nbt={equipment:{head:{components:{"minecraft:trim":{pattern:"minecraft:wayfinder"}}}}}] run scoreboard players add @s wayfinder 1
+execute as @a if entity @s[scores={mcLvl=1..},nbt={equipment:{chest:{components:{"minecraft:trim":{pattern:"minecraft:wayfinder"}}}}}] run scoreboard players add @s wayfinder 1
+execute as @a if entity @s[scores={mcLvl=1..},nbt={equipment:{legs:{components:{"minecraft:trim":{pattern:"minecraft:wayfinder"}}}}}] run scoreboard players add @s wayfinder 1
+execute as @a if entity @s[scores={mcLvl=1..},nbt={equipment:{feet:{components:{"minecraft:trim":{pattern:"minecraft:wayfinder"}}}}}] run scoreboard players add @s wayfinder 1
+
+execute as @a[scores={wayfinder=1..}] run tag @s add wayfinder
+
+execute as @a[tag=wayfinder] run function trimabilities:wayfinder
+
+#Wild
+#jump boost 4, 0.125 speed
+execute as @a[scores={wild=1..}] run scoreboard players set @s wild 0
+
+execute as @a if entity @s[scores={progressWild=3..},nbt={equipment:{head:{components:{"minecraft:trim":{pattern:"minecraft:wild"}}}}}] run scoreboard players add @s wild 1
+execute as @a if entity @s[scores={progressWild=3..},nbt={equipment:{chest:{components:{"minecraft:trim":{pattern:"minecraft:wild"}}}}}] run scoreboard players add @s wild 1
+execute as @a if entity @s[scores={progressWild=3..},nbt={equipment:{legs:{components:{"minecraft:trim":{pattern:"minecraft:wild"}}}}}] run scoreboard players add @s wild 1
+execute as @a if entity @s[scores={progressWild=3..},nbt={equipment:{feet:{components:{"minecraft:trim":{pattern:"minecraft:wild"}}}}}] run scoreboard players add @s wild 1
+
+execute as @a[scores={wild=1..}] run tag @s add wild
+
+execute as @a[tag=wild] run function trimabilities:wild
+
+#Eye
+execute as @a[scores={eye=1..}] run scoreboard players set @s eye 0
+
+execute as @a if entity @s[scores={progressEye=3..},nbt={equipment:{head:{components:{"minecraft:trim":{pattern:"minecraft:eye"}}}}}] run scoreboard players add @s eye 1
+execute as @a if entity @s[scores={progressEye=3..},nbt={equipment:{chest:{components:{"minecraft:trim":{pattern:"minecraft:eye"}}}}}] run scoreboard players add @s eye 1
+execute as @a if entity @s[scores={progressEye=3..},nbt={equipment:{legs:{components:{"minecraft:trim":{pattern:"minecraft:eye"}}}}}] run scoreboard players add @s eye 1
+execute as @a if entity @s[scores={progressEye=3..},nbt={equipment:{feet:{components:{"minecraft:trim":{pattern:"minecraft:eye"}}}}}] run scoreboard players add @s eye 1
+
+execute as @a[scores={eye=1..}] run tag @s add eye
+
+execute as @a[tag=eye] run function trimabilities:eye
+
+#Sentry
+#arrows shot move faster and deal more damage
+#execute if entity @a[scores={progressSentry=3..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:sentry"}}},{Slot: 102b,tag:{Trim:{pattern:"minecraft:sentry"}}},{Slot: 101b,tag:{Trim:{pattern:"minecraft:sentry"}}},{Slot: 100b,tag:{Trim:{pattern:"minecraft:sentry"}}}]}] run function trimabilities:sentry
 
 
 

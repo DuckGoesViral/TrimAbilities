@@ -1,10 +1,12 @@
+
+execute at @s run particle minecraft:flash{color:[1.0, 1.0, 1.0, 1.0]} ~ ~1 ~ 0 0 0 0 3 normal @a
+execute at @s run particle minecraft:large_smoke ~ ~2 ~ 0.1 0.1 0.1 0 15 normal @a
+
 scoreboard objectives add eyeRange dummy
 
 
-execute as @s[scores={sneakTrigger=2..}] run scoreboard players set @s eyeRange 250
-execute as @s[scores={sneakTrigger=2..}] at @s anchored eyes run playsound minecraft:entity.generic.explode ambient @a[distance=..150] ~ ~ ~ 0.2 2
-execute as @s[scores={sneakTrigger=2..}] at @s anchored eyes run function trimabilities:eyeshoot
-execute as @s[scores={sneakTrigger=2..}] at @s anchored eyes run scoreboard players set @s snipeCharge 0
+scoreboard players set @s eyeRange 500
+execute at @s anchored eyes run playsound minecraft:entity.generic.explode ambient @a[distance=..150] ~ ~ ~ 10 2
+execute at @s anchored eyes run function trimabilities:eyeshoot
 
-
-execute as @s[scores={sneakTrigger=2..}] run scoreboard players set @s sneakTrigger 0
+scoreboard players set @s eyeReload 0

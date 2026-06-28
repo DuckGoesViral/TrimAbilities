@@ -4,9 +4,7 @@ execute as @a[tag=sentry] run function trimabilities:sentryarrow
 
 
 
-execute as @a[advancements={trimabilities:spyglass=true}] run scoreboard players set @s spyglass 1
-execute as @a[advancements={trimabilities:spyglass=false}] run scoreboard players set @s spyglass 0
-advancement revoke @a only trimabilities:spyglass
+
 
 
 
