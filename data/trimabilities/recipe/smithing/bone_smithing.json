@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:smithing_trim",
+  "base": "minecraft:wolf_armor",
+  "addition": "#minecraft:trim_materials",
+  "template": "minecraft:test_block",
+  "pattern": "trimabilities:bone"
+}
