@@ -1,26 +1,26 @@
-execute as @a[scores={progressSentry=3..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:sentry"}}},{Slot: 102b,tag:{Trim:{pattern:"minecraft:sentry"}}},{Slot: 101b,tag:{Trim:{pattern:"minecraft:sentry"}}},{Slot: 100b,tag:{Trim:{pattern:"minecraft:sentry"}}}]}] run tag @s add sentry
-execute if entity @a[tag=sentry,tag=!unlockedSentry] as @a[tag=sentry,tag=!unlockedSentry] at @s run function trimabilities:unlocked/sentry
-execute as @a[tag=sentry] run function trimabilities:sentryarrow
 
 
 
+#execute unless score @s sentry = @s sentryOld run effect clear @s weakness
+
+execute if score @s sentry matches 0 run tag @s remove sentry
+
+execute if score @s sentry matches 1 run scoreboard players add @s subPower 4
+execute if score @s sentry matches 2 run scoreboard players add @s subPower 8
+execute if score @s sentry matches 3 run scoreboard players add @s subPower 12
+
+execute if score @s sentry matches 4 if entity @s[tag=!unlockedSentry] at @s run function trimabilities:unlocked/sentry
+execute if score @s sentry matches 4 if entity @s[nbt={SelectedItem:{id:"minecraft:bow"}}] run effect give @s speed 1 1 true
+execute if score @s sentry matches 4 if entity @s[nbt={SelectedItem:{id:"minecraft:crossbow"}}] run effect give @s speed 1 1 true
 
 
+execute if score @s sentry matches 4 as @s[advancements={trimabilities:bow_draw=true}] run scoreboard players set @s bow_draw 1
+execute if score @s sentry matches 4 as @s[advancements={trimabilities:bow_draw=false}] run scoreboard players set @s bow_draw 0
+execute if score @s sentry matches 4 run advancement revoke @s only trimabilities:bow_draw
 
 
-execute as @a[scores={spyglass=1},tag=sentry] run function trimabilities:sentryfire
+scoreboard players operation @s sentryOld = @s sentry
 
 
-execute as @a[scores={sneakTrigger=2..,sentryBoom=1},tag=sentry] run function trimabilities:sentryboomoff
-execute as @a[scores={sneakTrigger=2..,sentryBoom=0},tag=sentry] run function trimabilities:sentryboomon
-
-
-
-
-execute as @e[type=arrow,tag=arrow,nbt={inGround:1b}] at @s run function trimabilities:sentryboom
-execute as @e[type=arrow,tag=arrow,nbt={inGround:1b}] at @s run kill @s
-
-execute as @e[type=arrow,tag=arrow] at @s unless entity @a[tag=sentry,distance=..3.5] run tag @s add arrowgo
-execute as @e[type=arrow,tag=arrow,tag=arrowgo] at @s if entity @e[type=!arrow,type=!item,type=!experience_orb,distance=..3] run function trimabilities:sentryboom
-execute as @e[type=arrow,tag=arrow,tag=arrowgo] at @s if entity @e[type=!arrow,type=!item,type=!experience_orb,distance=..3] run kill @s
+#ability is found in ability20t
 

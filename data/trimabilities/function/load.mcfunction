@@ -330,6 +330,16 @@ scoreboard objectives add eyeFumble dummy
 scoreboard objectives add eyeHand dummy
 scoreboard objectives add eyeDamage minecraft.custom:minecraft.damage_taken
 
+scoreboard objectives add bow_draw dummy
+scoreboard objectives add sentryShot minecraft.used:minecraft.bow
+scoreboard objectives add sentryCharge dummy
+scoreboard objectives add sentryUUID dummy
+scoreboard objectives add sentryArrows dummy
+scoreboard objectives add sentryArrowSummon dummy
+scoreboard objectives add sentryCooldown dummy
+scoreboard objectives add sentryStep1 dummy
+scoreboard objectives add sentryRadius dummy
+
 scoreboard objectives add cooldownRib dummy
 scoreboard objectives add ribUnderground dummy
 

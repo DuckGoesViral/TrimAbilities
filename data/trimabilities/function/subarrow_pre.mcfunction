@@ -1,3 +1,4 @@
+
 scoreboard players reset @s subTag
 execute as @s[nbt={SelectedItem:{components:{"minecraft:custom_data":{added_power:1b}}}}] run item modify entity @s weapon.mainhand trimabilities:-1power
 execute as @s[nbt={SelectedItem:{components:{"minecraft:custom_data":{added_power:2b}}}}] run item modify entity @s weapon.mainhand trimabilities:-2power

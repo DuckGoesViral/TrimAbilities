@@ -1,3 +1,4 @@
+
 #Warrior
 
 #Silence
@@ -13,7 +14,6 @@
 
 
 #Archer
-scoreboard players reset @a subPower
 
 
 
@@ -30,6 +30,24 @@ execute as @a if entity @s[scores={mcLvl=5..},nbt={equipment:{feet:{components:{
 execute as @a[scores={vex=1..}] run tag @s add vex
 
 execute as @a[tag=vex] run function trimabilities:vex
+
+
+
+
+
+
+
+
+execute as @a[scores={sentry=4..}] if score @s sentryCharge matches 5.. if score @s sentryShot matches 1.. at @s run scoreboard players operation @e[type=arrow,limit=1,sort=nearest] sentryCharge = @s sentryCharge
+execute as @a[scores={sentry=4..}] if score @s sentryCharge matches 5.. if score @s sentryShot matches 1.. at @s run scoreboard players reset @s sentryShot
+execute as @a[scores={sentry=4..}] unless score @s bow_draw matches 1 run scoreboard players reset @s sentryCharge
+
+
+
+
+
+
+
 
 
 scoreboard players add timer mana 1

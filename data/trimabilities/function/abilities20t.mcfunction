@@ -1,3 +1,4 @@
+
 #AquaTeam
 #BlueTeam
 #GoldTeam
@@ -6,6 +7,20 @@
 #PurpleTeam
 #RedTeam
 #YellowTeam
+
+
+
+
+
+
+
+
+execute as @a[scores={sentry=4..}] if score @s bow_draw matches 1 run function trimabilities:sentrycharge
+
+execute as @e[type=arrow,scores={sentryCharge=5..}] run function trimabilities:sentryability
+
+
+
 
 
 

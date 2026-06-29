@@ -1,3 +1,4 @@
+
 #Utility
 
 #Coast
@@ -165,7 +166,7 @@ execute as @a[scores={spire=1..}] run tag @s add spire
 
 execute as @a[tag=spire] run function trimabilities:spire
 
-
+scoreboard players reset @a subPower
 
 #Wayfinder
 #haste but blindness
@@ -208,7 +209,16 @@ execute as @a[tag=eye] run function trimabilities:eye
 #Sentry
 #arrows shot move faster and deal more damage
 #execute if entity @a[scores={progressSentry=3..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:sentry"}}},{Slot: 102b,tag:{Trim:{pattern:"minecraft:sentry"}}},{Slot: 101b,tag:{Trim:{pattern:"minecraft:sentry"}}},{Slot: 100b,tag:{Trim:{pattern:"minecraft:sentry"}}}]}] run function trimabilities:sentry
+execute as @a[scores={sentry=1..}] run scoreboard players set @s sentry 0
 
+execute as @a if entity @s[scores={progressSentry=3..},nbt={equipment:{head:{components:{"minecraft:trim":{pattern:"minecraft:sentry"}}}}}] run scoreboard players add @s sentry 1
+execute as @a if entity @s[scores={progressSentry=3..},nbt={equipment:{chest:{components:{"minecraft:trim":{pattern:"minecraft:sentry"}}}}}] run scoreboard players add @s sentry 1
+execute as @a if entity @s[scores={progressSentry=3..},nbt={equipment:{legs:{components:{"minecraft:trim":{pattern:"minecraft:sentry"}}}}}] run scoreboard players add @s sentry 1
+execute as @a if entity @s[scores={progressSentry=3..},nbt={equipment:{feet:{components:{"minecraft:trim":{pattern:"minecraft:sentry"}}}}}] run scoreboard players add @s sentry 1
+
+execute as @a[scores={sentry=1..}] run tag @s add sentry
+
+execute as @a[tag=sentry] run function trimabilities:sentry
 
 
 

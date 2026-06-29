@@ -1,6 +1,6 @@
 
 
-execute unless score @s eye = @s recoveryEye run effect clear @s weakness
+execute unless score @s eye = @s eyeOld run effect clear @s weakness
 
 execute if score @s eye matches 0 run tag @s remove eye
 
