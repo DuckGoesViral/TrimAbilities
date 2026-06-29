@@ -69,4 +69,9 @@ execute as @a if score @s vex matches 4 if score @s vexDamage matches 1.. run ti
 execute as @a if score @s vex matches 4 if score @s vexDamage matches 1 run title @s actionbar {"text":"Air Walker re-enabled.","color":"green"}
 
 
+#Check for Bone Trim scale 
+execute as @e[type=wolf] store result score @s EntityScale run attribute @s minecraft:scale base get 10
+
 schedule function trimabilities:abilities20t 20t replace
+
+

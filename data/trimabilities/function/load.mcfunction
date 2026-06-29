@@ -445,3 +445,5 @@ scoreboard objectives add 9124-4841 trigger
 scoreboard objectives add 9725-4688 trigger
 scoreboard objectives add 8942-6759 trigger
 scoreboard objectives add 6639-3275 trigger
+
+scoreboard objectives add EntityScale dummy

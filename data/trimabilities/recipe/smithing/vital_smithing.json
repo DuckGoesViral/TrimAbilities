@@ -1,6 +1,7 @@
 {
   "type": "minecraft:smithing_trim",
-  "base": { "tag": "minecraft:trimmable_armor" },
-  "addition": { "tag": "minecraft:trim_materials" },
-  "template": { "item": "minecraft:chain_command_block" }
+  "addition": "#minecraft:trim_materials",
+  "base": "#minecraft:trimmable_armor",
+  "template": "minecraft:chain_command_block",
+  "pattern": "trimabilities:vital"
 }
