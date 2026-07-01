@@ -6,7 +6,6 @@ execute unless score @s dune = @s duneOld run effect clear @s speed
 
 
 execute if score @s dune matches 0 run tag @s remove dune
-execute if score @s dune matches 0 run tag @s remove dune
 
 execute if score @s dune matches 1 run effect give @s speed infinite 0 true
 execute if score @s dune matches 2 run effect give @s speed infinite 1 true
