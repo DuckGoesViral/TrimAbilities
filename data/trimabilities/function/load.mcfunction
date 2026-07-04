@@ -1,3 +1,6 @@
+gamerule max_command_forks 999999999
+gamerule max_command_sequence_length 999999999
+
 
 tellraw @a {"text": "Reload Succesful!","color": "#0000FF","bold": true}
 
@@ -339,6 +342,7 @@ scoreboard objectives add sentryArrowSummon dummy
 scoreboard objectives add sentryCooldown dummy
 scoreboard objectives add sentryStep1 dummy
 scoreboard objectives add sentryRadius dummy
+scoreboard objectives add sentryHeight dummy
 
 scoreboard objectives add cooldownRib dummy
 scoreboard objectives add ribUnderground dummy

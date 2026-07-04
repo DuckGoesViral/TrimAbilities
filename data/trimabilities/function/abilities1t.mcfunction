@@ -38,13 +38,21 @@ execute as @a[tag=vex] run function trimabilities:vex
 
 
 
+execute as @a[scores={sentry=4..}] as @s[advancements={trimabilities:bow_draw=true}] run scoreboard players set @s bow_draw 1
+execute as @a[scores={sentry=4..}] as @s[advancements={trimabilities:bow_draw=false}] run scoreboard players set @s bow_draw 0
+execute as @a[scores={sentry=4..}] run advancement revoke @s only trimabilities:bow_draw
+
+
 execute as @a[scores={sentry=4..}] if score @s sentryCharge matches 5.. if score @s sentryShot matches 1.. at @s run scoreboard players operation @e[type=arrow,limit=1,sort=nearest] sentryCharge = @s sentryCharge
 execute as @a[scores={sentry=4..}] if score @s sentryCharge matches 5.. if score @s sentryShot matches 1.. at @s run scoreboard players reset @s sentryShot
-execute as @a[scores={sentry=4..}] unless score @s bow_draw matches 1 run scoreboard players reset @s sentryCharge
+execute as @a[scores={sentry=4..}] unless score @s bow_draw matches 1 run scoreboard players set @s sentryCharge 4
 
+execute as @e[type=arrow,scores={sentryCharge=5..},nbt={inGround:1b}] run function trimabilities:sentryability
 
-
-
+#execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}] as @a[distance=..1] run damage @s 3 explosion
+execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}] run summon minecraft:creeper ~ ~ ~ {ExplosionRadius:1b,ignited:1b,Fuse:0s}
+execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}] run playsound minecraft:entity.zombie_villager.cure block @a[distance=..30] ~ ~ ~ 1 2
+execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}] run kill @s
 
 
 
