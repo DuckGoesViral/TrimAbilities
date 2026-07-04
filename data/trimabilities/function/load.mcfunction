@@ -401,6 +401,7 @@ scoreboard players set 100 constants 100
 # Frankenstein score counter and kill counts. Anything outside normal mob kills will be counted as extra kills for the frankenstein score.
 
 scoreboard objectives add summonSuccess dummy
+scoreboard objectives add orbDeath dummy
 
 scoreboard objectives add frankensteinScore dummy
 # 1 score per kill

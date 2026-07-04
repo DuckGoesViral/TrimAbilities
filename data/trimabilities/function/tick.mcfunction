@@ -60,19 +60,12 @@ execute if score Timer subPower matches 20.. as @a[nbt={SelectedItem:{id:"minecr
 execute if score Timer subPower matches 20.. run scoreboard players reset Timer subPower
 
 
-#execute as @a[nbt={SelectedItem:{tag:{added_power:0}}}] run item modify entity @s weapon.mainhand trimabilities:warn_clear
-execute as @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{added_power:0b}}}}] run item modify entity @s weapon.mainhand trimabilities:warn_clear
-execute as @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{added_power:1b}}}}] run item modify entity @s weapon.mainhand trimabilities:warn_power
-execute as @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{added_power:2b}}}}] run item modify entity @s weapon.mainhand trimabilities:warn_power
-execute as @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{added_power:3b}}}}] run item modify entity @s weapon.mainhand trimabilities:warn_power
-execute as @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{added_power:4b}}}}] run item modify entity @s weapon.mainhand trimabilities:warn_power
-
-execute as @a[nbt={SelectedItem:{components:{"minecraft:unbreakable":{}}}}] unless score @s ravine matches 4 run item modify entity @s weapon.mainhand trimabilities:ununbreakable
-execute as @a[nbt={equipment:{offhand:{components:{"minecraft:unbreakable":{}}}}}] unless score @s ravine matches 4 run item modify entity @s weapon.offhand trimabilities:ununbreakable
-execute as @a[nbt={equipment:{feet:{components:{"minecraft:unbreakable":{}}}}}] unless score @s ravine matches 4 run item modify entity @s armor.feet trimabilities:ununbreakable
-execute as @a[nbt={equipment:{legs:{components:{"minecraft:unbreakable":{}}}}}] unless score @s ravine matches 4 run item modify entity @s armor.legs trimabilities:ununbreakable
-execute as @a[nbt={equipment:{chest:{components:{"minecraft:unbreakable":{}}}}}] unless score @s ravine matches 4 run item modify entity @s armor.chest trimabilities:ununbreakable
-execute as @a[nbt={equipment:{head:{components:{"minecraft:unbreakable":{}}}}}] unless score @s ravine matches 4 run item modify entity @s armor.head trimabilities:ununbreakable
+# Item maintenance (bow power-warning labels + unbreakable stripping) every 5 ticks.
+# These are cosmetic/cleanup scans that don't need per-tick precision; gating them
+# to 5t removes ~11 item-NBT reads per player per tick. Logic lives in item_maintenance.
+scoreboard players add itemTimer subPower 1
+execute if score itemTimer subPower matches 5.. run function trimabilities:item_maintenance
+execute if score itemTimer subPower matches 5.. run scoreboard players set itemTimer subPower 0
 
 execute as @a[scores={grindstoneUse=1..}] run function trimabilities:subarrow_clear
 
