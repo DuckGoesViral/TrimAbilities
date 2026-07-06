@@ -31,4 +31,4 @@ execute as @a[tag=storm] run tag @s add mage
 #
 #execute as @a[tag=!raiser,tag=!rib,tag=!vex] run tag @s remove necromancer
 
-schedule function trimabilities:categorytags 10t
+schedule function trimabilities:categorytags 20t

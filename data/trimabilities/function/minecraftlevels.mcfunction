@@ -89,4 +89,4 @@ execute if entity @a[scores={minecraftLevel=50000..},tag=mcLvl10go] as @a[scores
 execute as @a[tag=mcLvl10go] run tag @s remove mcLvl10go
 
 
-schedule function trimabilities:minecraftlevels 10t
+schedule function trimabilities:minecraftlevels 20t

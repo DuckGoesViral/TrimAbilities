@@ -2,7 +2,9 @@
 tellraw @a {"text": "Reload Succesful!","color": "#0000FF","bold": true}
 
 function trimabilities:abilities5t
+function trimabilities:abilities10t
 function trimabilities:abilities20t
+function trimabilities:advancementxp
 function trimabilities:scoreboardlevels
 function trimabilities:categorytags
 function trimabilities:minecraftxp

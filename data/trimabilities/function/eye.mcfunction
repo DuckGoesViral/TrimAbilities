@@ -19,7 +19,7 @@ scoreboard players operation @s eyeOld = @s eye
 
 execute as @s[advancements={trimabilities:spyglass=true}] run scoreboard players set @s spyglass 1
 execute as @s[advancements={trimabilities:spyglass=false}] run scoreboard players set @s spyglass 0
-advancement revoke @a only trimabilities:spyglass
+advancement revoke @s only trimabilities:spyglass
 
 
 
