@@ -64,7 +64,7 @@ execute if score timer mana matches 100.. as @a[tag=mage] if score @s mana > @s 
 execute if score timer mana matches 100.. run scoreboard players set timer mana 0
 
 execute as @a[tag=mage,scores={xpDelay=1..}] run scoreboard players add @s xpDelay 1
-execute as @a[tag=mage,scores={xpDelay=60..}] run scoreboard players reset @s xpDelay
+execute as @a[tag=mage,scores={xpDelay=45..}] run scoreboard players reset @s xpDelay
 
 execute as @a[tag=raiser] unless score @s xpDelay matches 1.. run title @s actionbar ["",{"text":"Mana: ","color":"dark_aqua"},{"score":{"name":"@s","objective":"mana"},"color":"dark_aqua"},{"text":" |","color":"dark_gray"},{"text":" Souls: ","color":"dark_green"},{"score":{"name":"@s","objective":"frankensteinScore"},"color":"dark_green"}]
 
@@ -84,6 +84,9 @@ scoreboard players enable @a[tag=mage] 8259-9671
 scoreboard players enable @a[tag=mage] 8259-2315
 scoreboard players enable @a[tag=mage] 5681-8055
 scoreboard players enable @a[tag=mage] 4956-7855
+scoreboard players enable @a[tag=mage] 2753-1450
+scoreboard players enable @a[tag=mage] 8962-2901
+scoreboard players enable @a[tag=mage] 7416-9635
 
 execute as @a[scores={2457-1364=1..},tag=mage] at @s run function trimabilities:spells/fireball
 execute as @a[scores={6781-6345=1..},tag=mage] at @s run function trimabilities:spells/damageorb
@@ -93,6 +96,9 @@ execute as @a[scores={8259-9671=1..,raiser=4},tag=mage] at @s run function trima
 execute as @a[scores={8259-2315=1..,raiser=4},tag=mage] at @s run function trimabilities:spells/frankenstein/witherskeleton
 execute as @a[scores={5681-8055=1..,stray=4},tag=mage] at @s run function trimabilities:spells/cryomancy
 execute as @a[scores={4956-7855=1..,stray=4},tag=mage] at @s run function trimabilities:spells/icecube
+execute as @a[scores={2753-1450=1..},tag=mage] at @s run function trimabilities:spells/bloodsac
+execute as @a[scores={8962-2901=1..},tag=mage] at @s run function trimabilities:spells/repulsion
+execute as @a[scores={7416-9635=1..},tag=mage] at @s run function trimabilities:spells/blackhole
 
 
 execute as @a[scores={2457-1364=1..}] run scoreboard players set @s 2457-1364 0
@@ -103,6 +109,9 @@ execute as @a[scores={8259-9671=1..}] run scoreboard players set @s 8259-9671 0
 execute as @a[scores={8259-2315=1..}] run scoreboard players set @s 8259-2315 0
 execute as @a[scores={5681-8055=1..}] run scoreboard players set @s 5681-8055 0
 execute as @a[scores={4956-7855=1..}] run scoreboard players set @s 4956-7855 0
+execute as @a[scores={2753-1450=1..}] run scoreboard players set @s 2753-1450 0
+execute as @a[scores={8962-2901=1..}] run scoreboard players set @s 8962-2901 0
+execute as @a[scores={7416-9635=1..}] run scoreboard players set @s 7416-9635 0
 
 
 
@@ -140,4 +149,10 @@ execute as @e[type=marker,tag=iceMarker,scores={iceTimer=100..}] at @s if block 
 execute as @e[type=marker,tag=iceMarker,scores={iceTimer=100..}] at @s if block ~ ~1 ~ ice run setblock ~ ~1 ~ air destroy
 execute as @e[type=marker,tag=iceMarker,scores={iceTimer=100..}] run kill @s
 
+
+execute as @e[type=marker,tag=blackhole] at @s run particle minecraft:flash{color:[0.0, 0.0, 0.0, 0.0]} ~ ~ ~ 0 0 0 0 10 normal @a[distance=..50]
+
+
+execute as @e[tag=missileMarker] at @s anchored eyes facing entity @p eyes positioned ^ ^ ^2 rotated as @s positioned ^ ^ ^5 facing entity @s eyes facing ^ ^ ^-1 positioned as @s run tp @s ^ ^ ^0.5 ~ ~
+execute as @e[type=item_display,tag=homingMissile] at @s positioned ~ ~2 ~ at @e[type=armor_stand,tag=missileMarker,limit=1,sort=nearest] run tp ~ ~2 ~
 

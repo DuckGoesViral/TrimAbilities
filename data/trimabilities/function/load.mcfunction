@@ -442,7 +442,12 @@ scoreboard objectives add 8259-2315 trigger
 scoreboard objectives add 5681-8055 trigger
 #ice cube
 scoreboard objectives add 4956-7855 trigger
-
+#blood sacrifice
+scoreboard objectives add 2753-1450 trigger
+#ground pound/repulsion
+scoreboard objectives add 8962-2901 trigger
+#blackhole
+scoreboard objectives add 7416-9635 trigger
 
 #fake spell scoreboards
 scoreboard objectives add 7456-2314 trigger

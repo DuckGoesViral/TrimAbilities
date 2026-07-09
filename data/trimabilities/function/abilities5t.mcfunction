@@ -351,3 +351,7 @@ execute as @e[type=wolf,nbt={}] unless entity @s[tag=bone] if entity @s[scores={
 
 schedule function trimabilities:abilities5t 5t
 
+
+
+execute if entity @e[type=marker,tag=blackhole] as @e[type=!chest_minecart,type=!armor_stand,type=!marker,type=!area_effect_cloud,type=!item_display,tag=!holeblack] at @s if entity @e[type=marker,tag=blackhole,distance=..15] facing entity @e[type=marker,tag=blackhole,limit=1,sort=nearest] feet run tp ^ ^ ^.5
+execute if entity @e[type=marker,tag=blackhole] as @e[type=!chest_minecart,type=!armor_stand,type=!marker,type=!area_effect_cloud,type=!item_display,tag=!holeblack] at @s if entity @e[type=marker,tag=blackhole,distance=..3] run attribute @s gravity base set 0.0
