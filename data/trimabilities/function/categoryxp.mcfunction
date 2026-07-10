@@ -238,4 +238,4 @@ execute as @a[scores={enchantItem=1..},tag=mage] at @s run playsound minecraft:e
 execute as @a[scores={enchantItem=1..}] run scoreboard players remove @s enchantItem 1
 
 
-schedule function trimabilities:categoryxp 3t
+schedule function trimabilities:categoryxp 6t

@@ -80,3 +80,7 @@ scoreboard objectives add teamvote dummy
 scoreboard players set #active teamvote 0
 scoreboard players set #mode teamvote 1
 scoreboard players set #two teamvote 2
+scoreboard players set #ticker teamvote 0
+
+# Populate team counts/fullness immediately (then refreshed every 10t from tick)
+function teams:slow_tick
