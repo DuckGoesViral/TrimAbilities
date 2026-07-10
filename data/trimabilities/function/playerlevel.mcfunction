@@ -5,4 +5,4 @@ execute as @a[scores={playerLevel=1..}] run scoreboard players set @s playerLeve
 execute as @a[scores={playerLevel=..-1}] run scoreboard players set @s playerLevel 0 
 
 
-schedule function trimabilities:playerlevel 5t
+schedule function trimabilities:playerlevel 10t

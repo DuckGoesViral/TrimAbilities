@@ -68,8 +68,22 @@ execute as @a if score @s vex matches 4 if score @s vexDamage matches 1.. run ti
 execute as @a if score @s vex matches 4 if score @s vexDamage matches 1 run title @s actionbar {"text":"Air Walker re-enabled.","color":"green"}
 
 
-#Check for Bone Trim scale 
+#Check for Bone Trim scale
 execute as @e[type=wolf] store result score @s EntityScale run attribute @s minecraft:scale base get 10
+
+# Bone Trim Tag Check and Effects (moved here from abilities5t - wolf armor
+# detection doesn't need 5t, and this runs right after the EntityScale read)
+execute as @e[type=wolf,nbt={equipment:{body:{components:{"minecraft:trim":{pattern:"trimabilities:bone"}}}}}] unless entity @s[tag=bone] run tag @s add bone
+execute as @e[type=wolf,tag=bone] unless entity @s[nbt={active_effects:[{id:"minecraft:regeneration"}]}] run effect give @s minecraft:regeneration 3 1 true
+execute as @e[type=wolf,tag=bone] run attribute @s minecraft:scale base set 1.4
+execute as @e[type=wolf,tag=bone] run attribute @s minecraft:attack_damage base set 5
+execute as @e[type=wolf,tag=bone] run attribute @s minecraft:max_health base set 15
+
+# Bone Trim Tag Removal
+execute as @e[type=wolf,tag=bone] unless entity @s[nbt={equipment:{body:{components:{"minecraft:trim":{pattern:"trimabilities:bone"}}}}}] run tag @s remove bone
+execute as @e[type=wolf] if entity @s[nbt={active_effects:[{id:"minecraft:regeneration"}]}] unless entity @s[tag=bone] run effect clear @s
+execute as @e[type=wolf,nbt={}] unless entity @s[tag=bone] if entity @s[scores={EntityScale=14}] run attribute @s minecraft:max_health base set 8
+execute as @e[type=wolf,nbt={}] unless entity @s[tag=bone] if entity @s[scores={EntityScale=14}] run attribute @s scale base reset
 
 schedule function trimabilities:abilities20t 20t replace
 

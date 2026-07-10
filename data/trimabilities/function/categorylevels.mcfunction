@@ -208,4 +208,4 @@ execute as @a[tag=mLvl5go] run tag @s remove mLvl5go
 
 
 
-schedule function trimabilities:categorylevels 10t replace
+schedule function trimabilities:categorylevels 20t
