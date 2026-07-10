@@ -49,12 +49,6 @@ execute as @a[scores={sentry=4..}] unless score @s bow_draw matches 1 run scoreb
 
 execute as @e[type=arrow,scores={sentryCharge=5..},nbt={inGround:1b}] run function trimabilities:sentryability
 
-#execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}] as @a[distance=..1] run damage @s 3 explosion
-execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}] run summon minecraft:creeper ~ ~ ~ {ExplosionRadius:1b,ignited:1b,Fuse:0s}
-execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}] run playsound minecraft:entity.zombie_villager.cure block @a[distance=..30] ~ ~ ~ 1 2
-execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}] run kill @s
-
-
 
 
 
