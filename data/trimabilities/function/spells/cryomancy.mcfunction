@@ -11,6 +11,7 @@ execute at @s run playsound minecraft:block.enchantment_table.use ambient @s ~ ~
 execute at @s run summon snow_golem ~ ~ ~ {Pumpkin:0b,Tags:["cryoGolem"],DeathLootTable:"minecraft:empty"}
 execute at @s run summon snow_golem ~ ~ ~ {Pumpkin:0b,Tags:["cryoGolem"],DeathLootTable:"minecraft:empty"}
 execute at @s run effect give @e[type=snow_golem,tag=cryoGolem,limit=2,sort=nearest] speed infinite 1 true
+execute at @s run effect give @e[type=snow_golem,tag=cryoGolem,limit=2,sort=nearest] resistance infinite 1 true
 execute at @s if entity @s[team=AquaTeam] as @e[type=snow_golem,tag=cryoGolem,limit=2,sort=nearest] run team join AquaTeam
 execute at @s if entity @s[team=BlueTeam] as @e[type=snow_golem,tag=cryoGolem,limit=2,sort=nearest] run team join BlueTeam
 execute at @s if entity @s[team=GoldTeam] as @e[type=snow_golem,tag=cryoGolem,limit=2,sort=nearest] run team join GoldTeam

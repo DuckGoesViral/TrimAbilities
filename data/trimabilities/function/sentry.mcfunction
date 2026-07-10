@@ -14,11 +14,6 @@ execute if score @s sentry matches 4 if entity @s[nbt={SelectedItem:{id:"minecra
 execute if score @s sentry matches 4 if entity @s[nbt={SelectedItem:{id:"minecraft:crossbow"}}] run effect give @s speed 1 1 true
 
 
-execute if score @s sentry matches 4 as @s[advancements={trimabilities:bow_draw=true}] run scoreboard players set @s bow_draw 1
-execute if score @s sentry matches 4 as @s[advancements={trimabilities:bow_draw=false}] run scoreboard players set @s bow_draw 0
-execute if score @s sentry matches 4 run advancement revoke @s only trimabilities:bow_draw
-
-
 scoreboard players operation @s sentryOld = @s sentry
 
 

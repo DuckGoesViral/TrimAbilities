@@ -1,12 +1,12 @@
 execute at @s run playsound minecraft:entity.warden.sonic_boom player @a[distance=..30] ~ ~ ~ 1 1 1
-execute at @s anchored eyes run execute positioned ^ ^ ^2 as @a[distance=..2] run damage @s 15 sonic_boom
-execute at @s anchored eyes run execute positioned ^ ^ ^3 as @a[distance=..3] run damage @s 15 sonic_boom
-execute at @s anchored eyes run execute positioned ^ ^ ^4 as @a[distance=..3] run damage @s 15 sonic_boom
-execute at @s anchored eyes run execute positioned ^ ^ ^5 as @a[distance=..3] run damage @s 15 sonic_boom
-execute at @s anchored eyes run execute positioned ^ ^ ^2 as @e[type=!player,distance=..2] run damage @s 25 sonic_boom
-execute at @s anchored eyes run execute positioned ^ ^ ^3 as @e[type=!player,distance=..3] run damage @s 25 sonic_boom
-execute at @s anchored eyes run execute positioned ^ ^ ^4 as @e[type=!player,distance=..3] run damage @s 25 sonic_boom
-execute at @s anchored eyes run execute positioned ^ ^ ^5 as @e[type=!player,distance=..3] run damage @s 25 sonic_boom
+execute at @s anchored eyes run execute positioned ^ ^ ^2 as @a[distance=..1.9] run damage @s 15 magic
+execute at @s anchored eyes run execute positioned ^ ^ ^3 as @a[distance=..2.9] run damage @s 15 magic
+execute at @s anchored eyes run execute positioned ^ ^ ^4 as @a[distance=..3] run damage @s 15 magic
+execute at @s anchored eyes run execute positioned ^ ^ ^5 as @a[distance=..3] run damage @s 15 magic
+execute at @s anchored eyes run execute positioned ^ ^ ^2 as @e[type=!player,distance=..2] run damage @s 25 magic
+execute at @s anchored eyes run execute positioned ^ ^ ^3 as @e[type=!player,distance=..3] run damage @s 25 magic
+execute at @s anchored eyes run execute positioned ^ ^ ^4 as @e[type=!player,distance=..3] run damage @s 25 magic
+execute at @s anchored eyes run execute positioned ^ ^ ^5 as @e[type=!player,distance=..3] run damage @s 25 magic
 #execute at @s anchored eyes run execute positioned ^ ^ ^2 run summon minecraft:wind_charge ~ ~ ~ {Motion:[0.0d,-1.0d,0.0d]}
 #execute at @s anchored eyes run execute positioned ^ ^ ^3 run summon minecraft:wind_charge ~ ~ ~ {Motion:[0.0d,-1.0d,0.0d]}
 #execute at @s anchored eyes run execute positioned ^ ^ ^4 run summon minecraft:wind_charge ~ ~ ~ {Motion:[0.0d,-1.0d,0.0d]}

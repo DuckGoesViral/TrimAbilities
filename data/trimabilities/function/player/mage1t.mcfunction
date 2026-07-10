@@ -6,7 +6,7 @@ execute unless entity @s[type=player] run return 0
 
 # xp-display delay bookkeeping
 execute if score @s xpDelay matches 1.. run scoreboard players add @s xpDelay 1
-execute if score @s xpDelay matches 60.. run scoreboard players reset @s xpDelay
+execute if score @s xpDelay matches 45.. run scoreboard players reset @s xpDelay
 
 # Mana actionbar (raisers also see their soul count)
 execute if entity @s[tag=raiser] unless score @s xpDelay matches 1.. run title @s actionbar ["",{"text":"Mana: ","color":"dark_aqua"},{"score":{"name":"@s","objective":"mana"},"color":"dark_aqua"},{"text":" |","color":"dark_gray"},{"text":" Souls: ","color":"dark_green"},{"score":{"name":"@s","objective":"frankensteinScore"},"color":"dark_green"}]
@@ -26,6 +26,9 @@ scoreboard players enable @s 8259-9671
 scoreboard players enable @s 8259-2315
 scoreboard players enable @s 5681-8055
 scoreboard players enable @s 4956-7855
+scoreboard players enable @s 2753-1450
+scoreboard players enable @s 8962-2901
+scoreboard players enable @s 7416-9635
 
 # Cast requested spells
 execute if score @s 2457-1364 matches 1.. at @s run function trimabilities:spells/fireball
@@ -36,6 +39,9 @@ execute if score @s 8259-9671 matches 1.. if score @s raiser matches 4 at @s run
 execute if score @s 8259-2315 matches 1.. if score @s raiser matches 4 at @s run function trimabilities:spells/frankenstein/witherskeleton
 execute if score @s 5681-8055 matches 1.. if score @s stray matches 4 at @s run function trimabilities:spells/cryomancy
 execute if score @s 4956-7855 matches 1.. if score @s stray matches 4 at @s run function trimabilities:spells/icecube
+execute if score @s 2753-1450 matches 1.. at @s run function trimabilities:spells/bloodsac
+execute if score @s 8962-2901 matches 1.. at @s run function trimabilities:spells/repulsion
+execute if score @s 7416-9635 matches 1.. at @s run function trimabilities:spells/blackhole
 
 # Reset consumed triggers
 execute if score @s 2457-1364 matches 1.. run scoreboard players set @s 2457-1364 0
@@ -46,3 +52,6 @@ execute if score @s 8259-9671 matches 1.. run scoreboard players set @s 8259-967
 execute if score @s 8259-2315 matches 1.. run scoreboard players set @s 8259-2315 0
 execute if score @s 5681-8055 matches 1.. run scoreboard players set @s 5681-8055 0
 execute if score @s 4956-7855 matches 1.. run scoreboard players set @s 4956-7855 0
+execute if score @s 2753-1450 matches 1.. run scoreboard players set @s 2753-1450 0
+execute if score @s 8962-2901 matches 1.. run scoreboard players set @s 8962-2901 0
+execute if score @s 7416-9635 matches 1.. run scoreboard players set @s 7416-9635 0

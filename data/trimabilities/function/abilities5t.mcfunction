@@ -52,3 +52,18 @@ execute as @a[scores={Trim_Recovery_Toggle=1..}] run scoreboard players set @s T
 # Bone trim (wolves) moved to abilities20t - wolf scans don't need 5t
 
 schedule function trimabilities:abilities5t 5t
+
+
+
+execute if entity @e[type=marker,tag=blackhole] as @e[type=!chest_minecart,type=!armor_stand,type=!marker,type=!area_effect_cloud,type=!item_display,tag=!holeblack] at @s if entity @e[type=marker,tag=blackhole,distance=..15] facing entity @e[type=marker,tag=blackhole,limit=1,sort=nearest] feet run tp ^ ^ ^.5
+execute if entity @e[type=marker,tag=blackhole] as @e[type=!chest_minecart,type=!armor_stand,type=!marker,type=!area_effect_cloud,type=!item_display,tag=!holeblack] at @s if entity @e[type=marker,tag=blackhole,distance=..3] run attribute @s gravity base set 0.0
+
+
+
+#execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}] as @a[distance=..3] run damage @s 3 explosion
+execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}] run summon minecraft:creeper ~ ~ ~ {ExplosionRadius:1b,ignited:1b,Fuse:0s}
+execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}] run gamerule mob_griefing false
+execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}] run summon minecraft:creeper ~ ~ ~ {ExplosionRadius:3b,ignited:1b,Fuse:0s}
+execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}] run playsound minecraft:entity.zombie_villager.cure block @a[distance=..20] ~ ~ ~ 1 2
+execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}] run schedule function trimabilities:abilities5tplus 1t replace
+execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}] run kill @s

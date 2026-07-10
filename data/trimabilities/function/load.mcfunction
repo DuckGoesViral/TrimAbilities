@@ -1,3 +1,6 @@
+gamerule max_command_forks 999999999
+gamerule max_command_sequence_length 999999999
+
 
 tellraw @a {"text": "Reload Succesful!","color": "#0000FF","bold": true}
 
@@ -341,6 +344,7 @@ scoreboard objectives add sentryArrowSummon dummy
 scoreboard objectives add sentryCooldown dummy
 scoreboard objectives add sentryStep1 dummy
 scoreboard objectives add sentryRadius dummy
+scoreboard objectives add sentryHeight dummy
 
 scoreboard objectives add cooldownRib dummy
 scoreboard objectives add ribUnderground dummy
@@ -440,7 +444,12 @@ scoreboard objectives add 8259-2315 trigger
 scoreboard objectives add 5681-8055 trigger
 #ice cube
 scoreboard objectives add 4956-7855 trigger
-
+#blood sacrifice
+scoreboard objectives add 2753-1450 trigger
+#ground pound/repulsion
+scoreboard objectives add 8962-2901 trigger
+#blackhole
+scoreboard objectives add 7416-9635 trigger
 
 #fake spell scoreboards
 scoreboard objectives add 7456-2314 trigger
