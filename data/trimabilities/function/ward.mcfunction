@@ -5,6 +5,7 @@ execute unless score @s ward = @s wardOld run attribute @s max_health modifier r
 execute unless score @s ward = @s wardOld run attribute @s max_health modifier remove 2-3-1-4-1
 execute unless score @s ward = @s wardOld run effect clear @s resistance
 execute unless score @s ward = @s wardOld run effect clear @s slowness
+execute unless score @s ward = @s wardOld run scoreboard players reset @s cooldownWard
 
 execute if score @s ward matches 0 run tag @s remove ward
 

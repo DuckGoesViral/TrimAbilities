@@ -57,7 +57,30 @@ execute if entity @e[type=item_display,tag=healPool,limit=1] run function trimab
 execute if entity @e[type=marker,tag=iceMarker,limit=1] run function trimabilities:spells/icetick
 
 # Blackhole ambient particle (from main; single line, typed scan)
-execute as @e[type=marker,tag=blackhole] at @s run particle minecraft:flash{color:[0.0, 0.0, 0.0, 0.0]} ~ ~ ~ 0 0 0 0 10 normal @a[distance=..50]
+execute as @e[type=marker,tag=prehole] run scoreboard players add @s holeDeath 1
+execute as @e[type=marker,tag=prehole,scores={holeDeath=20..}] at @s run summon marker ~ ~ ~ {Tags:["blackhole"]}
+execute as @e[type=marker,tag=prehole,scores={holeDeath=20..}] run kill @s
+
+execute as @e[type=marker,tag=prehole] at @s run particle minecraft:smoke ~ ~ ~ 0 0 0 0 10 normal @a[distance=..60]
+execute as @e[type=marker,tag=blackhole] at @s run particle minecraft:flash{color:[0.0, 0.0, 0.0, 0.0]} ~ ~1 ~ 0 0 0 0 10 normal @a[distance=..60]
+execute if entity @e[type=marker,tag=blackhole] as @e[type=!chest_minecart,type=!armor_stand,type=!marker,type=!area_effect_cloud,type=!item_display,tag=!holeblack] at @s if entity @e[type=marker,tag=blackhole,distance=..20] facing entity @e[type=marker,tag=blackhole,limit=1,sort=nearest] feet run tp ^ ^ ^.175
+execute if entity @e[type=marker,tag=blackhole] as @e[type=!chest_minecart,type=!armor_stand,type=!marker,type=!area_effect_cloud,type=!item_display,tag=!holeblack] at @s if entity @e[type=marker,tag=blackhole,distance=..3.5] facing entity @e[type=marker,tag=blackhole,limit=1,sort=nearest] feet run tp ^ ^ ^.3
+execute if entity @e[type=marker,tag=blackhole] as @e[type=!chest_minecart,type=!armor_stand,type=!marker,type=!area_effect_cloud,type=!item_display,tag=!holeblack] at @s if entity @e[type=marker,tag=blackhole,distance=..3.5] run tag @s add stuckHole
+execute if entity @e[type=marker,tag=blackhole] at @e[type=marker,tag=blackhole] run kill @e[type=ender_pearl,distance=..3.5]
+execute as @e[tag=stuckHole,type=!chest_minecart,type=!armor_stand,type=!marker,type=!area_effect_cloud,type=!item_display] at @s unless entity @e[type=marker,tag=blackhole,distance=..3.5] run attribute @s gravity base reset
+execute as @e[tag=stuckHole,type=!chest_minecart,type=!armor_stand,type=!marker,type=!area_effect_cloud,type=!item_display] at @s unless entity @e[type=marker,tag=blackhole,distance=..3.5] run tag @s remove stuckHole
+execute as @e[tag=stuckHole] run attribute @s gravity base set 0.0
+
+execute as @e[type=marker,tag=blackhole] run scoreboard players add @s holeDeath 1
+execute as @e[type=marker,tag=blackhole,scores={holeDeath=400..}] run kill @s
+
+execute as @a[tag=holeblack] run scoreboard players add @s holeDeath 1
+execute as @a[tag=holeblack,scores={holeDeath=420..}] run tag @s remove holeblack
+execute as @a[scores={holeDeath=420..}] run scoreboard players reset @s holeDeath
 
 # Homing-missile steering - existence-gated (skips untyped @e scan when no missiles)
 execute if entity @e[type=armor_stand,tag=missileMarker,limit=1] run function trimabilities:spells/missiletick
+
+
+execute if entity @a[tag=domed] run function trimabilities:spiredome2
+

@@ -133,6 +133,14 @@ execute if score @s progressEye matches 3.. if entity @s[nbt={equipment:{legs:{c
 execute if score @s progressEye matches 3.. if entity @s[nbt={equipment:{feet:{components:{"minecraft:trim":{pattern:"minecraft:eye"}}}}}] run scoreboard players add @s eye 1
 execute if score @s eye matches 1.. run tag @s add eye
 
+#Sentry (Archer progress 3+)
+execute if score @s sentry matches 1.. run scoreboard players set @s sentry 0
+execute if score @s progressSentry matches 3.. if entity @s[nbt={equipment:{head:{components:{"minecraft:trim":{pattern:"minecraft:sentry"}}}}}] run scoreboard players add @s sentry 1
+execute if score @s progressSentry matches 3.. if entity @s[nbt={equipment:{chest:{components:{"minecraft:trim":{pattern:"minecraft:sentry"}}}}}] run scoreboard players add @s sentry 1
+execute if score @s progressSentry matches 3.. if entity @s[nbt={equipment:{legs:{components:{"minecraft:trim":{pattern:"minecraft:sentry"}}}}}] run scoreboard players add @s sentry 1
+execute if score @s progressSentry matches 3.. if entity @s[nbt={equipment:{feet:{components:{"minecraft:trim":{pattern:"minecraft:sentry"}}}}}] run scoreboard players add @s sentry 1
+execute if score @s sentry matches 1.. run tag @s add sentry
+
 #Vex (McLvl 5+) - detection moved here from abilities1t (was every tick)
 execute if score @s vex matches 1.. run scoreboard players set @s vex 0
 execute if score @s mcLvl matches 5.. if entity @s[nbt={equipment:{head:{components:{"minecraft:trim":{pattern:"minecraft:vex"}}}}}] run scoreboard players add @s vex 1

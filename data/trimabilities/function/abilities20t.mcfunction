@@ -85,6 +85,12 @@ execute as @e[type=wolf] if entity @s[nbt={active_effects:[{id:"minecraft:regene
 execute as @e[type=wolf,nbt={}] unless entity @s[tag=bone] if entity @s[scores={EntityScale=14}] run attribute @s minecraft:max_health base set 8
 execute as @e[type=wolf,nbt={}] unless entity @s[tag=bone] if entity @s[scores={EntityScale=14}] run attribute @s scale base reset
 
+
+execute if entity @a[tag=domed] run function trimabilities:spiredome3
+execute unless entity @a[tag=domed] as @e[type=item_display,tag=domeGenerator] at @s run function trimabilities:spiredome4
+
+
+
 schedule function trimabilities:abilities20t 20t replace
 
 

@@ -323,12 +323,20 @@ scoreboard objectives add healthTracker health
 
 scoreboard objectives add cooldownSpire dummy
 scoreboard objectives add sneakSpire dummy
+scoreboard objectives add spireDome dummy
+scoreboard objectives add spireDeath deathCount
+scoreboard objectives add domeHealth dummy
 scoreboard objectives add spireDurability dummy
 scoreboard objectives add spireDamage minecraft.custom:minecraft.damage_taken
 scoreboard objectives add spireHead dummy
 scoreboard objectives add spireChest dummy
 scoreboard objectives add spireLegs dummy
 scoreboard objectives add spireFeet dummy
+scoreboard objectives add domeCooldown dummy
+scoreboard objectives add spireTank minecraft.custom:minecraft.damage_resisted
+scoreboard objectives add spireDeal minecraft.custom:minecraft.damage_dealt
+scoreboard objectives add spireMeter dummy
+scoreboard objectives add spireTrigger dummy
 
 scoreboard objectives add eyeReload dummy
 scoreboard objectives add eyeFumble dummy
@@ -404,6 +412,7 @@ scoreboard players set 100 constants 100
 
 scoreboard objectives add summonSuccess dummy
 scoreboard objectives add orbDeath dummy
+scoreboard objectives add holeDeath dummy
 
 scoreboard objectives add frankensteinScore dummy
 # 1 score per kill

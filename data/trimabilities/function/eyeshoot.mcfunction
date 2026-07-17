@@ -5,4 +5,5 @@ execute as @e[dx=0] positioned ~-0.99 ~-0.99 ~-0.99 if entity @s[dx=0] run damag
 tag @s remove eyeHolder
 scoreboard players remove @s eyeRange 1
 execute if score @s eyeRange matches 1.. positioned ^ ^ ^0.5 if block ~ ~ ~ air run function trimabilities:eyeshoot
+execute if score @s eyeRange matches 1.. positioned ^ ^ ^0.5 unless block ~ ~ ~ air unless block ~ ~ ~ bedrock unless block ~ ~ ~ end_portal_frame unless block ~ ~ ~ end_portal unless block ~ ~ ~ end_gateway unless block ~ ~ ~ end_portal_frame unless block ~ ~ ~ nether_portal unless block ~ ~ ~ structure_block unless block ~ ~ ~ structure_void unless block ~ ~ ~ barrier unless block ~ ~ ~ command_block unless block ~ ~ ~ chain_command_block unless block ~ ~ ~ repeating_command_block unless block ~ ~ ~ jigsaw unless block ~ ~ ~ light unless block ~ ~ ~ reinforced_deepslate run setblock ~ ~ ~ air destroy
 

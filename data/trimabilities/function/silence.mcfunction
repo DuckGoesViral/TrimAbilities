@@ -23,10 +23,10 @@ execute if score @s silence matches 4 run effect give @s speed infinite 1 true
 scoreboard players operation @s silenceOld = @s silence
 
 
-execute if score @s silence matches 4 unless score @s cooldownSilence matches 240.. if score @s sneakTrigger matches 2.. run tellraw @s ["",{"text":"This ability is ","color":"red"},{"text":"not available","bold":true,"color":"red"}]
-execute if score @s silence matches 4 if score @s cooldownSilence matches 240.. if score @s sneakTrigger matches 2.. run function trimabilities:silence_boom
-execute if score @s silence matches 4 if score @s cooldownSilence matches 239 run tellraw @s ["",{"text":"\""},{"text":"Sonic Boom","bold":true,"color":"dark_purple"},{"text":"\" is now "},{"text":"available","color":"green"},{"text":"!"}]
-execute if score @s silence matches 4 unless score @s cooldownSilence matches 240.. run scoreboard players add @s cooldownSilence 1
+execute if score @s silence matches 4 unless score @s cooldownSilence matches 120.. if score @s sneakTrigger matches 2.. run tellraw @s ["",{"text":"This ability is ","color":"red"},{"text":"not available","bold":true,"color":"red"}]
+execute if score @s silence matches 4 if score @s cooldownSilence matches 120.. if score @s sneakTrigger matches 2.. run function trimabilities:silence_boom
+execute if score @s silence matches 4 if score @s cooldownSilence matches 119 run tellraw @s ["",{"text":"\""},{"text":"Sonic Boom","bold":true,"color":"dark_purple"},{"text":"\" is now "},{"text":"available","color":"green"},{"text":"!"}]
+execute if score @s silence matches 4 unless score @s cooldownSilence matches 120.. run scoreboard players add @s cooldownSilence 1
 
 
 
