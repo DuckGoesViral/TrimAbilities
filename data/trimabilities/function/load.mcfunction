@@ -346,6 +346,7 @@ scoreboard objectives add eyeDamage minecraft.custom:minecraft.damage_taken
 scoreboard objectives add bow_draw dummy
 scoreboard objectives add sentryShot minecraft.used:minecraft.bow
 scoreboard objectives add sentryCharge dummy
+scoreboard objectives add sentryDelta dummy
 scoreboard objectives add sentryUUID dummy
 scoreboard objectives add sentryArrows dummy
 scoreboard objectives add sentryArrowSummon dummy

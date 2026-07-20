@@ -34,6 +34,10 @@ execute as @a[scores={sentry=4..}] unless score @s bow_draw matches 1 run scoreb
 
 execute as @e[type=arrow,scores={sentryCharge=5..},nbt={inGround:1b}] run function trimabilities:sentryability
 
+execute if entity @e[type=arrow,tag=sentryBarrage] as @e[type=ender_pearl] at @s if entity @e[type=arrow,tag=sentryBarrage,distance=..5] run playsound minecraft:entity.ender_eye.death block @a[distance=..30] ~ ~ ~ 10 1 1
+execute if entity @e[type=arrow,tag=sentryBarrage] as @e[type=ender_pearl] at @s if entity @e[type=arrow,tag=sentryBarrage,distance=..5] run particle minecraft:reverse_portal ~ ~ ~ 0 0 0 1 25 normal @a[distance=..50]
+execute if entity @e[type=arrow,tag=sentryBarrage] as @e[type=ender_pearl] at @s if entity @e[type=arrow,tag=sentryBarrage,distance=..5] run kill @s
+
 # Mana regen timer (fires every 100 ticks)
 scoreboard players add timer mana 1
 execute if score timer mana matches 100.. as @a[tag=mage] unless score @s mana >= @s manaMax run function trimabilities:manaregen
