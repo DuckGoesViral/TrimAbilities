@@ -1,6 +1,6 @@
 
 
-execute if predicate trimabilities:is_sneaking run scoreboard players add @s sentryCharge 1
+execute if predicate trimabilities:is_sneaking unless score @s sentryCharge matches 100.. run scoreboard players add @s sentryCharge 1
 
 execute if predicate trimabilities:is_sneaking run title @s actionbar ["",{"text":"Preparing Orbital Bombardment:","color":"green"},{"text":" ","bold":true,"color":"green"},{"score":{"name":"@s","objective":"sentryCharge"},"bold":true,"color":"green"},{"text":" Blocks","bold":true,"color":"green"}]
 

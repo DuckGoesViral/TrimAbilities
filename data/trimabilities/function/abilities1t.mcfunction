@@ -21,7 +21,6 @@
 scoreboard players reset @a subPower
 
 #vex - air walk (detection in player/equipcheck; the fill logic needs 1t)
-execute as @a[tag=vex] run function trimabilities:vex
 
 #Sentry (revived in main: advancement-based bow-draw detection)
 execute as @a[scores={sentry=4..}] as @s[advancements={trimabilities:bow_draw=true}] run scoreboard players set @s bow_draw 1
@@ -83,4 +82,10 @@ execute if entity @e[type=armor_stand,tag=missileMarker,limit=1] run function tr
 
 
 execute if entity @a[tag=domed] run function trimabilities:spiredome2
+
+execute as @e[tag=lightningStunned] run scoreboard players add @s lightningStun 1
+execute as @e[tag=lightningStunned,scores={lightningStun=20..}] run attribute @s movement_speed base reset
+execute as @e[tag=lightningStunned,scores={lightningStun=20..}] run attribute @s jump_strength base reset
+execute as @e[tag=lightningStunned,scores={lightningStun=20..}] run tag @s remove lightningStunned
+execute as @e[scores={lightningStun=20..}] run scoreboard players reset @s lightningStun
 

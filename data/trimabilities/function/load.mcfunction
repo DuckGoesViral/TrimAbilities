@@ -414,6 +414,8 @@ scoreboard objectives add summonSuccess dummy
 scoreboard objectives add orbDeath dummy
 scoreboard objectives add holeDeath dummy
 
+scoreboard objectives add lightningStun dummy
+
 scoreboard objectives add frankensteinScore dummy
 # 1 score per kill
 scoreboard objectives add frankensteinKills minecraft.custom:minecraft.mob_kills

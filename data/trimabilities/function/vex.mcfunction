@@ -1,17 +1,30 @@
-execute unless score @s vex = @s vexOld run effect clear @s slow_falling
 execute unless score @s vex = @s vexOld run effect clear @s invisibility
+execute unless score @s vex = @s vexOld run effect clear @s weakness
+execute unless score @s vex = @s vexOld run attribute @s scale modifier remove 5-1-0-2-4
+execute unless score @s vex = @s vexOld run attribute @s scale modifier remove 5-1-0-3-4
+execute unless score @s vex = @s vexOld run attribute @s scale modifier remove 5-1-1-4-4
+execute unless score @s vex = @s vexOld run attribute @s camera_distance modifier remove 5-1-0-2-5
+execute unless score @s vex = @s vexOld run attribute @s camera_distance modifier remove 5-1-0-3-5
+execute unless score @s vex = @s vexOld run attribute @s camera_distance modifier remove 5-1-1-4-5
+
 
 execute if score @s vex matches 0 run tag @s remove vex
 
-execute if score @s vex matches 1.. run effect give @s slow_falling infinite 0 true
-execute if score @s vex matches 1.. run effect give @s invisibility infinite 0 true
+execute if score @s vex matches 1..3 run effect give @s invisibility infinite 0 false
 
+execute if score @s vex matches 2 run attribute @s scale modifier add 5-1-0-2-4 -0.2 add_value
+execute if score @s vex matches 2 run attribute @s camera_distance modifier add 5-1-0-2-5 1 add_value
+execute if score @s vex matches 2 run effect give @s weakness infinite 0 true
+execute if score @s vex matches 3 run attribute @s scale modifier add 5-1-0-3-4 -0.4 add_value
+execute if score @s vex matches 3 run attribute @s camera_distance modifier add 5-1-0-3-5 2.5 add_value
+execute if score @s vex matches 3 run effect give @s weakness infinite 1 true
 
 execute if score @s vex matches 4 if entity @s[tag=!unlockedVex] at @s run function trimabilities:unlocked/vex
 
-execute at @s run fill ~-3 ~-3 ~-3 ~3 ~3 ~3 minecraft:air replace minecraft:barrier
-execute unless score @s vexDamage matches 1.. if score @s vex matches 4 at @s unless predicate trimabilities:is_sneaking run fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 barrier replace minecraft:air
-execute at @s if predicate trimabilities:is_sneaking run fill ~-1 ~-.5 ~-1 ~1 ~-.5 ~1 air replace minecraft:barrier
+execute if score @s vex matches 4 run attribute @s scale modifier add 5-1-1-4-4 -0.7 add_value
+execute if score @s vex matches 4 run effect give @s weakness infinite 2 true
+execute if score @s vex matches 4 run attribute @s camera_distance modifier add 5-1-1-4-5 9 add_value
+execute if score @s vex matches 4 run effect give @s invisibility infinite 0 true
 
 scoreboard players operation @s vexOld = @s vex
 

@@ -11,6 +11,7 @@ execute as @a[tag=coast] run function trimabilities:coast
 execute as @a[tag=tide] run function trimabilities:tide
 execute as @a[tag=ravine] run function trimabilities:ravine
 execute as @a[tag=rib] run function trimabilities:rib
+execute as @a[tag=vex] run function trimabilities:vex
 
 #Warrior
 execute as @a[tag=shaper] run function trimabilities:shaper
@@ -30,13 +31,17 @@ execute as @a[tag=wild] run function trimabilities:wild
 execute as @a[tag=eye] run function trimabilities:eye
 execute as @a[tag=sentry] run function trimabilities:sentry
 
+#Wizard
+execute as @a[tag=raiser] run function trimabilities:raiser
+execute as @a[tag=stray] run function trimabilities:stray
+execute as @a[tag=echo] run function trimabilities:echo
+execute as @a[tag=storm] run function trimabilities:storm
+
 #Sentry
 #arrows shot move faster and deal more damage
 #execute if entity @a[scores={progressSentry=3..},nbt={Inventory:[{Slot: 103b,tag:{Trim:{pattern:"minecraft:sentry"}}},{Slot: 102b,tag:{Trim:{pattern:"minecraft:sentry"}}},{Slot: 101b,tag:{Trim:{pattern:"minecraft:sentry"}}},{Slot: 100b,tag:{Trim:{pattern:"minecraft:sentry"}}}]}] run function trimabilities:sentry
 
-#Necromancer
-execute as @a[tag=raiser] run function trimabilities:raiser
-execute as @a[tag=stray] run function trimabilities:stray
+
 
 # Cryo summoner cleanup (must run even when all golems are dead)
 execute as @a[tag=cryoSummon] at @s unless entity @e[type=snow_golem,tag=cryoSummon] run tag @s remove cryoSummon
@@ -59,10 +64,7 @@ schedule function trimabilities:abilities5t 5t
 
 
 
-#execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}] as @a[distance=..3] run damage @s 3 explosion
-execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}] run summon minecraft:tnt ~ ~4 ~ {fuse:0s}
-#execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}] run gamerule mob_griefing false
-##execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}] run summon minecraft:creeper ~ ~ ~ {ExplosionRadius:3b,ignited:1b,Fuse:0s}
+execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}] as @e[type=!item,type=!chest_minecart,type=!armor_stand,type=!marker,type=!area_effect_cloud,type=!item_display,distance=..5] run damage @s 10 explosion
+execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}] run summon minecraft:creeper ~ ~ ~ {ExplosionRadius:1b,ignited:1b,Fuse:0s}
 execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}] run playsound minecraft:entity.zombie_villager.cure block @a[distance=..20] ~ ~ ~ 1 2
-#execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}] run gamerule mob_griefing true
 execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}] run kill @s

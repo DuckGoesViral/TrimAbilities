@@ -164,3 +164,19 @@ execute if score @s progressStray matches 3.. if entity @s[nbt={equipment:{chest
 execute if score @s progressStray matches 3.. if entity @s[nbt={equipment:{legs:{components:{"minecraft:trim":{pattern:"trimabilities:stray"}}}}}] run scoreboard players add @s stray 1
 execute if score @s progressStray matches 3.. if entity @s[nbt={equipment:{feet:{components:{"minecraft:trim":{pattern:"trimabilities:stray"}}}}}] run scoreboard players add @s stray 1
 execute if score @s stray matches 1.. run tag @s add stray
+
+#Echo (Necromancer progress 3+)
+execute if score @s echo matches 1.. run scoreboard players set @s echo 0
+execute if score @s progressEcho matches 3.. if entity @s[nbt={equipment:{head:{components:{"minecraft:trim":{pattern:"trimabilities:echo"}}}}}] run scoreboard players add @s echo 1
+execute if score @s progressEcho matches 3.. if entity @s[nbt={equipment:{chest:{components:{"minecraft:trim":{pattern:"trimabilities:echo"}}}}}] run scoreboard players add @s echo 1
+execute if score @s progressEcho matches 3.. if entity @s[nbt={equipment:{legs:{components:{"minecraft:trim":{pattern:"trimabilities:echo"}}}}}] run scoreboard players add @s echo 1
+execute if score @s progressEcho matches 3.. if entity @s[nbt={equipment:{feet:{components:{"minecraft:trim":{pattern:"trimabilities:echo"}}}}}] run scoreboard players add @s echo 1
+execute if score @s echo matches 1.. run tag @s add echo
+
+#Storm (Necromancer progress 3+)
+execute if score @s storm matches 1.. run scoreboard players set @s storm 0
+execute if score @s progressStorm matches 3.. if entity @s[nbt={equipment:{head:{components:{"minecraft:trim":{pattern:"trimabilities:storm"}}}}}] run scoreboard players add @s storm 1
+execute if score @s progressStorm matches 3.. if entity @s[nbt={equipment:{chest:{components:{"minecraft:trim":{pattern:"trimabilities:storm"}}}}}] run scoreboard players add @s storm 1
+execute if score @s progressStorm matches 3.. if entity @s[nbt={equipment:{legs:{components:{"minecraft:trim":{pattern:"trimabilities:storm"}}}}}] run scoreboard players add @s storm 1
+execute if score @s progressStorm matches 3.. if entity @s[nbt={equipment:{feet:{components:{"minecraft:trim":{pattern:"trimabilities:storm"}}}}}] run scoreboard players add @s storm 1
+execute if score @s storm matches 1.. run tag @s add storm
