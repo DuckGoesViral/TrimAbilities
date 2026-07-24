@@ -501,3 +501,6 @@ scoreboard objectives add 8942-6759 trigger
 scoreboard objectives add 6639-3275 trigger
 
 scoreboard objectives add EntityScale dummy
+
+#Bolt Sound Pitch Scoreboard
+scoreboard objectives add boltSoundPitch dummy
