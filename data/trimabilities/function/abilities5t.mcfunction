@@ -12,6 +12,8 @@ execute as @a[tag=tide] run function trimabilities:tide
 execute as @a[tag=ravine] run function trimabilities:ravine
 execute as @a[tag=rib] run function trimabilities:rib
 execute as @a[tag=vex] run function trimabilities:vex
+execute as @a[tag=bolt] run function trimabilities:bolt
+execute as @a[tag=flow] run function trimabilities:flow
 
 #Warrior
 execute as @a[tag=shaper] run function trimabilities:shaper
@@ -68,3 +70,4 @@ execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}
 execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}] run summon minecraft:creeper ~ ~ ~ {ExplosionRadius:1b,ignited:1b,Fuse:0s}
 execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}] run playsound minecraft:entity.zombie_villager.cure block @a[distance=..20] ~ ~ ~ 1 2
 execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}] run kill @s
+

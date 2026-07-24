@@ -18,9 +18,16 @@
 execute as @a[scores={sentry=4..}] if score @s bow_draw matches 1 run function trimabilities:sentrycharge
 
 
-
-
-
+execute as @a[scores={bolt=4..}] run scoreboard players reset @s boltMS
+execute as @a[scores={bolt=4..}] run scoreboard players operation @s boltMS += @s boltRun
+execute as @a[scores={bolt=4..}] run scoreboard players operation @s boltMS += @s boltWalk
+execute as @a[scores={bolt=4..}] run scoreboard players operation @s boltMS += @s boltSneak
+execute as @a[scores={bolt=4..}] run scoreboard players operation @s boltMS /= 100 constants
+execute as @a[scores={bolt=4..}] run scoreboard players reset @s boltRun
+execute as @a[scores={bolt=4..}] run scoreboard players reset @s boltWalk
+execute as @a[scores={bolt=4..}] run scoreboard players reset @s boltSneak
+execute as @a[scores={bolt=4..}] if score @s boltBrake matches 50 run function trimabilities:boltfriction
+execute as @a[scores={bolt=4..}] run scoreboard players operation @s boltMSOld = @s boltMS
 
 
 execute as @e[type=minecraft:item_display,tag=healPool,team=AquaTeam] at @s run effect give @e[distance=..2.5,team=AquaTeam] regeneration 3 1 true

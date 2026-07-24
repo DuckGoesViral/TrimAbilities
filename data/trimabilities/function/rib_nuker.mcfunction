@@ -1,6 +1,6 @@
 scoreboard players set @s sneakTrigger 0
 
-execute unless score @s cooldownRib matches 12.. run return run tellraw @s {"text": "Please wait a bit before doing this!","color": "red"}
+execute unless score @s cooldownRib matches 4.. run return run tellraw @s {"text": "Please wait a bit before doing this!","color": "red"}
 
 execute run scoreboard players set @s ribUnderground 0
 execute at @s unless block ~ ~4 ~ air run scoreboard players add @s ribUnderground 1

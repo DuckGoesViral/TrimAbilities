@@ -170,7 +170,28 @@ scoreboard objectives add tide dummy
 scoreboard objectives add ravine dummy
 scoreboard objectives add rib dummy
 
+scoreboard objectives add bolt dummy
+scoreboard objectives add flow dummy
+
+scoreboard objectives add boltSpeed dummy
+scoreboard objectives add boltGear dummy
+scoreboard objectives add boltPitch dummy
+scoreboard objectives add boltBrake dummy
+scoreboard objectives add boltWarn dummy
+scoreboard objectives add boltRun minecraft.custom:minecraft.sprint_one_cm
+scoreboard objectives add boltWalk minecraft.custom:minecraft.walk_one_cm
+scoreboard objectives add boltSneak minecraft.custom:minecraft.crouch_one_cm
+scoreboard objectives add boltMS dummy
+scoreboard objectives add boltMSOld dummy
+scoreboard objectives add boltStock dummy
+scoreboard objectives add boltTimer dummy
+scoreboard objectives add boltFood food
+scoreboard objectives add boltFuel dummy
+
 scoreboard objectives add vex dummy
+
+scoreboard objectives add boltOld dummy
+scoreboard objectives add flowOld dummy
 
 scoreboard objectives add shaperOld dummy
 scoreboard objectives add duneOld dummy
@@ -405,7 +426,9 @@ scoreboard players set 10 constants 10
 scoreboard players set 20 constants 20
 scoreboard players set 24 constants 24
 scoreboard players set 40 constants 40
+scoreboard players set 50 constants 50
 scoreboard players set 100 constants 100
+scoreboard players set 100000 constants 100000
 
 
 

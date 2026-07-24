@@ -45,6 +45,22 @@ execute if score @s mcLvl matches 6.. if entity @s[nbt={equipment:{legs:{compone
 execute if score @s mcLvl matches 6.. if entity @s[nbt={equipment:{feet:{components:{"minecraft:trim":{pattern:"minecraft:rib"}}}}}] run scoreboard players add @s rib 1
 execute if score @s rib matches 1.. run tag @s add rib
 
+#Bolt (McLvl 5+)
+execute if score @s bolt matches 1.. run scoreboard players set @s bolt 0
+execute if score @s mcLvl matches 5.. if entity @s[nbt={equipment:{head:{components:{"minecraft:trim":{pattern:"minecraft:bolt"}}}}}] run scoreboard players add @s bolt 1
+execute if score @s mcLvl matches 5.. if entity @s[nbt={equipment:{chest:{components:{"minecraft:trim":{pattern:"minecraft:bolt"}}}}}] run scoreboard players add @s bolt 1
+execute if score @s mcLvl matches 5.. if entity @s[nbt={equipment:{legs:{components:{"minecraft:trim":{pattern:"minecraft:bolt"}}}}}] run scoreboard players add @s bolt 1
+execute if score @s mcLvl matches 5.. if entity @s[nbt={equipment:{feet:{components:{"minecraft:trim":{pattern:"minecraft:bolt"}}}}}] run scoreboard players add @s bolt 1
+execute if score @s bolt matches 1.. run tag @s add bolt
+
+#Flow (McLvl 7+)
+execute if score @s flow matches 1.. run scoreboard players set @s flow 0
+execute if score @s mcLvl matches 7.. if entity @s[nbt={equipment:{head:{components:{"minecraft:trim":{pattern:"minecraft:flow"}}}}}] run scoreboard players add @s flow 1
+execute if score @s mcLvl matches 7.. if entity @s[nbt={equipment:{chest:{components:{"minecraft:trim":{pattern:"minecraft:flow"}}}}}] run scoreboard players add @s flow 1
+execute if score @s mcLvl matches 7.. if entity @s[nbt={equipment:{legs:{components:{"minecraft:trim":{pattern:"minecraft:flow"}}}}}] run scoreboard players add @s flow 1
+execute if score @s mcLvl matches 7.. if entity @s[nbt={equipment:{feet:{components:{"minecraft:trim":{pattern:"minecraft:flow"}}}}}] run scoreboard players add @s flow 1
+execute if score @s flow matches 1.. run tag @s add flow
+
 #Shaper (McLvl 1+)
 execute if score @s shaper matches 1.. run scoreboard players set @s shaper 0
 execute if score @s mcLvl matches 1.. if entity @s[nbt={equipment:{head:{components:{"minecraft:trim":{pattern:"minecraft:shaper"}}}}}] run scoreboard players add @s shaper 1
