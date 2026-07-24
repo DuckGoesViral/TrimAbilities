@@ -93,3 +93,26 @@ execute as @e[tag=lightningStunned,scores={lightningStun=20..}] run attribute @s
 execute as @e[tag=lightningStunned,scores={lightningStun=20..}] run tag @s remove lightningStunned
 execute as @e[scores={lightningStun=20..}] run scoreboard players reset @s lightningStun
 
+
+#bolt sound calculations
+execute as @a[tag=bolt] run scoreboard players operation @s boltSoundPitch = @s boltMS
+execute as @a[tag=bolt,scores={boltGear=1}] store result storage trimabilities:bolt pitch float 0.1 run scoreboard players operation @s boltSoundPitch += 0 constants
+execute as @a[tag=bolt,scores={boltGear=2}] store result storage trimabilities:bolt pitch float 0.1 run scoreboard players operation @s boltSoundPitch -= 8 constants
+execute as @a[tag=bolt,scores={boltGear=3}] store result storage trimabilities:bolt pitch float 0.1 run scoreboard players operation @s boltSoundPitch -= 16 constants
+execute as @a[tag=bolt,scores={boltGear=4}] store result storage trimabilities:bolt pitch float 0.1 run scoreboard players operation @s boltSoundPitch -= 22 constants
+execute as @a[tag=bolt,scores={boltGear=5}] store result storage trimabilities:bolt pitch float 0.1 run scoreboard players operation @s boltSoundPitch -= 28 constants
+execute as @a[tag=bolt,scores={boltGear=6}] store result storage trimabilities:bolt pitch float 0.1 run scoreboard players operation @s boltSoundPitch -= 32 constants
+execute as @a[tag=bolt,scores={boltGear=7}] store result storage trimabilities:bolt pitch float 0.1 run scoreboard players operation @s boltSoundPitch -= 36 constants
+execute as @a[tag=bolt,scores={boltGear=8}] store result storage trimabilities:bolt pitch float 0.1 run scoreboard players operation @s boltSoundPitch -= 40 constants
+
+
+# execute if score @s bolt matches 4 if score @s boltGear matches 3
+# execute if score @s bolt matches 4 if score @s boltGear matches 4
+# execute if score @s bolt matches 4 if score @s boltGear matches 5
+# execute if score @s bolt matches 4 if score @s boltGear matches 6
+# execute if score @s bolt matches 4 if score @s boltGear matches 7
+# execute if score @s bolt matches 4 if score @s boltGear matches 8
+
+execute as @a[scores={bolt=4..}] run function trimabilities:boltsound with storage trimabilities:bolt
+execute as @a[scores={bolt=4..}] at @s if score @s boltSoundPitch matches 11.. run playsound minecraft:entity.iron_golem.repair player @a ~ ~ ~ 0.35 2
+execute as @a[scores={bolt=4..}] at @s if score @s boltSoundPitch matches ..-1 run playsound minecraft:entity.iron_golem.repair player @a ~ ~ ~ 0.35 2

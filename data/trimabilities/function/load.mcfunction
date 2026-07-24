@@ -413,6 +413,8 @@ scoreboard objectives add NVcooldownTimer2 dummy
 
 # Create Constant scoreboard objectives for operations.
 scoreboard objectives add constants dummy
+scoreboard players set -1 constants -1
+scoreboard players set 0 constants 0
 scoreboard players set 1 constants 1
 scoreboard players set 2 constants 2
 scoreboard players set 3 constants 3
@@ -423,8 +425,13 @@ scoreboard players set 7 constants 7
 scoreboard players set 8 constants 8
 scoreboard players set 9 constants 9
 scoreboard players set 10 constants 10
+scoreboard players set 16 constants 16 
 scoreboard players set 20 constants 20
-scoreboard players set 24 constants 24
+scoreboard players set 22 constants 22
+scoreboard players set 25 constants 25 
+scoreboard players set 28 constants 28
+scoreboard players set 32 constants 32
+scoreboard players set 36 constants 36 
 scoreboard players set 40 constants 40
 scoreboard players set 50 constants 50
 scoreboard players set 100 constants 100
