@@ -2,6 +2,10 @@
   "type": "minecraft:chest",
   "pools": [
     {
+      "rolls": 0,
+      "entries": []
+    },
+    {
       "bonus_rolls": 0,
       "entries": [
         {
@@ -109,25 +113,135 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:paper",
+          "name": "minecraft:warped_fungus_on_a_stick",
           "weight": 1,
           "conditions": [],
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{scroll:1}"
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Homing Missile Scroll",
+                "color": "white",
+                "italic": false
+              }
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:1}",
-              "conditions": []
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Use this item to unlock a new spell",
+                  "type": "text",
+                  "color": "aqua",
+                  "bold": false,
+                  "italic": false
+                },
+                {
+                  "text": "Spell: Magic Missile",
+                  "color": "dark_red",
+                  "bold": true,
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
             },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:unbreakable": {},
+                "minecraft:item_model": "trimabilities:homing_missile_scroll",
+                "minecraft:custom_data": {
+                  "scroll": "homing_missile"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:warped_fungus_on_a_stick",
+          "weight": 1,
+          "conditions": [],
+          "functions": [
             {
               "function": "minecraft:set_name",
               "name": {
-                "text": "COMING SOON (KEEP THIS)",
+                "text": "Fangs of Earth Scroll",
                 "color": "white",
                 "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Use this item to unlock a new spell",
+                  "type": "text",
+                  "color": "aqua",
+                  "bold": false,
+                  "italic": false
+                },
+                {
+                  "text": "Spell: Fangs of Earth",
+                  "color": "dark_green",
+                  "bold": true,
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:unbreakable": {},
+                "minecraft:item_model": "trimabilities:fangs_of_earth_scroll",
+                "minecraft:custom_data": {
+                  "scroll": "fangs_of_earth"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:warped_fungus_on_a_stick",
+          "weight": 1,
+          "conditions": [],
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Black Hole Scroll",
+                "color": "white",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Use this item to unlock a new spell",
+                  "type": "text",
+                  "color": "aqua",
+                  "bold": false,
+                  "italic": false
+                },
+                {
+                  "text": "Spell: Black Hole",
+                  "color": "dark_purple",
+                  "bold": true,
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:unbreakable": {},
+                "minecraft:item_model": "trimabilities:black_hole_scroll",
+                "minecraft:custom_data": {
+                  "scroll": "black_hole"
+                }
               }
             }
           ]

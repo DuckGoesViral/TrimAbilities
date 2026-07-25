@@ -6,7 +6,18 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:saddle",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 5,
+                "min": 1
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:leather",
           "weight": 20
         },
         {
@@ -46,6 +57,11 @@
         },
         {
           "type": "minecraft:item",
+          "name": "minecraft:copper_horse_armor",
+          "weight": 15
+        },
+        {
+          "type": "minecraft:item",
           "name": "minecraft:iron_horse_armor",
           "weight": 15
         },
@@ -58,7 +74,8 @@
           "type": "minecraft:item",
           "functions": [
             {
-              "function": "minecraft:enchant_randomly"
+              "function": "minecraft:enchant_randomly",
+              "options": "#minecraft:on_random_loot"
             }
           ],
           "name": "minecraft:book",
@@ -289,18 +306,9 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:chain_command_block",
-          "weight": 5,
+          "weight": 8,
           "conditions": [],
           "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{TrimPattern:\"trimabilities:stray\"}"
-            },
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:1}",
-              "conditions": []
-            },
             {
               "function": "minecraft:set_name",
               "name": {
@@ -338,7 +346,18 @@
                   "color": "blue",
                   "italic": false
                 }
-              ]
+              ],
+              "mode": "replace_all"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_model": "trimabilities:vital"
+              }
             }
           ]
         }
