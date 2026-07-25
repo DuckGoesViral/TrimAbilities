@@ -5,7 +5,7 @@
     "type": "minecraft:player",
     "flags": {},
     "vehicle": {
-      "type": "minecraft:boat"
+      "type": "#minecraft:boat"
     }
   }
 }

@@ -1,12 +1,11 @@
 {
-    "type": "minecraft:crafting_shapeless",
-    "ingredients": [
-        {
-            "item": "minecraft:shaper_armor_trim_smithing_template"
-        }
-    ],
-    "result": {
-        "item": "minecraft:shaper_armor_trim_smithing_template",
-        "count": 1
-    }
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:shaper_armor_trim_smithing_template"
+  ],
+  "result": {
+    "id": "minecraft:shaper_armor_trim_smithing_template",
+    "count": 1
+  }
 }
