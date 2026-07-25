@@ -196,3 +196,13 @@ execute if score @s progressStorm matches 3.. if entity @s[nbt={equipment:{chest
 execute if score @s progressStorm matches 3.. if entity @s[nbt={equipment:{legs:{components:{"minecraft:trim":{pattern:"trimabilities:storm"}}}}}] run scoreboard players add @s storm 1
 execute if score @s progressStorm matches 3.. if entity @s[nbt={equipment:{feet:{components:{"minecraft:trim":{pattern:"trimabilities:storm"}}}}}] run scoreboard players add @s storm 1
 execute if score @s storm matches 1.. run tag @s add storm
+
+
+#Flow (Double Jump Utility Trim)
+execute if score @s flow matches 1.. run scoreboard players set @s flow 0
+execute if score @s mcLvl matches 5.. if entity @s[nbt={equipment:{head:{components:{"minecraft:trim":{pattern:"minecraft:flow"}}}}}] run scoreboard players add @s flow 1
+execute if score @s mcLvl matches 5.. if entity @s[nbt={equipment:{chest:{components:{"minecraft:trim":{pattern:"minecraft:flow"}}}}}] run scoreboard players add @s flow 1
+execute if score @s mcLvl matches 5.. if entity @s[nbt={equipment:{legs:{components:{"minecraft:trim":{pattern:"minecraft:flow"}}}}}] run scoreboard players add @s flow 1
+execute if score @s mcLvl matches 5.. if entity @s[nbt={equipment:{feet:{components:{"minecraft:trim":{pattern:"minecraft:flow"}}}}}] run scoreboard players add @s flow 1
+execute if score @s flow matches 1.. run tag @s add flow
+

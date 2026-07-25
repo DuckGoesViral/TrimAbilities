@@ -7,6 +7,7 @@ tellraw @a {"text": "Reload Succesful!","color": "#0000FF","bold": true}
 function trimabilities:abilities5t
 function trimabilities:abilities10t
 function trimabilities:abilities20t
+function trimabilities:abilities200t
 function trimabilities:advancementxp
 function trimabilities:scoreboardlevels
 function trimabilities:categorytags
@@ -169,6 +170,9 @@ scoreboard objectives add rib dummy
 
 scoreboard objectives add bolt dummy
 scoreboard objectives add flow dummy
+scoreboard objectives add flowTimer dummy
+scoreboard objectives add flowCooldown dummy
+scoreboard objectives add flowCharge dummy 
 
 scoreboard objectives add boltSpeed dummy
 scoreboard objectives add boltGear dummy
