@@ -47,10 +47,10 @@ execute if score @s rib matches 1.. run tag @s add rib
 
 #Bolt (McLvl 5+)
 execute if score @s bolt matches 1.. run scoreboard players set @s bolt 0
-execute if score @s mcLvl matches 5.. if entity @s[nbt={equipment:{head:{components:{"minecraft:trim":{pattern:"minecraft:bolt"}}}}}] run scoreboard players add @s bolt 1
-execute if score @s mcLvl matches 5.. if entity @s[nbt={equipment:{chest:{components:{"minecraft:trim":{pattern:"minecraft:bolt"}}}}}] run scoreboard players add @s bolt 1
-execute if score @s mcLvl matches 5.. if entity @s[nbt={equipment:{legs:{components:{"minecraft:trim":{pattern:"minecraft:bolt"}}}}}] run scoreboard players add @s bolt 1
-execute if score @s mcLvl matches 5.. if entity @s[nbt={equipment:{feet:{components:{"minecraft:trim":{pattern:"minecraft:bolt"}}}}}] run scoreboard players add @s bolt 1
+execute if score @s mcLvl matches 4.. if entity @s[nbt={equipment:{head:{components:{"minecraft:trim":{pattern:"minecraft:bolt"}}}}}] run scoreboard players add @s bolt 1
+execute if score @s mcLvl matches 4.. if entity @s[nbt={equipment:{chest:{components:{"minecraft:trim":{pattern:"minecraft:bolt"}}}}}] run scoreboard players add @s bolt 1
+execute if score @s mcLvl matches 4.. if entity @s[nbt={equipment:{legs:{components:{"minecraft:trim":{pattern:"minecraft:bolt"}}}}}] run scoreboard players add @s bolt 1
+execute if score @s mcLvl matches 4.. if entity @s[nbt={equipment:{feet:{components:{"minecraft:trim":{pattern:"minecraft:bolt"}}}}}] run scoreboard players add @s bolt 1
 execute if score @s bolt matches 1.. run tag @s add bolt
 
 #Flow (McLvl 7+)
