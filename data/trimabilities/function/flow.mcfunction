@@ -26,6 +26,6 @@ execute as @a[scores={flow=4..}] if score @s flowCharge matches 150..199 run tit
 execute as @a[scores={flow=4..}] if score @s flowCharge matches 200.. run title @s actionbar ["",{"text":"Charge:"},{"text":" \u0f04 \u0f04 \u0f04 \u0f04 ","bold":true,"color":"green"}]
 
 #double jump effect for Flow Trim
-execute as @s[scores={flowCharge=50..,flowCooldown=0,flow=4..},predicate=trimabilities:is_sneaking,predicate=trimabilities:is_in_air] store result score @s flowTimer run effect give @s minecraft:levitation 1 75 true
+execute as @s[scores={flowCharge=50..,flow=4..},predicate=trimabilities:is_sneaking,predicate=trimabilities:is_in_air] unless score @s flowCooldown matches 1.. store result score @s flowTimer run effect give @s minecraft:levitation 1 75 true
 execute at @s if score @s flowTimer matches 1.. run particle minecraft:cloud ~ ~-0.5 ~ 0.5 0.5 0.5 0 30
 execute at @s if score @s flowTimer matches 1.. run playsound minecraft:entity.wind_charge.wind_burst player @a ~ ~-0.1 ~ 0.2 0.7

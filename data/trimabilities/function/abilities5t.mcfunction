@@ -13,7 +13,6 @@ execute as @a[tag=ravine] run function trimabilities:ravine
 execute as @a[tag=rib] run function trimabilities:rib
 execute as @a[tag=vex] run function trimabilities:vex
 execute as @a[tag=bolt] run function trimabilities:bolt
-execute as @a[tag=flow] run function trimabilities:flow
 
 #Warrior
 execute as @a[tag=shaper] run function trimabilities:shaper
