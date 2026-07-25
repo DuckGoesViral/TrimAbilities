@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    [
+      "minecraft:shaper_armor_trim_smithing_template",
+      "minecraft:wayfinder_armor_trim_smithing_template",
+      "minecraft:raiser_armor_trim_smithing_template"
+    ],
+    [
+      "minecraft:wooden_pickaxe"
+    ]
+  ],
+  "result": {
+    "id": "minecraft:host_armor_trim_smithing_template",
+    "count": 1
+  }
+}

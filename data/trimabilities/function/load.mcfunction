@@ -78,11 +78,8 @@ scoreboard objectives add ruinsPlaced dummy
 execute unless score TrailRuins ruinsPlaced matches 0.. run scoreboard players set TrailRuins ruinsPlaced 0
 function trimabilities:starttrailruins
 
-function trimabilities:spawnhelp
-
 scoreboard objectives add trimHelp trigger
 scoreboard objectives add helpTimer dummy
-function trimabilities:triggerhelp
 
 scoreboard objectives add keepTrim dummy
 
@@ -501,3 +498,6 @@ scoreboard objectives add 8942-6759 trigger
 scoreboard objectives add 6639-3275 trigger
 
 scoreboard objectives add EntityScale dummy
+
+#Bolt Sound Pitch Scoreboard
+scoreboard objectives add boltSoundPitch dummy

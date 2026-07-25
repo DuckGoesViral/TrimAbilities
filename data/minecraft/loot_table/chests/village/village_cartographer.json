@@ -17,8 +17,8 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:book",
-          "weight": 20
+          "name": "minecraft:map",
+          "weight": 10
         },
         {
           "type": "minecraft:item",
@@ -27,53 +27,76 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 7,
-                "min": 2
+                "max": 5,
+                "min": 1
               },
               "function": "minecraft:set_count"
             }
           ],
           "name": "minecraft:paper",
-          "weight": 20
+          "weight": 15
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:map"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:compass"
+          "name": "minecraft:compass",
+          "weight": 5
         },
         {
           "type": "minecraft:item",
           "functions": [
             {
-              "function": "minecraft:enchant_with_levels",
-              "levels": 30,
-              "options": "#minecraft:on_random_loot"
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 4,
+                "min": 1
+              },
+              "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:book",
-          "weight": 10
+          "name": "minecraft:bread",
+          "weight": 15
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 2,
+                "min": 1
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:stick",
+          "weight": 5
         }
       ],
       "rolls": {
         "type": "minecraft:uniform",
-        "max": 10,
-        "min": 2
+        "max": 5,
+        "min": 1
       }
     },
     {
       "bonus_rolls": 0,
       "entries": [
         {
-          "type": "minecraft:empty",
-          "weight": 3
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": 1,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:bundle"
         },
         {
-          "type": "minecraft:item",
-          "name": "minecraft:eye_armor_trim_smithing_template",
-          "weight": 1
+          "type": "minecraft:empty",
+          "weight": 2
         }
       ],
       "rolls": 1
@@ -83,7 +106,7 @@
       "entries": [
         {
           "type": "minecraft:empty",
-          "weight": 3
+          "weight": 6
         },
         {
           "type": "minecraft:item",
@@ -223,5 +246,5 @@
       ]
     }
   ],
-  "random_sequence": "minecraft:chests/stronghold_library"
+  "random_sequence": "minecraft:chests/village/village_cartographer"
 }

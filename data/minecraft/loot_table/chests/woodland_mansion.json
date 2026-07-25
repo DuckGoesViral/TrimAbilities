@@ -288,49 +288,16 @@
       "bonus_rolls": 0,
       "entries": [
         {
-          "type": "minecraft:empty"
+          "type": "minecraft:empty",
+          "weight": 6
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:vex_armor_trim_smithing_template"
+          "name": "minecraft:vex_armor_trim_smithing_template",
+          "weight": 3
         }
       ],
-      "rolls": 1
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:paper",
-          "weight": 1,
-          "conditions": [],
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{scroll:2}"
-            },
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:2}",
-              "conditions": []
-            },
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "text": "COMING SOON (KEEP THIS)",
-                "color": "white",
-                "italic": false
-              }
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "air",
-          "weight": 2
-        }
-      ]
+      "rolls": 2
     }
   ],
   "random_sequence": "minecraft:chests/woodland_mansion"
