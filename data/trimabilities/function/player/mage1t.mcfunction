@@ -29,6 +29,9 @@ scoreboard players enable @s 4956-7855
 scoreboard players enable @s 2753-1450
 scoreboard players enable @s 8962-2901
 scoreboard players enable @s 7416-9635
+scoreboard players enable @s 7824-6438
+scoreboard players enable @s 4120-1163
+scoreboard players enable @s temp
 
 # Cast requested spells
 execute if score @s 2457-1364 matches 1.. at @s run function trimabilities:spells/fireball
@@ -42,6 +45,9 @@ execute if score @s 4956-7855 matches 1.. if score @s stray matches 4 at @s run 
 execute if score @s 2753-1450 matches 1.. at @s run function trimabilities:spells/bloodsac
 execute if score @s 8962-2901 matches 1.. at @s run function trimabilities:spells/repulsion
 execute if score @s 7416-9635 matches 1.. at @s run function trimabilities:spells/blackhole
+execute if score @s 7824-6438 matches 1.. at @s run function trimabilities:spells/warp
+execute if score @s 4120-1163 matches 1.. at @s run function trimabilities:spells/lightning
+execute if score @s temp matches 1.. at @s run tellraw @s "THIS IS NOT IMPLEMENTED YET"
 
 # Reset consumed triggers
 execute if score @s 2457-1364 matches 1.. run scoreboard players set @s 2457-1364 0
@@ -55,3 +61,6 @@ execute if score @s 4956-7855 matches 1.. run scoreboard players set @s 4956-785
 execute if score @s 2753-1450 matches 1.. run scoreboard players set @s 2753-1450 0
 execute if score @s 8962-2901 matches 1.. run scoreboard players set @s 8962-2901 0
 execute if score @s 7416-9635 matches 1.. run scoreboard players set @s 7416-9635 0
+execute if score @s 7824-6438 matches 1.. run scoreboard players set @s 7824-6438 0
+execute if score @s 4120-1163 matches 1.. run scoreboard players set @s 4120-1163 0
+execute if score @s temp matches 1.. run scoreboard players set @s temp 0
