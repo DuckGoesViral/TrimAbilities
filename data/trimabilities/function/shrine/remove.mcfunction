@@ -27,3 +27,9 @@ execute if entity @e[type=chest_minecart,tag=trimShrine,nbt={Items:[{Slot:13b,co
 execute if entity @e[type=chest_minecart,tag=trimShrine,nbt={Items:[{Slot:13b,components:{"minecraft:trim":{pattern:"minecraft:vex"}}}]}] run give @s vex_armor_trim_smithing_template
 
 data modify entity @e[type=minecraft:chest_minecart,tag=trimShrine,limit=1] Items[{Slot:13b}].components merge value {"minecraft:trim":{pattern:""}}
+
+
+execute at @s run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+
+tellraw @s {"text":"The Trim has been removed!","color":"green"}
+
