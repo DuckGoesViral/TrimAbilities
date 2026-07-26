@@ -1,6 +1,6 @@
 scoreboard players set placed trimShrine 1
 
-$summon chest_minecart 0 $(y) 0 {Tags:["trimShrine"],CustomName:'[{"text":"Trim Shrine","color":"dark_purple"}]',CustomNameVisible:1b,Invulnerable:1b,PersistenceRequired:1b}
+$summon chest_minecart 0 $(y) 0 {Tags:["trimShrine"],CustomName:'Trim Shrine',CustomNameVisible:1b,Invulnerable:1b,PersistenceRequired:1b}
 $summon marker 0 $(y) 0 {Tags:["trimShrine"],Invulnerable:1b}
 
 execute at @e[type=chest_minecart,tag=trimShrine,limit=1] run fill ~3 ~-.5 ~3 ~-3 ~-.5 ~-3 structure_block

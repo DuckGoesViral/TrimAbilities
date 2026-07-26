@@ -28,7 +28,7 @@ scoreboard objectives add grindstoneUse minecraft.custom:interact_with_grindston
 
 
 scoreboard objectives add trimShrine dummy
-execute unless score started trimShrine matches 1 run function trimabilities:shrine/find-y
+#execute unless score started trimShrine matches 1 run function trimabilities:shrine/find-y
 
 scoreboard objectives add buttonRecovery dummy
 scoreboard objectives add buttonRemove dummy
@@ -63,6 +63,8 @@ scoreboard objectives add recoveryTide dummy
 scoreboard objectives add recoveryRavine dummy
 scoreboard objectives add recoveryRib dummy
 scoreboard objectives add recoveryVex dummy
+scoreboard objectives add recoveryBolt dummy
+scoreboard objectives add recoveryFlow dummy
 
 
 

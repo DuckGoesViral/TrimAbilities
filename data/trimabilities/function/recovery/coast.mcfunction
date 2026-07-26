@@ -1,5 +1,5 @@
 
-execute at @s as @e[type=item,nbt={Item:{tag:{Trim:{pattern:"minecraft:coast"}}}},distance=..10,limit=1,sort=nearest] run data merge entity @s {Item:{tag:{Trim:{pattern:""}}}}
+execute at @s as @e[type=item,nbt={Item:{components:{"minecraft:trim":{pattern:"minecraft:coast"}}}},distance=..10,limit=1,sort=nearest] run data merge entity @s {Item:{components:{"minecraft:trim":{pattern:""}}}}
 
 
 scoreboard players remove @s coast 1
