@@ -105,14 +105,7 @@ execute as @a[tag=bolt,scores={boltGear=6}] store result storage trimabilities:b
 execute as @a[tag=bolt,scores={boltGear=7}] store result storage trimabilities:bolt pitch float 0.1 run scoreboard players operation @s boltSoundPitch -= 36 constants
 execute as @a[tag=bolt,scores={boltGear=8}] store result storage trimabilities:bolt pitch float 0.1 run scoreboard players operation @s boltSoundPitch -= 40 constants
 
-
-# execute if score @s bolt matches 4 if score @s boltGear matches 3
-# execute if score @s bolt matches 4 if score @s boltGear matches 4
-# execute if score @s bolt matches 4 if score @s boltGear matches 5
-# execute if score @s bolt matches 4 if score @s boltGear matches 6
-# execute if score @s bolt matches 4 if score @s boltGear matches 7
-# execute if score @s bolt matches 4 if score @s boltGear matches 8
-
+#Sound effects for bolts
 execute as @a[scores={bolt=4..}] unless predicate trimabilities:stopped run function trimabilities:boltsound with storage trimabilities:bolt
 execute as @a[scores={bolt=4..}] at @s unless predicate trimabilities:stopped if score @s boltSoundPitch matches 11.. run playsound minecraft:entity.iron_golem.repair player @a ~ ~ ~ 0.1 2
 execute as @a[scores={bolt=4..}] at @s unless predicate trimabilities:stopped if score @s boltSoundPitch matches ..-1 run playsound minecraft:entity.iron_golem.repair player @a ~ ~ ~ 0.1 2

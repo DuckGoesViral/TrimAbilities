@@ -96,8 +96,13 @@ execute as @e[type=wolf,nbt={}] unless entity @s[tag=bone] if entity @s[scores={
 execute if entity @a[tag=domed] run function trimabilities:spiredome3
 execute unless entity @a[tag=domed] as @e[type=item_display,tag=domeGenerator] at @s run function trimabilities:spiredome4
 
+#fall damage reduction for Flow Trim 
+execute as @a[tag=flow,scores={flow=4..}] run attribute @s fall_damage_multiplier base set 0.2
+execute as @a[tag=flow,scores={flow=4..}] run attribute @s safe_fall_distance base set 6
+
+#Flow Trim Charge and Cooldown failsafe for mid-use removal.
+execute as @a[tag=!flow,scores={flowCharge=1..}] run scoreboard players remove @s flowCharge 5
+execute as @a[tag=!flow,scores={flowCooldown=1..}] run scoreboard players remove @s flowCooldown 1
 
 
 schedule function trimabilities:abilities20t 20t replace
-
-
