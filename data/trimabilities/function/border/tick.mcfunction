@@ -1,6 +1,8 @@
 # Retrieves the border location and checks if players are in the wilds.
-function trimabilities:border/getborder
-function trimabilities:border/wilds with storage trimabilities:border wild
+#function trimabilities:border/getborder
+#function trimabilities:border/wilds with storage trimabilities:border wild
+
+function trimabilities:border/wilds
 
 # Increments a timer for each player in the wilds to track how long they've been there. Will run a level removal function every 60 seconds.
 execute as @a[tag=inWilds] run scoreboard players add @s wildsTimer 1
@@ -11,9 +13,7 @@ execute as @a[tag=inWilds,scores={wildsLevels=0,wildsTimer=2400..}] at @s run fu
 
 # Remove 1 level from the player every 60 seconds in the wilds. Also, run a cave ambient sound and teleport nearby mobs to the player. This excludes any players, items, xp, etc. 
 # Note that boats being teleported to the player is intended behavior, as players may be in boats to avoid the TP. 
-execute as @a[tag=inWilds,scores={wildsTimer=1200..}] unless score @s wildsLevels matches 0 run xp add @s -1 levels
-execute as @a[tag=inWilds,scores={wildsTimer=1200..}] at @s unless score @s wildsLevels matches 0 run playsound minecraft:ambient.cave ambient @s ~ ~ ~ 5 1 1
-execute as @a[tag=inWilds,scores={wildsTimer=1200..}] unless score @s wildsLevels matches 0 run scoreboard players reset @s wildsTimer
+execute as @a[tag=inWilds,scores={wildsTimer=1200..}] at @s unless score @s wildsLevels matches 0 run function trimabilities:border/drain
 
 # Resets the wilds timer for players not in the wilds
 execute as @a[tag=!inWilds,nbt={Dimension:"minecraft:overworld"}] run scoreboard players reset @s wildsTimer
@@ -31,20 +31,20 @@ execute as @a[tag=inWilds,nbt={Dimension:"minecraft:overworld"}] at @s run kill 
 execute as @a[tag=inWilds,nbt={Dimension:"minecraft:overworld"}] at @s run kill @e[type=minecraft:area_effect_cloud,distance=..15]
 
 # Nether border enforcement
-scoreboard objectives add netherBorder dummy
-execute as @a at @s if dimension minecraft:the_nether if entity @s[x=-1500,z=-1500,dx=3000,dz=3000,scores={netherBorder=1..}] run tellraw @s ["",{"text":"--------------------------------------------------","color":"dark_green"},{"text":"\n"},{"text":"EXITING NETHER WILDS!!!","bold":true,"color":"green"},{"text":"\nYou are back to normal territory, what a relief!\n"},{"text":"--------------------------------------------------","color":"dark_green"},{"text":"\n "}]
-execute as @a at @s if dimension minecraft:the_nether if entity @s[x=-1500,z=-1500,dx=3000,dz=3000] run scoreboard players set @s netherBorder 0
-execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] if score @s netherBorder matches 0 run tellraw @s ["",{"text":"--------------------------------------------------","color":"dark_red"},{"text":"\n"},{"text":"ENTERING NETHER WILDS!!!","bold":true,"color":"red"},{"text":"\nYou are entering "},{"text":"unmarked territory","bold":true},{"text":", The longer you stay\nhere the more "},{"text":"XP will be drained","bold":true},{"text":" from your bar. If you\never reach 0, you will be "},{"text":"sent to spawn","bold":true},{"text":". You cannot gain\nany XP while in the wilds so you cannot gain any time.\nGood luck.\n"},{"text":"HERE BE DRAGONS","italic":true,"color":"dark_purple"},{"text":"\n"},{"text":"--------------------------------------------------","color":"dark_red"},{"text":"\n "}]
-execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] if score @s netherBorder matches 0 run playsound minecraft:entity.elder_guardian.curse ambient @s ~ ~ ~ 5 0 1
-
-execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] run scoreboard players add @s netherBorder 1
-
-execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] if score @s netherBorder matches 600.. store result score @s wildsLevels run xp query @s levels
-execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] if score @s netherBorder matches 600.. unless score @s wildsLevels matches 0 run xp add @s -1 levels
-execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] if score @s netherBorder matches 600.. at @s unless score @s wildsLevels matches 0 run playsound minecraft:ambient.cave ambient @s ~ ~ ~ 5 1 1
-execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] if score @s netherBorder matches 600.. unless score @s wildsLevels matches 0 run scoreboard players reset @s netherBorder
-
-execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] if score @s netherBorder matches 1200.. if score @s wildsLevels matches 0 run function trimabilities:border/netherbail
+#scoreboard objectives add netherBorder dummy
+#execute as @a at @s if dimension minecraft:the_nether if entity @s[x=-1500,z=-1500,dx=3000,dz=3000,scores={netherBorder=1..}] run tellraw @s ["",{"text":"--------------------------------------------------","color":"dark_green"},{"text":"\n"},{"text":"EXITING NETHER WILDS!!!","bold":true,"color":"green"},{"text":"\nYou are back to normal territory, what a relief!\n"},{"text":"--------------------------------------------------","color":"dark_green"},{"text":"\n "}]
+#execute as @a at @s if dimension minecraft:the_nether if entity @s[x=-1500,z=-1500,dx=3000,dz=3000] run scoreboard players set @s netherBorder 0
+#execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] if score @s netherBorder matches 0 run tellraw @s ["",{"text":"--------------------------------------------------","color":"dark_red"},{"text":"\n"},{"text":"ENTERING NETHER WILDS!!!","bold":true,"color":"red"},{"text":"\nYou are entering "},{"text":"unmarked territory","bold":true},{"text":", The longer you stay\nhere the more "},{"text":"XP will be drained","bold":true},{"text":" from your bar. If you\never reach 0, you will be "},{"text":"sent to spawn","bold":true},{"text":". You cannot gain\nany XP while in the wilds so you cannot gain any time.\nGood luck.\n"},{"text":"HERE BE DRAGONS","italic":true,"color":"dark_purple"},{"text":"\n"},{"text":"--------------------------------------------------","color":"dark_red"},{"text":"\n "}]
+#execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] if score @s netherBorder matches 0 run playsound minecraft:entity.elder_guardian.curse ambient @s ~ ~ ~ 5 0 1
+#
+#execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] run scoreboard players add @s netherBorder 1
+#
+#execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] if score @s netherBorder matches 600.. store result score @s wildsLevels run xp query @s levels
+#execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] if score @s netherBorder matches 600.. unless score @s wildsLevels matches 0 run xp add @s -1 levels
+#execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] if score @s netherBorder matches 600.. at @s unless score @s wildsLevels matches 0 run playsound minecraft:ambient.cave ambient @s ~ ~ ~ 5 1 1
+#execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] if score @s netherBorder matches 600.. unless score @s wildsLevels matches 0 run scoreboard players reset @s netherBorder
+#
+#execute as @a at @s if dimension minecraft:the_nether unless entity @s[x=-1500,z=-1500,dx=3000,dz=3000] if score @s netherBorder matches 1200.. if score @s wildsLevels matches 0 run function trimabilities:border/netherbail
 
 
 

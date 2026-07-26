@@ -8,7 +8,7 @@ execute as @a[tag=unlockedVital,tag=!fixedVital] run function trimabilities:play
 function trimabilities:abilities1t
 
 
-#ASDF function trimabilities:border/tick
+function trimabilities:border/tick
 
 
 

@@ -17,7 +17,7 @@ function trimabilities:minecraftlevels
 function trimabilities:categorylevels
 function trimabilities:necroteam
 function trimabilities:shrine/destroy
-#ASDF function trimabilities:border/load
+function trimabilities:border/load
 
 scoreboard objectives add subPower dummy
 scoreboard objectives add subRandom dummy
@@ -172,7 +172,7 @@ scoreboard objectives add bolt dummy
 scoreboard objectives add flow dummy
 scoreboard objectives add flowTimer dummy
 scoreboard objectives add flowCooldown dummy
-scoreboard objectives add flowCharge dummy 
+scoreboard objectives add flowCharge dummy
 
 scoreboard objectives add boltSpeed dummy
 scoreboard objectives add boltGear dummy
