@@ -27,4 +27,3 @@ execute as @e[type=arrow,tag=eyearrowpi1] run data merge entity @s {damage:4d,Pi
 execute as @e[type=arrow,tag=eyearrowpi2] run data merge entity @s {damage:4d,PierceLevel:5b}
 execute as @e[type=arrow,tag=eyearrowpi3] run data merge entity @s {damage:4d,PierceLevel:6b}
 execute as @e[type=arrow,tag=eyearrowpi4] run data merge entity @s {damage:4d,PierceLevel:7b}
-

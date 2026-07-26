@@ -17,7 +17,7 @@ function trimabilities:minecraftlevels
 function trimabilities:categorylevels
 function trimabilities:necroteam
 function trimabilities:shrine/destroy
-#ASDF function trimabilities:border/load
+function trimabilities:border/load
 
 scoreboard objectives add subPower dummy
 scoreboard objectives add subRandom dummy
@@ -28,7 +28,7 @@ scoreboard objectives add grindstoneUse minecraft.custom:interact_with_grindston
 
 
 scoreboard objectives add trimShrine dummy
-execute unless score started trimShrine matches 1 run function trimabilities:shrine/find-y
+#execute unless score started trimShrine matches 1 run function trimabilities:shrine/find-y
 
 scoreboard objectives add buttonRecovery dummy
 scoreboard objectives add buttonRemove dummy
@@ -63,6 +63,8 @@ scoreboard objectives add recoveryTide dummy
 scoreboard objectives add recoveryRavine dummy
 scoreboard objectives add recoveryRib dummy
 scoreboard objectives add recoveryVex dummy
+scoreboard objectives add recoveryBolt dummy
+scoreboard objectives add recoveryFlow dummy
 
 
 
@@ -172,7 +174,7 @@ scoreboard objectives add bolt dummy
 scoreboard objectives add flow dummy
 scoreboard objectives add flowTimer dummy
 scoreboard objectives add flowCooldown dummy
-scoreboard objectives add flowCharge dummy 
+scoreboard objectives add flowCharge dummy
 
 scoreboard objectives add boltSpeed dummy
 scoreboard objectives add boltGear dummy
@@ -493,13 +495,18 @@ scoreboard objectives add 2753-1450 trigger
 scoreboard objectives add 8962-2901 trigger
 #blackhole
 scoreboard objectives add 7416-9635 trigger
-
+#warp
+scoreboard objectives add 7824-6438 trigger
+#lightning bolt
+scoreboard objectives add 4120-1163 trigger
 #fake spell scoreboards
 scoreboard objectives add 7456-2314 trigger
 scoreboard objectives add 9124-4841 trigger
 scoreboard objectives add 9725-4688 trigger
 scoreboard objectives add 8942-6759 trigger
 scoreboard objectives add 6639-3275 trigger
+scoreboard objectives add temp trigger
+
 
 scoreboard objectives add EntityScale dummy
 

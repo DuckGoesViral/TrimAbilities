@@ -1,6 +1,6 @@
 
 
-execute at @s as @e[type=item,nbt={Item:{tag:{Trim:{pattern:"minecraft:wild"}}}},distance=..10,limit=1,sort=nearest] run data merge entity @s {Item:{tag:{Trim:{pattern:""}}}}
+execute at @s as @e[type=item,nbt={Item:{components:{"minecraft:trim":{pattern:"minecraft:wild"}}}},distance=..10,limit=1,sort=nearest] run data merge entity @s {Item:{components:{"minecraft:trim":{pattern:""}}}}
 
 
 scoreboard players remove @s wild 1
