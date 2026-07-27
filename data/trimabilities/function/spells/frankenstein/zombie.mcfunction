@@ -11,20 +11,18 @@ execute if score @s frankensteinScore matches ..9 run return run tellraw @s {"te
 
 execute at @s run playsound minecraft:block.enchantment_table.use ambient @s ~ ~ ~ 1 2
 
-execute at @s anchored eyes run summon minecraft:zombie ~ ~ ~ {Tags:["necroSummon0"],DeathLootTable:"minecraft:empty"}
+execute at @s anchored eyes run summon minecraft:zombie ~ ~ ~ {Tags:["necroSummon0","newSummon"],DeathLootTable:"minecraft:empty"}
 
 execute if entity @s[team=] run team join necromancer @s
 execute if entity @s[team=necromancer] run scoreboard players reset @s necroTimer
 
-execute if entity @s[team=AquaTeam] as @e[tag=necroSummon0,distance=..3] run team join AquaTeam
-execute if entity @s[team=BlueTeam] as @e[tag=necroSummon0,distance=..3] run team join BlueTeam
-execute if entity @s[team=GoldTeam] as @e[tag=necroSummon0,distance=..3] run team join GoldTeam
-execute if entity @s[team=GrayTeam] as @e[tag=necroSummon0,distance=..3] run team join GrayTeam
-execute if entity @s[team=GreenTeam] as @e[tag=necroSummon0,distance=..3] run team join GreenTeam
-execute if entity @s[team=PurpleTeam] as @e[tag=necroSummon0,distance=..3] run team join PurpleTeam
-execute if entity @s[team=RedTeam] as @e[tag=necroSummon0,distance=..3] run team join RedTeam
-execute if entity @s[team=YellowTeam] as @e[tag=necroSummon0,distance=..3] run team join YellowTeam
+# Team-agnostic: summon joins the caster's color team (whatever it is);
+# teamless casters fall through to the necromancer team below.
+data modify storage trimabilities:iter q set from storage teams:registry names
+data modify storage trimabilities:iter cb set value "trimabilities:spell/join_owner_apply"
+function trimabilities:teamiter/run
 execute if entity @s[team=necromancer] as @e[tag=necroSummon0,distance=..3] run team join necromancer
+tag @e[tag=newSummon,distance=..3] remove newSummon
 
 execute as @e[tag=necroSummon0] run effect give @s glowing infinite 0 true
 execute as @e[tag=necroSummon0] run effect give @s fire_resistance infinite 0 true

@@ -8,21 +8,19 @@ execute at @s run playsound minecraft:block.enchantment_table.use ambient @s ~ ~
 
 
 
-execute at @s run summon snow_golem ~ ~ ~ {Pumpkin:0b,Tags:["cryoGolem"],DeathLootTable:"minecraft:empty"}
-execute at @s run summon snow_golem ~ ~ ~ {Pumpkin:0b,Tags:["cryoGolem"],DeathLootTable:"minecraft:empty"}
+execute at @s run summon snow_golem ~ ~ ~ {Pumpkin:0b,Tags:["cryoGolem","newSummon"],DeathLootTable:"minecraft:empty"}
+execute at @s run summon snow_golem ~ ~ ~ {Pumpkin:0b,Tags:["cryoGolem","newSummon"],DeathLootTable:"minecraft:empty"}
 execute at @s run effect give @e[type=snow_golem,tag=cryoGolem,limit=2,sort=nearest] speed infinite 1 true
 execute at @s run effect give @e[type=snow_golem,tag=cryoGolem,limit=2,sort=nearest] resistance infinite 1 true
-execute at @s if entity @s[team=AquaTeam] as @e[type=snow_golem,tag=cryoGolem,limit=2,sort=nearest] run team join AquaTeam
-execute at @s if entity @s[team=BlueTeam] as @e[type=snow_golem,tag=cryoGolem,limit=2,sort=nearest] run team join BlueTeam
-execute at @s if entity @s[team=GoldTeam] as @e[type=snow_golem,tag=cryoGolem,limit=2,sort=nearest] run team join GoldTeam
-execute at @s if entity @s[team=GrayTeam] as @e[type=snow_golem,tag=cryoGolem,limit=2,sort=nearest] run team join GrayTeam
-execute at @s if entity @s[team=GreenTeam] as @e[type=snow_golem,tag=cryoGolem,limit=2,sort=nearest] run team join GreenTeam
-execute at @s if entity @s[team=PurpleTeam] as @e[type=snow_golem,tag=cryoGolem,limit=2,sort=nearest] run team join PurpleTeam
-execute at @s if entity @s[team=RedTeam] as @e[type=snow_golem,tag=cryoGolem,limit=2,sort=nearest] run team join RedTeam
-execute at @s if entity @s[team=YellowTeam] as @e[type=snow_golem,tag=cryoGolem,limit=2,sort=nearest] run team join YellowTeam
+# Team-agnostic: the golems join the caster's team (whatever team that is).
+data modify storage trimabilities:iter q set from storage teams:registry names
+data modify storage trimabilities:iter cb set value "trimabilities:spell/join_owner_apply"
+function trimabilities:teamiter/run
 
 execute if entity @s[team=] run tag @s add cryoSummon
 execute if entity @s[team=] run tag @e[type=snow_golem,tag=cryoGolem,limit=2,sort=nearest] add cryoSummon
+
+tag @e[tag=newSummon,distance=..3] remove newSummon
 
 
 execute at @s run particle minecraft:reverse_portal ~ ~1 ~ 0 0 0 1 50 normal @a[distance=..15]

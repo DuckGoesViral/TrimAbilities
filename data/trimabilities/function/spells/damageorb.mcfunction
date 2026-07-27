@@ -5,18 +5,15 @@ scoreboard players remove @s mana 40
 
 execute at @s run summon armor_stand ^ ^ ^1 {Tags:["damageOrbMarker"],NoGravity:1b,Invisible:1b,Invulnerable:1b}
 
-execute at @s run summon item_display ~ ~ ~ {transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1f,1f,1f]},item:{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;-1141575257,1882212652,-1935865409,1178835309],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzFiNzUzNjhkYjlhNzYzMzJkYzZkOWU1YzAwZTIzMmZkNDIzOGNhMWEzMDE5ZTdiNTIxZjE0ZmZjODMzMGU3YiJ9fX0="}]}}}},Tags:["damageOrb"]}
+execute at @s run summon item_display ~ ~ ~ {transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1f,1f,1f]},item:{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;-1141575257,1882212652,-1935865409,1178835309],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzFiNzUzNjhkYjlhNzYzMzJkYzZkOWU1YzAwZTIzMmZkNDIzOGNhMWEzMDE5ZTdiNTIxZjE0ZmZjODMzMGU3YiJ9fX0="}]}}}},Tags:["damageOrb","newSummon"]}
 
 tag @s add damageOrbImmunity
 
-execute if entity @s[team=AquaTeam] at @s as @e[type=item_display,distance=..1,limit=1,sort=nearest,tag=damageOrb] run team join AquaTeam
-execute if entity @s[team=BlueTeam] at @s as @e[type=item_display,distance=..1,limit=1,sort=nearest,tag=damageOrb] run team join BlueTeam
-execute if entity @s[team=GoldTeam] at @s as @e[type=item_display,distance=..1,limit=1,sort=nearest,tag=damageOrb] run team join GoldTeam
-execute if entity @s[team=GrayTeam] at @s as @e[type=item_display,distance=..1,limit=1,sort=nearest,tag=damageOrb] run team join GrayTeam
-execute if entity @s[team=GreenTeam] at @s as @e[type=item_display,distance=..1,limit=1,sort=nearest,tag=damageOrb] run team join GreenTeam
-execute if entity @s[team=PurpleTeam] at @s as @e[type=item_display,distance=..1,limit=1,sort=nearest,tag=damageOrb] run team join PurpleTeam
-execute if entity @s[team=RedTeam] at @s as @e[type=item_display,distance=..1,limit=1,sort=nearest,tag=damageOrb] run team join RedTeam
-execute if entity @s[team=YellowTeam] at @s as @e[type=item_display,distance=..1,limit=1,sort=nearest,tag=damageOrb] run team join YellowTeam
+# Team-agnostic: the orb joins the caster's team (whatever team that is).
+data modify storage trimabilities:iter q set from storage teams:registry names
+data modify storage trimabilities:iter cb set value "trimabilities:spell/join_owner_apply"
+function trimabilities:teamiter/run
+tag @e[tag=newSummon,distance=..3] remove newSummon
 
 data modify entity @e[type=armor_stand,tag=damageOrbMarker,limit=1,sort=nearest] Pos[1] set from entity @s Pos[1]
 #execute as @e[type=item_display,tag=damageOrb,limit=1,sort=nearest] run tp @s ~ ~2 ~

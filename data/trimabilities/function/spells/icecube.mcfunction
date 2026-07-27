@@ -7,14 +7,11 @@ execute at @s run playsound minecraft:block.enchantment_table.use ambient @s ~ ~
 
 
 scoreboard objectives add iceTimer dummy
-execute at @s if entity @s[team=AquaTeam] as @e[type=!item,type=!chest_minecart,type=!armor_stand,type=!marker,type=!area_effect_cloud,type=!item_display,team=!AquaTeam,distance=..10] run tag @s add frozen
-execute at @s if entity @s[team=BlueTeam] as @e[type=!item,type=!chest_minecart,type=!armor_stand,type=!marker,type=!area_effect_cloud,type=!item_display,team=!AquaTeam,distance=..10] run tag @s add frozen
-execute at @s if entity @s[team=GoldTeam] as @e[type=!item,type=!chest_minecart,type=!armor_stand,type=!marker,type=!area_effect_cloud,type=!item_display,team=!AquaTeam,distance=..10] run tag @s add frozen
-execute at @s if entity @s[team=GrayTeam] as @e[type=!item,type=!chest_minecart,type=!armor_stand,type=!marker,type=!area_effect_cloud,type=!item_display,team=!AquaTeam,distance=..10] run tag @s add frozen
-execute at @s if entity @s[team=GreenTeam] as @e[type=!item,type=!chest_minecart,type=!armor_stand,type=!marker,type=!area_effect_cloud,type=!item_display,team=!AquaTeam,distance=..10] run tag @s add frozen
-execute at @s if entity @s[team=PurpleTeam] as @e[type=!item,type=!chest_minecart,type=!armor_stand,type=!marker,type=!area_effect_cloud,type=!item_display,team=!AquaTeam,distance=..10] run tag @s add frozen
-execute at @s if entity @s[team=RedTeam] as @e[type=!item,type=!chest_minecart,type=!armor_stand,type=!marker,type=!area_effect_cloud,type=!item_display,team=!AquaTeam,distance=..10] run tag @s add frozen
-execute at @s if entity @s[team=YellowTeam] as @e[type=!item,type=!chest_minecart,type=!armor_stand,type=!marker,type=!area_effect_cloud,type=!item_display,team=!AquaTeam,distance=..10] run tag @s add frozen
+# Team-agnostic: iterate the registry so the caster freezes non-teammates,
+# regardless of which team they're on (fixes the old always-!AquaTeam bug).
+data modify storage trimabilities:iter q set from storage teams:registry names
+data modify storage trimabilities:iter cb set value "trimabilities:spells/icecube_apply"
+function trimabilities:teamiter/run
 execute at @s if entity @s[team=] as @e[type=!item,type=!chest_minecart,type=!armor_stand,type=!marker,type=!area_effect_cloud,type=!item_display,distance=..10] run tag @s add frozen
 tag @s remove frozen
 execute as @e[tag=frozen] at @s unless entity @e[type=marker,distance=..1,tag=iceMarker] run summon marker ~ ~ ~ {Tags:["iceMarker"]}
