@@ -21,6 +21,22 @@ team add PurpleTeam
 team modify PurpleTeam color light_purple
 team add YellowTeam
 team modify YellowTeam color yellow
+team add BlackTeam
+team modify BlackTeam color black
+team add DarkBlueTeam
+team modify DarkBlueTeam color dark_blue
+team add DarkGreenTeam
+team modify DarkGreenTeam color dark_green
+team add DarkAquaTeam
+team modify DarkAquaTeam color dark_aqua
+team add DarkRedTeam
+team modify DarkRedTeam color dark_red
+team add DarkPurpleTeam
+team modify DarkPurpleTeam color dark_purple
+team add DarkGrayTeam
+team modify DarkGrayTeam color dark_gray
+team add WhiteTeam
+team modify WhiteTeam color white
 
 # Whether a player is currently on a team (0 = no, 1 = yes)
 scoreboard objectives add has_team dummy
@@ -34,6 +50,14 @@ scoreboard objectives add join_green trigger
 scoreboard objectives add join_red trigger
 scoreboard objectives add join_purple trigger
 scoreboard objectives add join_yellow trigger
+scoreboard objectives add join_black trigger
+scoreboard objectives add join_darkblue trigger
+scoreboard objectives add join_darkgreen trigger
+scoreboard objectives add join_darkaqua trigger
+scoreboard objectives add join_darkred trigger
+scoreboard objectives add join_darkpurple trigger
+scoreboard objectives add join_darkgray trigger
+scoreboard objectives add join_white trigger
 
 # Live member counts per team (fake player #n holds each count)
 scoreboard objectives add aqua_team_count dummy
@@ -44,6 +68,14 @@ scoreboard objectives add green_team_count dummy
 scoreboard objectives add red_team_count dummy
 scoreboard objectives add purple_team_count dummy
 scoreboard objectives add yellow_team_count dummy
+scoreboard objectives add black_team_count dummy
+scoreboard objectives add darkblue_team_count dummy
+scoreboard objectives add darkgreen_team_count dummy
+scoreboard objectives add darkaqua_team_count dummy
+scoreboard objectives add darkred_team_count dummy
+scoreboard objectives add darkpurple_team_count dummy
+scoreboard objectives add darkgray_team_count dummy
+scoreboard objectives add white_team_count dummy
 
 # Voting on the single active join/kick request
 scoreboard objectives add vote_yes trigger
@@ -81,6 +113,10 @@ scoreboard players set #active teamvote 0
 scoreboard players set #mode teamvote 1
 scoreboard players set #two teamvote 2
 scoreboard players set #ticker teamvote 0
+
+# --- Team registry: single source of truth for team-agnostic ability code ---
+# TrimAbilities iterates this list. Add a team above AND here to register it everywhere.
+data modify storage teams:registry names set value ["AquaTeam","GoldTeam","BlueTeam","GrayTeam","GreenTeam","RedTeam","PurpleTeam","YellowTeam","BlackTeam","DarkBlueTeam","DarkGreenTeam","DarkAquaTeam","DarkRedTeam","DarkPurpleTeam","DarkGrayTeam","WhiteTeam"]
 
 # Populate team counts/fullness immediately (then refreshed every 10t from tick)
 function teams:slow_tick

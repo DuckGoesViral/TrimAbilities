@@ -10,6 +10,14 @@ execute if entity @s[team=GreenTeam] run tag @a[team=GreenTeam] add kickable
 execute if entity @s[team=RedTeam] run tag @a[team=RedTeam] add kickable
 execute if entity @s[team=PurpleTeam] run tag @a[team=PurpleTeam] add kickable
 execute if entity @s[team=YellowTeam] run tag @a[team=YellowTeam] add kickable
+execute if entity @s[team=BlackTeam] run tag @a[team=BlackTeam] add kickable
+execute if entity @s[team=DarkBlueTeam] run tag @a[team=DarkBlueTeam] add kickable
+execute if entity @s[team=DarkGreenTeam] run tag @a[team=DarkGreenTeam] add kickable
+execute if entity @s[team=DarkAquaTeam] run tag @a[team=DarkAquaTeam] add kickable
+execute if entity @s[team=DarkRedTeam] run tag @a[team=DarkRedTeam] add kickable
+execute if entity @s[team=DarkPurpleTeam] run tag @a[team=DarkPurpleTeam] add kickable
+execute if entity @s[team=DarkGrayTeam] run tag @a[team=DarkGrayTeam] add kickable
+execute if entity @s[team=WhiteTeam] run tag @a[team=WhiteTeam] add kickable
 tag @s remove kickable
 
 tag @s add menu_opener

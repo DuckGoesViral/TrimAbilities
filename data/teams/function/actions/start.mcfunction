@@ -26,6 +26,22 @@ execute if entity @s[tag=req_purple] run scoreboard players operation #count tea
 execute if entity @s[tag=req_purple] run tag @a[team=PurpleTeam] add voter
 execute if entity @s[tag=req_yellow] run scoreboard players operation #count teamvote = #n yellow_team_count
 execute if entity @s[tag=req_yellow] run tag @a[team=YellowTeam] add voter
+execute if entity @s[tag=req_black] run scoreboard players operation #count teamvote = #n black_team_count
+execute if entity @s[tag=req_black] run tag @a[team=BlackTeam] add voter
+execute if entity @s[tag=req_darkblue] run scoreboard players operation #count teamvote = #n darkblue_team_count
+execute if entity @s[tag=req_darkblue] run tag @a[team=DarkBlueTeam] add voter
+execute if entity @s[tag=req_darkgreen] run scoreboard players operation #count teamvote = #n darkgreen_team_count
+execute if entity @s[tag=req_darkgreen] run tag @a[team=DarkGreenTeam] add voter
+execute if entity @s[tag=req_darkaqua] run scoreboard players operation #count teamvote = #n darkaqua_team_count
+execute if entity @s[tag=req_darkaqua] run tag @a[team=DarkAquaTeam] add voter
+execute if entity @s[tag=req_darkred] run scoreboard players operation #count teamvote = #n darkred_team_count
+execute if entity @s[tag=req_darkred] run tag @a[team=DarkRedTeam] add voter
+execute if entity @s[tag=req_darkpurple] run scoreboard players operation #count teamvote = #n darkpurple_team_count
+execute if entity @s[tag=req_darkpurple] run tag @a[team=DarkPurpleTeam] add voter
+execute if entity @s[tag=req_darkgray] run scoreboard players operation #count teamvote = #n darkgray_team_count
+execute if entity @s[tag=req_darkgray] run tag @a[team=DarkGrayTeam] add voter
+execute if entity @s[tag=req_white] run scoreboard players operation #count teamvote = #n white_team_count
+execute if entity @s[tag=req_white] run tag @a[team=WhiteTeam] add voter
 
 # Reset and enable the vote triggers for everyone tagged as a voter.
 scoreboard players set @a[tag=voter] voted 0
