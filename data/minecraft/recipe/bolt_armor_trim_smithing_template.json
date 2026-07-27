@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:bolt_armor_trim_smithing_template"
+  ],
+  "result": {
+    "id": "minecraft:bolt_armor_trim_smithing_template",
+    "count": 1
+  }
+}
