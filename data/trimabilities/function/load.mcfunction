@@ -7,7 +7,7 @@ tellraw @a {"text": "Reload Succesful!","color": "#0000FF","bold": true}
 function trimabilities:abilities5t
 function trimabilities:abilities10t
 function trimabilities:abilities20t
-function trimabilities:abilities200t
+function trimabilities:abilities100t
 function trimabilities:advancementxp
 function trimabilities:scoreboardlevels
 function trimabilities:categorytags
@@ -25,14 +25,19 @@ scoreboard objectives add subTag dummy
 
 scoreboard objectives add grindstoneUse minecraft.custom:interact_with_grindstone
 
-
+scoreboard objectives add trimEssence dummy
+scoreboard objectives add insuranceBudget dummy
 
 scoreboard objectives add trimShrine dummy
 #execute unless score started trimShrine matches 1 run function trimabilities:shrine/find-y
 
 scoreboard objectives add buttonRecovery dummy
 scoreboard objectives add buttonRemove dummy
-
+scoreboard objectives add buttonInsure dummy
+scoreboard objectives add buttonSalvage dummy
+scoreboard objectives add buttonDeposit dummy
+scoreboard objectives add buttonWithdraw dummy
+scoreboard objectives add hasEssence dummy
 
 scoreboard objectives add recoveryToggle dummy
 scoreboard objectives add Trim_Recovery_Toggle trigger
