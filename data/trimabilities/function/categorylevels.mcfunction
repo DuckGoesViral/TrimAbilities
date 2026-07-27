@@ -21,32 +21,32 @@ execute as @a[scores={warriorLevel=1000..},tag=wLvl2go,tag=!wDuneGive] run tag @
 execute as @a[scores={warriorLevel=1000..},tag=wLvl2go] at @s run function trimabilities:clvl/w2
 execute as @a[tag=wLvl2go] run tag @s remove wLvl2go
 
-execute as @a[scores={warriorLevel=2500..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl3,tag=!wLvl4,tag=!wLvl5] if score @s level3s matches 3.. run tellraw @s {"text":"You have reached your maximum mastery for this category! ","color":"red"}
-execute as @a[scores={warriorLevel=2500..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl3,tag=!wLvl4,tag=!wLvl5] if score @s level3s matches 3.. run scoreboard players set @s warriorLevel 2250
-execute as @a[scores={warriorLevel=2500..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl3,tag=!wLvl4,tag=!wLvl5] run tag @s remove wLvl2
-execute as @a[scores={warriorLevel=2500..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl3,tag=!wLvl4,tag=!wLvl5] run tag @s add wLvl3go
-execute as @a[scores={warriorLevel=2500..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl3,tag=!wLvl4,tag=!wLvl5] run tag @s add wLvl3
-execute as @a[scores={warriorLevel=2500..},tag=wLvl3go] at @s run function trimabilities:clvl/w3
+execute as @a[scores={warriorLevel=2000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl3,tag=!wLvl4,tag=!wLvl5] if score @s level3s matches 3.. run tellraw @s {"text":"You have reached your maximum mastery for this category! ","color":"red"}
+execute as @a[scores={warriorLevel=2000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl3,tag=!wLvl4,tag=!wLvl5] if score @s level3s matches 3.. run scoreboard players set @s warriorLevel 2250
+execute as @a[scores={warriorLevel=2000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl3,tag=!wLvl4,tag=!wLvl5] run tag @s remove wLvl2
+execute as @a[scores={warriorLevel=2000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl3,tag=!wLvl4,tag=!wLvl5] run tag @s add wLvl3go
+execute as @a[scores={warriorLevel=2000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl3,tag=!wLvl4,tag=!wLvl5] run tag @s add wLvl3
+execute as @a[scores={warriorLevel=2000..},tag=wLvl3go] at @s run function trimabilities:clvl/w3
 execute as @a[tag=wLvl3go] run tag @s remove wLvl3go
 
-execute as @a[scores={warriorLevel=5000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl3,tag=!wLvl4,tag=!wLvl5] if score @s level4s matches 2.. run tellraw @s {"text":"You have reached your maximum mastery for this category!","color":"red"}
-execute as @a[scores={warriorLevel=5000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl3,tag=!wLvl4,tag=!wLvl5] if score @s level4s matches 2.. run scoreboard players set @s warriorLevel 4500
-execute as @a[scores={warriorLevel=5000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl2,tag=!wLvl4,tag=!wLvl5] run tag @s remove wLvl3
-execute as @a[scores={warriorLevel=5000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl2,tag=!wLvl4,tag=!wLvl5] run tag @s add wLvl4go
-execute as @a[scores={warriorLevel=5000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl2,tag=!wLvl4,tag=!wLvl5] run tag @s add wLvl4
-execute as @a[scores={warriorLevel=5000..},tag=wLvl4go,tag=!wSnoutGive] run scoreboard players add @s progressSnout 1
-execute as @a[scores={warriorLevel=5000..},tag=wLvl4go,tag=!wSnoutGive] run tag @s add wSnoutGive
-execute as @a[scores={warriorLevel=5000..},tag=wLvl4go] at @s run function trimabilities:clvl/w4
+execute as @a[scores={warriorLevel=4000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl3,tag=!wLvl4,tag=!wLvl5] if score @s level4s matches 2.. run tellraw @s {"text":"You have reached your maximum mastery for this category!","color":"red"}
+execute as @a[scores={warriorLevel=4000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl3,tag=!wLvl4,tag=!wLvl5] if score @s level4s matches 2.. run scoreboard players set @s warriorLevel 4500
+execute as @a[scores={warriorLevel=4000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl2,tag=!wLvl4,tag=!wLvl5] run tag @s remove wLvl3
+execute as @a[scores={warriorLevel=4000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl2,tag=!wLvl4,tag=!wLvl5] run tag @s add wLvl4go
+execute as @a[scores={warriorLevel=4000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl2,tag=!wLvl4,tag=!wLvl5] run tag @s add wLvl4
+execute as @a[scores={warriorLevel=4000..},tag=wLvl4go,tag=!wSnoutGive] run scoreboard players add @s progressSnout 1
+execute as @a[scores={warriorLevel=4000..},tag=wLvl4go,tag=!wSnoutGive] run tag @s add wSnoutGive
+execute as @a[scores={warriorLevel=4000..},tag=wLvl4go] at @s run function trimabilities:clvl/w4
 execute as @a[tag=wLvl4go] run tag @s remove wLvl4go
 
-execute as @a[scores={warriorLevel=10000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl2,tag=!wLvl3,tag=!wLvl5] if score @s level5s matches 1.. run tellraw @s {"text":"You have reached your maximum mastery for this category!","color":"red"}
-execute as @a[scores={warriorLevel=10000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl2,tag=!wLvl3,tag=!wLvl5] if score @s level5s matches 1.. run scoreboard players set @s warriorLevel 9000
-execute as @a[scores={warriorLevel=10000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl2,tag=!wLvl3,tag=!wLvl5] run tag @s remove wLvl4
-execute as @a[scores={warriorLevel=10000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl2,tag=!wLvl3,tag=!wLvl5] run tag @s add wLvl5go
-execute as @a[scores={warriorLevel=10000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl2,tag=!wLvl3,tag=!wLvl5] run tag @s add wLvl5
-execute as @a[scores={warriorLevel=10000..},tag=wLvl5go,tag=!wSilenceGive] run scoreboard players add @s progressSilence 1
-execute as @a[scores={warriorLevel=10000..},tag=wLvl5go,tag=!wSilenceGive] run tag @s add wSilenceGive
-execute as @a[scores={warriorLevel=10000..},tag=wLvl5go] at @s run function trimabilities:clvl/w5
+execute as @a[scores={warriorLevel=8000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl2,tag=!wLvl3,tag=!wLvl5] if score @s level5s matches 1.. run tellraw @s {"text":"You have reached your maximum mastery for this category!","color":"red"}
+execute as @a[scores={warriorLevel=8000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl2,tag=!wLvl3,tag=!wLvl5] if score @s level5s matches 1.. run scoreboard players set @s warriorLevel 9000
+execute as @a[scores={warriorLevel=8000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl2,tag=!wLvl3,tag=!wLvl5] run tag @s remove wLvl4
+execute as @a[scores={warriorLevel=8000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl2,tag=!wLvl3,tag=!wLvl5] run tag @s add wLvl5go
+execute as @a[scores={warriorLevel=8000..},tag=!wLvl0,tag=!wLvl1,tag=!wLvl2,tag=!wLvl3,tag=!wLvl5] run tag @s add wLvl5
+execute as @a[scores={warriorLevel=8000..},tag=wLvl5go,tag=!wSilenceGive] run scoreboard players add @s progressSilence 1
+execute as @a[scores={warriorLevel=8000..},tag=wLvl5go,tag=!wSilenceGive] run tag @s add wSilenceGive
+execute as @a[scores={warriorLevel=8000..},tag=wLvl5go] at @s run function trimabilities:clvl/w5
 execute as @a[tag=wLvl5go] run tag @s remove wLvl5go
 
 
