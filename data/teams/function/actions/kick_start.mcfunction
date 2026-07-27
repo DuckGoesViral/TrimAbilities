@@ -25,6 +25,22 @@ execute if entity @s[team=PurpleTeam] run tag @a[team=PurpleTeam] add voter
 execute if entity @s[team=PurpleTeam] run scoreboard players operation #count teamvote = #n purple_team_count
 execute if entity @s[team=YellowTeam] run tag @a[team=YellowTeam] add voter
 execute if entity @s[team=YellowTeam] run scoreboard players operation #count teamvote = #n yellow_team_count
+execute if entity @s[team=BlackTeam] run tag @a[team=BlackTeam] add voter
+execute if entity @s[team=BlackTeam] run scoreboard players operation #count teamvote = #n black_team_count
+execute if entity @s[team=DarkBlueTeam] run tag @a[team=DarkBlueTeam] add voter
+execute if entity @s[team=DarkBlueTeam] run scoreboard players operation #count teamvote = #n darkblue_team_count
+execute if entity @s[team=DarkGreenTeam] run tag @a[team=DarkGreenTeam] add voter
+execute if entity @s[team=DarkGreenTeam] run scoreboard players operation #count teamvote = #n darkgreen_team_count
+execute if entity @s[team=DarkAquaTeam] run tag @a[team=DarkAquaTeam] add voter
+execute if entity @s[team=DarkAquaTeam] run scoreboard players operation #count teamvote = #n darkaqua_team_count
+execute if entity @s[team=DarkRedTeam] run tag @a[team=DarkRedTeam] add voter
+execute if entity @s[team=DarkRedTeam] run scoreboard players operation #count teamvote = #n darkred_team_count
+execute if entity @s[team=DarkPurpleTeam] run tag @a[team=DarkPurpleTeam] add voter
+execute if entity @s[team=DarkPurpleTeam] run scoreboard players operation #count teamvote = #n darkpurple_team_count
+execute if entity @s[team=DarkGrayTeam] run tag @a[team=DarkGrayTeam] add voter
+execute if entity @s[team=DarkGrayTeam] run scoreboard players operation #count teamvote = #n darkgray_team_count
+execute if entity @s[team=WhiteTeam] run tag @a[team=WhiteTeam] add voter
+execute if entity @s[team=WhiteTeam] run scoreboard players operation #count teamvote = #n white_team_count
 
 # The target does not get to vote on their own kick.
 execute as @a[tag=kick_target] run tag @s remove voter

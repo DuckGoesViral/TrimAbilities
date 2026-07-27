@@ -12,6 +12,14 @@ execute if entity @s[team=GreenTeam] run tag @a[team=GreenTeam] add kickscope
 execute if entity @s[team=RedTeam] run tag @a[team=RedTeam] add kickscope
 execute if entity @s[team=PurpleTeam] run tag @a[team=PurpleTeam] add kickscope
 execute if entity @s[team=YellowTeam] run tag @a[team=YellowTeam] add kickscope
+execute if entity @s[team=BlackTeam] run tag @a[team=BlackTeam] add kickscope
+execute if entity @s[team=DarkBlueTeam] run tag @a[team=DarkBlueTeam] add kickscope
+execute if entity @s[team=DarkGreenTeam] run tag @a[team=DarkGreenTeam] add kickscope
+execute if entity @s[team=DarkAquaTeam] run tag @a[team=DarkAquaTeam] add kickscope
+execute if entity @s[team=DarkRedTeam] run tag @a[team=DarkRedTeam] add kickscope
+execute if entity @s[team=DarkPurpleTeam] run tag @a[team=DarkPurpleTeam] add kickscope
+execute if entity @s[team=DarkGrayTeam] run tag @a[team=DarkGrayTeam] add kickscope
+execute if entity @s[team=WhiteTeam] run tag @a[team=WhiteTeam] add kickscope
 tag @s remove kickscope
 
 # The target is the teammate whose id matches the requested id.

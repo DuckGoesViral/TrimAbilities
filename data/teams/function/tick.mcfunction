@@ -30,6 +30,14 @@ execute as @a[scores={join_green=1..}] run function teams:actions/jointeam
 execute as @a[scores={join_red=1..}] run function teams:actions/jointeam
 execute as @a[scores={join_purple=1..}] run function teams:actions/jointeam
 execute as @a[scores={join_yellow=1..}] run function teams:actions/jointeam
+execute as @a[scores={join_black=1..}] run function teams:actions/jointeam
+execute as @a[scores={join_darkblue=1..}] run function teams:actions/jointeam
+execute as @a[scores={join_darkgreen=1..}] run function teams:actions/jointeam
+execute as @a[scores={join_darkaqua=1..}] run function teams:actions/jointeam
+execute as @a[scores={join_darkred=1..}] run function teams:actions/jointeam
+execute as @a[scores={join_darkpurple=1..}] run function teams:actions/jointeam
+execute as @a[scores={join_darkgray=1..}] run function teams:actions/jointeam
+execute as @a[scores={join_white=1..}] run function teams:actions/jointeam
 
 # --- Kick: open the menu, or start a kick vote against a chosen teammate ---
 execute as @a[scores={kickmenu=1..}] run function teams:kickmenu
