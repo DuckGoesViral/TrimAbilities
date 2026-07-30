@@ -1,0 +1,272 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:empty",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:coast_armor_trim_smithing_template",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:raiser_armor_trim_smithing_template",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:shaper_armor_trim_smithing_template",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:wayfinder_armor_trim_smithing_template",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:host_armor_trim_smithing_template",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:dune_armor_trim_smithing_template",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:wild_armor_trim_smithing_template",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chain_command_block",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Smithing Template",
+                "color": "white",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Vital Armor Trim",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "Applies to:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " Armor",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "Ingredients",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " Ingots & Crystals",
+                  "color": "blue",
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_model": "trimabilities:vital"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:repeating_command_block",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_model": "trimabilities:stray"
+              }
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Smithing Template",
+                "color": "white",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Stray Armor Trim",
+                  "color": "gray",
+                  "italic": false
+                },
+                "",
+                {
+                  "text": "Applies to:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " Armor",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "Ingredients",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " Ingots & Crystals",
+                  "color": "blue",
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:eye_armor_trim_smithing_template",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:ward_armor_trim_smithing_template",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:snout_armor_trim_smithing_template",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:jigsaw",
+          "weight": 1,
+          "functions": [
+            {
+            "function": "minecraft:set_components",
+            "components": {
+                "minecraft:item_model": "trimabilities:echo"
+            }
+            },
+            {
+            "function": "minecraft:set_name",
+            "name": {
+                "text": "Smithing Template",
+                "color": "white",
+                "italic": false
+            }
+            },
+            {
+            "function": "minecraft:set_lore",
+            "lore": [
+                {
+                "text": "Echo Armor Trim",
+                "color": "gray",
+                "italic": false
+                },
+                "",
+                {
+                "text": "Applies to:",
+                "color": "gray",
+                "italic": false
+                },
+                {
+                "text": " Armor",
+                "color": "blue",
+                "italic": false
+                },
+                {
+                "text": "Ingredients",
+                "color": "gray",
+                "italic": false
+                },
+                {
+                "text": " Ingots & Crystals",
+                "color": "blue",
+                "italic": false
+                }
+            ],
+            "mode": "replace_all"
+            }
+          ]
+        },
+                {
+          "type": "minecraft:item",
+          "name": "minecraft:test_block",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": "Smithing Template"
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "Bone Armor Trim",
+                  "color": "gray",
+                  "italic": false
+                },
+                "",
+                {
+                  "text": "Applies to:",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " Wolf Armor",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": "Ingredients",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": " Ingots & Crystals",
+                  "color": "blue",
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_model": "trimabilities:bone"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "random_sequence": "trimabilities:chests/trim_box"
+}
