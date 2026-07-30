@@ -89,7 +89,7 @@ execute as @e[type=wolf,tag=bone] run attribute @s minecraft:max_health base set
 # Bone Trim Tag Removal
 execute as @e[type=wolf,tag=bone] unless entity @s[nbt={equipment:{body:{components:{"minecraft:trim":{pattern:"trimabilities:bone"}}}}}] run tag @s remove bone
 execute as @e[type=wolf] if entity @s[nbt={active_effects:[{id:"minecraft:regeneration"}]}] unless entity @s[tag=bone] run effect clear @s
-execute as @e[type=wolf,nbt={}] unless entity @s[tag=bone] if entity @s[scores={EntityScale=14}] run attribute @s minecraft:max_health base set 8
+execute as @e[type=wolf,nbt={}] unless entity @s[tag=bone] if entity @s[scores={EntityScale=14}] run attribute @s minecraft:max_health base reset
 execute as @e[type=wolf,nbt={}] unless entity @s[tag=bone] if entity @s[scores={EntityScale=14}] run attribute @s scale base reset
 execute as @e[type=wolf,nbt={}] unless entity @s[tag=bone] if entity @s[scores={EntityScale=14}] run attribute @s attack_damage base reset
 
