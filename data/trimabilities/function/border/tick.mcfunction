@@ -9,6 +9,8 @@ execute as @a[tag=inWilds] run scoreboard players add @s wildsTimer 1
 
 # Stores the player's current XP levels in a scoreboard for the time calculation.
 execute as @a[tag=inWilds,nbt={Dimension:"minecraft:overworld"}] store result score @s wildsLevels run xp query @s levels
+execute as @a[tag=inWilds,scores={wildsLevels=0,wildsTimer=2200}] run scoreboard players set @s wildsBailCountdown 10
+execute as @a[tag=inWilds,scores={wildsLevels=0,wildsTimer=2200}] run function trimabilities:border/bailtimer
 execute as @a[tag=inWilds,scores={wildsLevels=0,wildsTimer=2400..}] at @s run function trimabilities:border/bail
 
 # Remove 1 level from the player every 60 seconds in the wilds. Also, run a cave ambient sound and teleport nearby mobs to the player. This excludes any players, items, xp, etc. 

@@ -5,3 +5,4 @@ scoreboard objectives add wildsRandom dummy
 scoreboard objectives add wildsETimer dummy
 
 scoreboard objectives add netherTP dummy
+scoreboard objectives add wildsBailCountdown dummy
