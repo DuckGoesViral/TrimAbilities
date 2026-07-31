@@ -1,0 +1,50 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Retired Adventurer",
+    "color": "light_purple",
+    "bold": true
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Wild",
+        "color": "gold",
+        "underlined": true
+      },
+      "width": 400
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "This trim requires Minecraft Level III, Archer Level II, and Wayfinder completion\n\nIt provides +2 Power Levels on all bows, Jump Boost IV, and Speed I\n\nIt can be found in Jungle Temples\n\nEach Wild piece provides +50% chance for an extra power level."
+      },
+      "width": 400
+    }
+  ],
+  "inputs": [],
+  "can_close_with_escape": true,
+  "actions": [
+    {
+      "label": {
+        "text": "Next - Eye"
+      },
+      "width": 100,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:intro_eye"
+      }
+    },
+    {
+      "label": {
+        "text": "Return to Select"
+      },
+      "width": 100,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:intro_class"
+      }
+    }
+  ]
+}

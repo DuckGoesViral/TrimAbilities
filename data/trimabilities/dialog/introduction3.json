@@ -1,0 +1,49 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Retired Adventurer",
+    "color": "light_purple",
+    "bold": true
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "IMPORTANT NOTE!",
+        "color": "red"
+      },
+      "width": 400
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "If you are new to this, you should know that each class' starting trim (or their tier 1) can be found in archaeology sites, villages, and ruined nether portals.\n\nImportantly, they can all be converted between each other in a crafting table using:\n\nA wooden sword to make Shaper\nA wooden pickaxe to make Host\nA bow to make Wayfinder\nA wooden hoe to make Raiser"
+      },
+      "width": 400
+    }
+  ],
+  "inputs": [],
+  "can_close_with_escape": true,
+  "actions": [
+    {
+      "label": {
+        "text": "Next"
+      },
+      "width": 100,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:introduction4"
+      }
+    },
+    {
+      "label": {
+        "text": "Skip"
+      },
+      "width": 50,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:end_intro"
+      }
+    }
+  ]
+}

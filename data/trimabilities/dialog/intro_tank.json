@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Retired Adventurer",
+    "color": "light_purple",
+    "bold": true
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "The tank class is a close-quarters class like warrior but it focuses on defensive ability rather than offensive.\n\nThese trims buff you resistance to damage and overall health points at the cost of slowness on some trims.\n\nThe first three trims are Host, Vital, and Ward.\n\nThe legends tell of a tier four trim named Spire. A trim that provides nimbleness, for a tank, as well as high resistance and health. It is also said to have abilities that let you fight back and take control of the battlefield. If one is ever found I may be able to tell you more about it."
+      },
+      "width": 400
+    }
+  ],
+  "inputs": [],
+  "can_close_with_escape": true,
+  "actions": [
+    {
+      "label": {
+        "text": "Next - Host"
+      },
+      "width": 100,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:intro_host"
+      }
+    },
+    {
+      "label": {
+        "text": "Return to Select"
+      },
+      "width": 100,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:intro_class"
+      }
+    }
+  ]
+}

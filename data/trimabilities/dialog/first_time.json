@@ -1,0 +1,52 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Retired Adventurer",
+    "color": "light_purple",
+    "bold": true
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Hello traveler, welcome to the world of"
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Trim Ablities",
+        "color": "dark_purple",
+        "bold": true
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Do you need me to tell you more? Or have you already gotten the hang of all this?"
+      }
+    }
+  ],
+  "inputs": [],
+  "can_close_with_escape": true,
+  "actions": [
+    {
+      "label": {
+        "text": "Yes, tell me about Trims"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:introduction1"
+      }
+    },
+    {
+      "label": {
+        "text": "We can skip the introduction"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:end_intro"
+      }
+    }
+  ]
+}

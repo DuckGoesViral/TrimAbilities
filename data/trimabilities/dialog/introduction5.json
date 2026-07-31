@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Retired Adventurer",
+    "color": "light_purple",
+    "bold": true
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "As well as needing the Minecraft and Category level requirement, you must wear a full set of each trim in order before you can wear the next.\n\nFor example, you must wear the Warrior tier 1, Shaper, before being able to use the tier 2, Dune."
+      },
+      "width": 400
+    }
+  ],
+  "inputs": [],
+  "can_close_with_escape": true,
+  "actions": [
+    {
+      "label": {
+        "text": "Next"
+      },
+      "width": 100,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:intro_class"
+      }
+    },
+    {
+      "label": {
+        "text": "Skip"
+      },
+      "width": 50,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:end_intro"
+      }
+    }
+  ]
+}

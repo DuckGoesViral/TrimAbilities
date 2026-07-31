@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Retired Adventurer",
+    "color": "light_purple",
+    "bold": true
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "The archer class is focused on dealing ranged damage, and a lot of it. Archer has the highest per hit damage potential of the combat classes.\n\nThe archer trims buff mainly bow damage but most provide other benefits as well. Some trims in this class, however, limit your ability to deal melee damage.\n\nThe first three trims in this class are Wayfinder, Wild, and Eye.\n\nThe tale goes that the tier four Archer trim is called Sentry and while it deals the same bow damage as Eye, it has none of the limitations. They also say that this trim has the ability to flatten an entire area in a matter of seconds with there being stories of arrows raining down as far as you can see."
+      },
+      "width": 400
+    }
+  ],
+  "inputs": [],
+  "can_close_with_escape": true,
+  "actions": [
+    {
+      "label": {
+        "text": "Next - Wayfinder"
+      },
+      "width": 100,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:intro_wayfinder"
+      }
+    },
+    {
+      "label": {
+        "text": "Return to Select"
+      },
+      "width": 100,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:intro_class"
+      }
+    }
+  ]
+}

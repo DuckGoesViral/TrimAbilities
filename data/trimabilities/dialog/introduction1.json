@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Retired Adventurer",
+    "color": "light_purple",
+    "bold": true
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "In this world, all trims have special abilities. \n\nTrims are also sorted into four main classes, along with the extra utility trims.\n\nEach main class (Warrior, Tank, Archer, Wizard) has four trims in them. Or at least that's what they say...\n\nI, myself have never seen any tier four trim in my entire lifetime of searching"
+      },
+      "width": 400
+    }
+  ],
+  "inputs": [],
+  "can_close_with_escape": true,
+  "actions": [
+    {
+      "label": {
+        "text": "Next"
+      },
+      "width": 100,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:introduction2"
+      }
+    },
+    {
+      "label": {
+        "text": "Skip"
+      },
+      "width": 50,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:end_intro"
+      }
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Retired Adventurer",
+    "color": "light_purple",
+    "bold": true
+  },
+  "body": {
+    "type": "minecraft:plain_message",
+    "contents": {
+      "text": "I can tell you about each class and the trims in them now if you want. Just tell me what class you're interested in."
+    },
+    "width": 400
+  },
+  "actions": [
+    {
+      "label": {
+        "text": "Warrior",
+        "color": "red",
+        "bold": true
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:intro_warrior"
+      }
+    },
+    {
+      "label": {
+        "text": "Tank",
+        "color": "blue",
+        "bold": true
+      },
+      "width": 150,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:intro_tank"
+      }
+    },
+    {
+      "label": {
+        "text": "Archer",
+        "color": "gold",
+        "bold": true
+      },
+      "width": 150,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:intro_archer"
+      }
+    },
+    {
+      "label": {
+        "text": "Wizard",
+        "color": "dark_purple",
+        "bold": true
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:intro_wizard"
+      }
+    },
+    {
+      "label": {
+        "text": "I have heard enough, thank you."
+      },
+      "width": 200,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:end_intro"
+      }
+    }
+  ]
+}

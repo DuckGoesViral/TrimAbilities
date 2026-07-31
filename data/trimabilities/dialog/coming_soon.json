@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:notice",
+  "title": {
+    "text": "Retired Adventurer",
+    "color": "light_purple",
+    "bold": true
+  },
+  "body": {
+    "type": "minecraft:plain_message",
+    "contents": {
+      "text": "This feature has not been added but it will be soon. Thank you for your patience!"
+    }
+  }
+}

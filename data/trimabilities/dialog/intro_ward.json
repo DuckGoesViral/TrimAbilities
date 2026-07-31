@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Retired Adventurer",
+    "color": "light_purple",
+    "bold": true
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Ward",
+        "color": "blue",
+        "underlined": true
+      },
+      "width": 400
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "This trim requires Minecraft Level VI, Tank Level IV, and Vital completion\n\nIt provides +8 Health Points and Resistance II but Slowness I\n\nWith a full set you also get the Last Stand ability. This ability allows you to cheat death similarly to a totem. If you are ever at two hearts, 4 health points, or less the ability will trigger and give you regeneration, absorption, speed, strength, and increased resistance. This ability has a 10 minute cooldown. It will not trigger if you lose too much health too quickly.\n\nIt can be found in Ancient Cities\n\nEach Ward piece provides +3 Health Points."
+      },
+      "width": 400
+    }
+  ],
+  "inputs": [],
+  "can_close_with_escape": true,
+  "actions": [
+    {
+      "label": {
+        "text": "Return to Select"
+      },
+      "width": 100,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:intro_class"
+      }
+    }
+  ]
+}

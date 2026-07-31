@@ -1,0 +1,49 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Retired Adventurer",
+    "color": "light_purple",
+    "bold": true
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "There are five main skills that you can level up in this world.\n\nThe first is called Minecraft Level. You level this up by getting advancements, mining, and farming.\nMinecraft Level is necessary for unlocking all trims and for gaining faster Category XP.\n\nNext comes your category XP, of which there are four; one for each class, or category.\n\nYour Warrior Level can be increased by killing mobs\n\nYour Tank Level can be increasd by taking and tanking damage\n\nYour Archer Level is increased by killing mobs with a bow\n\nAnd finally, Wizard Level is increased by enchanting, drinking potions, and casting spells."
+      },
+      "width": 400
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "You can check all of these levels by running the command '/trigger playerLevel'",
+        "color": "aqua"
+      },
+      "width": 400
+    }
+  ],
+  "inputs": [],
+  "can_close_with_escape": true,
+  "actions": [
+    {
+      "label": {
+        "text": "Next"
+      },
+      "width": 100,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:introduction5"
+      }
+    },
+    {
+      "label": {
+        "text": "Skip"
+      },
+      "width": 50,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:end_intro"
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Retired Adventurer",
+    "color": "light_purple",
+    "bold": true
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "The Wizard class (sometimes called Mage) is the most unique class of them all, but also poses the most challenges. It can be used for both close and ranged combat, but generally benefits from keeping a bit of a distance.\n\nThe Wizard trims provide different maximum mana capabilities and their own exclusive spells. A wizard can cast spells from his spellbook or from torn pages and regenerates mana at a base rate of 6 per 5 seconds, however this increases for every Wizard Level you obtain.\n\nThe first three trims in this class are Raiser, Stray, and Echo.\n\nLegends about the tier four, known as Storm, are more sparse than others but they tell of an exclusive spell which darkens the sky and strikes anyone who dares get near."
+      },
+      "width": 400
+    }
+  ],
+  "inputs": [],
+  "can_close_with_escape": true,
+  "actions": [
+    {
+      "label": {
+        "text": "Next - Raiser"
+      },
+      "width": 100,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:intro_raiser"
+      }
+    },
+    {
+      "label": {
+        "text": "Return to Select"
+      },
+      "width": 100,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:intro_class"
+      }
+    }
+  ]
+}

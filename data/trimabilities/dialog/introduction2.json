@@ -1,0 +1,80 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Retired Adventurer",
+    "color": "light_purple",
+    "bold": true
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "In addition to the trims in the main classes there are also seven utility trims.\n\nThese are: Coast, Tide, Ravine, Rib, Bolt, Flow, and Vex"
+      },
+      "width": 400
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Coast and Tide give water effects",
+        "color": "dark_aqua"
+      },
+      "width": 400
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Ravine and Rib give mining effects",
+        "color": "dark_red"
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Bolt turns you into a human car and lets you move at top speeds.",
+        "color": "gold"
+      },
+      "width": 400
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Flow lets you perform up to four extra jumps midair",
+        "color": "blue"
+      },
+      "width": 400
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Vex makes you small and hard to spot, but makes you much weaker in a fight",
+        "color": "dark_purple"
+      },
+      "width": 400
+    }
+  ],
+  "inputs": [],
+  "can_close_with_escape": true,
+  "actions": [
+    {
+      "label": {
+        "text": "Next"
+      },
+      "width": 100,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:introduction3"
+      }
+    },
+    {
+      "label": {
+        "text": "Skip"
+      },
+      "width": 50,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:end_intro"
+      }
+    }
+  ]
+}

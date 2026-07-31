@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Retired Adventurer",
+    "color": "light_purple",
+    "bold": true
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Are you ready to jump into the world of Trim Abilities for real now?\n\nFrom now on you will be able to talk to me for information and for various trim functions.\n\nWith my vast stock of trims from my travels I can trade with you and even help you find structures you need.\n\nNow, if you ever need this tutorial again you can always ask.\n\nI look forward to doing business with you."
+      },
+      "width": 400
+    }
+  ],
+  "inputs": [],
+  "can_close_with_escape": true,
+  "actions": [
+    {
+      "label": {
+        "text": "I'm ready!"
+      },
+      "width": 150,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:main"
+      }
+    },
+    {
+      "label": {
+        "text": "Can you repeat all that?"
+      },
+      "width": 150,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:introduction1"
+      }
+    }
+  ]
+}

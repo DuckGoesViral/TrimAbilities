@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Retired Adventurer",
+    "color": "light_purple",
+    "bold": true
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Eye",
+        "color": "gold",
+        "underlined": true
+      },
+      "width": 400
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "This trim requires Minecraft Level VI, Archer Level IV, and Wild completion\n\nIt provides +4 Power Levels on all bows, but you also get Weakness I\n\nWith a full set you also get the Snipe ability. This ability transforms all spyglasses into snipers. When using the scope, you can shoot any entity by pressing F (to swap between main and offhand) from up to 500 blocks away. You must accurately hit your target but if you do they will take 40 damage. This shot takes a few seconds to reload but there is no additional cooldown. You cannot reload while taking damage.\n\nIt can be found in Strongholds\n\nEach Eye piece provides +1 Power Level."
+      },
+      "width": 400
+    }
+  ],
+  "inputs": [],
+  "can_close_with_escape": true,
+  "actions": [
+    {
+      "label": {
+        "text": "Return to Select"
+      },
+      "width": 100,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:intro_class"
+      }
+    }
+  ]
+}

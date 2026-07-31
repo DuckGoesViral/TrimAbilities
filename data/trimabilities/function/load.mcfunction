@@ -19,6 +19,8 @@ function trimabilities:necroteam
 function trimabilities:shrine/destroy
 function trimabilities:border/load
 
+scoreboard objectives add npcClick minecraft.custom:minecraft.talked_to_villager
+
 scoreboard objectives add subPower dummy
 scoreboard objectives add subRandom dummy
 scoreboard objectives add subTag dummy

@@ -1,0 +1,50 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Retired Adventurer",
+    "color": "light_purple",
+    "bold": true
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Raiser",
+        "color": "dark_purple",
+        "underlined": true
+      },
+      "width": 400
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "This trim requires Minecraft Level I\n\nIt provides 50 Maximum Mana and lets you summon the spellbook with double-shift. This book shows you all the spells that can be used by Wizards. The full set lets you use the Frankenstein spell.\n\nIt can be found from archeology, villages, and ruined portals\n\nAll combat trims also provide a \"Sub-Effect\" for when less than a full set is worn. Each Raiser piece provides +15 Max Mana when there is no full set."
+      },
+      "width": 400
+    }
+  ],
+  "inputs": [],
+  "can_close_with_escape": true,
+  "actions": [
+    {
+      "label": {
+        "text": "Next - Stray"
+      },
+      "width": 100,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:intro_stray"
+      }
+    },
+    {
+      "label": {
+        "text": "Return to Select"
+      },
+      "width": 100,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:intro_class"
+      }
+    }
+  ]
+}

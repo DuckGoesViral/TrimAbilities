@@ -12,6 +12,12 @@ execute if score @s xpDelay matches 45.. run scoreboard players reset @s xpDelay
 execute if entity @s[tag=raiser] unless score @s xpDelay matches 1.. run title @s actionbar ["",{"text":"Mana: ","color":"dark_aqua"},{"score":{"name":"@s","objective":"mana"},"color":"dark_aqua"},{"text":" |","color":"dark_gray"},{"text":" Souls: ","color":"dark_green"},{"score":{"name":"@s","objective":"frankensteinScore"},"color":"dark_green"}]
 execute if entity @s[tag=!raiser] unless score @s xpDelay matches 1.. run title @s actionbar ["",{"text":"| ","color":"dark_gray"},{"text":"Mana: ","color":"dark_aqua"},{"score":{"name":"@s","objective":"mana"},"color":"dark_aqua"},{"text":" |","color":"dark_gray"}]
 
+
+scoreboard objectives add 
+
+
+
+
 # Spell triggers (fake + real)
 scoreboard players enable @s 7456-2314
 scoreboard players enable @s 9124-4841

@@ -1,0 +1,57 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Retired Adventurer",
+    "color": "light_purple",
+    "bold": true
+  },
+  "body": {
+    "type": "minecraft:plain_message",
+    "contents": {
+      "text": "Hello, what can I do for you today?"
+    },
+    "width": 400
+  },
+  "actions": [
+    {
+      "label": {
+        "text": "Remind me of how Trims work."
+      },
+      "width": 175,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:introduction1"
+      }
+    },
+    {
+      "label": {
+        "text": "What does the Trim Shrine do?"
+      },
+      "width": 175,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:coming_soon"
+      }
+    },
+    {
+      "label": {
+        "text": "Help me find trims."
+      },
+      "width": 175,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:coming_soon"
+      }
+    },
+    {
+      "label": {
+        "text": "Can we trade trims?"
+      },
+      "width": 175,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:coming_soon"
+      }
+    }
+  ]
+}

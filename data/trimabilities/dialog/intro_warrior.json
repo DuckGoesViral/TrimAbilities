@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Retired Adventurer",
+    "color": "light_purple",
+    "bold": true
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "The warrior class specializes in close-quarters combat.\n\nThese trims provide buffs to your melee attack damage and movement speed but sacrifice some maximum health points.\n\nThe first three trims in this class are Shaper, Dune, and Snout.\n\nThe legends state that the tier four is called silence, this trim does not sacrifice any health points and has powerful abilities beyond simple damage that benefit a true warrior. If one is ever found I may be able to tell you more about it."
+      },
+      "width": 400
+    }
+  ],
+  "inputs": [],
+  "can_close_with_escape": true,
+  "actions": [
+    {
+      "label": {
+        "text": "Next - Shaper"
+      },
+      "width": 100,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:intro_shaper"
+      }
+    },
+    {
+      "label": {
+        "text": "Return to Select"
+      },
+      "width": 100,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:intro_class"
+      }
+    }
+  ]
+}
