@@ -1,34 +1,35 @@
 #Warrior xp
-execute as @a[scores={mobKills=1..},tag=mcLvl0,tag=warrior] run scoreboard players add @s warriorLevel 0
-execute as @a[scores={mobKills=1..},tag=mcLvl0,tag=warrior] run scoreboard players set @s xpDisplay 0
-execute as @a[scores={mobKills=1..},tag=mcLvl1,tag=warrior] run scoreboard players add @s warriorLevel 1
-execute as @a[scores={mobKills=1..},tag=mcLvl1,tag=warrior] run scoreboard players set @s xpDisplay 1
-execute as @a[scores={mobKills=1..},tag=mcLvl2,tag=warrior] run scoreboard players add @s warriorLevel 1
-execute as @a[scores={mobKills=1..},tag=mcLvl2,tag=warrior] run scoreboard players set @s xpDisplay 1
-execute as @a[scores={mobKills=1..},tag=mcLvl3,tag=warrior] run scoreboard players add @s warriorLevel 2
-execute as @a[scores={mobKills=1..},tag=mcLvl3,tag=warrior] run scoreboard players set @s xpDisplay 2
-execute as @a[scores={mobKills=1..},tag=mcLvl4,tag=warrior] run scoreboard players add @s warriorLevel 2
-execute as @a[scores={mobKills=1..},tag=mcLvl4,tag=warrior] run scoreboard players set @s xpDisplay 2
-execute as @a[scores={mobKills=1..},tag=mcLvl5,tag=warrior] run scoreboard players add @s warriorLevel 3
-execute as @a[scores={mobKills=1..},tag=mcLvl5,tag=warrior] run scoreboard players set @s xpDisplay 3
-execute as @a[scores={mobKills=1..},tag=mcLvl6,tag=warrior] run scoreboard players add @s warriorLevel 3
-execute as @a[scores={mobKills=1..},tag=mcLvl6,tag=warrior] run scoreboard players set @s xpDisplay 3
-execute as @a[scores={mobKills=1..},tag=mcLvl7,tag=warrior] run scoreboard players add @s warriorLevel 4
-execute as @a[scores={mobKills=1..},tag=mcLvl7,tag=warrior] run scoreboard players set @s xpDisplay 4
-execute as @a[scores={mobKills=1..},tag=mcLvl8,tag=warrior] run scoreboard players add @s warriorLevel 4
-execute as @a[scores={mobKills=1..},tag=mcLvl8,tag=warrior] run scoreboard players set @s xpDisplay 4
-execute as @a[scores={mobKills=1..},tag=mcLvl9,tag=warrior] run scoreboard players add @s warriorLevel 5
-execute as @a[scores={mobKills=1..},tag=mcLvl9,tag=warrior] run scoreboard players set @s xpDisplay 5
-execute as @a[scores={mobKills=1..},tag=mcLvl10,tag=warrior] run scoreboard players add @s warriorLevel 5
-execute as @a[scores={mobKills=1..},tag=mcLvl10,tag=warrior] run scoreboard players set @s xpDisplay 5
-execute as @a[scores={mobKills=1..},tag=wLvl0,tag=warrior] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Warrior xp | Level 1 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"warriorLevel"},"color":"dark_aqua"},{"text":" / 250) ","color":"dark_aqua"}]
-execute as @a[scores={mobKills=1..},tag=wLvl1,tag=warrior] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Warrior xp | Level 2 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"warriorLevel"},"color":"dark_aqua"},{"text":" / 1000) ","color":"dark_aqua"}]
-execute as @a[scores={mobKills=1..},tag=wLvl2,tag=warrior] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Warrior xp | Level 3 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"warriorLevel"},"color":"dark_aqua"},{"text":" / 2000) ","color":"dark_aqua"}]
-execute as @a[scores={mobKills=1..},tag=wLvl3,tag=warrior] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Warrior xp | Level 4 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"warriorLevel"},"color":"dark_aqua"},{"text":" / 4000) ","color":"dark_aqua"}]
-execute as @a[scores={mobKills=1..},tag=wLvl4,tag=warrior] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Warrior xp | Level 5 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"warriorLevel"},"color":"dark_aqua"},{"text":" / 8000) ","color":"dark_aqua"}]
-execute as @a[scores={mobKills=1..},tag=wLvl5,tag=warrior] run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Warrior xp | Level 5 ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"warriorLevel"},"color":"dark_aqua"},{"text":") ","color":"dark_aqua"}]
-execute as @a[scores={mobKills=1..},tag=warrior] at @s run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 0.5 2
+execute as @a[scores={mobKills=1..},tag=mcLvl0,tag=warrior] unless score @s silverfishKills matches 1.. run scoreboard players add @s warriorLevel 0
+execute as @a[scores={mobKills=1..},tag=mcLvl0,tag=warrior] unless score @s silverfishKills matches 1.. run scoreboard players set @s xpDisplay 0
+execute as @a[scores={mobKills=1..},tag=mcLvl1,tag=warrior] unless score @s silverfishKills matches 1.. run scoreboard players add @s warriorLevel 1
+execute as @a[scores={mobKills=1..},tag=mcLvl1,tag=warrior] unless score @s silverfishKills matches 1.. run scoreboard players set @s xpDisplay 1
+execute as @a[scores={mobKills=1..},tag=mcLvl2,tag=warrior] unless score @s silverfishKills matches 1.. run scoreboard players add @s warriorLevel 1
+execute as @a[scores={mobKills=1..},tag=mcLvl2,tag=warrior] unless score @s silverfishKills matches 1.. run scoreboard players set @s xpDisplay 1
+execute as @a[scores={mobKills=1..},tag=mcLvl3,tag=warrior] unless score @s silverfishKills matches 1.. run scoreboard players add @s warriorLevel 2
+execute as @a[scores={mobKills=1..},tag=mcLvl3,tag=warrior] unless score @s silverfishKills matches 1.. run scoreboard players set @s xpDisplay 2
+execute as @a[scores={mobKills=1..},tag=mcLvl4,tag=warrior] unless score @s silverfishKills matches 1.. run scoreboard players add @s warriorLevel 2
+execute as @a[scores={mobKills=1..},tag=mcLvl4,tag=warrior] unless score @s silverfishKills matches 1.. run scoreboard players set @s xpDisplay 2
+execute as @a[scores={mobKills=1..},tag=mcLvl5,tag=warrior] unless score @s silverfishKills matches 1.. run scoreboard players add @s warriorLevel 3
+execute as @a[scores={mobKills=1..},tag=mcLvl5,tag=warrior] unless score @s silverfishKills matches 1.. run scoreboard players set @s xpDisplay 3
+execute as @a[scores={mobKills=1..},tag=mcLvl6,tag=warrior] unless score @s silverfishKills matches 1.. run scoreboard players add @s warriorLevel 3
+execute as @a[scores={mobKills=1..},tag=mcLvl6,tag=warrior] unless score @s silverfishKills matches 1.. run scoreboard players set @s xpDisplay 3
+execute as @a[scores={mobKills=1..},tag=mcLvl7,tag=warrior] unless score @s silverfishKills matches 1.. run scoreboard players add @s warriorLevel 4
+execute as @a[scores={mobKills=1..},tag=mcLvl7,tag=warrior] unless score @s silverfishKills matches 1.. run scoreboard players set @s xpDisplay 4
+execute as @a[scores={mobKills=1..},tag=mcLvl8,tag=warrior] unless score @s silverfishKills matches 1.. run scoreboard players add @s warriorLevel 4
+execute as @a[scores={mobKills=1..},tag=mcLvl8,tag=warrior] unless score @s silverfishKills matches 1.. run scoreboard players set @s xpDisplay 4
+execute as @a[scores={mobKills=1..},tag=mcLvl9,tag=warrior] unless score @s silverfishKills matches 1.. run scoreboard players add @s warriorLevel 5
+execute as @a[scores={mobKills=1..},tag=mcLvl9,tag=warrior] unless score @s silverfishKills matches 1.. run scoreboard players set @s xpDisplay 5
+execute as @a[scores={mobKills=1..},tag=mcLvl10,tag=warrior] unless score @s silverfishKills matches 1.. run scoreboard players add @s warriorLevel 5
+execute as @a[scores={mobKills=1..},tag=mcLvl10,tag=warrior] unless score @s silverfishKills matches 1.. run scoreboard players set @s xpDisplay 5
+execute as @a[scores={mobKills=1..},tag=wLvl0,tag=warrior] unless score @s silverfishKills matches 1.. run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Warrior xp | Level 1 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"warriorLevel"},"color":"dark_aqua"},{"text":" / 250) ","color":"dark_aqua"}]
+execute as @a[scores={mobKills=1..},tag=wLvl1,tag=warrior] unless score @s silverfishKills matches 1.. run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Warrior xp | Level 2 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"warriorLevel"},"color":"dark_aqua"},{"text":" / 1000) ","color":"dark_aqua"}]
+execute as @a[scores={mobKills=1..},tag=wLvl2,tag=warrior] unless score @s silverfishKills matches 1.. run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Warrior xp | Level 3 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"warriorLevel"},"color":"dark_aqua"},{"text":" / 2000) ","color":"dark_aqua"}]
+execute as @a[scores={mobKills=1..},tag=wLvl3,tag=warrior] unless score @s silverfishKills matches 1.. run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Warrior xp | Level 4 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"warriorLevel"},"color":"dark_aqua"},{"text":" / 4000) ","color":"dark_aqua"}]
+execute as @a[scores={mobKills=1..},tag=wLvl4,tag=warrior] unless score @s silverfishKills matches 1.. run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Warrior xp | Level 5 Progress ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"warriorLevel"},"color":"dark_aqua"},{"text":" / 8000) ","color":"dark_aqua"}]
+execute as @a[scores={mobKills=1..},tag=wLvl5,tag=warrior] unless score @s silverfishKills matches 1.. run title @s actionbar ["",{"text":"+","color":"dark_aqua"},{"score":{"name":"@s","objective":"xpDisplay"},"color":"dark_aqua"},{"text":" Warrior xp | Level 5 ","color":"dark_aqua"},{"text":" (","color":"dark_aqua"},{"score":{"name":"@s","objective":"warriorLevel"},"color":"dark_aqua"},{"text":") ","color":"dark_aqua"}]
+execute as @a[scores={mobKills=1..},tag=warrior] unless score @s silverfishKills matches 1.. at @s run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 0.5 2
 execute as @a[scores={mobKills=1..}] run scoreboard players remove @s mobKills 1
+execute as @a[scores={silverfishKills=1..}] run scoreboard players reset @s silverfishKills
 
 #Tank xp
 execute as @a[scores={damageTaken=50..},tag=mcLvl0,tag=tank] run scoreboard players add @s tankLevel 0

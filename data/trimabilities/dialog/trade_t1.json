@@ -1,0 +1,77 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Retired Adventurer",
+    "color": "light_purple",
+    "bold": true
+  },
+  "body": {
+    "type": "minecraft:plain_message",
+    "contents": {
+      "text": "For tier one trims you can trade me any trim and two trim essence.\n\nWhat trim should I give you in return?"
+    },
+    "width": 400
+  },
+  "actions": [
+    {
+      "label": {
+        "text": "Shaper",
+        "color": "red"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger trade_shaper"
+      }
+    },
+    {
+      "label": {
+        "text": "Host",
+        "color": "blue"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger trade_host"
+      }
+    },
+    {
+      "label": {
+        "text": "Wayfinder",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger trade_wayfinder"
+      }
+    },
+    {
+      "label": {
+        "text": "Raiser",
+        "color": "dark_purple"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger trade_raiser"
+      }
+    },
+    {
+      "label": {
+        "text": "What's trim essence?"
+      },
+      "width": 125,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:trade_essence"
+      }
+    },
+    {
+      "label": {
+        "text": "Wait, let me rethink."
+      },
+      "width": 125,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:main"
+      }
+    }
+  ]
+}

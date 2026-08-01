@@ -8,49 +8,49 @@
   "body": {
     "type": "minecraft:plain_message",
     "contents": {
-      "text": "Hello, what can I do for you today?"
+      "text": "What tier of trim do you want to trade for?"
     },
     "width": 400
   },
   "actions": [
     {
       "label": {
-        "text": "Remind me of how Trims work."
+        "text": "T1 - Shaper, Host, Wayfinder, Raiser"
       },
-      "width": 175,
+      "width": 200,
       "action": {
         "type": "minecraft:show_dialog",
-        "dialog": "trimabilities:introduction1"
+        "dialog": "trimabilities:trade_t1"
       }
     },
     {
       "label": {
-        "text": "What does the Trim Shrine do?"
+        "text": "T2 - Dune, Vital, Wild, Stray"
       },
-      "width": 175,
+      "width": 200,
       "action": {
         "type": "minecraft:show_dialog",
-        "dialog": "trimabilities:coming_soon"
+        "dialog": "trimabilities:trade_t2"
       }
     },
     {
       "label": {
-        "text": "Help me find trims."
+        "text": "T3 - Snout, Ward, Eye, Echo"
       },
-      "width": 175,
+      "width": 200,
       "action": {
         "type": "minecraft:show_dialog",
-        "dialog": "trimabilities:coming_soon"
+        "dialog": "trimabilities:trade_t3"
       }
     },
     {
       "label": {
-        "text": "Can we trade trims?"
+        "text": "T4 - Silence, Spire, Sentry, Storm"
       },
-      "width": 175,
+      "width": 200,
       "action": {
         "type": "minecraft:show_dialog",
-        "dialog": "trimabilities:trade_start"
+        "dialog": "trimabilities:trade_t4"
       }
     }
   ]

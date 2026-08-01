@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Retired Adventurer",
+    "color": "light_purple",
+    "bold": true
+  },
+  "body": {
+    "type": "minecraft:plain_message",
+    "contents": {
+      "text": "I am sorry but in all my days I have yet to come across any tier four trims.\n\nI cannot trade for these trims."
+    },
+    "width": 400
+  },
+  "actions": [
+    {
+      "label": {
+        "text": "I'll pick something else."
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:main"
+      }
+    }
+  ]
+}

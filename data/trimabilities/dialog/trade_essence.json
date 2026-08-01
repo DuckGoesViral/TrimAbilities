@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Retired Adventurer",
+    "color": "light_purple",
+    "bold": true
+  },
+  "body": {
+    "type": "minecraft:plain_message",
+    "contents": {
+      "text": "Trim essence is a form of currency that you can obtain by salvaging trims at the trim shrine.\n\nDifferent trims give different amounts of essence depending on their rarity.\n\nTrim essence can be used in item or abstract form by either withdrawing or depositing into the trim shrine.\n\nI need trim essence to forge and convert trims.\n\nEssence can also be used to insure trims so that you keep them after death."
+    },
+    "width": 400
+  },
+  "actions": [
+    {
+      "label": {
+        "text": "Tell me about the trim shrine."
+      },
+      "width": 175,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:coming_soon"
+      }
+    },
+    {
+      "label": {
+        "text": "I understand, let's trade now."
+      },
+      "width": 175,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:main"
+      }
+    }
+  ]
+}

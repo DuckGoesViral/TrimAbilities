@@ -19,7 +19,7 @@ execute if entity @e[type=chest_minecart,tag=trimShrine,nbt={Items:[{Slot:13b,id
 execute if entity @e[type=chest_minecart,tag=trimShrine,nbt={Items:[{Slot:13b,id:"minecraft:coast_armor_trim_smithing_template"}]}] run scoreboard players add @s trimEssence 1
 execute if entity @e[type=chest_minecart,tag=trimShrine,nbt={Items:[{Slot:13b,id:"minecraft:tide_armor_trim_smithing_template"}]}] run scoreboard players add @s trimEssence 3
 execute if entity @e[type=chest_minecart,tag=trimShrine,nbt={Items:[{Slot:13b,id:"minecraft:structure_block"}]}] run scoreboard players add @s trimEssence 3
-execute if entity @e[type=chest_minecart,tag=trimShrine,nbt={Items:[{Slot:13b,id:"minecraft:rib_armor_trim_smithing_template"}]}] run scoreboard players add @s trimEssence 5
+execute if entity @e[type=chest_minecart,tag=trimShrine,nbt={Items:[{Slot:13b,id:"minecraft:rib_armor_trim_smithing_template"}]}] run return run tellraw @s {"text":"You cannot salvage Rib trims!","color":"red"}
 execute if entity @e[type=chest_minecart,tag=trimShrine,nbt={Items:[{Slot:13b,id:"minecraft:bolt_armor_trim_smithing_template"}]}] run scoreboard players add @s trimEssence 4
 execute if entity @e[type=chest_minecart,tag=trimShrine,nbt={Items:[{Slot:13b,id:"minecraft:flow_armor_trim_smithing_template"}]}] run scoreboard players add @s trimEssence 6
 execute if entity @e[type=chest_minecart,tag=trimShrine,nbt={Items:[{Slot:13b,id:"minecraft:vex_armor_trim_smithing_template"}]}] run scoreboard players add @s trimEssence 4

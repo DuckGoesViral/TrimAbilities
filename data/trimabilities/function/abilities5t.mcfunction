@@ -73,8 +73,13 @@ execute as @e[type=arrow,tag=sentryBarrage] at @s if entity @s[nbt={inGround:1b}
 
 
 
-execute as @a[scores={npcClick=1..}] at @s if entity @e[type=wandering_trader,tag=npcTrim,distance=..5] if entity @s[tag=npcFirst] run dialog show @s trimabilities:main
-execute as @a[scores={npcClick=1..}] at @s if entity @e[type=wandering_trader,tag=npcTrim,distance=..5] unless entity @s[tag=npcFirst] run dialog show @s trimabilities:first_time
-execute as @a[scores={npcClick=1..}] at @s if entity @e[type=wandering_trader,tag=npcTrim,distance=..5] unless entity @s[tag=npcFirst] run tag @s add npcFirst
-execute as @a[scores={npcClick=1..}] run scoreboard players reset @s npcClick
-execute as @e[type=wandering_trader,tag=npcTrim] run data merge entity @s {Offers:{Recipes:[]},NoAI:1b}
+
+function trimabilities:npc/5t
+
+
+
+
+
+
+
+

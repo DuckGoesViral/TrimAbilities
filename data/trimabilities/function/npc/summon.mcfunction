@@ -1,0 +1,1 @@
+summon minecraft:wandering_trader ~ ~ ~ {Offers:{Recipes:[]},NoAI:1b,Tags:["npcTrim"],Invulnerable:1b,CustomName:[{"text":"Retired Adventurer","bold":true,"color":"light_purple"}],CustomNameVisible:1b}

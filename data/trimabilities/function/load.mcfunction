@@ -19,7 +19,27 @@ function trimabilities:necroteam
 function trimabilities:shrine/destroy
 function trimabilities:border/load
 
+
+
+
+scoreboard objectives add trade_shaper trigger
+scoreboard objectives add trade_dune trigger
+scoreboard objectives add trade_snout trigger
+scoreboard objectives add trade_host trigger
+scoreboard objectives add trade_vital trigger
+scoreboard objectives add trade_ward trigger
+scoreboard objectives add trade_wayfinder trigger
+scoreboard objectives add trade_wild trigger
+scoreboard objectives add trade_eye trigger
+scoreboard objectives add trade_raiser trigger
+scoreboard objectives add trade_stray trigger
+scoreboard objectives add trade_echo trigger
+
 scoreboard objectives add npcClick minecraft.custom:minecraft.talked_to_villager
+
+scoreboard objectives add essenceCheck dummy
+scoreboard objectives add essenceAmount dummy
+scoreboard objectives add trimCheck dummy
 
 scoreboard objectives add subPower dummy
 scoreboard objectives add subRandom dummy
@@ -134,7 +154,7 @@ scoreboard objectives add mageLevel dummy
 scoreboard objectives add xpDisplay dummy
 
 scoreboard objectives add mobKills minecraft.custom:minecraft.mob_kills
-
+scoreboard objectives add silverfishKills minecraft.killed:minecraft.silverfish
 scoreboard objectives add damageTaken minecraft.custom:minecraft.damage_taken
 scoreboard objectives add damageTanked minecraft.custom:minecraft.damage_resisted
 scoreboard objectives add damageBlocked minecraft.custom:minecraft.damage_blocked_by_shield

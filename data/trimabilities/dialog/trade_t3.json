@@ -1,0 +1,77 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Retired Adventurer",
+    "color": "light_purple",
+    "bold": true
+  },
+  "body": {
+    "type": "minecraft:plain_message",
+    "contents": {
+      "text": "For tier three trims I will need an existing tier three as well as six trim essence.\n\nWhat trim do you want in return?"
+    },
+    "width": 400
+  },
+  "actions": [
+    {
+      "label": {
+        "text": "Snout",
+        "color": "red"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger trade_snout"
+      }
+    },
+    {
+      "label": {
+        "text": "Ward",
+        "color": "blue"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger trade_ward"
+      }
+    },
+    {
+      "label": {
+        "text": "Eye",
+        "color": "gold"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger trade_eye"
+      }
+    },
+    {
+      "label": {
+        "text": "Echo",
+        "color": "dark_purple"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger trade_echo"
+      }
+    },
+    {
+      "label": {
+        "text": "What's trim essence?"
+      },
+      "width": 125,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:trade_essence"
+      }
+    },
+    {
+      "label": {
+        "text": "Wait, let me rethink."
+      },
+      "width": 125,
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "trimabilities:main"
+      }
+    }
+  ]
+}
